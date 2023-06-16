@@ -26,7 +26,7 @@ onMounted(fetchData)
   <header class="flex justify-between items-center p-10">
     <div>
       <p class="w-[220px] leading-none">
-        Michael Ciccarelli is a NYC based software engineer specializing in frontend & ui development
+        Michael Ciccarelli is a NYC based software engineer specializing in javascript & ui development
       </p>
 
       <Links :links="links" />

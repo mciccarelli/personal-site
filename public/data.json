@@ -6,7 +6,7 @@
       "url": "https://pod.xyz",
       "year": 2022,
       "image": "/projects/podarchy.png",
-      "description": "dApp built with next.js and React Flow spatial interface for exploring blockchain data.",
+      "description": "dApp, DAO tool built with next.js and React Flow spatial interface for exploring blockchain wallet relationships.",
       "role": "Development",
       "expanded": false
     },
