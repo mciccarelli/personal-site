@@ -1,7 +1,7 @@
 @import './base.css';
 
 #app {
-  @apply min-h-screen;
+  @apply min-h-screen flex flex-col justify-between;
 }
 
 a {

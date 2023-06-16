@@ -34,18 +34,9 @@ onMounted(fetchData)
     </div>
   </header>
 
-  <footer class="fixed bottom-0 left-0 w-full">
-    <div class="flex items-end justify-between p-10 w-full">
-      <div class="w-60">
-        <p class="mb-0">[ ! ] available for freelance: <a href="mailto:mikecicc@gmail.com">july 2023</a></p>
-      </div>
+  <footer class="flex items-end justify-between p-10 w-full">
+    <div class="w-60">
+      <p class="mb-0">[ ! ] available for freelance: <a href="mailto:mikecicc@gmail.com">july 2023</a></p>
     </div>
   </footer>
 </template>
-
-<style scoped>
-header h1 {
-  @apply font-display leading-none mt-10 relative text-2xl;
-  /* font-size: clamp(1rem, -0.875rem + 18vw, 16.2rem); */
-}
-</style>

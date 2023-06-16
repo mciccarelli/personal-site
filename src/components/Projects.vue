@@ -26,11 +26,22 @@ function toggleProject(id) {
   <ul class="w-full md:w-96">
     <li v-for="project in projects" :key="project.id" class="project-item" @click="toggleProject(project.id)">
       <div class="flex justify-between">
-        <span
-          class="cursor-pointer hover:text-green select-none"
-          :class="{ 'text-green': activeProject === project.id }"
-        >
-          <span class="mr-2"><span v-if="activeProject === project.id">[ - ]</span><span v-else>[ + ]</span></span>
+        <span class="project-title" :class="{ 'text-green': activeProject === project.id }">
+          <span v-if="activeProject === project.id"
+            >[
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
+              <path d="M6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" />
+            </svg>
+            ]</span
+          ><span v-else
+            >[
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
+              <path
+                d="M10.75 6.75a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"
+              />
+            </svg>
+            ]</span
+          >
           <span>{{ project.title }}</span>
         </span>
         <span v-if="activeProject === project.id">
@@ -44,10 +55,7 @@ function toggleProject(id) {
           </a>
 
           <div class="flex justify-between">
-            <p class="description pr-10 mb-0">{{ project.description }}</p>
-            <p class="whitespace-nowrap mb-0">
-              {{ project.year }}
-            </p>
+            <p class="description mb-0">{{ project.description }} — {{ project.year }}: {{ project.role }}</p>
           </div>
         </div>
       </Transition>
@@ -56,6 +64,22 @@ function toggleProject(id) {
 </template>
 
 <style scoped>
+.project-title {
+  @apply transition ease-in-out duration-300 cursor-pointer select-none flex items-center;
+}
+
+.project-title > span {
+  @apply flex items-center mr-2;
+}
+
+.project-title > span > span {
+  @apply flex items-center;
+}
+
+.project-item:hover .project-title {
+  @apply text-green;
+}
+
 .project-details,
 .nested-enter-active,
 .nested-leave-active {
