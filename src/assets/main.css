@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply uppercase text-[12px] leading-[100%] font-normal mb-5 underline;
+  @apply uppercase text-[12px] leading-[100%] font-normal mb-5;
 }
 
 p {

@@ -23,7 +23,7 @@ function toggleProject(id) {
 
 <template>
   <h5>Projects</h5>
-  <ul class="w-[440px]">
+  <ul class="w-full md:w-96">
     <li v-for="project in projects" :key="project.id" class="project-item" @click="toggleProject(project.id)">
       <div class="flex justify-between">
         <span
@@ -39,7 +39,10 @@ function toggleProject(id) {
       </div>
       <Transition duration="550" name="nested">
         <div v-if="activeProject === project.id" class="project-details flex flex-col space-y-4 py-4">
-          <img :src="project.image" alt="" class="project-image" />
+          <a :href="project.url" target="_blank" class="project-image">
+            <img :src="project.image" alt="" />
+          </a>
+
           <div class="flex justify-between">
             <p class="description pr-10 mb-0">{{ project.description }}</p>
             <p class="whitespace-nowrap mb-0">
