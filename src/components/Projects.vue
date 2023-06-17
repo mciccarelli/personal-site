@@ -51,7 +51,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-10 text-right overflow-hidden mb-20">
+  <div class="p-4 md:p-10 text-right overflow-hidden mb-20">
     <h5>Projects</h5>
     <div v-for="(project, index) in projects" :key="project.title" class="project-item">
       <div
@@ -88,7 +88,7 @@ onMounted(() => {
 }
 
 .project-title {
-  @apply text-xl md:text-3xl xl:text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
+  @apply text-3xl xl:text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
 }
 
 .project-item:hover .project-title {
