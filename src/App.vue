@@ -8,34 +8,34 @@ import { links } from './data.json'
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { ease: 'power4.out' } })
   const titleText = new SplitType('.title', { types: 'chars' })
-
   tl.fromTo(
     titleText.chars,
     {
       y: 100,
       opacity: 0,
-      duration: 2,
+      duration: 1,
     },
     {
       y: 0,
       opacity: 1,
       stagger: 0.05,
-      duration: 2,
+      duration: 1,
       ease: 'power4.out',
     }
   )
     .to('.intro', {
       y: 0,
       opacity: 1,
-      stagger: 0.05,
+      // stagger: 0.05,
       duration: 1,
     })
     .to('.links', {
-      x: 0,
+      // x: 0,
       opacity: 1,
-      stagger: 0.05,
-      duration: 1,
+      // stagger: 0.05,
+      duration: 0.5,
     })
+    .to('.social-link', { duration: 1.5, x: 0, opacity: 1, stagger: 0.25 })
 })
 </script>
 
@@ -54,8 +54,8 @@ onMounted(() => {
         startups, and individuals to build websites, web apps, and other digital products.
       </p>
       <p class="mb-8">Available for freelance: july 2023</p>
-      <ul class="links mb-0">
-        <li v-for="link in links" :key="link.title" class="text-[16px]">
+      <ul class="links">
+        <li v-for="link in links" :key="link.title" class="social-link">
           <a :href="link.url" target="_blank">{{ link.title }}<span>↗</span></a>
         </li>
       </ul>
@@ -86,19 +86,20 @@ onMounted(() => {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .intro {
-  @apply container mx-auto lg:w-[1100px] mx-auto px-4 md:px-10 relative opacity-0 translate-y-[50px] mb-32;
+  @apply container mx-auto lg:w-[1100px] mx-auto px-4 md:px-10 relative opacity-0 translate-y-[20px] mb-32;
 }
 .intro p {
   @apply text-lg md:text-3xl lg:text-5xl leading-none tracking-tight;
 }
 .links {
-  @apply xl:absolute xl:bottom-[6px] xl:right-32 opacity-0 -translate-x-[50px];
+  @apply xl:absolute xl:bottom-[6px] xl:right-32 opacity-0 mb-0;
 }
-.links li:hover span {
+
+.social-link:hover span {
   @apply opacity-100;
 }
 
-.links li span {
-  @apply text-[20px] opacity-0 transition-opacity duration-300 ease-in-out ml-px;
+.social-link {
+  @apply text-[16px] ml-px opacity-0 translate-x-[-50px];
 }
 </style>
