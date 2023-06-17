@@ -4,7 +4,7 @@
       "id": 10,
       "title": "pod.xyz",
       "url": "https://pod.xyz",
-      "year": 2022,
+      "year": 2023,
       "image": "/projects/podarchy.png",
       "description": "dApp, DAO tool built with next.js and React Flow spatial interface for exploring blockchain wallet relationships.",
       "role": "Development",
@@ -46,7 +46,7 @@
       "url": "https://revolvelawgroup.com",
       "year": 2019,
       "image": "/projects/revolve-law.png",
-      "description": "Single-page website for lawyer firm, built with React and Framer motion.",
+      "description": "Single-page website for a law firm, built with React and Framer motion.",
       "role": "Frontend development",
       "expanded": false
     },

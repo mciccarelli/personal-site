@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.1",
+    "split-type": "^0.3.3",
     "vue": "^3.3.2"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
 
 const props = defineProps({
   projects: {
@@ -19,57 +20,85 @@ function toggleProject(id) {
     activeProject.value = id
   }
 }
+
+onMounted(() => {
+  let targets = gsap.utils.toArray('.project-item')
+
+  targets.forEach((el, index) => {
+    const text = el.querySelector('.project-title')
+    const image = el.querySelector('.project-image')
+
+    text.addEventListener('mouseenter', (e) => {
+      gsap.to(image, { autoAlpha: 1 })
+    })
+
+    text.addEventListener('mouseleave', (e) => {
+      gsap.to(image, { autoAlpha: 0 })
+    })
+
+    text.addEventListener('mousemove', (e) => {
+      //gsap.set(image, { x: e.offsetX - 200 })
+      gsap.set(image, {
+        x: e.offsetX,
+        y: e.offsetY,
+        xPercent: -175,
+        yPercent: -10 * (index + 1),
+        stagger: 0.05,
+      })
+    })
+  })
+})
 </script>
 
 <template>
-  <h5>Projects</h5>
-  <ul class="w-full md:w-96">
-    <li v-for="project in projects" :key="project.id" class="project-item" @click="toggleProject(project.id)">
-      <div class="flex justify-between">
-        <span class="project-title" :class="{ 'text-green': activeProject === project.id }">
-          <span v-if="activeProject === project.id"
-            >[
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
-              <path d="M6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" />
-            </svg>
-            ]</span
-          ><span v-else
-            >[
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
-              <path
-                d="M10.75 6.75a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"
-              />
-            </svg>
-            ]</span
-          >
-          <span>{{ project.title }}</span>
-        </span>
-        <span v-if="activeProject === project.id">
-          <a :href="project.url" target="_blank">visit site <span class="text-[14px]">↗</span></a>
-        </span>
-      </div>
-      <Transition duration="550" name="nested">
-        <div v-if="activeProject === project.id" class="project-details flex flex-col space-y-4 py-4">
-          <a :href="project.url" target="_blank" class="project-image">
-            <img :src="project.image" alt="" />
-          </a>
-
-          <div class="flex justify-between">
-            <p class="description mb-0">{{ project.description }} — {{ project.year }}: {{ project.role }}</p>
-          </div>
+  <div class="p-10 text-right overflow-hidden mb-20">
+    <h5>Projects</h5>
+    <ul class="w-full text-right p-0 m-0">
+      <li
+        v-for="project in projects"
+        :key="project.id"
+        class="project-item text-right flex flex-col items-end"
+        @click="toggleProject(project.id)"
+      >
+        <div class="flex justify-end relative">
+          <span class="project-title" :class="{ 'text-green': activeProject === project.id }">
+            <span>{{ project.title }}</span>
+          </span>
+          <img
+            :src="project.image"
+            alt=""
+            class="project-image"
+            :class="{ 'project-image--active': activeProject === project.id }"
+          />
         </div>
-      </Transition>
-    </li>
-  </ul>
+        <Transition duration="550" name="nested">
+          <div v-if="activeProject === project.id" class="project-details flex flex-col space-y-4 py-4 mb-4">
+            <!-- <img :src="project.image" alt="" class="project-image" /> -->
+
+            <div class="flex flex-col items-end text-right m-0">
+              <p class="description mb-4 p-0 max-w-[280px]">
+                {{ project.description }} — {{ project.year }}: {{ project.role }}
+              </p>
+              <a :href="project.url" target="_blank">visit site <span class="text-[14px]">↗</span></a>
+            </div>
+          </div>
+        </Transition>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
+.project-details {
+  @apply flex flex-row space-x-4;
+}
+
 .project-title {
-  @apply transition ease-in-out duration-300 cursor-pointer select-none flex items-center;
+  @apply text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center;
 }
 
 .project-title > span {
-  @apply flex items-center mr-2;
+  @apply flex items-center ml-2;
 }
 
 .project-title > span > span {
@@ -78,6 +107,10 @@ function toggleProject(id) {
 
 .project-item:hover .project-title {
   @apply text-green;
+}
+
+.project-image {
+  @apply max-w-[300px] md:max-w-[500px] xl:max-w-[720px] opacity-0 absolute left-1/2 top-1/2 -translate-y-[-50%] -translate-x-[-50%] pointer-events-none;
 }
 
 .project-details,
