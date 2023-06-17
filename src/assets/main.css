@@ -30,6 +30,10 @@ li {
   @apply uppercase text-[12px] leading-[100%] font-normal mb-0;
 }
 
+.v-collapse {
+  transition: height var(--vc-auto-duration) cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 @media (hover: hover) {
   a:hover {
     @apply text-green;

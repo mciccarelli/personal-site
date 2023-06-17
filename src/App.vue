@@ -1,29 +1,12 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import Projects from './components/Projects.vue'
+import { onMounted } from 'vue'
 import { gsap } from 'gsap'
-// import { MotionPathPlugin } from 'gsap/MotionPathPlugin.js'
 import SplitType from 'split-type'
-
-const links = ref([
-  { title: 'Email', url: 'mailto:mikecicc@gmail.com' },
-  { title: 'Twitter', url: 'https://twitter.com/mciccarelli' },
-  { title: 'Github', url: 'https://github.com/mciccarelli' },
-  { title: 'LinkedIn', url: 'https://www.linkedin.com/in/mciccarelli/' },
-  { title: 'Instagram', url: 'https://www.instagram.com/minorvillain/' },
-])
-
-const data = ref({ projects: [] })
-
-const fetchData = async () => {
-  await fetch('/data.json')
-    .then((response) => response.json())
-    .then((result) => (data.value.projects = result.projects))
-}
+import Projects from './components/Projects.vue'
+import { links } from './data.json'
 
 onMounted(() => {
-  fetchData()
-  const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power4.out' } })
+  const tl = gsap.timeline({ defaults: { ease: 'power4.out' } })
   const titleText = new SplitType('.title', { types: 'chars' })
 
   tl.fromTo(
@@ -31,6 +14,7 @@ onMounted(() => {
     {
       y: 100,
       opacity: 0,
+      duration: 2,
     },
     {
       y: 0,
@@ -44,11 +28,13 @@ onMounted(() => {
       y: 0,
       opacity: 1,
       stagger: 0.05,
+      duration: 1,
     })
     .to('.links', {
       x: 0,
       opacity: 1,
       stagger: 0.05,
+      duration: 1,
     })
 })
 </script>
@@ -75,22 +61,21 @@ onMounted(() => {
         </li>
       </ul>
     </div>
-
-    <Projects :projects="data.projects" v-if="data && data?.projects?.length > 0" />
+    <Projects />
   </main>
 
-  <footer class="grid grid-cols-3 gap-4 opacity-50">
-    <div class="p-10">
+  <footer class="md:grid md:grid-cols-3 md:gap-4">
+    <div class="p-4 md:p-10">
       <p class="mb-0">freelance developer <br />Brooklyn, New York</p>
     </div>
-    <div class="p-10 text-center">
-      <p class="mb-0">
+    <div class="p-4 md:p-10">
+      <p class="mb-0 text-left md:text-center">
         <a href="mailto:mikecicc@gmail.com">email</a> — <a href="https://twitter.com/mciccarelli">twitter</a> <br />
         <a href="https://instagram.com/minorvillain">Instagram</a> — <a href="https://github.com/mciccarelli">Github</a>
       </p>
     </div>
-    <div class="p-10">
-      <p class="mb-0 text-right">All Rights reserved. <br />Michael Ciccarelli &copy; 2023</p>
+    <div class="p-4 md:p-10">
+      <p class="mb-0 md:text-right">All Rights reserved. <br />Michael Ciccarelli &copy; 2023</p>
     </div>
   </footer>
 </template>
