@@ -1,8 +1,11 @@
 <script setup>
 import { onMounted, reactive } from 'vue'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
 import { Collapse } from '../lib/collapse'
 import { projects as projectData } from '../data.json'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const projects = reactive(
   projectData.map(({ id, title, description, year, role, image, url }, index) => ({
@@ -23,8 +26,20 @@ function handleAccordion(selectedIndex) {
 }
 
 onMounted(() => {
-  let targets = gsap.utils.toArray('.project-item')
+  // reveal section on scroll
+  gsap.to('.projects', {
+    autoAlpha: 1,
+    duration: 0.2,
+    ease: 'none',
+    scrollTrigger: {
+      start: 2,
+      end: 3,
+      toggleActions: 'play none none reverse',
+    },
+  })
 
+  // for reveal project images on title hover
+  let targets = gsap.utils.toArray('.project-item')
   targets.forEach((el, index) => {
     const text = el.querySelector('.project-title')
     const image = el.querySelector('.project-image')
@@ -51,7 +66,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-4 md:p-10 text-right overflow-hidden mb-20">
+  <div class="projects">
     <h5>Projects</h5>
     <div v-for="(project, index) in projects" :key="project.title" class="project-item">
       <div
@@ -83,6 +98,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.projects {
+  @apply p-4 md:p-10 text-right overflow-hidden mb-20 opacity-0;
+}
+
 .project-item {
   @apply relative text-right flex flex-col items-end;
 }
