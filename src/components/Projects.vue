@@ -26,19 +26,23 @@ function handleAccordion(selectedIndex) {
 }
 
 onMounted(() => {
-  // reveal section on scroll
-  gsap.to('.projects', {
-    autoAlpha: 1,
-    duration: 0.2,
-    ease: 'none',
-    scrollTrigger: {
-      start: 2,
-      end: 3,
-      toggleActions: 'play none none reverse',
-    },
+  // reveal project list on scroll
+  gsap.from('.projects-label', {
+    duration: 0.3,
+    x: 20,
+    opacity: 0,
+    scrollTrigger: { start: 2, end: 3, toggleActions: 'play none none reverse' },
+  })
+  gsap.from('.project-item', {
+    duration: 0.3,
+    delay: 0.6,
+    x: 20,
+    opacity: 0,
+    stagger: 0.05,
+    scrollTrigger: { start: 2, end: 3, toggleActions: 'play none none reverse' },
   })
 
-  // for reveal project images on title hover
+  // reveal project images on title hover
   let targets = gsap.utils.toArray('.project-item')
   targets.forEach((el, index) => {
     const text = el.querySelector('.project-title')
@@ -67,7 +71,7 @@ onMounted(() => {
 
 <template>
   <div class="projects">
-    <h5>Projects</h5>
+    <h5 class="projects-label">Projects</h5>
     <div v-for="(project, index) in projects" :key="project.title" class="project-item">
       <div
         class="project-title"
@@ -99,7 +103,7 @@ onMounted(() => {
 
 <style scoped>
 .projects {
-  @apply p-4 md:p-10 text-right overflow-hidden mb-20 opacity-0;
+  @apply p-10 text-right overflow-hidden mb-20;
 }
 
 .project-item {
@@ -107,7 +111,7 @@ onMounted(() => {
 }
 
 .project-title {
-  @apply text-3xl xl:text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
+  @apply leading-none text-3xl xl:text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
 }
 
 .project-item:hover .project-title {
