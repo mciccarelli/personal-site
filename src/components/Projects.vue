@@ -119,7 +119,7 @@ onMounted(() => {
 }
 
 .project-thumbnail {
-  @apply md:hidden block mb-4;
+  @apply md:hidden block my-4;
 }
 
 .project-image {

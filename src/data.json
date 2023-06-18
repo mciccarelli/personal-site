@@ -28,8 +28,8 @@
       "url": "https://pod.xyz",
       "year": 2023,
       "image": "/projects/podarchy.png",
-      "description": "dApp, DAO tool built with next.js and React Flow spatial interface for exploring blockchain wallet relationships.",
-      "role": "Development"
+      "description": "web3/dApp built with Next.js, Ethers, and React Flow spatial interface for visualizing blockchain data.",
+      "role": "FE Development"
     },
     {
       "id": 9,
@@ -37,8 +37,8 @@
       "url": "https://amazonthe.bar",
       "year": 2022,
       "image": "/projects/the-bar.png",
-      "description": "Portfolio site for an Amazon creative studio, built with Next.js + Sanity headless CMS",
-      "role": "Development"
+      "description": "Portfolio site built with Next.js + Sanity.io headless CMS",
+      "role": "Fullstack Development"
     },
     {
       "id": 8,
@@ -46,7 +46,7 @@
       "url": "https://elara.world",
       "year": 2021,
       "image": "/projects/elara-world.png",
-      "description": "Community site for Elara Pictures, to feature music, videos and sell merch. Build with Next.js, Sanity & Shopify",
+      "description": "Community site for Elara Pictures, to feature music, videos, and merch. Built with Next.js, Sanity, and Shopify headless.",
       "role": "Fullstack development"
     },
     {
@@ -55,7 +55,7 @@
       "url": "https://the-well.com",
       "year": 2020,
       "image": "/projects/the-well.png",
-      "description": "Editorial + Ecommerce built with Next.js, Shopify and Sanity",
+      "description": "Editorial and e-commerce site built with Next.js, Shopify, and Sanity",
       "role": "Fullstack development"
     },
     {
@@ -65,7 +65,7 @@
       "year": 2019,
       "image": "/projects/revolve-law.png",
       "description": "Single-page website for a law firm, built with React and Framer motion.",
-      "role": "Frontend development"
+      "role": "FE Development"
     },
     {
       "id": 5,
@@ -73,8 +73,8 @@
       "url": "https://common.com/studio",
       "year": 2018,
       "image": "/projects/common-studio.png",
-      "description": "Single-page website for generating leads, built with React.js.",
-      "role": "Frontend development"
+      "description": "Single-page, lead gen website, built with Next.js and Contentful CMS.",
+      "role": "FE Development"
     },
     {
       "id": 4,
@@ -82,7 +82,7 @@
       "url": "https://g9.ventures",
       "year": 2018,
       "image": "/projects/g9-ventures.png",
-      "description": "Portfolio site for VC firm, built with React.js.",
+      "description": "Portfolio site for a VC firm, built with React.js.",
       "role": "Fullstack development"
     },
     {
@@ -91,16 +91,17 @@
       "url": "https://vennskincare.com",
       "year": 2017,
       "image": "/projects/venn.png",
-      "description": "Ecommerce website for Venn Skincare, built with Shopify."
+      "description": "e-commerce/product website built with Shopify.",
+      "role": "FE development"
     },
     {
       "id": 2,
-      "title": "VICE TV",
+      "title": "VICELAND",
       "url": "https://vicetv.com",
       "year": 2016,
       "image": "/projects/vice-tv.png",
-      "description": "Video streaming website for VICE TV, built with Vue and Video.js",
-      "role": "Frontend development"
+      "description": "Video streaming for VICE, built with Next.js and Video.js",
+      "role": "FE development"
     },
     {
       "id": 1,
@@ -108,8 +109,8 @@
       "url": "https://dt.filzfelt.com",
       "year": 2016,
       "image": "/projects/dt-filzfelt.png",
-      "description": "Tool for interior designers to create custom wall panels, built with React.js and d3.js",
-      "role": "Frontend development"
+      "description": "Tool for designers to configure custom wall panels, built with Vue and d3.js",
+      "role": "FE development"
     }
   ]
 }
