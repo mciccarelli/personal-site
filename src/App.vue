@@ -3,7 +3,6 @@ import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 import SplitType from 'split-type'
 import Projects from './components/Projects.vue'
-import Footer from './components/Footer.vue'
 import { links } from './data.json'
 
 onMounted(() => {
@@ -61,7 +60,13 @@ onMounted(() => {
     </div>
     <Projects />
   </main>
-  <Footer />
+  <footer class="flex justify-between">
+    <p class="mb-0 p-10">
+      freelance developer<br />bk, ny &bull; <a href="mailto:mikecicc@gmail.com">Email</a> &bull;
+      <a href="https://twitter.com/mciccarelli">Twitter</a>
+    </p>
+    <p class="p-10 mb-0 text-right">All Rights reserved. <br />Michael Ciccarelli &copy; 2023</p>
+  </footer>
 </template>
 
 <style scoped>
