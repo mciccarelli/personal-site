@@ -23,6 +23,24 @@
   ],
   "projects": [
     {
+      "id": 12,
+      "title": "Metropolis",
+      "url": "https://metropolis.sh",
+      "year": 2023,
+      "image": "/projects/metropolis.png",
+      "description": "Landing page built with Next.js + TailwindCSS for a CLI tool, to visualize smart contract deployments.",
+      "role": "FE Development"
+    },
+    {
+      "id": 11,
+      "title": "Over Abstraction",
+      "url": "https://overabstraction.fm",
+      "year": 2023,
+      "image": "/projects/over-abstraction.png",
+      "description": "Splash page for a web3 podcast, built with Next.js + TailwindCSS",
+      "role": "FE Development"
+    },
+    {
       "id": 10,
       "title": "pod.xyz",
       "url": "https://pod.xyz",
