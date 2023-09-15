@@ -48,9 +48,8 @@ onMounted(() => {
     <div class="intro">
       <p class="intro__text">
         <span class="font-display italic mb-8">Michael Ciccarelli</span> is a software engineer living in brooklyn, new
-        york focused on frontend &amp; javascript development. he has worked with companies, creative agencies,
-        startups, and individuals to build websites, apps, and bespoke digital products <br />Available for freelance:
-        10/23
+        york focused on frontend and javascript development. he works with companies, agencies, startups, and
+        individuals to build websites, apps, and bespoke digital products. Available for freelance work
       </p>
       <ul class="links">
         <li v-for="link in links" :key="link.title" class="links__link">
@@ -88,7 +87,7 @@ onMounted(() => {
 }
 
 .links {
-  @apply xl:absolute xl:bottom-[6px] xl:right-52 opacity-0 mb-0;
+  @apply xl:absolute xl:-bottom-[120px] xl:left-10 opacity-0 mb-0;
 }
 
 .links__link:hover span {
