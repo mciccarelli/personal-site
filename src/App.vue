@@ -1,20 +1,7 @@
 <script setup>
 import Projects from './components/Projects.vue'
+import { monthNames } from './data.json'
 
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
 const currYear = new Date().getFullYear()
 const currMonth = new Date().getMonth()
 const nextMonth = currMonth + 1 < 12 ? currMonth + 1 : 0
@@ -44,12 +31,12 @@ const dateAvailable = `${monthNames[nextMonth]} ${currYear}`
     <Projects />
   </main>
   <footer class="md:flex md:justify-between px-8 lg:px-16">
-    <p class="mb-4 md:mb-0">
+    <p class="mb-4 md:mb-0 text-xs">
       brooklyn, new york <br /><a href="mailto:mikecicc@gmail.com">Email</a> &bull;
       <a href="https://twitter.com/mciccarelli">Twitter</a> &bull;
       <a href="https://github.com/mciccarelli">Github</a>
     </p>
-    <p class="md:text-right">All Rights reserved. <br />Michael Ciccarelli &copy; {{ currYear }}</p>
+    <p class="md:text-right text-xs">All Rights reserved. <br />Michael Ciccarelli &copy; {{ currYear }}</p>
   </footer>
 </template>
 

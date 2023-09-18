@@ -3,15 +3,11 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      display: ['Saol Display'],
       body: ['Inter'],
-      mono: ['IBM Plex Mono', 'monospace'],
     },
     extend: {
       colors: {
         blue: '#0000f3',
-        // black: '#161616',
-        // white: '#f8f8f8',
         green: '#05F140',
       },
     },
