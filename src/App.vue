@@ -1,100 +1,64 @@
 <script setup>
-import { onMounted } from 'vue'
-import { gsap } from 'gsap'
-import SplitType from 'split-type'
 import Projects from './components/Projects.vue'
-import { links } from './data.json'
 
-onMounted(() => {
-  const tl = gsap.timeline()
-  const titleText = new SplitType('.title__text', { types: 'chars' })
-
-  tl.fromTo(
-    titleText.chars,
-    {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 1,
-      ease: 'power4.out',
-    }
-  )
-    .from('.intro__text', {
-      y: 10,
-      opacity: 0,
-      blur: 8,
-      duration: 0.2,
-    })
-    .to('.links', {
-      opacity: 1,
-      duration: 0.2,
-    })
-    .to('.links__link', { duration: 0.3, x: 0, opacity: 1, stagger: 0.05 })
-})
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
+const currYear = new Date().getFullYear()
+const currMonth = new Date().getMonth()
+const nextMonth = currMonth + 1 < 12 ? currMonth + 1 : 0
+const dateAvailable = `${monthNames[nextMonth]} ${currYear}`
 </script>
 
 <template>
-  <header>
-    <div class="title">
-      <h1 class="title__text">Ciccarelli</h1>
-    </div>
-  </header>
   <main>
     <div class="intro">
-      <p class="intro__text">
-        <span class="font-display italic mb-8">Michael Ciccarelli</span> is a software engineer living in brooklyn, new
-        york focused on frontend and javascript development. he works with companies, agencies, startups, and
-        individuals to build websites, apps, and bespoke digital products. Available for freelance work
+      <p>
+        michael ciccarelli is a software engineer based in brooklyn, new york. He specializes in frontend, bridging the
+        gap between design and development. His primary focus revolves around creating user interfaces, responsive
+        layouts, interactive elements, and accessible user experiences using javascript, html, and css.
       </p>
-      <ul class="links">
-        <li v-for="link in links" :key="link.title" class="links__link">
-          <a :href="link.url" target="_blank">{{ link.title }}<span>↗</span></a>
-        </li>
-      </ul>
+      <p>
+        for over a decade, he has worked with early-stage technology companies and diverse businesses to build websites,
+        apps, and bespoke digital products, engaging from their initial concept until they go live.
+        <span class="opacity-[.5] font-bold">available for freelance {{ dateAvailable }}</span>
+      </p>
+      <div class="mb-2 text-sm md:text-lg uppercase font-bold">contact</div>
+      <div class="mb-0 text-sm md:text-lg uppercase font-bold">
+        Email: <a class="font-bold" href="mailto:mikecicc@gmail.com">mikecicc@gmail.com</a>
+      </div>
+      <div class="mb-0 text-sm md:text-lg uppercase font-bold">Phone: 917-783-3277</div>
     </div>
+
     <Projects />
   </main>
-  <footer class="flex justify-between">
-    <p class="mb-0 p-10">
-      freelance developer<br />bk, ny &bull; <a href="mailto:mikecicc@gmail.com">Email</a> &bull;
-      <a href="https://twitter.com/mciccarelli">Twitter</a>
+  <footer class="md:flex md:justify-between px-8 lg:px-16">
+    <p class="mb-4 md:mb-0">
+      brooklyn, new york <br /><a href="mailto:mikecicc@gmail.com">Email</a> &bull;
+      <a href="https://twitter.com/mciccarelli">Twitter</a> &bull;
+      <a href="https://github.com/mciccarelli">Github</a>
     </p>
-    <p class="p-10 mb-0 text-right">All Rights reserved. <br />Michael Ciccarelli &copy; 2023</p>
+    <p class="md:text-right">All Rights reserved. <br />Michael Ciccarelli &copy; {{ currYear }}</p>
   </footer>
 </template>
 
 <style scoped>
-.title {
-  @apply container mx-auto flex justify-center p-10 text-center;
-}
-.title__text {
-  @apply font-display leading-none will-change-transform whitespace-nowrap;
-  font-size: clamp(1rem, -0.875rem + 18vw, 16.2rem);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
 .intro {
-  @apply container mx-auto lg:w-[1100px] mx-auto px-10 relative mb-10 lg:mb-32;
+  @apply relative p-8 lg:p-16 max-w-7xl;
 }
 
-.intro__text {
-  @apply text-2xl md:text-3xl lg:text-5xl leading-none tracking-tight xl:indent-32 mb-8 xl:mb-0;
-}
-
-.links {
-  @apply xl:absolute xl:-bottom-[120px] xl:left-10 opacity-0 mb-0;
-}
-
-.links__link:hover span {
-  @apply opacity-100;
-}
-
-.links__link {
-  @apply text-[16px] ml-px opacity-0 translate-x-[-50px];
+.intro p {
+  @apply text-base md:text-3xl font-bold;
 }
 </style>

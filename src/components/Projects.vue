@@ -26,6 +26,13 @@ function handleAccordion(selectedIndex) {
 }
 
 onMounted(() => {
+  gsap.to('.projects-cta', {
+    duration: 0.3,
+    x: -20,
+    opacity: 0,
+    scrollTrigger: { start: 2, end: 3, toggleActions: 'play none none reverse' },
+  })
+
   // reveal project list on scroll
   gsap.from('.projects-label', {
     duration: 0.3,
@@ -60,7 +67,7 @@ onMounted(() => {
       gsap.set(image, {
         x: e.offsetX,
         y: e.offsetY,
-        xPercent: -100,
+        xPercent: -50,
         yPercent: -10 * (index + 1),
         stagger: 0.05,
       })
@@ -71,7 +78,19 @@ onMounted(() => {
 
 <template>
   <div class="projects">
-    <h5 class="projects-label">Projects</h5>
+    <div class="projects-cta mb-20 flex">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 -translate-x-[50%]"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+      </svg>
+    </div>
+    <h5 class="projects-label font-body text-xs mb-20">recent projects</h5>
     <div v-for="(project, index) in projects" :key="project.title" class="project-item">
       <div
         class="project-title"
@@ -84,7 +103,7 @@ onMounted(() => {
         ]"
         @click="handleAccordion(index)"
       >
-        <span>{{ project.title }}</span>
+        <span class="font-bold">{{ project.title }}</span>
         <img :src="project.image" alt="" class="project-image" />
       </div>
 
@@ -93,7 +112,19 @@ onMounted(() => {
           <img :src="project.image" alt="" class="project-thumbnail" />
           <p>{{ project.description }} — {{ project.year }}: {{ project.role }}</p>
           <p>
-            <a :href="project.url" target="_blank">visit site <span class="text-[14px]">↗</span></a>
+            <a :href="project.url" target="_blank" className="flex items-center gap-1">
+              visit site
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </a>
           </p>
         </div>
       </Collapse>
@@ -103,15 +134,15 @@ onMounted(() => {
 
 <style scoped>
 .projects {
-  @apply p-10 text-right overflow-hidden mb-20;
+  @apply p-8 md:p-16 max-w-7xl overflow-hidden mb-20;
 }
 
 .project-item {
-  @apply relative text-right flex flex-col items-end;
+  @apply relative flex flex-col items-start;
 }
 
 .project-title {
-  @apply leading-none text-3xl xl:text-5xl font-display transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
+  @apply leading-none text-2xl lg:text-5xl font-body transition ease-in-out duration-300 cursor-pointer select-none flex items-center uppercase;
 }
 
 .project-item:hover .project-title {
@@ -127,10 +158,10 @@ onMounted(() => {
 }
 
 .project-details {
-  @apply flex flex-col items-end text-right m-0 pb-5;
+  @apply flex flex-col items-start m-0 pb-5;
 }
 
 .project-details p {
-  @apply text-[12px] max-w-[350px] mb-2;
+  @apply text-[12px] max-w-[350px] my-2;
 }
 </style>
