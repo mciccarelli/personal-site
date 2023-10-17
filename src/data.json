@@ -37,12 +37,21 @@
   ],
   "projects": [
     {
-      "id": 12,
+      "id": 13,
       "title": "Metropolis",
-      "url": "https://metropolis.sh",
+      "url": "https://metropolis.space",
       "year": 2023,
-      "image": "/projects/metropolis.png",
-      "description": "Landing page built with Next.js + TailwindCSS for a CLI tool, to visualize smart contract deployments.",
+      "image": "/projects/metro.png",
+      "description": "Landing page built with Next.js + TailwindCSS",
+      "role": "FE Development"
+    },
+    {
+      "id": 12,
+      "title": "Metal",
+      "url": "https://metal.build",
+      "year": 2023,
+      "image": "/projects/metal.png",
+      "description": "dApp build with Next.js + TailwindCSS, to visualize smart contract deployments on Ethereum.",
       "role": "FE Development"
     },
     {
@@ -51,7 +60,7 @@
       "url": "https://pod.xyz",
       "year": 2023,
       "image": "/projects/podarchy.png",
-      "description": "web3/dApp built with Next.js, Ethers, and React Flow spatial interface for visualizing blockchain data.",
+      "description": "dApp built with Next.js, Ethers, and React Flow spatial interface for visualizing blockchain data.",
       "role": "FE Development"
     },
     {
