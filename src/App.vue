@@ -33,7 +33,7 @@ const dateAvailable = `${monthNames[nextMonth]} ${currYear}`
   <footer class="md:flex md:justify-between px-8 lg:px-16">
     <p class="mb-4 md:mb-0 text-xs">
       brooklyn, new york <br /><a href="mailto:mikecicc@gmail.com">Email</a> &bull;
-      <a href="https://twitter.com/mciccarelli">Twitter</a> &bull;
+      <a href="https://twitter.com/0xhael">Twitter</a> &bull;
       <a href="https://github.com/mciccarelli">Github</a>
     </p>
     <p class="md:text-right text-xs">All Rights reserved. <br />Michael Ciccarelli &copy; {{ currYear }}</p>
