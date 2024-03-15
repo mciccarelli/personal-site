@@ -25,7 +25,6 @@ const dateAvailable = `${monthNames[nextMonth]} ${currYear}`
       <div class="mb-0 text-sm md:text-lg uppercase font-bold">
         Email: <a class="font-bold" href="mailto:mikecicc@gmail.com">mikecicc@gmail.com</a>
       </div>
-      <div class="mb-0 text-sm md:text-lg uppercase font-bold">Phone: 917-783-3277</div>
     </div>
 
     <Projects />
