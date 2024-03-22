@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 22, 22, 22;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 248, 248, 248;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 248, 248, 248;
+    --background-start-rgb: 22, 22, 22;
+    --background-end-rgb: 22, 22, 22;
   }
 }
 
@@ -26,8 +26,61 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+a {
+  @apply text-gray-400;
+}
+
+a:hover,
+a:active {
+  @apply text-accent underline;
+}
+
+p {
+  @apply text-xs leading-relaxed mb-8;
+}
+
+li {
+  @apply text-xs list-none m-0 mb-2;
+}
+
+h2 {
+  @apply mx-4 mb-4 text-base;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+/* @font-face {
+  font-family: "Cera Pro";
+  src: url("/fonts/CeraPro-RegularItalic.woff2") format("woff2"),
+    url("/fonts/CeraPro-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/fonts/CeraPro-Bold.woff2") format("woff2"),
+    url("/fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/fonts/CeraPro-Regular.woff2") format("woff2"),
+    url("/fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/fonts/CeraPro-BoldItalic.woff2") format("woff2"),
+    url("/fonts/CeraPro-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+} */
