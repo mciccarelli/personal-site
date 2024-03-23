@@ -3,12 +3,12 @@ import { ScrollBlurImage } from '@/components';
 
 const ProjectList = ({ items }) => {
   return (
-    <div>
+    <div className="py-10">
       <h2>Selected Projects</h2>
-      <div>
+      <div className="flex flex-col gap-y-8">
         {items.map(({ id, title, description, year, role, image, url, hideLink }, index) => {
           return (
-            <div key={index} className="flex flex-col mb-12">
+            <div key={index}>
               <div className="block px-2">
                 <ScrollBlurImage imageUrl={image} />
               </div>

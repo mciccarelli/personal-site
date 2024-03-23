@@ -12,8 +12,8 @@ export default function Home() {
         <div className="w-full max-w-[1080px]">
           <div className="flex flex-col md:grid md:grid-cols-4 md:gap-x-8 w-full">
             <div className="col-span-2 flex flex-col md:px-4">
-              <div className="flex flex-col md:sticky md:top-10 md:h-[calc(100vh_-_40px)] md:overflow-hidden">
-                <div className="flex flex-col gap-y-8 mb-12 md:mb-0 flex-1">
+              <div className="flex flex-col md:sticky md:top-10 md:h-[calc(100vh_-_40px)]">
+                <div className="flex flex-col gap-y-8 flex-1">
                   <div>
                     <h2>About</h2>
                     <div className="bio" dangerouslySetInnerHTML={{ __html: bio }} />
