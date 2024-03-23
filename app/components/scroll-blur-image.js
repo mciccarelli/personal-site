@@ -30,7 +30,7 @@ const ScrollBlurImage = ({ imageUrl }) => {
       animate={controls}
       variants={variants}
       transition={{ duration: 0.5 }}
-      className="w-full h-auto mx-4 mb-4 drop-shadow-none"
+      className="w-full max-w-full h-auto mb-4 drop-shadow-none will-change-auto"
     />
   );
 };

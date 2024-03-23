@@ -2,87 +2,60 @@ import data from './data.json';
 import { ProjectList } from '@/app/components';
 
 export default function Home() {
+  const { bio, experience, clients, capabilities, links, projects } = data;
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4">
       <div className="flex justify-end w-full">
         <div className="w-full max-w-[1080px]">
           <div className="flex flex-col md:grid md:grid-cols-4 w-full">
             <div className="md:col-span-2 order-last md:order-first mb-4 p-4 md:p-6">
-              {data?.projects && <ProjectList items={data.projects} />}
+              {projects && <ProjectList items={projects} />}
             </div>
             <div className="col-span-2 p-4 md:p-6">
-              <div className="sticky top-4 flex flex-col gap-8 mb-12 md:mb-0">
-                <div>
-                  <h2>About</h2>
-                  <p>
-                    I&apos;m Michael Ciccarelli, a freelance software engineer and consultant specializing in web
-                    development. I design, code and implement UIs and functional prototypes for a living. Currently
-                    immersed in the world of web3 and DeFi, working remotely from NYC.
-                  </p>
-                  <p className="mb-0">
-                    For over a decade, I&apos;ve supported various brands and tech startups in enhancing their web
-                    presence and digital offerings. This website is my personal online identity and space for
-                    side–projects, experiments and select client work.
-                  </p>
+              <div className="md:sticky md:top-10 flex flex-col gap-8 mb-12 md:mb-0">
+                <div dangerouslySetInnerHTML={{ __html: bio }} />
+                <div className="w-full">
+                  <h2>Experience</h2>
+                  {experience.map(({ company, role, tenure }, index) => (
+                    <li key={index} className="grid grid-cols-2 gap-4">
+                      <span className="md:col-span-1">
+                        {company}
+                        {role ? ',' : ''} {role}
+                      </span>
+                      <span className="md:col-span-1">{tenure}</span>
+                    </li>
+                  ))}
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <h2>Experience</h2>
-                    <li>Freelance</li>
-                    <li>Metropolis, Senior SWE</li>
-                    <li>Axoni, Software Engineer</li>
-                    <li>VICE Media, FE Lead</li>
-                    <li>GREY Group, Staff Engineer</li>
-                    <li>Condé Nast, Web Developer</li>
-                  </div>
-                  <div>
-                    <h2>&nbsp;</h2>
-                    <li>2016 —</li>
-                    <li>2022 — </li>
-                    <li>2021 — 2022</li>
-                    <li>2014 — 2018</li>
-                    <li>2013 — 2014</li>
-                    <li>2012 — 2013</li>
-                  </div>
-                </div>
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h2>Clients</h2>
-                    <li>Amazon</li>
-                    <li>The WELL</li>
-                    <li>Cannon</li>
-                    <li>Pentagram</li>
-                    <li>Architectual Digest</li>
-                    <li>Elara Pictures</li>
-                    <li>Style.com</li>
-                    <li>Spinneybeck</li>
-                    <li>Revolve Law Group</li>
+                    {clients.map((client, index) => (
+                      <li key={index} className="">
+                        {client}
+                      </li>
+                    ))}
                   </div>
                   <div>
                     <h2>Capabilities</h2>
-                    <li>JavaScript/TypeScript</li>
-                    <li>Next.js and React</li>
-                    <li>E-commerce</li>
-                    <li>Content Management</li>
-                    <li>Jamstack/Headless</li>
-                    <li>Static site generation</li>
-                    <li>Figma &amp; prototyping</li>
-                    <li>Animation and data viz</li>
-                    <li>DevOps &amp; architecture</li>
+                    {capabilities.map((skill, index) => (
+                      <li key={index} className="">
+                        {skill}
+                      </li>
+                    ))}
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h2>Contact</h2>
-                    <li>
-                      <a href="mailto:m@ciccarel.li">m[at]ciccarel.li</a>
-                    </li>
-                    <li>+1 917 783 3277</li>
-                    <li>
-                      <a href="https://twitter.com/0xhael">Twitter</a>,{' '}
-                      <a href="https://instagram.com/minorvillain">Instagram</a>,{' '}
-                      <a href="https://github.com/mciccarelli">Github</a>
-                    </li>
+                    {links.map(({ text, href }, index) => (
+                      <li key={index} className="">
+                        <a href={href} alt="">
+                          {text}
+                        </a>
+                      </li>
+                    ))}
                   </div>
                 </div>
               </div>

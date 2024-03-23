@@ -1,40 +1,78 @@
 {
-  "bio": "<h2>About</h2><p>I&apos;m Michael Ciccarelli, a freelance software engineer and consultant specializing in web development. I design, code and implement UIs and functional prototypes for a living. Currently immersed in the world of web3 and DeFi, working remotely from NYC.</p><p className=\"mb-0\">For over a decade, I&apos;ve supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for side–projects, experiments and select client work.</p>",
+  "bio": "<h2>About</h2><p>I&apos;m Michael Ciccarelli, a freelance software engineer and consultant specializing in web development. I design, code and implement UIs and functional prototypes for a living. Currently immersed in the world of web3 and DeFi, working remotely from NYC.</p><p className=\"mb-0\">For over a decade, I&apos;ve supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p>",
   "links": [
     {
-      "title": "m[at]ciccarel[dot]li",
-      "url": "mailto:m@ciccarel.li"
+      "text": "m[at]ciccarel[dot]li",
+      "href": "mailto:m@ciccarel.li"
     },
     {
-      "title": "Twitter",
-      "url": "https://twitter.com/0xhael"
+      "text": "+1 917 783 3277",
+      "href": "tel:+1917-783-3277"
     },
     {
-      "title": "Instagram",
-      "url": "https://www.instagram.com/minorvillain"
+      "text": "Twitter",
+      "href": "https://twitter.com/0xhael"
     },
     {
-      "title": "Github",
-      "url": "https://github.com/mciccarelli"
+      "text": "Instagram",
+      "href": "https://www.instagram.com/minorvillain"
+    },
+    {
+      "text": "Github",
+      "href": "https://github.com/mciccarelli"
     }
   ],
   "experience": [
-    "Freelance",
-    "Metropolis - Sr. FE Engineer",
-    "Axoni, Sr. Software Engineer",
-    "VICE Media - Lead Engineer",
-    "Grey Group - Web Developer",
-    "Condé Nast - Web Developer"
+    {
+      "company": "Freelance",
+      "role": false,
+      "tenure": "2016 - "
+    },
+    {
+      "company": "Metropolis",
+      "role": "Sr. Frontend Engineer",
+      "tenure": "2022 - "
+    },
+    {
+      "company": "Axoni",
+      "role": "Sr. Software Engineer",
+      "tenure": "2021 - 2022"
+    },
+    {
+      "company": "VICE Media",
+      "role": "Lead Engineer",
+      "tenure": "2014 - 2018"
+    },
+    {
+      "company": "Grey Group",
+      "role": "Web Developer",
+      "tenure": "2013 - 2014"
+    },
+    {
+      "company": "Condé Nast",
+      "role": "Web Developer",
+      "tenure": "2012 - 2013"
+    }
   ],
   "clients": [
     "Amazon",
-    "The WELL",
-    "Common",
     "Pentagram",
+    "The WELL",
     "Elara Pictures",
-    "style.com",
+    "Common",
+    "WIRED Magazine",
     "Revolve Law Group",
     "Spinneybeck"
+  ],
+  "capabilities": [
+    "JavaScript/TypeScript",
+    "Next.js and React",
+    "E-commerce",
+    "Headless CMS",
+    "Jamstack, SSG/SSR",
+    "Figma & Prototyping",
+    "Animation and data viz",
+    "Vercel & cloud infrastructure"
   ],
   "projects": [
     {
@@ -76,21 +114,21 @@
     },
     {
       "id": 9,
-      "title": "The BAR",
-      "url": "https://amazonthe.bar",
-      "year": 2022,
-      "image": "/projects/the-bar.png",
-      "description": "Portfolio site built with Next.js + Sanity.io headless CMS",
-      "role": "Fullstack Development"
-    },
-    {
-      "id": 8,
       "title": "ELARA.WORLD",
       "url": "https://elara.world",
       "year": 2021,
       "image": "/projects/elara-world.png",
       "description": "Community site for Elara Pictures, to feature music, videos, and merch. Built with Next.js, Sanity, and Shopify headless.",
       "role": "Fullstack development"
+    },
+    {
+      "id": 9,
+      "title": "The BAR",
+      "url": "https://amazonthe.bar",
+      "year": 2022,
+      "image": "/projects/the-bar.png",
+      "description": "Portfolio site built with Next.js + Sanity.io headless CMS",
+      "role": "Fullstack Development"
     },
     {
       "id": 7,

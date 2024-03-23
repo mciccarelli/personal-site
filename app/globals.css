@@ -18,6 +18,11 @@
   a {
     @apply !text-gray-400;
   }
+
+  a:hover,
+  a:active {
+    @apply !text-accent;
+  }
 }
 
 body {
@@ -31,7 +36,7 @@ a {
 
 a:hover,
 a:active {
-  @apply !text-accent underline;
+  @apply underline;
 }
 
 p {
@@ -39,11 +44,11 @@ p {
 }
 
 li {
-  @apply text-xs leading-tight list-none m-0 mb-2;
+  @apply text-xs leading-none list-none m-0 mb-2;
 }
 
 h2 {
-  @apply mx-4 mb-4 text-base;
+  @apply mx-2 mb-2 text-base;
 }
 
 @layer utilities {

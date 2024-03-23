@@ -9,7 +9,9 @@ const ProjectList = ({ items }) => {
         {items.map(({ id, title, description, year, role, image, url, hideLink }, index) => {
           return (
             <div key={index} className="flex flex-col mb-12">
-              <ScrollBlurImage imageUrl={image} />
+              <div className="block px-2">
+                <ScrollBlurImage imageUrl={image} />
+              </div>
               <h2 className="mb-2">{title}</h2>
               <p className="mb-2" dangerouslySetInnerHTML={{ __html: description }} />
               <p className="mb-0">
