@@ -1,39 +1,40 @@
 {
-  "monthNames": [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ],
+  "bio": "<h2>About</h2><p>I&apos;m Michael Ciccarelli, a freelance software engineer and consultant specializing in web development. I design, code and implement UIs and functional prototypes for a living. Currently immersed in the world of web3 and DeFi, working remotely from NYC.</p><p className=\"mb-0\">For over a decade, I&apos;ve supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for side–projects, experiments and select client work.</p>",
   "links": [
     {
-      "title": "Email",
-      "url": "mailto:mikecicc@gmail.com"
+      "title": "m[at]ciccarel[dot]li",
+      "url": "mailto:m@ciccarel.li"
     },
     {
       "title": "Twitter",
-      "url": "https://twitter.com/mciccarelli"
+      "url": "https://twitter.com/0xhael"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/minorvillain"
     },
     {
       "title": "Github",
       "url": "https://github.com/mciccarelli"
-    },
-    {
-      "title": "LinkedIn",
-      "url": "https://www.linkedin.com/in/mciccarelli/"
-    },
-    {
-      "title": "Instagram",
-      "url": "https://www.instagram.com/minorvillain/"
     }
+  ],
+  "experience": [
+    "Freelance",
+    "Metropolis - Sr. FE Engineer",
+    "Axoni, Sr. Software Engineer",
+    "VICE Media - Lead Engineer",
+    "Grey Group - Web Developer",
+    "Condé Nast - Web Developer"
+  ],
+  "clients": [
+    "Amazon",
+    "The WELL",
+    "Common",
+    "Pentagram",
+    "Elara Pictures",
+    "style.com",
+    "Revolve Law Group",
+    "Spinneybeck"
   ],
   "projects": [
     {

@@ -1,7 +1,7 @@
 // import { Noto_Sans_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
-import "./globals.css";
+import './globals.css';
 
 // const notoSansMono = Noto_Sans_Mono({
 //   subsets: ["latin"],
@@ -35,31 +35,31 @@ import "./globals.css";
 const CeraPro = localFont({
   src: [
     {
-      path: "../public/fonts/CeraPro-Regular.woff2",
-      weight: "400",
-      style: "normal",
+      path: '../public/fonts/CeraPro-Regular.woff2',
+      weight: '400',
+      style: 'normal'
     },
     {
-      path: "../public/fonts/CeraPro-RegularItalic.woff2",
-      weight: "400",
-      style: "italic",
+      path: '../public/fonts/CeraPro-RegularItalic.woff2',
+      weight: '400',
+      style: 'italic'
     },
     {
-      path: "../public/fonts/CeraPro-BoldItalic.woff2",
-      weight: "700",
-      style: "normal",
+      path: '../public/fonts/CeraPro-BoldItalic.woff2',
+      weight: '700',
+      style: 'normal'
     },
     {
-      path: "../public/fonts/CeraPro-BoldItalic.woff2",
-      weight: "700",
-      style: "italic",
-    },
-  ],
+      path: '../public/fonts/CeraPro-BoldItalic.woff2',
+      weight: '700',
+      style: 'italic'
+    }
+  ]
 });
 
 export const metadata = {
-  title: "michael ciccarelli",
-  description: "freelance software engineer",
+  title: 'michael ciccarelli',
+  description: 'freelance software engineer'
 };
 
 export default function RootLayout({ children }) {
