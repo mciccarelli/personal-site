@@ -1,5 +1,5 @@
 {
-  "bio": "<h2>About</h2><p>I&apos;m Michael Ciccarelli, a freelance software engineer and consultant specializing in web development. I design, code and implement UIs and functional prototypes for a living. Currently immersed in the world of web3 and DeFi, working remotely from NYC.</p><p className=\"mb-0\">For over a decade, I&apos;ve supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p>",
+  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements UIs and functional prototypes as a remote contractor based in Brooklyn, New York.</p><p>For over a decade, he has supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p><p>Currently immersed in the world of web3 and decentralized finance (DeFi) — <br />available for freelance, collaborations, and other opportunities.</p>",
   "links": [
     {
       "text": "mic[at]hael[dot]cc",
@@ -7,7 +7,7 @@
     },
     {
       "text": "+1 917 783 3277",
-      "href": "tel:+1917-783-3277"
+      "href": false
     },
     {
       "text": "Twitter",
@@ -22,6 +22,19 @@
       "href": "https://github.com/mciccarelli"
     }
   ],
+  "crypto": [
+    {
+      "icon": "/ethereum.svg",
+      "symbol": "ETH",
+      "address": "0xA760265A496869DfF06332a05A5669f3B66e82CA",
+      "ens": "hael.eth"
+    },
+    {
+      "icon": "/bitcoin-alt.svg",
+      "symbol": "BTC",
+      "address": "bc1q9h6l4mwpp0nectvh9ykyqqtejxp58jtxynyeq8"
+    }
+  ],
   "experience": [
     {
       "company": "Freelance",
@@ -30,7 +43,7 @@
     },
     {
       "company": "Metropolis",
-      "role": "Sr. Frontend Engineer",
+      "role": "Sr. FE Engineer",
       "tenure": "2022 - "
     },
     {
@@ -67,12 +80,12 @@
   "capabilities": [
     "JavaScript/TypeScript",
     "Next.js and React",
-    "E-commerce",
-    "Headless CMS",
-    "Jamstack, SSG/SSR",
+    "Vercel & cloud infrs.",
+    "Content Management",
+    "E-commerce, Shopify",
+    "APIs, Headless, & Jamstack",
     "Figma & Prototyping",
-    "Animation and data viz",
-    "Vercel & cloud infrastructure"
+    "Animation and data viz"
   ],
   "projects": [
     {

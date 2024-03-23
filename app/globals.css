@@ -44,11 +44,15 @@ p {
 }
 
 li {
-  @apply text-xs leading-none list-none m-0 mb-2;
+  @apply text-xs leading-none list-none m-0 mb-2 last-of-type:mb-0;
 }
 
 h2 {
-  @apply mx-2 mb-2 text-base;
+  @apply mx-2 mb-2 text-sm uppercase font-bold;
+}
+
+.bio p {
+  @apply mb-4 last-of-type:mb-0;
 }
 
 @layer utilities {

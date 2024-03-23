@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollBlurImage } from '@/app/components';
+import { ScrollBlurImage } from '@/components';
 
 const ProjectList = ({ items }) => {
   return (
