@@ -29,3 +29,25 @@ export function useCopyToClipboard() {
 export function truncateWalletAddress(address, chars = 4) {
   return `${address.slice(0, chars + 2)}...${address.slice(-chars)}`;
 }
+
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+export function getAvailability() {
+  const currYear = new Date().getFullYear();
+  const currMonth = new Date().getMonth();
+  const nextMonth = currMonth + 1 < 12 ? currMonth + 1 : 0;
+  return `${monthNames[nextMonth]} ${currYear}`;
+}

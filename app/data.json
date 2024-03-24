@@ -1,49 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements UIs and functional prototypes as a remote contractor based in Brooklyn, New York.</p><p>For over a decade, he has supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p><p>Currently immersed in the world of web3 and decentralized finance (DeFi) — available for freelance, collaborations, and other opportunities.</p>",
-  "links": [
-    {
-      "text": "mic[at]hael[dot]cc",
-      "href": "mailto:mic@hael.cc"
-    },
-    {
-      "text": "+1 917 783 3277",
-      "href": false
-    },
-    {
-      "text": "Twitter",
-      "href": "https://twitter.com/0xhael"
-    },
-    {
-      "text": "Farcaster",
-      "href": "https://warpcast.com/hael.eth"
-    },
-    {
-      "text": "Instagram",
-      "href": "https://www.instagram.com/minorvillain"
-    },
-    {
-      "text": "Github",
-      "href": "https://github.com/mciccarelli"
-    }
-  ],
-  "crypto": [
-    {
-      "icon": "/ethereum.svg",
-      "symbol": "ETH",
-      "address": "0xA760265A496869DfF06332a05A5669f3B66e82CA",
-      "ens": "hael.eth"
-    },
-    {
-      "icon": "/bitcoin-alt.svg",
-      "symbol": "BTC",
-      "address": "bc1q9h6l4mwpp0nectvh9ykyqqtejxp58jtxynyeq8"
-    },
-    {
-      "icon": "/solana.svg",
-      "symbol": "SOL",
-      "address": "ajWipFscWhbTYDEFv8t7EoQMPaqnVUW3GeCuVpXozuy"
-    }
-  ],
+  "bio": "<p>Michael Ciccarelli is a brooklyn-based software engineer and consultant specializing in web development. He designs, codes and implements user interfaces and functional prototypes.</p><p>For over a decade, he has helped various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and dentralized finance (DeFi).</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -93,8 +49,63 @@
     "Content Management",
     "E-commerce, Shopify",
     "APIs, Headless, & Jamstack",
-    "Figma & Prototyping",
-    "Animation and data viz"
+    "Animation and data viz",
+    "Figma & Prototyping"
+  ],
+  "contact": [
+    {
+      "text": "Email",
+      "href": "mailto:mic@hael.cc"
+    },
+    {
+      "text": "+1 917 783 3277",
+      "href": false
+    },
+    {
+      "text": "Twitter",
+      "href": "https://twitter.com/0xhael"
+    },
+    {
+      "text": "Instagram",
+      "href": "https://www.instagram.com/minorvillain"
+    },
+    {
+      "text": "Farcaster",
+      "href": "https://warpcast.com/ciccarelli"
+    },
+    {
+      "text": "Github",
+      "href": "https://github.com/mciccarelli"
+    }
+  ],
+  "crypto": [
+    {
+      "symbol": "ETH",
+      "address": "0x85760ef61c0ccB7BCC4C7A0116d80D59D92e736d",
+      "ens": "ciccarelli.eth"
+    },
+    {
+      "symbol": "BTC",
+      "address": "bc1q6ycngc7e8hjxwdasnlc87rmasa485f0c2p8f97"
+    },
+    {
+      "symbol": "SOL",
+      "address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "email",
+      "href": "mailto:mic@hael.cc"
+    },
+    {
+      "text": "Instagram",
+      "href": "https://www.instagram.com/minorvillain"
+    },
+    {
+      "text": "Twitter",
+      "href": "https://twitter.com/0xhael"
+    }
   ],
   "projects": [
     {
@@ -113,7 +124,7 @@
       "url": "https://metal.build",
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
-      "description": "dApp built with Next.js, Viem, &amp; TailwindCSS. Single-click smart contract deployments, search for popular contracts, browse starter templates, and interact with them onchain.",
+      "description": "dapp built with Next.js, Viem, &amp; TailwindCSS. Single-click smart contract deployments, search for popular contracts, browse starter templates, and interact with them onchain.",
       "role": "FE Development"
     },
     {
@@ -131,7 +142,7 @@
       "url": "https://pod.xyz",
       "year": 2023,
       "image": "/projects/podarchy.png",
-      "description": "dApp built with Next.js, Ethers, and React Flow spatial interface for visualizing smart contracts and blockchain data.",
+      "description": "dapp built with Next.js, Ethers, and React Flow spatial interface for visualizing smart contracts and blockchain data.",
       "role": "FE Development"
     },
     {

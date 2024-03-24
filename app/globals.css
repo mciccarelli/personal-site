@@ -3,25 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 22, 22, 22;
+  --foreground-rgb: 22, 22, 22, 0.85;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 248, 248, 248;
+    /* --foreground-rgb: 248, 248, 248; */
+    --foreground-rgb: 186, 196, 184, 0.85;
     --background-start-rgb: 22, 22, 22;
     --background-end-rgb: 22, 22, 22;
   }
 
-  a {
-    @apply !text-gray-400;
-  }
-
   a:hover,
   a:active {
-    @apply !text-accent;
+    color: rgba(186, 196, 184, 1) !important;
   }
 }
 
@@ -30,21 +27,23 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-a {
-  @apply text-black;
-}
-
 a:hover,
 a:active {
   @apply underline;
+  color: rgba(22, 22, 22, 1);
 }
 
+/* a:hover > svg,
+a:active > svg {
+  @apply opacity-75 transition-opacity duration-200 delay-100;
+} */
+
 p {
-  @apply text-xs leading-relaxed mb-4;
+  @apply text-xs leading-tight mb-4 uppercase;
 }
 
 li {
-  @apply text-xs leading-none list-none m-0 mb-2 last-of-type:mb-0;
+  @apply text-xs leading-tight uppercase list-none;
 }
 
 h2 {

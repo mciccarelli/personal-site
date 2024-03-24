@@ -3,12 +3,17 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
 import { useCopyToClipboard, truncateWalletAddress } from '@/app/utils';
+import { IconBtc, IconCheck, IconEth, IconSol } from '@/components';
+
+const delay = 2;
 
 export default function Wallets({ data }) {
   const [copiedText, copy] = useCopyToClipboard();
   const [tooltip, setTooltip] = useState(false);
+  const ensAddress = data.find(({ symbol }) => symbol === 'ETH')?.ens ?? '';
 
   const handleCopy = text => {
+    setTooltip(false);
     copy(text)
       .then(() => {
         console.log('Copied!', { text });
@@ -16,39 +21,36 @@ export default function Wallets({ data }) {
       })
       .catch(error => {
         console.error('Failed to copy!', error);
-      })
-      .finally(() => {
-        setTimeout(() => {
-          setTooltip(false);
-        }, 1500);
       });
   };
 
+  useEffect(() => {
+    if (tooltip === false) return;
+    let timer1 = setTimeout(() => setTooltip(false), delay * 1000);
+
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, [tooltip]);
+
   return (
     <div className="flex items-center gap-x-2 relative">
-      {data.map(({ icon, symbol, address, ens }, index) => (
+      {data.map(({ symbol, address, ens }, index) => (
         <div
           key={index}
-          className="flex items-center text-xs opacity-50 hover:opacity-100 cursor-pointer"
+          className="flex items-center text-xs cursor-pointer gap-x-px"
           alt="copy to clipboard"
           onClick={() => handleCopy(ens ?? address)}>
-          {/* <img src={icon} alt="" className="w-3 h-3" /> */}
-          <span className="uppercase">{symbol}</span>
+          {symbol === 'BTC' && <IconBtc />}
+          {symbol === 'ETH' && <IconEth />}
+          {symbol === 'SOL' && <IconSol />}
+          <div className="uppercase">{symbol}</div>
         </div>
       ))}
       {tooltip && (
-        <div className="absolute -top-6 right-0 text-xs uppercase text-center whitespace-nowrap flex items-center gap-x-px">
-          <svg
-            className="scale-50 -mt-px"
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            fillRule="evenodd"
-            clipRule="evenodd">
-            <path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z" />
-          </svg>
-          {copiedText === 'hael.eth' ? copiedText : truncateWalletAddress(copiedText)} copied{' '}
+        <div className="absolute -bottom-6 left-0 text-[10px] uppercase text-center whitespace-nowrap flex items-center gap-x-px">
+          <IconCheck />
+          {copiedText === ensAddress ? copiedText : truncateWalletAddress(copiedText)} copied{' '}
         </div>
       )}
     </div>
