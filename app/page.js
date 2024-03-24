@@ -68,14 +68,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="hidden md:flex justify-between py-4 ">
-                  <p className="mb-0">{footerText}</p>
+                  <p className="mb-0 opacity-50">{footerText}</p>
                   <Wallets data={crypto} />
                 </div>
               </div>
             </div>
             <div className="md:col-span-2 md:order-first mb-4">{projects && <ProjectList items={projects} />}</div>
             <div className="md:hidden flex justify-between py-4">
-              <p className="mb-0">{footerText}</p>
+              <p className="mb-0 opacity-50">{footerText}</p>
               <Wallets data={crypto} />
             </div>
           </div>

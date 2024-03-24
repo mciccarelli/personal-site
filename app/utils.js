@@ -25,3 +25,7 @@ export function useCopyToClipboard() {
 
   return [copiedText, copy];
 }
+
+export function truncateWalletAddress(address, chars = 4) {
+  return `${address.slice(0, chars + 2)}...${address.slice(-chars)}`;
+}

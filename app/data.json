@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements UIs and functional prototypes as a remote contractor based in Brooklyn, New York.</p><p>For over a decade, he has supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p><p>Currently immersed in the world of web3, smart contracts, and decentralized finance (DeFi) — available for freelance, collaborations, and other opportunities.</p>",
+  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements UIs and functional prototypes as a remote contractor based in Brooklyn, New York.</p><p>For over a decade, he has supported various brands and tech startups in enhancing their web presence and digital offerings. This website is my personal online identity and space for select client work, side projects, and experiments.</p><p>Currently immersed in the world of web3 and decentralized finance (DeFi) — available for freelance, collaborations, and other opportunities.</p>",
   "links": [
     {
       "text": "mic[at]hael[dot]cc",
@@ -12,6 +12,10 @@
     {
       "text": "Twitter",
       "href": "https://twitter.com/0xhael"
+    },
+    {
+      "text": "Farcaster",
+      "href": "https://warpcast.com/hael.eth"
     },
     {
       "text": "Instagram",
@@ -33,38 +37,43 @@
       "icon": "/bitcoin-alt.svg",
       "symbol": "BTC",
       "address": "bc1q9h6l4mwpp0nectvh9ykyqqtejxp58jtxynyeq8"
+    },
+    {
+      "icon": "/solana.svg",
+      "symbol": "SOL",
+      "address": "ajWipFscWhbTYDEFv8t7EoQMPaqnVUW3GeCuVpXozuy"
     }
   ],
   "experience": [
     {
       "company": "Freelance",
       "role": false,
-      "tenure": "2016 - "
+      "tenure": "2016 — "
     },
     {
       "company": "Metropolis",
       "role": "Sr. FE Engineer",
-      "tenure": "2022 - "
+      "tenure": "2022 — "
     },
     {
       "company": "Axoni",
       "role": "Sr. Software Engineer",
-      "tenure": "2021 - 2022"
+      "tenure": "2020 — 2022"
     },
     {
       "company": "VICE Media",
       "role": "Lead Engineer",
-      "tenure": "2014 - 2018"
+      "tenure": "2014 — 2018"
     },
     {
       "company": "Grey Group",
       "role": "Web Developer",
-      "tenure": "2013 - 2014"
+      "tenure": "2013 — 2014"
     },
     {
       "company": "Condé Nast",
       "role": "Web Developer",
-      "tenure": "2012 - 2013"
+      "tenure": "2012 — 2013"
     }
   ],
   "clients": [
