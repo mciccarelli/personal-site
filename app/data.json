@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a brooklyn-based software engineer and consultant specializing in web development. He designs, codes and implements user interfaces and functional prototypes.</p><p>For over a decade, Michael has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi).</p>",
+  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements web apps, UIs, and functional prototypes for a living — based in BK/NY.</p><p>For nearly 2 decades, he has supported various brands, tech startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi).</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -8,7 +8,7 @@
     },
     {
       "company": "Metropolis",
-      "role": "Sr. FE Engineer",
+      "role": "FE Engineer",
       "tenure": "2022 — "
     },
     {
@@ -18,12 +18,12 @@
     },
     {
       "company": "VICE Media",
-      "role": "Lead Engineer",
+      "role": "Lead FE Engineer",
       "tenure": "2014 — 2018"
     },
     {
-      "company": "Grey Group",
-      "role": "Web Developer",
+      "company": "Grey",
+      "role": "Creative Technologist",
       "tenure": "2013 — 2014"
     },
     {
@@ -35,12 +35,12 @@
   "clients": [
     "Amazon",
     "Pentagram",
-    "The WELL",
     "Elara Pictures",
+    "Revolve Law Group",
+    "The WELL",
     "Common",
     "WIRED Magazine",
-    "Revolve Law Group",
-    "Spinneybeck"
+    "Knoll"
   ],
   "capabilities": [
     "JavaScript/TypeScript",
@@ -55,11 +55,11 @@
   "contact": [
     {
       "text": "Email",
-      "href": "mailto:mic@hael.cc"
+      "href": "mailto:m@cicc.dev"
     },
     {
-      "text": "+1 917 783 3277",
-      "href": false
+      "text": "Telegram",
+      "href": "http://t.me/mciccarelli"
     },
     {
       "text": "Twitter",
@@ -96,11 +96,11 @@
   "footerLinks": [
     {
       "text": "email",
-      "href": "mailto:mic@hael.cc"
+      "href": "mailto:m@cicc.dev"
     },
     {
-      "text": "Instagram",
-      "href": "https://www.instagram.com/minorvillain"
+      "text": "Telegram",
+      "href": "http://t.me/mciccarelli"
     },
     {
       "text": "Twitter",

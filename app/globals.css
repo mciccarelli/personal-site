@@ -43,7 +43,7 @@ p {
 }
 
 li {
-  @apply text-xs leading-tight uppercase list-none;
+  @apply text-xs leading-tight uppercase list-none mb-px last-of-type:mb-0;
 }
 
 h2 {

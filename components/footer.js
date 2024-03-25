@@ -5,14 +5,14 @@ const Footer = ({ links }) => {
   const currMonth = new Date().getMonth();
   const nextMonth = currMonth + 1 < 12 ? currMonth + 1 : 0;
   const avail = `${MONTH_NAMES[nextMonth]} ${currYear}`;
-  const footerText = `freelance developer<br /> available ${avail}`;
+  const footerText = `freelance developer<br /> <a href="mailto:m@cicc.dev">available ${avail}</a>`;
 
   return (
     <div className="flex justify-between items-end w-full">
-      <p className="mb-0" dangerouslySetInnerHTML={{ __html: footerText }} />
+      <p className="mb-0 text-[10px]" dangerouslySetInnerHTML={{ __html: footerText }} />
       <ul className="text-right flex flex-col items-end">
         {links.map(({ text, href }, index) => (
-          <li key={index} className="">
+          <li key={index} className="text-[10px]">
             {href ? (
               <a href={href} alt="">
                 {text}
