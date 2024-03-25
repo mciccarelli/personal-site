@@ -39,15 +39,15 @@ a:active > svg {
 } */
 
 p {
-  @apply text-xs leading-tight mb-4 uppercase;
+  @apply text-xs leading-tight mb-4 uppercase tracking-wide;
 }
 
 li {
-  @apply text-xs leading-tight uppercase list-none mb-px last-of-type:mb-0;
+  @apply text-xs leading-tight uppercase list-none mb-px last-of-type:mb-0 tracking-wide;
 }
 
 h2 {
-  @apply mx-2 mb-2 text-sm uppercase font-bold;
+  @apply mx-2 mb-2 text-sm uppercase font-bold tracking-wide;
 }
 
 .bio p {

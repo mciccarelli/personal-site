@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements web apps, UIs, and functional prototypes for a living — based in BK/NY.</p><p>For nearly 2 decades, he has supported various brands, tech startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi).</p>",
+  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements UIs and functional prototypes for a living — based in Brooklyn, NY.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi).</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -22,8 +22,8 @@
       "tenure": "2014 — 2018"
     },
     {
-      "company": "Grey",
-      "role": "Creative Technologist",
+      "company": "GREY Group",
+      "role": "Developer",
       "tenure": "2013 — 2014"
     },
     {
