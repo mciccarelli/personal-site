@@ -16,9 +16,11 @@ export default function Sidebar({}) {
             <h2>Experience</h2>
             {experience.map(({ company, role, tenure }, index) => (
               <li key={index} className="grid grid-cols-2 gap-4">
-                <span className="md:col-span-1">
+                <span className="md:col-span-1 flex">
                   {company}
-                  {role ? ',' : ''} {role}
+                  <span className="hidden lg:flex">
+                    {role ? ',' : ''} {role}
+                  </span>
                 </span>
                 <span className="md:col-span-1">{tenure}</span>
               </li>

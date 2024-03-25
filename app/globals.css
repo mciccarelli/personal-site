@@ -23,6 +23,7 @@
 }
 
 body {
+  @apply text-base leading-tight;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
@@ -39,15 +40,15 @@ a:active > svg {
 } */
 
 p {
-  @apply text-xs leading-tight mb-4 uppercase tracking-wide;
+  @apply mb-4 uppercase;
 }
 
 li {
-  @apply text-xs leading-tight uppercase list-none mb-px last-of-type:mb-0 tracking-wide;
+  @apply uppercase list-none mb-px last-of-type:mb-0;
 }
 
 h2 {
-  @apply mx-2 mb-2 text-sm uppercase font-bold tracking-wide;
+  @apply mx-2 mb-2 text-base tracking-wide uppercase font-bold;
 }
 
 .bio p {
@@ -59,35 +60,3 @@ h2 {
     text-wrap: balance;
   }
 }
-
-/* @font-face {
-  font-family: "Cera Pro";
-  src: url("/fonts/CeraPro-RegularItalic.woff2") format("woff2"),
-    url("/fonts/CeraPro-RegularItalic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Cera Pro";
-  src: url("/fonts/CeraPro-Bold.woff2") format("woff2"),
-    url("/fonts/CeraPro-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Cera Pro";
-  src: url("/fonts/CeraPro-Regular.woff2") format("woff2"),
-    url("/fonts/CeraPro-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Cera Pro";
-  src: url("/fonts/CeraPro-BoldItalic.woff2") format("woff2"),
-    url("/fonts/CeraPro-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-} */
