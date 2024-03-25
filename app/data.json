@@ -115,7 +115,7 @@
       "hideLink": true,
       "year": 2024,
       "image": "/projects/food-frames.gif",
-      "description": "<a href=\"https://docs.farcaster.xyz/reference/frames/spec\">Farcaster Frame</a> Development using Frog and Tailwind. The idea was to utilize Farcaster's new Frames standard, to demo a simple flow for visualizing token deployments onchain using the Metal.build smart contract deployment service.",
+      "description": "<a href=\"https://docs.farcaster.xyz/reference/frames/spec\">Farcaster Frame</a> Development using <a href=\"https://frog.fm\">Frog</a>, Next.js. and Tailwind. The concept was to use Farcaster's new Frames standard and demonstrate a simple token deployments using the metal.build tool.",
       "role": "Development"
     },
     {
@@ -124,7 +124,7 @@
       "url": "https://metal.build",
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
-      "description": "dapp built with Next.js, Viem, &amp; TailwindCSS. Single-click smart contract deployments, search for popular contracts, browse starter templates, and interact with them onchain.",
+      "description": "dapp built with Next.js, Viem, Privy, &amp; Tailwind. Single-click smart contract deployments, search for popular contracts, browse starter templates, and interact with them onchain.",
       "role": "FE Development"
     },
     {
@@ -133,7 +133,7 @@
       "url": "https://overabstraction.fm",
       "year": 2023,
       "image": "/projects/oa.png",
-      "description": "Landing page for a crypto podcast series built with Next.js + TailwindCSS",
+      "description": "Landing page for a crypto podcast series built with Next.js + Tailwind",
       "role": "FE Development"
     },
     {
