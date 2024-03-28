@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a freelance software engineer and consultant specializing in web development. He designs, codes and implements user interfaces and functional prototypes — based in Brooklyn, NY.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi).</p>",
+  "bio": "<p>hael.cc is the online identity of michael ciccarelli, a freelance software engineer and consultant specializing in web development. a space for side-projects, experiments, and professional experiences.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi). he is based in NYC, and available for freelance, consulting, and collaborations.</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -44,18 +44,18 @@
   ],
   "capabilities": [
     "JavaScript/TypeScript",
-    "Next.js and React",
+    "Next.js and Node.js",
     "Vercel & cloud infrs.",
-    "Content Management",
-    "E-commerce, Shopify",
-    "APIs, Headless, & Jamstack",
+    "Web3 Development",
+    "Headless CMS & E-commerce",
     "Animation and data viz",
+    "UI/UX design",
     "Figma & Prototyping"
   ],
   "contact": [
     {
       "text": "Email",
-      "href": "mailto:m@cicc.dev"
+      "href": "mailto:mic@hael.cc"
     },
     {
       "text": "Telegram",
@@ -63,7 +63,7 @@
     },
     {
       "text": "Twitter",
-      "href": "https://twitter.com/0xhael"
+      "href": "https://twitter.com/mciccarelli"
     },
     {
       "text": "Instagram",
@@ -81,22 +81,22 @@
   "crypto": [
     {
       "symbol": "ETH",
-      "address": "0x85760ef61c0ccB7BCC4C7A0116d80D59D92e736d",
-      "ens": "ciccarelli.eth"
+      "address": "0xA760265A496869DfF06332a05A5669f3B66e82CA",
+      "ens": "hael.eth"
     },
     {
       "symbol": "BTC",
-      "address": "bc1q6ycngc7e8hjxwdasnlc87rmasa485f0c2p8f97"
+      "address": "bc1q9h6l4mwpp0nectvh9ykyqqtejxp58jtxynyeq8"
     },
     {
       "symbol": "SOL",
-      "address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
+      "address": "ajWipFscWhbTYDEFv8t7EoQMPaqnVUW3GeCuVpXozuy"
     }
   ],
   "footerLinks": [
     {
       "text": "email",
-      "href": "mailto:m@cicc.dev"
+      "href": "mailto:mic@hael.cc"
     },
     {
       "text": "Telegram",
@@ -104,7 +104,7 @@
     },
     {
       "text": "Twitter",
-      "href": "https://twitter.com/0xhael"
+      "href": "https://twitter.com/mciccarelli"
     }
   ],
   "projects": [

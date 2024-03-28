@@ -29,8 +29,8 @@ const CeraPro = localFont({
 });
 
 export const metadata = {
-  title: 'michael ciccarelli',
-  description: 'freelance software engineer and consultant specializing in web development.'
+  title: 'hael.cc',
+  description: 'michael ciccarelli: freelance software engineer and consultant specializing in web development.'
 };
 
 export default function RootLayout({ children }) {
@@ -41,13 +41,13 @@ export default function RootLayout({ children }) {
       <body className={CeraPro.className}>
         <div className="flex min-h-screen flex-col items-center justify-between">
           <div className="flex justify-end w-full">
-            <div className="flex flex-col md:grid md:grid-cols-4 md:gap-x-8 max-w-5xl p-4 lg:p-0">
+            <div className="flex flex-col md:grid md:grid-cols-4 md:gap-x-8 max-w-5xl p-4 xl:p-2">
               <Sidebar />
               <div className="md:col-span-2 md:order-first mb-4">{children}</div>
               <div className="md:hidden flex">
                 <Footer links={footerLinks} />
               </div>
-              <div className="hidden md:block fixed bottom-4 left-4 opacity-50 hover:opacity-75 transition-opacity ease-in-out">
+              <div className="hidden md:block fixed bottom-4 left-5 opacity-20 hover:opacity-50 transition-opacity ease-in-out">
                 <IconC />
               </div>
             </div>

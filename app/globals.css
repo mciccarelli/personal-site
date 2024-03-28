@@ -52,7 +52,7 @@ h2 {
 }
 
 .bio p {
-  @apply mb-4 last-of-type:mb-0;
+  @apply mb-4 last-of-type:mb-0 md:pr-2;
 }
 
 @layer utilities {
