@@ -1,5 +1,5 @@
 import data from '@/app/data.json';
-import { ProjectList, Footer, Wallets } from '@/components';
+import { Footer, Wallets } from '@/components';
 
 export default function Sidebar({}) {
   const { bio, experience, clients, capabilities, contact, footerLinks, crypto, projects } = data;
@@ -62,7 +62,7 @@ export default function Sidebar({}) {
               ))}
             </div>
             <div>
-              <h2>Wallets</h2>
+              <h2>Onchain</h2>
               <Wallets data={crypto} />
             </div>
           </div>
