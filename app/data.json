@@ -1,5 +1,5 @@
 {
-  "bio": "<p>hael.cc is the online identity of michael ciccarelli, a freelance software engineer and consultant specializing in web development. a space for side-projects, experiments, and professional experiences.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the world of web3 and decentralized finance (DeFi). he is based in NYC, and available for freelance, consulting, and collaborations.</p>",
+  "bio": "<p>hael.cc is the online identity of michael ciccarelli, a creative software engineer and consultant specializing in web development.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the fields of web3 and decentralized finance (DeFi). he is based in NYC, and available for freelance, consulting, and collaborations.</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -37,9 +37,9 @@
     "Pentagram",
     "Elara Pictures",
     "Revolve Law Group",
+    "WIRED Magazine",
     "The WELL",
     "Common",
-    "WIRED Magazine",
     "Knoll"
   ],
   "capabilities": [
@@ -99,12 +99,12 @@
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "Telegram",
-      "href": "http://t.me/mciccarelli"
+      "text": "X/Twitter",
+      "href": "https://x.com/0xhael"
     },
     {
-      "text": "Twitter",
-      "href": "https://twitter.com/mciccarelli"
+      "text": "Telegram",
+      "href": "http://t.me/mjjchael"
     }
   ],
   "projects": [
