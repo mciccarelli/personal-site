@@ -1,5 +1,5 @@
 {
-  "bio": "<p>hael.cc is the online identity of michael ciccarelli, a creative software engineer and consultant specializing in web development.</p><p>For over a decade, he has supported various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the fields of web3 and decentralized finance (DeFi). he is based in NYC, and available for freelance, consulting, and collaborations.</p>",
+  "bio": "<p>hael.cc is the personal website of michael ciccarelli, a design engineer and consultant specializing in web development.</p><p>For over a decade, he has worked with various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the fields of web3 and decentralized finance (DeFi).</p><p>Based in NYC — available for freelance and collaborations.</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -58,12 +58,12 @@
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "Telegram",
-      "href": "http://t.me/mjjchael"
+      "text": "X",
+      "href": "https://x.com/0xhael"
     },
     {
-      "text": "X/Twitter",
-      "href": "https://x.com/0xhael"
+      "text": "Telegram",
+      "href": "http://t.me/mcrelli"
     },
     {
       "text": "Instagram",
@@ -71,7 +71,7 @@
     },
     {
       "text": "Farcaster",
-      "href": "https://warpcast.com/hael.eth"
+      "href": "https://warpcast.com/ciccarelli"
     },
     {
       "text": "Github",
@@ -81,16 +81,16 @@
   "crypto": [
     {
       "symbol": "ETH",
-      "address": "0xA760265A496869DfF06332a05A5669f3B66e82CA",
-      "ens": "hael.eth"
+      "address": "0x85760ef61c0ccB7BCC4C7A0116d80D59D92e736d",
+      "ens": "relli.eth"
     },
     {
       "symbol": "BTC",
-      "address": "bc1q9h6l4mwpp0nectvh9ykyqqtejxp58jtxynyeq8"
+      "address": "bc1q6ycngc7e8hjxwdasnlc87rmasa485f0c2p8f97"
     },
     {
       "symbol": "SOL",
-      "address": "ajWipFscWhbTYDEFv8t7EoQMPaqnVUW3GeCuVpXozuy"
+      "address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
     }
   ],
   "footerLinks": [
@@ -99,12 +99,12 @@
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "X/Twitter",
-      "href": "https://x.com/0xhael"
+      "text": "Telegram",
+      "href": "http://t.me/mcrelli"
     },
     {
-      "text": "Telegram",
-      "href": "http://t.me/mjjchael"
+      "text": "X",
+      "href": "https://x.com/0xhael"
     }
   ],
   "projects": [
