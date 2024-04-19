@@ -1,5 +1,5 @@
 {
-  "bio": "<p>hael.cc is the personal website of michael ciccarelli, a design engineer and consultant specializing in web development.</p><p>For over a decade, he has worked with various brands, startups, and individuals in enhancing their digital offerings. currently immersed in the fields of web3 and decentralized finance (DeFi).</p><p>Based in NYC — available for freelance and collaborations.</p>",
+  "bio": "<p>michael ciccarelli is a nyc-based creative developer and consultant specializing in frontend web development. this site is where i share selected client work and experiments involving art/code.</p><p>For over a decade, I've worked with various brands, startups, and people in enhancing their digital offerings. currently immersed in the fields of web3, crypto and decentralized finance (DeFi).</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -58,16 +58,16 @@
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "X",
-      "href": "https://x.com/0xhael"
+      "text": "Calendly",
+      "href": "https://calendly.com/hael/30min"
     },
     {
       "text": "Telegram",
       "href": "http://t.me/mcrelli"
     },
     {
-      "text": "Instagram",
-      "href": "https://www.instagram.com/minorvillain"
+      "text": "X (Twitter)",
+      "href": "https://x.com/0xhael"
     },
     {
       "text": "Farcaster",
@@ -99,12 +99,12 @@
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "Telegram",
-      "href": "http://t.me/mcrelli"
+      "text": "X (Twitter)",
+      "href": "https://x.com/0xhael"
     },
     {
-      "text": "X",
-      "href": "https://x.com/0xhael"
+      "text": "Telegram",
+      "href": "http://t.me/mcrelli"
     }
   ],
   "projects": [

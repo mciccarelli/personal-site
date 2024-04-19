@@ -5,7 +5,7 @@ const Footer = ({ links }) => {
   const currMonth = new Date().getMonth();
   const nextMonth = currMonth + 1 < 12 ? currMonth + 1 : 0;
   const avail = `${MONTH_NAMES[nextMonth]} ${currYear}`;
-  const footerText = `freelance developer<br /> <a href="mailto:mic@hael.cc">available ${avail}</a>`;
+  const footerText = `available for hire: ${avail}<br /><a href="https://calendly.com/hael/30min">project inquiry &rarr;</a>`;
 
   return (
     <div className="flex justify-between items-end w-full">
