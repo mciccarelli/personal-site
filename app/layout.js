@@ -29,8 +29,8 @@ const CeraPro = localFont({
 });
 
 export const metadata = {
-  title: 'hael.cc',
-  description: 'michael ciccarelli — freelance software engineer and consultant specializing in web development.'
+  title: 'michael ciccarelli',
+  description: 'freelance software engineer and consultant specializing in web development.'
 };
 
 export default function RootLayout({ children }) {

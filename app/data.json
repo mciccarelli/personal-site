@@ -1,5 +1,5 @@
 {
-  "bio": "<p>michael ciccarelli is a nyc-based creative developer and consultant specializing in frontend web development. this site is where i share selected client work and experiments involving art/code.</p><p>For over a decade, I've worked with various brands, startups, and people in enhancing their digital offerings. currently immersed in the fields of web3, crypto and decentralized finance (DeFi).</p>",
+  "bio": "<p>michael ciccarelli is a nyc-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals in enhancing their digital offerings.</p><p>currently immersed in the fields of web3, crypto and decentralized finance (DeFi), he is building tools and applications that leverage blockchain technology to create new paradigms for the web.</p>",
   "experience": [
     {
       "company": "Freelance",
@@ -43,23 +43,19 @@
     "Knoll"
   ],
   "capabilities": [
-    "JavaScript/TypeScript",
-    "Next.js and Node.js",
-    "Web3 development",
-    "Vercel & cloud infrs.",
-    "Headless CMS & E-commerce",
-    "Animation and data viz",
-    "UI/UX design",
-    "Figma & Prototyping"
+    "JavaScript (TS)",
+    "Next.js / React",
+    "Node.js and APIs",
+    "Decentralized apps",
+    "Vercel & cloud infrs",
+    "Headless CMS & E-com",
+    "UI/UX design, data viz",
+    "Figma Prototyping"
   ],
   "contact": [
     {
       "text": "Email",
       "href": "mailto:mic@hael.cc"
-    },
-    {
-      "text": "Calendly",
-      "href": "https://calendly.com/hael/30min"
     },
     {
       "text": "Telegram",
