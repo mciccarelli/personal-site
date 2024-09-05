@@ -1,8 +1,8 @@
 {
-  "bio": "<p>michael ciccarelli is a nyc-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals in enhancing their digital offerings.</p><p>currently immersed in the fields of web3, crypto and decentralized finance (DeFi), he is building tools and applications that leverage blockchain technology to create new paradigms for the web.</p>",
+  "bio": "<p>Michael Ciccarelli is a NYC-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals to enhance their digital offerings.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a creative technology studio, he is focused on building innovative tools and applications for consumer-facing products and B2B SaaS, helping businesses in various indistries innovate faster.</p>",
   "experience": [
     {
-      "company": "Freelance",
+      "company": "Consultant",
       "role": false,
       "tenure": "2016 — "
     },
@@ -43,19 +43,19 @@
     "Knoll"
   ],
   "capabilities": [
-    "JavaScript (TS)",
+    "JavaScript / Typescript",
     "Next.js / React",
-    "Node.js and APIs",
+    "REST & GraphQL API",
     "Decentralized apps",
     "Vercel & cloud infrs",
     "Headless CMS & E-com",
-    "UI/UX design, data viz",
+    "UI Motion & Animation",
     "Figma Prototyping"
   ],
   "contact": [
     {
       "text": "Email",
-      "href": "mailto:mic@hael.cc"
+      "href": "mailto:m@ciccarel.li"
     },
     {
       "text": "Telegram",
@@ -92,7 +92,7 @@
   "footerLinks": [
     {
       "text": "email",
-      "href": "mailto:mic@hael.cc"
+      "href": "mailto:m@ciccarel.li"
     },
     {
       "text": "X (Twitter)",
@@ -105,13 +105,23 @@
   ],
   "projects": [
     {
-      "id": 14,
-      "title": "Farcaster Food Frames",
-      "url": "https://food-frame.metal.build/api/food/dev",
-      "hideLink": true,
+      "id": 15,
+      "title": "Fig Buffalo",
+      "url": "https://figbuffalo.com",
+      "hideLink": false,
       "year": 2024,
-      "image": "/projects/food-frames.gif",
-      "description": "<a href=\"https://docs.farcaster.xyz/reference/frames/spec\">Farcaster Frame</a> Development using <a href=\"https://frog.fm\">Frog</a>, Next.js. and Tailwind. The concept was to use Farcaster's new Frames standard and demonstrate a simple token deployments using the metal.build tool.",
+      "image": "/projects/fig.jpg",
+      "description": "Events page for a local Buffalo fashion show built with Next.js, Tailwind, and Stripe for ticket sales.",
+      "role": "Design & Development"
+    },
+    {
+      "id": 14,
+      "title": "KelvonAgee.com",
+      "url": "https://kelvonagee.com",
+      "hideLink": false,
+      "year": 2024,
+      "image": "/projects/kelvon-agee.jpeg",
+      "description": "Portfolio site for a Producer / Director using Next.js. and Tailwind. Includes portfolio UX of various photography and video projects.",
       "role": "Development"
     },
     {
