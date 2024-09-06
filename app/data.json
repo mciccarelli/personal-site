@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a NYC-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals to enhance their digital offerings.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a creative technology studio, he is focused on building innovative tools and applications for consumer-facing products and B2B SaaS, helping businesses in various indistries innovate faster.</p>",
+  "bio": "<p>Michael Ciccarelli is a NYC-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals to enhance their digital offerings.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a creative technology studio, he is focused on building innovative tools and applications for consumer-facing products and B2B SaaS.</p>",
   "experience": [
     {
       "company": "Consultant",
@@ -55,7 +55,7 @@
   "contact": [
     {
       "text": "Email",
-      "href": "mailto:m@ciccarel.li"
+      "href": "mailto:mikecicc@gmail.com"
     },
     {
       "text": "Telegram",
@@ -92,7 +92,7 @@
   "footerLinks": [
     {
       "text": "email",
-      "href": "mailto:m@ciccarel.li"
+      "href": "mailto:mikecicc@gmail.com"
     },
     {
       "text": "X (Twitter)",
