@@ -3,9 +3,9 @@
   "emailAddress": "mikecicc@gmail.com",
   "experience": [
     {
-      "company": "Independent Consultant",
+      "company": "Consulting",
       "role": false,
-      "tenure": "2016 — "
+      "tenure": "2024 — "
     },
     {
       "company": "Sonar Labs, Inc",
@@ -93,22 +93,22 @@
   "projects": [
     {
       "id": 15,
-      "title": "Fig Buffalo",
-      "url": "https://figbuffalo.com",
-      "hideLink": false,
-      "year": 2024,
-      "image": "/projects/fig.jpg",
-      "description": "Event page for an upcoming Buffalo runway fashion show — built with Next.js, TailwindCSS, and Stripe checkout for ticket sales.",
-      "role": "Design & Development"
-    },
-    {
-      "id": 14,
       "title": "KelvonAgee.com",
       "url": "https://kelvonagee.com",
       "hideLink": false,
       "year": 2024,
       "image": "/projects/kelvonagee.jpg",
-      "description": "Portfolio site for an LA-based Producer/Director/Photographer using Next.js, TailwindCSS and Cloundinary for media storage &amp; CDN.",
+      "description": "Portfolio site for a Producer/Director/Photographer using Next.js, TailwindCSS and Framer Motion. Cloundinary for CDN.",
+      "role": "Design & Development"
+    },
+    {
+      "id": 14,
+      "title": "Fig Buffalo",
+      "url": "https://figbuffalo.com",
+      "hideLink": false,
+      "year": 2024,
+      "image": "/projects/fig.jpg",
+      "description": "Event page for a Buffalo fashion show — built with Next.js, TailwindCSS, and Stripe for ticket sales.",
       "role": "Design & Development"
     },
     {
@@ -117,7 +117,7 @@
       "url": "https://metal.build",
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
-      "description": "decentralized app built with Next.js, Viem, &amp; Privy. Single-click smart contract deployments, starter templates, visualize and interact with onchain data.",
+      "description": "decentralized app built with Next.js, Viem, &amp; Privy. Smart contract deployments, starter templates, visualize and interact with onchain data.",
       "role": "FE Development"
     },
     {
