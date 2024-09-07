@@ -5,7 +5,7 @@ const ProjectList = ({ items }) => {
   return (
     <div className="py-8">
       <h2>Recent Projects</h2>
-      <div className="flex flex-col gap-y-8">
+      <div className="flex flex-col gap-y-10 md:gap-y-20">
         {items.map(({ id, title, description, year, role, image, url, hideLink }, index) => {
           return (
             <div key={index}>

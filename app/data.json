@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a NYC-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals to enhance their digital offerings.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a creative technology studio, he is focused on building innovative tools and applications for consumer-facing products and B2B SaaS.</p>",
+  "bio": "<p>Michael Ciccarelli is a Brooklyn-based creative developer with over a decade of experience collaborating with brands, startups, and individuals to elevate their digital experiences.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a software consultancy, he specializes in crafting web applications user interfaces for consumer-facing products and B2B SaaS solutions.</p>",
   "emailAddress": "mikecicc@gmail.com",
   "experience": [
     {
@@ -67,8 +67,8 @@
       "href": "https://x.com/mcrxlli"
     },
     {
-      "text": "Farcaster",
-      "href": "https://warpcast.com/ciccarelli"
+      "text": "Instagram",
+      "href": "https://instagram.com/fvckarelli"
     },
     {
       "text": "Github",
@@ -98,7 +98,7 @@
       "hideLink": false,
       "year": 2024,
       "image": "/projects/fig.jpg",
-      "description": "Events page for a local Buffalo fashion show built with Next.js, Tailwind, and Stripe for ticket sales.",
+      "description": "Event page for an upcoming Buffalo runway fashion show — built with Next.js, TailwindCSS, and Stripe checkout for ticket sales.",
       "role": "Design & Development"
     },
     {
@@ -108,7 +108,7 @@
       "hideLink": false,
       "year": 2024,
       "image": "/projects/kelvonagee.jpg",
-      "description": "Portfolio site for a Producer / Director using Next.js. and Tailwind. Includes portfolio UX of various photography and video projects.",
+      "description": "Portfolio site for an LA-based Producer/Director/Photographer using Next.js, TailwindCSS and Cloundinary for media storage &amp; CDN.",
       "role": "Development"
     },
     {
@@ -117,7 +117,7 @@
       "url": "https://metal.build",
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
-      "description": "dapp built with Next.js, Viem, Privy, &amp; Tailwind. Single-click smart contract deployments, search for popular contracts, browse starter templates, and interact with them onchain.",
+      "description": "decentralized app built with Next.js, Viem, &amp; Privy. Single-click smart contract deployments, starter templates, visualize and interact with onchain data.",
       "role": "FE Development"
     },
     {
@@ -203,11 +203,11 @@
     },
     {
       "id": 2,
-      "title": "VICELAND",
+      "title": "VICE TV",
       "url": "https://vicetv.com",
       "year": 2016,
       "image": "/projects/vice-tv.png",
-      "description": "Video streaming for VICE, built with Next.js and Video.js",
+      "description": "Video streaming for VICE, built with React, Node, and Video.js",
       "role": "FE development"
     },
     {
