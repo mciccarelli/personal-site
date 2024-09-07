@@ -1,8 +1,9 @@
 {
   "bio": "<p>Michael Ciccarelli is a NYC-based software engineer specializing in web development. For over a decade, he has worked with brands, startups, and individuals to enhance their digital offerings.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a creative technology studio, he is focused on building innovative tools and applications for consumer-facing products and B2B SaaS.</p>",
+  "emailAddress": "mikecicc@gmail.com",
   "experience": [
     {
-      "company": "Consultant",
+      "company": "Independent Consultant",
       "role": false,
       "tenure": "2016 — "
     },
@@ -43,14 +44,14 @@
     "Knoll"
   ],
   "capabilities": [
-    "JavaScript / Typescript",
-    "Next.js / React",
-    "REST & GraphQL API",
-    "Decentralized apps",
+    "JavaScript, Typescript",
+    "Next.js, Remix, React, Vue",
+    "Radix UI, Tailwind, CSS-in-JS",
+    "REST & GraphQL APIs",
+    "DeFi, Decentralized apps",
     "Vercel & cloud infrs",
-    "Headless CMS & E-com",
-    "UI Motion & Animation",
-    "Figma Prototyping"
+    "Headless CMS & E-commerce",
+    "UI Design, Motion & Animation"
   ],
   "contact": [
     {
@@ -87,20 +88,6 @@
     {
       "symbol": "SOL",
       "address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
-    }
-  ],
-  "footerLinks": [
-    {
-      "text": "email",
-      "href": "mailto:mikecicc@gmail.com"
-    },
-    {
-      "text": "X (Twitter)",
-      "href": "https://x.com/mcrxlli"
-    },
-    {
-      "text": "Telegram",
-      "href": "http://t.me/mcrelli"
     }
   ],
   "projects": [

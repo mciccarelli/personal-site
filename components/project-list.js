@@ -4,7 +4,7 @@ import { ScrollBlurImage } from '@/components';
 const ProjectList = ({ items }) => {
   return (
     <div className="py-8">
-      <h2>Selected Projects</h2>
+      <h2>Recent Projects</h2>
       <div className="flex flex-col gap-y-8">
         {items.map(({ id, title, description, year, role, image, url, hideLink }, index) => {
           return (
