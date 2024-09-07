@@ -1,11 +1,11 @@
 {
-  "bio": "<p>Michael Ciccarelli is a Brooklyn-based creative developer with over a decade of experience collaborating with brands, startups, and individuals to elevate their digital experiences.</p><p>As the founder of <a href='https://kolumn.co'>kolumn</a>, a software consultancy, he specializes in crafting web applications user interfaces for consumer-facing products and B2B SaaS solutions.</p>",
+  "bio": "<p>Michael Ciccarelli is a full-stack web developer with over a decade of experience building applications in consumer markets (e-comm, social platforms), and b2b SaaS (finance, marketing, etc). <p>Based in Brooklyn, he leads an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, partnering with brands, startups, and individuals from diverse industries to elevate their digital experiences.</p>",
   "emailAddress": "mikecicc@gmail.com",
   "experience": [
     {
       "company": "Consulting",
       "role": false,
-      "tenure": "2024 — "
+      "tenure": "2016 — "
     },
     {
       "company": "Sonar Labs, Inc",
