@@ -37,7 +37,7 @@ export default function Sidebar({}) {
               ))}
             </div>
             <div>
-              <h2>Capabilities</h2>
+              <h2>Technical Skills</h2>
               {capabilities.map((skill, index) => (
                 <li key={index} className="">
                   {skill}

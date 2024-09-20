@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a full-stack web developer with over a decade of experience building applications in consumer markets (e-comm, social platforms), and b2b SaaS (finance, marketing, etc). <p>Based in Brooklyn, he leads an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, partnering with brands, startups, and individuals from diverse industries to elevate their digital experiences.</p>",
+  "bio": "<p>Michael Ciccarelli is a full-stack web developer with over a decade of experience building high-performing applications for consumer markets (e-commerce, social platforms) and B2B SaaS (finance, marketing, and more).</p><p>Based in Brooklyn, he runs an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, partnering with brands, startups, and individuals across industries to create impactful digital experiences.</p>",
   "emailAddress": "mikecicc@gmail.com",
   "experience": [
     {
@@ -8,7 +8,7 @@
       "tenure": "2016 — "
     },
     {
-      "company": "Sonar Labs, Inc",
+      "company": "Metropolis",
       "role": "Sr. FE Engineer",
       "tenure": "2022 — 2024"
     },
@@ -37,21 +37,21 @@
     "Pentagram",
     "Elara Pictures",
     "Revolve Law Group",
-    "ONE/OF",
     "XCM (Amazon)",
+    "ONE/OF",
     "The WELL",
     "Common",
     "Knoll"
   ],
   "capabilities": [
-    "JavaScript, Typescript",
-    "Next.js, Remix, React, Vue",
-    "Radix UI, Tailwind, CSS-in-JS",
-    "RESTful & GraphQL APIs",
-    "Web3, Decentralized apps",
+    "JavaScript/Typescript",
+    "Next.js, React, Vite, Vue",
+    "Radix UI, TailwindCSS",
+    "Decentralized apps",
     "Vercel & cloud infrs",
     "Headless CMS & E-commerce",
-    "UI design, motion & animation"
+    "Figma, Sketch, Adobe CC",
+    "UI Motion & Animation"
   ],
   "contact": [
     {
@@ -92,6 +92,16 @@
   ],
   "projects": [
     {
+      "id": 16,
+      "title": "The Bar",
+      "url": "https://the-bar-eta.vercel.app",
+      "hideLink": false,
+      "year": 2024,
+      "image": "/projects/the-bar-2024.jpg",
+      "description": "Awards/Portfolio site for an Amazon internal creative agency using Next.js, TailwindCSS and Framer Motion. Sanity for headless CMS.",
+      "role": "Development"
+    },
+    {
       "id": 15,
       "title": "KelvonAgee.com",
       "url": "https://kelvonagee.com",
@@ -118,15 +128,6 @@
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
       "description": "decentralized app built with Next.js, Viem, &amp; Privy. Smart contract deployments, starter templates, visualize and interact with onchain data.",
-      "role": "FE Development"
-    },
-    {
-      "id": 12,
-      "title": "Over Abstraction",
-      "url": "https://overabstraction.fm",
-      "year": 2023,
-      "image": "/projects/oa.png",
-      "description": "Landing page for a crypto podcast series built with Next.js + Tailwind",
       "role": "FE Development"
     },
     {
