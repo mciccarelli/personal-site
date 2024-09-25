@@ -8,19 +8,28 @@ const ProjectList = ({ items }) => {
       <div className="flex flex-col gap-y-10 md:gap-y-20">
         {items.map(({ id, title, description, year, role, image, url, hideLink }, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="flex flex-col gap-y2">
               <div className="block px-2">
-                <ScrollBlurImage imageUrl={image} />
-              </div>
-              <h2 className="mb-2">{title}</h2>
-              <p className="mb-2" dangerouslySetInnerHTML={{ __html: description }} />
-              <p className="mb-0">
-                {!hideLink && (
+                {!hideLink ? (
                   <a href={url} target="_blank">
-                    Visit Website &rarr;
+                    <ScrollBlurImage imageUrl={image} />
                   </a>
+                ) : (
+                  <ScrollBlurImage imageUrl={image} />
                 )}
-              </p>
+              </div>
+              <h2>{title}</h2>
+              <p dangerouslySetInnerHTML={{ __html: description }} />
+              <div className="px-2 flex items-center justify-between">
+                <p dangerouslySetInnerHTML={{ __html: role }} />
+                <p>
+                  {!hideLink && (
+                    <a href={url} target="_blank">
+                      Visit Website &rarr;
+                    </a>
+                  )}
+                </p>
+              </div>
             </div>
           );
         })}

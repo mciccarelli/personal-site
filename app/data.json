@@ -1,6 +1,7 @@
 {
-  "bio": "<p>Michael Ciccarelli is a full-stack web developer with over a decade of experience building high-performing applications for consumer markets (e-commerce, social platforms) and B2B SaaS (finance, marketing, and more).</p><p>Based in Brooklyn, he runs an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, partnering with brands, startups, and individuals across industries to create impactful digital experiences.</p>",
+  "bio": "<p>Michael Ciccarelli is a front-end/UI specialist and full-stack developer with two decades of experience building everything from e-commerce platforms to B2B SaaS solutions. He focuses on creating responsive, visually engaging web applications that incorporate smooth motion and animation for a more dynamic user experience.</p><p>Based in Brooklyn, Michael runs an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, collaborating with brands, startups, and individuals to craft digital experiences that resonate. Whether you're launching something new or refining an existing product, he's here to help bring your vision to life with polished, interactive design and performance in mind.</p>",
   "emailAddress": "mikecicc@gmail.com",
+  "resume": "/michael_ciccarelli-resume.pdf",
   "experience": [
     {
       "company": "Consulting",
@@ -9,17 +10,17 @@
     },
     {
       "company": "Metropolis",
-      "role": "Sr. FE Engineer",
+      "role": "Senior FE Engineer",
       "tenure": "2022 — 2024"
     },
     {
       "company": "Axoni",
-      "role": "Sr. Software Engineer",
+      "role": "Software Engineer",
       "tenure": "2020 — 2022"
     },
     {
       "company": "VICE Media",
-      "role": "Lead FE Engineer",
+      "role": "Engineering Manager",
       "tenure": "2014 — 2018"
     },
     {
@@ -44,14 +45,14 @@
     "Knoll"
   ],
   "capabilities": [
-    "JavaScript/Typescript",
+    "JavaScript/TypeScript",
     "Next.js, React, Vite, Vue",
-    "Radix UI, TailwindCSS",
-    "Decentralized apps",
-    "Vercel & cloud infrs",
-    "Headless CMS & E-commerce",
-    "Figma, Sketch, Adobe CC",
-    "UI Motion & Animation"
+    "TailwindCSS, Radix UI",
+    "Web3, DeFi & dApps",
+    "AWS, Vercel & cloud infrs",
+    "Publishing & Headless CMS",
+    "Payment & e-commerce",
+    "Figma, Sketch, Adobe CC"
   ],
   "contact": [
     {
