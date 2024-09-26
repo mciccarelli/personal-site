@@ -4,7 +4,7 @@
   "resume": "/michael_ciccarelli-resume.pdf",
   "experience": [
     {
-      "company": "Consulting",
+      "company": "Independent Consultant",
       "role": false,
       "tenure": "2016 — "
     },
@@ -20,18 +20,13 @@
     },
     {
       "company": "VICE Media",
-      "role": "Engineering Manager",
+      "role": "Lead Engineer",
       "tenure": "2014 — 2018"
-    },
-    {
-      "company": "GREY Group",
-      "role": "Web Developer",
-      "tenure": "2013 — 2014"
     },
     {
       "company": "Condé Nast",
       "role": "Web Developer",
-      "tenure": "2012 — 2013"
+      "tenure": "2012 — 2014"
     }
   ],
   "clients": [
