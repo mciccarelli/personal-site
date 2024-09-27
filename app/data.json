@@ -1,5 +1,5 @@
 {
-  "bio": "<p>Michael Ciccarelli is a front-end/UI specialist and full-stack developer with two decades of experience building everything from e-commerce platforms to B2B SaaS solutions. He focuses on creating responsive, visually engaging web applications that incorporate smooth motion and animation for a more dynamic user experience.</p><p>Based in Brooklyn, Michael runs an independent <a href='https://kolumn.co' title='kolumn.com'>software consultancy</a>, collaborating with brands, startups, and individuals to craft digital experiences that resonate. Whether you're launching something new or refining an existing product, he's here to help bring your vision to life with polished, interactive design and performance in mind.</p>",
+  "bio": "<p>Michael Ciccarelli is a front-end/UI specialist and full-stack developer with two decades of experience building publishing platforms, e-commerce sites, and B2B SaaS solutions. He focuses on creating responsive, visually engaging web apps with smooth motion and animation for a dynamic user experience.</p><p>Based in Brooklyn, he runs an independent <a href='https://kolumn.co' title='kolumn'>software consultancy</a>, working with brands, startups, and individuals to create custom apps and engaging digital experiences.</p>",
   "emailAddress": "mikecicc@gmail.com",
   "resume": "/michael_ciccarelli-resume.pdf",
   "experience": [
@@ -32,22 +32,24 @@
   "clients": [
     "Pentagram",
     "Elara Pictures",
-    "Revolve Law Group",
-    "XCM (Amazon)",
-    "ONE/OF",
+    "Amazon XCM",
     "The WELL",
+    "ONE/OF",
+    "Revolve",
     "Common",
+    "Grey",
     "Knoll"
   ],
   "capabilities": [
     "JavaScript/TypeScript",
-    "Next.js, React, Vite, Vue",
-    "TailwindCSS, Radix UI",
-    "Web3, DeFi & dApps",
-    "AWS, Vercel & cloud infrs",
-    "Publishing & Headless CMS",
-    "Payment & e-commerce",
-    "Figma, Sketch, Adobe CC"
+    "React, Next.js, Svelte, Vue",
+    "E-commerce, payments, SaaS",
+    "Publishing, CMS, CDN & SEO",
+    "Headless, cloud-based infra.",
+    "Web3 & Blockchain",
+    "Animations & Motion",
+    "Tailwind CSS, Radix UI",
+    "Figma, Framer, Adobe"
   ],
   "contact": [
     {
@@ -65,6 +67,10 @@
     {
       "text": "Instagram",
       "href": "https://instagram.com/fvckarelli"
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://linkedin.com/in/mciccarelli"
     },
     {
       "text": "Github",

@@ -44,7 +44,7 @@ export default function Sidebar({}) {
               ))}
             </div>
             <div>
-              <h2>Technical Skills</h2>
+              <h2>Capabilities</h2>
               {capabilities.map((skill, index) => (
                 <li key={index} className="">
                   {skill}
@@ -55,7 +55,7 @@ export default function Sidebar({}) {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <h2>Contact</h2>
+              <h2>Socials</h2>
               {contact.map(({ text, href }, index) => (
                 <li key={index} className="">
                   {href ? (
