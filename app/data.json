@@ -1,67 +1,17 @@
 {
-  "bio": "<p>Michael Ciccarelli is a front-end/UI specialist and full-stack developer with two decades of experience building publishing platforms, e-commerce sites, and B2B SaaS solutions. He focuses on creating responsive, visually engaging web apps with smooth motion and animation for a dynamic user experience.</p><p>Based in Brooklyn, he runs an independent <a href='https://kolumn.co' title='kolumn'>software consultancy</a>, working with brands, startups, and individuals to create custom apps and engaging digital experiences.</p>",
-  "emailAddress": "mikecicc@gmail.com",
+  "siteTitle": "Michael Ciccarelli",
+  "siteDescription": "software engineer and consultant specializing in frontend/ui development.",
+  "headline": "creative developer",
+  "bio": "<p>Michael Ciccarelli is a seasoned software engineer with a focus on front-end/UI, creating responsive, visually engaging web apps with smooth motion and animation for a dynamic user experience.</p><p>Based in Brooklyn, he runs a boutique <a href='http://kolumn.co'>development studio</a>, working with a range of clients—from startups to enterprise—building publishing platforms, e-commerce sites, and B2B SaaS solutions.</p>",
+  "emailAddress": "mic@hael.cc",
   "resume": "/michael_ciccarelli-resume.pdf",
-  "experience": [
-    {
-      "company": "Independent Consultant",
-      "role": false,
-      "tenure": "2016 — "
-    },
-    {
-      "company": "Metropolis",
-      "role": "Senior FE Engineer",
-      "tenure": "2022 — 2024"
-    },
-    {
-      "company": "Axoni",
-      "role": "Senior Engineer II",
-      "tenure": "2020 — 2022"
-    },
-    {
-      "company": "VICE Media",
-      "role": "Lead Engineer",
-      "tenure": "2014 — 2018"
-    },
-    {
-      "company": "Condé Nast",
-      "role": "Web Developer",
-      "tenure": "2012 — 2014"
-    }
-  ],
-  "clients": [
-    "Pentagram",
-    "Elara Pictures",
-    "Amazon XCM",
-    "The WELL",
-    "ONE/OF",
-    "Revolve",
-    "Common",
-    "Grey",
-    "Knoll"
-  ],
-  "capabilities": [
-    "JavaScript/TypeScript",
-    "React, Next.js, Svelte, Vue",
-    "E-commerce, payments, SaaS",
-    "Publishing, CMS, CDN & SEO",
-    "Headless, cloud-based infra.",
-    "Web3 & Blockchain",
-    "Animations & Motion",
-    "Tailwind CSS, Radix UI",
-    "Figma, Framer, Adobe"
-  ],
-  "contact": [
-    {
-      "text": "Email",
-      "href": "mailto:mikecicc@gmail.com"
-    },
+  "links": [
     {
       "text": "Telegram",
       "href": "http://t.me/mcrelli"
     },
     {
-      "text": "X (Twitter)",
+      "text": "Twitter/X",
       "href": "https://x.com/mcrxlli"
     },
     {
@@ -77,11 +27,11 @@
       "href": "https://github.com/mciccarelli"
     }
   ],
-  "crypto": [
+  "wallets": [
     {
       "symbol": "ETH",
       "address": "0x85760ef61c0ccB7BCC4C7A0116d80D59D92e736d",
-      "ens": "relli.eth"
+      "ens": "hael.eth"
     },
     {
       "symbol": "BTC",
@@ -94,133 +44,81 @@
   ],
   "projects": [
     {
-      "id": 16,
       "title": "The Bar",
       "url": "https://the-bar-eta.vercel.app",
-      "hideLink": false,
       "year": 2024,
       "image": "/projects/the-bar-2024.jpg",
-      "description": "Awards/Portfolio site for an Amazon internal creative agency using Next.js, TailwindCSS and Framer Motion. Sanity for headless CMS.",
-      "role": "Development"
+      "description": "Portfolio site for Amazon XCM. Next.js/Sanity, Tailwind CSS & Framer Motion."
     },
     {
-      "id": 15,
       "title": "KelvonAgee.com",
       "url": "https://kelvonagee.com",
-      "hideLink": false,
       "year": 2024,
       "image": "/projects/kelvonagee.jpg",
-      "description": "Portfolio site for a Producer, Director, and Director of Photography (DP) using Next.js, TailwindCSS and Framer Motion. Cloundinary for CDN.",
-      "role": "Design & Development"
+      "description": "Personal website. Next.js/Cloudinary, Tailwind CSS & Framer Motion."
     },
     {
-      "id": 14,
-      "title": "Fig Buffalo",
+      "title": "FIG Fashion Show",
       "url": "https://figbuffalo.com",
-      "hideLink": false,
       "year": 2024,
       "image": "/projects/fig.jpg",
-      "description": "Event page for a Buffalo fashion show — built with Next.js, TailwindCSS, and Stripe for ticket sales.",
-      "role": "Design & Development"
+      "description": "Events lander page, Next.js, TailwindCSS, and Stripe."
     },
     {
-      "id": 13,
       "title": "Metal",
       "url": "https://metal.build",
       "year": 2024,
       "image": "/projects/metal-deploy-onbase.png",
-      "description": "decentralized app built with Next.js, Viem, &amp; Privy. Smart contract deployments, starter templates, visualize and interact with onchain data.",
-      "role": "FE Development"
+      "description": "dApp for deploying smart contracts. Next.js, Viem, &amp; Privy."
     },
     {
-      "id": 10,
-      "title": "pod.xyz",
+      "title": "Pod.xyz",
       "url": "https://pod.xyz",
       "year": 2023,
       "image": "/projects/podarchy.png",
-      "description": "dapp built with Next.js, Ethers, and React Flow spatial interface for visualizing smart contracts and blockchain data.",
-      "role": "FE Development"
+      "description": "dApp for DAO Governance. Next.js, Ethers, and React Flow."
     },
     {
-      "id": 9,
-      "title": "ELARA.WORLD",
+      "title": "Elara.world",
       "url": "https://elara.world",
       "year": 2021,
       "image": "/projects/elara-world.png",
-      "description": "Community site for Elara Pictures, to feature music, videos, and merch. Built with Next.js, Sanity, and Shopify headless.",
-      "role": "Fullstack development"
+      "description": "Community / Merch site. Next.js, Sanity, and Shopify."
     },
     {
-      "id": 9,
-      "title": "The BAR",
-      "url": "https://amazonthe.bar",
-      "year": 2022,
-      "image": "/projects/the-bar.png",
-      "description": "Portfolio site built with Next.js + Sanity.io headless CMS",
-      "role": "Fullstack Development"
-    },
-    {
-      "id": 7,
       "title": "The Well",
       "url": "https://the-well.com",
       "year": 2020,
       "image": "/projects/the-well.png",
-      "description": "Editorial and e-commerce site built with Next.js, Shopify, and Sanity",
-      "role": "Fullstack development"
+      "description": "E-commerce & booking site. Vue.js, Sanity, and Shopify."
     },
     {
-      "id": 6,
       "title": "Revolve Law",
       "url": "https://revolvelawgroup.com",
       "year": 2019,
       "image": "/projects/revolve-law.png",
-      "description": "Single-page website for a law firm, built with React and Framer motion.",
-      "role": "FE Development"
+      "description": "Brochure-style business site. Next.js and Framer motion."
     },
     {
-      "id": 5,
-      "title": "Common Studio",
-      "url": "https://common.com/studio",
-      "year": 2018,
-      "image": "/projects/common-studio.png",
-      "description": "Single-page, lead gen website, built with Next.js and Contentful CMS.",
-      "role": "FE Development"
-    },
-    {
-      "id": 4,
       "title": "G9 Ventures",
       "url": "https://g9.ventures",
       "year": 2018,
       "image": "/projects/g9-ventures.png",
-      "description": "Portfolio site for a VC firm, built with React.js.",
-      "role": "Fullstack development"
+      "description": "For Pentagram, portfolio site for VC. React.js & Framer Motion."
     },
     {
-      "id": 3,
       "title": "Venn Skincare",
       "url": "https://vennskincare.com",
       "year": 2017,
       "image": "/projects/venn.png",
-      "description": "e-commerce/product website built with Shopify.",
-      "role": "FE development"
+      "description": "E-commerce with Shopify."
     },
     {
-      "id": 2,
-      "title": "VICE TV",
-      "url": "https://vicetv.com",
-      "year": 2016,
-      "image": "/projects/vice-tv.png",
-      "description": "Video streaming for VICE, built with React, Node, and Video.js",
-      "role": "FE development"
-    },
-    {
-      "id": 1,
       "title": "Design Tool",
       "url": "https://dt.filzfelt.com",
       "year": 2016,
       "image": "/projects/dt-filzfelt.png",
-      "description": "Tool for designers to configure custom wall panels, built with Vue and d3.js",
-      "role": "FE development"
+      "description": "Textile design tool. Vue.js and d3.js"
     }
   ]
 }

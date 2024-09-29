@@ -2,57 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 22, 22, 22, 0.85;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 248, 248, 248; */
-    --foreground-rgb: 186, 196, 184, 0.85;
-    --background-start-rgb: 22, 22, 22;
-    --background-end-rgb: 22, 22, 22;
-  }
-
-  a:hover,
-  a:active {
-    color: rgba(186, 196, 184, 1) !important;
-  }
-}
-
 body {
-  @apply text-base leading-tight;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  @apply text-base bg-black text-snow;
 }
 
 a:hover,
 a:active {
-  @apply underline;
-  color: rgba(22, 22, 22, 1);
+  @apply underline text-white/90;
 }
 
-/* a:hover > svg,
-a:active > svg {
-  @apply opacity-75 transition-opacity duration-200 delay-100;
-} */
-
 p {
-  @apply mb-4 uppercase;
+  @apply mb-4 last-of-type:mb-0;
 }
 
 li {
-  @apply uppercase list-none mb-px last-of-type:mb-0;
+  @apply list-none mb-px last-of-type:mb-0;
 }
 
 h2 {
-  @apply mx-2 mb-2 text-base tracking-wide uppercase font-bold;
-}
-
-.bio p {
-  @apply mb-4 last-of-type:mb-0 md:pr-2;
+  @apply mb-2 text-base tracking-wide uppercase font-bold;
 }
 
 @layer utilities {

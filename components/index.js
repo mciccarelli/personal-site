@@ -6,5 +6,5 @@ export { default as IconEth } from './icon-eth';
 export { default as IconSol } from './icon-sol';
 export { default as ProjectList } from './project-list';
 export { default as ScrollBlurImage } from './scroll-blur-image';
-export { default as Sidebar } from './sidebar';
+export { default as ScrambledText } from './scrambled-text';
 export { default as Wallets } from './wallets';

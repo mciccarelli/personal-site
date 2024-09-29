@@ -34,21 +34,21 @@ export default function Wallets({ data }) {
   }, [tooltip]);
 
   return (
-    <div className="flex items-center gap-x-2 relative">
+    <div className="flex items-center gap-x-1.5 relative">
       {data.map(({ symbol, address, ens }, index) => (
         <div
           key={index}
-          className="flex items-center cursor-pointer gap-x-1"
+          className="flex items-center cursor-pointer gap-x-1 opacity-10 hover:opacity-100 transition-opacity"
           alt="copy to clipboard"
           onClick={() => handleCopy(ens ?? address)}>
           {symbol === 'BTC' && <IconBtc />}
           {symbol === 'ETH' && <IconEth />}
           {symbol === 'SOL' && <IconSol />}
-          <div className="uppercase">{symbol}</div>
+          {/* <div className="uppercase">{symbol}</div> */}
         </div>
       ))}
       {tooltip && (
-        <div className="absolute -bottom-6 left-0 uppercase text-center whitespace-nowrap flex items-center gap-x-px">
+        <div className="absolute -top-6 right-0 uppercase text-center whitespace-nowrap flex items-center gap-x-px">
           <IconCheck />
           {copiedText === ensAddress ? copiedText : truncateWalletAddress(copiedText)} copied{' '}
         </div>

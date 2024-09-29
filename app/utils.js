@@ -1,6 +1,12 @@
 'use client';
 
 import { useCallback, useState } from 'react';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
 
 export function useCopyToClipboard() {
   const [copiedText, setCopiedText] = useState(null);
