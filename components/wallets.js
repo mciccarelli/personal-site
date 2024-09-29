@@ -40,7 +40,7 @@ export default function Wallets({ data }) {
           key={index}
           className="flex items-center cursor-pointer gap-x-1 opacity-10 hover:opacity-100 transition-opacity"
           alt="copy to clipboard"
-          onClick={() => handleCopy(ens ?? address)}>
+          onClick={() => handleCopy(address)}>
           {symbol === 'BTC' && <IconBtc />}
           {symbol === 'ETH' && <IconEth />}
           {symbol === 'SOL' && <IconSol />}
@@ -50,7 +50,7 @@ export default function Wallets({ data }) {
       {tooltip && (
         <div className="absolute -top-6 right-0 uppercase text-center whitespace-nowrap flex items-center gap-x-px">
           <IconCheck />
-          {copiedText === ensAddress ? copiedText : truncateWalletAddress(copiedText)} copied{' '}
+          {truncateWalletAddress(copiedText)} copied{' '}
         </div>
       )}
     </div>

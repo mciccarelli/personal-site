@@ -50,7 +50,7 @@ const ScrambledText = () => {
 
   return (
     <div
-      className="flex items-center cursor-default"
+      className="flex items-center cursor-default hover:text-white/20"
       onMouseEnter={() => setIsHovering(true)} // Start animation on mouse over
       onMouseLeave={() => setIsHovering(false)} // Reset animation on mouse leave
     >
