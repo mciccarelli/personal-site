@@ -71,14 +71,14 @@
     {
       "title": "Metal",
       "url": "https://metal.build",
-      "year": 2024,
+      "year": 2023,
       "image": "/projects/metal-deploy-onbase.png",
       "description": "dApp for deploying smart contracts. Next.js, Viem, &amp; Privy."
     },
     {
       "title": "Pod.xyz",
       "url": "https://pod.xyz",
-      "year": 2023,
+      "year": 2022,
       "image": "/projects/podarchy.png",
       "description": "dApp for DAO Governance. Next.js, Ethers, and React Flow."
     },
@@ -102,27 +102,6 @@
       "year": 2019,
       "image": "/projects/revolve-law.png",
       "description": "Brochure-style business site. Next.js and Framer motion."
-    },
-    {
-      "title": "G9 Ventures",
-      "url": "https://g9.ventures",
-      "year": 2018,
-      "image": "/projects/g9-ventures.png",
-      "description": "For Pentagram, portfolio site for VC. React.js & Framer Motion."
-    },
-    {
-      "title": "Venn Skincare",
-      "url": "https://vennskincare.com",
-      "year": 2017,
-      "image": "/projects/venn.png",
-      "description": "E-commerce with Shopify."
-    },
-    {
-      "title": "Design Tool",
-      "url": "https://dt.filzfelt.com",
-      "year": 2016,
-      "image": "/projects/dt-filzfelt.png",
-      "description": "Textile design tool. Vue.js and d3.js"
     }
   ]
 }

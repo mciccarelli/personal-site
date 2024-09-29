@@ -38,7 +38,7 @@ export default function Wallets({ data }) {
       {data.map(({ symbol, address, ens }, index) => (
         <div
           key={index}
-          className="flex items-center cursor-pointer gap-x-1 opacity-10 hover:opacity-100 transition-opacity"
+          className="flex items-center cursor-pointer gap-x-1 opacity-20 hover:opacity-100 transition-opacity"
           alt="copy to clipboard"
           onClick={() => handleCopy(address)}>
           {symbol === 'BTC' && <IconBtc />}

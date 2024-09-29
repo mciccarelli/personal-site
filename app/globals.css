@@ -8,7 +8,7 @@ body {
 
 a:hover,
 a:active {
-  @apply underline text-white/90;
+  @apply underline text-snow/90;
 }
 
 p {

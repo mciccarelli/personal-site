@@ -14,7 +14,10 @@ export default function Home() {
             For all inquiries, please email: <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
           </p>
         </div>
-        {projects && <ProjectList items={projects} />}
+        <div>
+          <h2>Recent Projects</h2>
+          <ProjectList items={projects} />
+        </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
