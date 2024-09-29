@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={CeraPro.className}>
         <div className="min-h-dvh p-4 flex flex-col gap-y-4 justify-between">
-          <header className="grid grid-cols-3 max-w-4xl">
+          <header className="grid grid-cols-1 md:grid-cols-3 max-w-4xl">
             <div className="col-span-1">
               <ScrambledText />
             </div>

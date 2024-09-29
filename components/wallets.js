@@ -34,7 +34,7 @@ export default function Wallets({ data }) {
   }, [tooltip]);
 
   return (
-    <div className="flex items-center gap-x-1.5 relative">
+    <div className="flex items-center md:justify-end gap-x-1.5 relative w-full">
       {data.map(({ symbol, address, ens }, index) => (
         <div
           key={index}
@@ -48,7 +48,7 @@ export default function Wallets({ data }) {
         </div>
       ))}
       {tooltip && (
-        <div className="absolute -top-6 right-0 uppercase text-center whitespace-nowrap flex items-center gap-x-px">
+        <div className="absolute md:-top-6 top-1/2 -translate-y-1/2 md:translate-y-0 right-0 uppercase text-center whitespace-nowrap flex items-center gap-x-px">
           <IconCheck />
           {truncateWalletAddress(copiedText)} copied{' '}
         </div>
