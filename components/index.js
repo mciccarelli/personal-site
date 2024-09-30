@@ -1,3 +1,4 @@
+export { default as BlinkingDot } from './blinking-dot';
 export { default as Footer } from './footer';
 export { default as IconBtc } from './icon-btc';
 export { default as IconC } from './icon-c';
