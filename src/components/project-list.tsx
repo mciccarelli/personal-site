@@ -56,7 +56,7 @@ const ListItem: React.FC<ListItemProps> = ({ title, description, url }) => {
 			</a>
 			<div
 				className={cn('md:line-clamp-1 md:opacity-0', {
-					'md:opacity-50': isHovered
+					'md:opacity-100': isHovered
 				})}
 				dangerouslySetInnerHTML={{ __html: description }}
 			/>
