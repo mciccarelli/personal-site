@@ -102,6 +102,13 @@
       "year": 2019,
       "image": "/projects/revolve-law.png",
       "description": "Brochure-style business site. Next.js and Framer motion."
+    },
+    {
+      "title": "VICELAND",
+      "url": "https://vicetv.com",
+      "year": 2016,
+      "image": "/projects/vice-tv.png",
+      "description": "Video publishing platform. React.js and a custom CMS"
     }
   ]
 }

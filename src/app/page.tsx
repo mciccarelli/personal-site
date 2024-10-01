@@ -15,7 +15,7 @@ export default function Home() {
 					</p>
 				</div>
 				<div>
-					<h2>Recent Projects</h2>
+					<h2>Selected Projects</h2>
 					<ProjectList items={projects} />
 				</div>
 			</div>
