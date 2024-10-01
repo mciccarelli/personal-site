@@ -1,7 +1,9 @@
-import { Logo, ProjectList } from '@/components';
-import { projects, bio, emailAddress, links, resume } from '@/app/data.json';
+import { ProjectList } from '@/components';
+import data from '@/app/data.json';
 
 export default function Home() {
+	const { projects, bio, emailAddress, links, resume } = data;
+
 	return (
 		<div className="col-span-3 md:col-span-2 md:col-start-2 flex flex-col justify-between gap-y-10">
 			<div className="flex flex-col gap-y-10">

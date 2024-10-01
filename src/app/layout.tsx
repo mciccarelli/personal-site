@@ -2,10 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Footer, ModeToggle, ScrambledText } from '@/components';
-import { siteTitle, siteDescription, headline } from '@/app/data.json';
 import localFont from 'next/font/local';
-// import { Inconsolata } from 'next/font/google';
-// const monoFont = Inconsolata({ subsets: ['latin'], display: 'swap' });
+import data from '@/app/data.json';
 
 const CeraPro = localFont({
 	src: [
@@ -33,8 +31,8 @@ const CeraPro = localFont({
 });
 
 export const metadata: Metadata = {
-	title: siteTitle,
-	description: siteDescription
+	title: data?.siteTitle,
+	description: data?.siteDescription
 };
 
 export default function RootLayout({
@@ -52,7 +50,7 @@ export default function RootLayout({
 								<div className="col-span-1">
 									<ScrambledText />
 								</div>
-								<div className="col-span-2">{headline}</div>
+								<div className="col-span-2">{data?.headline}</div>
 							</div>
 							<ModeToggle />
 						</header>
