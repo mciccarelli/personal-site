@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* #0A0908: hsl(30, 11.11%, 3.53%)
+	#FCF7F8: hsl(348, 45.45%, 97.84%)
+	#7C898B: hsl(188, 6.07%, 51.57%) */
+
+	/* white: hsl(198, 31.25%, 93.73%); */
+	/* blue: hsl(230.13, 95.18%, 48.82%); */
+	/* black: hsl(240, 10%, 3.92%); */
+	:root {
+		--background: 348, 45.45%, 97.84%;
+		--foreground: 30, 11.11%, 3.53%;
+
+		--card: 348, 45.45%, 97.84%;
+		--card-foreground: 30, 11.11%, 3.53%;
+
+		--popover: 348, 45.45%, 97.84%;
+		--popover-foreground: 30, 11.11%, 3.53%;
+
+		--primary: 240 5.9% 10%;
+		--primary-foreground: 348, 45.45%, 97.84%;
+
+		--secondary: 240 4.8% 95.9%;
+		--secondary-foreground: 240 5.9% 10%;
+
+		--muted: 240 4.8% 95.9%;
+		--muted-foreground: 240 3.8% 46.1%;
+
+		--accent: 240 4.8% 95.9%;
+		--accent-foreground: 240 5.9% 10%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 348, 45.45%, 97.84%;
+
+		--border: 240 5.9% 90%;
+		--input: 240 5.9% 90%;
+		--ring: 30, 11.11%, 3.53%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 30, 11.11%, 3.53%;
+		--foreground: 348, 45.45%, 97.84%;
+
+		--card: 30, 11.11%, 3.53%;
+		--card-foreground: 348, 45.45%, 97.84%;
+
+		--popover: 30, 11.11%, 3.53%;
+		--popover-foreground: 348, 45.45%, 97.84%;
+
+		--primary: 348, 45.45%, 97.84%;
+		--primary-foreground: 240 5.9% 10%;
+
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 348, 45.45%, 97.84%;
+
+		--muted: 240 3.7% 15.9%;
+		--muted-foreground: 240 5% 64.9%;
+
+		--accent: 240 3.7% 15.9%;
+		--accent-foreground: 0 0% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 348, 45.45%, 97.84%;
+
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+		--ring: 240 4.9% 83.9%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground min-h-screen text-base;
+	}
+
+	h2 {
+		@apply mb-2 tracking-wide uppercase font-bold;
+	}
+
+	p {
+		@apply mb-4 last-of-type:mb-0;
+	}
+
+	li {
+		@apply list-none mb-px last-of-type:mb-0;
+	}
+
+	a {
+		@apply text-foreground opacity-50 transition-opacity hover:opacity-100;
+	}
+}
