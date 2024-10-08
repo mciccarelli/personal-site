@@ -48,11 +48,18 @@
   ],
   "projects": [
     {
-      "title": "The Bar",
-      "url": "https://the-bar-eta.vercel.app",
+      "title": "Amazon: The Bar",
+      "url": "https://amazonthe.bar",
       "year": 2024,
       "image": "/projects/the-bar-2024.jpg",
-      "description": "Portfolio site for Amazon XCM. Next.js/Sanity, Tailwind CSS & Framer Motion."
+      "description": "Portfolio site for XCM. Next.js, Sanity, Tailwind CSS & Framer Motion."
+    },
+    {
+      "title": "ONE/OF",
+      "url": "https://shoponeof.com",
+      "year": 2024,
+      "image": "/projects/the-bar-2024.jpg",
+      "description": "E-commerce; Shopify headless, Next.js, Sanity, Tailwind & Framer."
     },
     {
       "title": "KelvonAgee.com",
