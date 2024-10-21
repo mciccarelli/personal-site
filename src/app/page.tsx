@@ -11,11 +11,11 @@ export default function Home() {
 					<h2>About</h2>
 					<div className="bio mb-4" dangerouslySetInnerHTML={{ __html: bio }} />
 					<p>
-						<span className="flex items-center gap-x-1.5">
-							For project inquiries,{' '}
+						<span className="flex items-center gap-x-1">
 							<a className="fancy-link" href={calLink} title="">
-								book an intro call.
-							</a>{' '}
+								Book an intro call
+							</a>
+							for project inquiries
 						</span>
 						<span className="flex items-center gap-x-1.5">
 							Or drop me an email{' '}
