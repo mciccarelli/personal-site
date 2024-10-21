@@ -1,11 +1,16 @@
 {
   "siteTitle": "michael ciccarelli",
-  "siteDescription": "software engineer and consultant specializing in frontend/ui development.",
-  "headline": "creative developer",
-  "bio": "<p>Michael Ciccarelli is a seasoned software engineer with a focus on front-end/UI, creating responsive, visually engaging web apps with smooth motion and animation for a dynamic user experience.</p><p>Based in Brooklyn, he runs an independent software consultancy, working with a range of clients—from startups to enterprise—building publishing platforms, e-commerce sites, and B2B SaaS solutions.</p>",
+  "siteDescription": "software engineer and consultant specializing in UX development.",
+  "headline": "design + engineering",
+  "bio": "<p>Michael Ciccarelli is a creative software engineer specializing in UI/UX design and full-stack development, crafting responsive, visually engaging web apps with motion and animation for dynamic user experiences.</p><p>Based in NYC, he runs an independent technology studio, partnering with startups and businesses to build consumer apps, B2B SaaS, and projects in emerging technologies like blockchain, crypto, and DeFi.</p>",
   "emailAddress": "mic@hael.cc",
+  "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
   "links": [
+    {
+      "text": "Email",
+      "href": "mailto:mic@hael.cc"
+    },
     {
       "text": "Twitter/X",
       "href": "https://x.com/0xhael"
@@ -17,10 +22,6 @@
     {
       "text": "Telegram",
       "href": "http://t.me/mcrelli"
-    },
-    {
-      "text": "Github",
-      "href": "https://github.com/mciccarelli"
     },
     {
       "text": "LinkedIn",

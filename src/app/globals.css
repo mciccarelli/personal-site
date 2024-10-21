@@ -99,4 +99,26 @@
 	a {
 		@apply text-foreground opacity-50 transition-opacity hover:opacity-100;
 	}
+
+	.fancy-link {
+		@apply relative;
+	}
+
+	.fancy-link::after {
+		@apply text-accent;
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 2px;
+		width: 100%;
+		background-color: currentColor; /* Uses the text color */
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease-out;
+	}
+
+	.fancy-link:hover::after {
+		transform: scaleX(1);
+	}
 }
