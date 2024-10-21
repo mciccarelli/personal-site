@@ -8,7 +8,7 @@
   "links": [
     {
       "text": "Twitter/X",
-      "href": "https://x.com/mcrxlli"
+      "href": "https://x.com/0xhael"
     },
     {
       "text": "Instagram",
@@ -48,11 +48,11 @@
   ],
   "projects": [
     {
-      "title": "Amazon: The Bar",
+      "title": "The Bar",
       "url": "https://amazonthe.bar",
       "year": 2024,
       "image": "/projects/the-bar-2024.jpg",
-      "description": "Portfolio site for XCM. Next.js, Sanity, Tailwind CSS & Framer Motion."
+      "description": "Portfolio site for Amazon/XCM. Next.js, Sanity, Tailwind CSS & Framer Motion."
     },
     {
       "title": "ONE/OF",
