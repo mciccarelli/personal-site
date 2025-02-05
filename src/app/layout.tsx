@@ -2,32 +2,12 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Footer, ModeToggle, ScrambledText, Sidebar } from '@/components';
-import localFont from 'next/font/local';
+import { Roboto_Mono } from 'next/font/google';
 import data from '@/app/data.json';
 
-const CeraPro = localFont({
-	src: [
-		{
-			path: '../../public/fonts/CeraPro-Regular.woff2',
-			weight: '400',
-			style: 'normal'
-		},
-		{
-			path: '../../public/fonts/CeraPro-RegularItalic.woff2',
-			weight: '400',
-			style: 'italic'
-		},
-		{
-			path: '../../public/fonts/CeraPro-Bold.woff2',
-			weight: '700',
-			style: 'normal'
-		},
-		{
-			path: '../../public/fonts/CeraPro-BoldItalic.woff2',
-			weight: '700',
-			style: 'italic'
-		}
-	]
+export const roboto_mono = Roboto_Mono({
+	subsets: ['latin'],
+	display: 'swap'
 });
 
 export const metadata: Metadata = {
@@ -42,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={CeraPro.className}>
+			<body className={roboto_mono.className}>
 				<ThemeProvider defaultTheme="system" storageKey="kolumn-ui-theme">
 					{/* <div className="flex min-h-screen flex-col items-center justify-between">
 						<div className="flex justify-end w-full">

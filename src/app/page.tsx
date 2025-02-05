@@ -2,23 +2,20 @@ import { Links, ProjectList } from '@/components';
 import data from '@/app/data.json';
 
 export default function Home() {
-	const { projects, bio, emailAddress, calLink, links } = data;
+	const { projects, bio, emailAddress, calLink, links, experience } = data;
 
 	return (
 		<div className="col-span-3 md:col-span-2 md:col-start-2 flex flex-col gap-y-10">
 			<div className="flex flex-col gap-y-10">
 				<div className="pt-10 md:pt-40">
-					<h2>About</h2>
+					{/* <h2>About</h2> */}
 					<div className="bio mb-4" dangerouslySetInnerHTML={{ __html: bio }} />
 					<p>
 						<span className="flex items-center gap-x-1">
 							<a className="fancy-link" href={calLink} title="">
 								Book an intro call
 							</a>
-							for project inquiries
-						</span>
-						<span className="flex items-center gap-x-1.5">
-							Or drop me an email{' '}
+							for project inquiries, or drop me an email{' '}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 16 16"
@@ -37,10 +34,26 @@ export default function Home() {
 						</span>
 					</p>
 				</div>
+
 				<div className="col-span-4">
 					<h2>Projects</h2>
 					<ProjectList items={projects} />
 				</div>
+
+				{/* <div className="col-span-4">
+					<h2>Experience</h2>
+					{experience.map(({ company, title, dates, description }, index) => (
+						<li key={index} className="grid grid-cols-2 gap-4">
+							<span className="md:col-span-1 flex">
+								{dates} -- {company}
+								<span className="hidden lg:flex">
+									{title ? ',' : ''} {title}
+								</span>
+							</span>
+							<span className="md:col-span-1">{description}</span>
+						</li>
+					))}
+				</div> */}
 				<div className="col-span-1">
 					<h2>Links</h2>
 					<Links items={links} />

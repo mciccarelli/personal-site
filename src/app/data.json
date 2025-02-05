@@ -1,11 +1,19 @@
 {
   "siteTitle": "michael ciccarelli",
-  "siteDescription": "software engineer and consultant specializing in UX development.",
-  "headline": "design + engineering",
-  "bio": "<p>Michael Ciccarelli is a creative developer specializing in UI/UX design and full-stack development, crafting responsive, visually engaging web apps with smooth motion and animation for dynamic user experiences.</p><p>Based in NYC, he runs a software consultancy, working with startups and businesses to build consumer apps, B2B SaaS, and projects in emerging tech like blockchain, crypto, and DeFi.</p>",
+  "siteDescription": "creative developer",
+  "headline": "",
+  "bio": "<p>brooklyn-based design engineer specializing in crafting digital products that blend creativity with technology. through motion design, intuitive UX, and modern headless architecture, he delivers engaging, business-ready solutions.</p><p>he is the founder of <a href='https://kolumn.co'>kolumn</a>, a technology studio that collaborates with startups and brands to build consumer apps, B2B SaaS, and emerging tech projects in blockchain, crypto, and DeFi.</p>",
   "emailAddress": "mic@hael.cc",
   "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
+  "experience": [
+    {
+      "company": "...",
+      "title": "...",
+      "dates": "...",
+      "description": "..."
+    }
+  ],
   "links": [
     {
       "text": "Email",
