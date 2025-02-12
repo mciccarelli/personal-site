@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { BlinkingDot } from '@/components';
+import { BlinkingDot, ProjectDescription } from '@/components';
 
 interface ListItemProps {
 	title: string;
@@ -12,12 +12,15 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ title, description, url }) => {
 	const [isHovered, setIsHovered] = useState(false);
+
 	function handleMouseEnter() {
 		setIsHovered(true);
 	}
+
 	function handleMouseLeave() {
 		setIsHovered(false);
 	}
+
 	return (
 		<div
 			className="flex flex-col md:flex-row gap-x-1.5 relative md:flex-1"
@@ -34,20 +37,13 @@ const ListItem: React.FC<ListItemProps> = ({ title, description, url }) => {
 			>
 				<BlinkingDot />
 			</div>
-			<a
-				className="whitespace-nowrap flex gap-x-px items-center"
-				href={url}
-				target="_blank"
-				title="Visit site"
-			>
+			<a className="whitespace-nowrap flex gap-x-px items-center" href={url} target="_blank">
 				{title}{' '}
 			</a>
-			<div
-				className={cn('md:line-clamp-1 md:opacity-0', {
-					'md:opacity-100': isHovered
-				})}
-				dangerouslySetInnerHTML={{ __html: description }}
-			/>
+			<div className="hidden md:block">
+				<ProjectDescription text={description} trigger={isHovered} setTrigger={setIsHovered} />
+			</div>
+			<div className="block md:hidden" dangerouslySetInnerHTML={{ __html: description }} />
 		</div>
 	);
 };

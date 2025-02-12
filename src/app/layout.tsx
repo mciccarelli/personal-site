@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Footer, ModeToggle, ScrambledText, Sidebar } from '@/components';
+import { Footer, ModeToggle, SiteName, Sidebar } from '@/components';
 import { Roboto_Mono } from 'next/font/google';
 import data from '@/app/data.json';
 
@@ -40,7 +40,7 @@ export default function RootLayout({
 						<header className="relative flex justify-between">
 							<div className="grid grid-cols-1 md:grid-cols-3 max-w-4xl w-full">
 								<div className="col-span-1">
-									<ScrambledText />
+									<SiteName />
 									{/* <svg
 										className="w-4"
 										viewBox="0 0 110 158"
