@@ -7,8 +7,8 @@ export default function Home() {
 	return (
 		<div className="container mx-auto px-4">
 			<div className="grid grid-cols-12 gap-4">
-				<div className="col-span-12 md:col-span-8 md:col-start-2 flex flex-col gap-4">
-					<div className="pt-10 md:pt-20 max-w-xl">
+				<div className="col-span-12 md:col-span-10 md:col-start-1 lg:col-start-4 lg:col-span-8 flex flex-col gap-4 md:gap-8">
+					<div className="pt-8 md:pt-32 max-w-xl">
 						<div className="bio mb-4" dangerouslySetInnerHTML={{ __html: bio }} />
 						<p>
 							<a className="fancy-link" href={calLink} title="">
