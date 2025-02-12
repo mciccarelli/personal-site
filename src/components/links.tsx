@@ -26,7 +26,7 @@ const ListItem: React.FC<ListItemProps> = ({ text, href }) => {
 		>
 			<div
 				className={cn(
-					'hidden md:flex opacity-0 transition-opacity absolute -left-3 top-1/2 -translate-y-1/2',
+					'hidden md:flex opacity-0 transition-opacity absolute -left-2.5 top-1/2 -translate-y-1/2',
 					{
 						'opacity-100': isHovered
 					}
