@@ -10,9 +10,8 @@ export default function Home() {
 				<div className="pt-10 md:pt-40">
 					<div className="bio mb-4" dangerouslySetInnerHTML={{ __html: bio }} />
 					<p>
-						Book an{' '}
 						<a className="fancy-link" href={calLink} title="">
-							intro call
+							book an intro call
 						</a>{' '}
 						for project inquiries, or drop me an email at{' '}
 						<a className="fancy-link" href={`mailto:${emailAddress}`}>
