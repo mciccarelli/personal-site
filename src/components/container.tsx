@@ -1,6 +1,6 @@
 'use client';
 
-import { Footer, ModeToggle, ScrambledText } from '@/components';
+import { Footer, ModeToggle, SiteName } from '@/components';
 import { useTheme } from '@/components/theme-provider';
 
 export default function Container({
@@ -19,7 +19,7 @@ export default function Container({
 			<header className="relative flex justify-between">
 				<div className="grid grid-cols-1 md:grid-cols-3 w-full">
 					<div className="col-span-1">
-						<ScrambledText />
+						<SiteName />
 						{/* <svg
 							className="w-4"
 							viewBox="0 0 110 158"
