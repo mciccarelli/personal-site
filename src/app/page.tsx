@@ -55,7 +55,7 @@ export default function Home() {
 					))}
 				</div> */}
 				<div className="col-span-1">
-					<h2>Links</h2>
+					<h2>Elsewhere</h2>
 					<Links items={links} />
 				</div>
 			</div>

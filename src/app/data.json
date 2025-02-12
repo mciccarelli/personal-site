@@ -2,7 +2,7 @@
   "siteTitle": "michael ciccarelli",
   "siteDescription": "creative developer",
   "headline": "",
-  "bio": "<p>brooklyn-based design engineer specializing in crafting digital products that blend creativity with technology. through motion design, intuitive UX, and modern headless architecture, he delivers engaging, business-ready solutions.</p><p>he is the founder of <a href='https://kolumn.co'>kolumn</a>, a technology studio that collaborates with startups and brands to build consumer apps, B2B SaaS, and emerging tech projects in blockchain, crypto, and DeFi.</p>",
+  "bio": "<p>brooklyn-based creative developer merging design and technology to build web apps and digital products. specializing in motion design, intuitive UX, and headless architecture, he delivers engaging, business-ready solutions.</p><p>founder of <a href='https://kolumn.co'>kolumn</a>, a technology studio building consumer apps, B2B SaaS, and emerging tech solutions in blockchain, crypto, and DeFi.</p>",
   "emailAddress": "mic@hael.cc",
   "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
@@ -24,20 +24,12 @@
       "href": "https://x.com/mcrxlli"
     },
     {
-      "text": "Instagram",
-      "href": "https://instagram.com/fvckarelli"
-    },
-    {
       "text": "Telegram",
       "href": "http://t.me/mcrelli"
     },
     {
       "text": "LinkedIn",
       "href": "https://linkedin.com/in/mciccarelli"
-    },
-    {
-      "text": "Resume",
-      "href": "/michael_ciccarelli-resume.pdf"
     }
   ],
   "wallets": [
@@ -85,13 +77,6 @@
       "description": "Events lander page, Next.js, TailwindCSS, and Stripe."
     },
     {
-      "title": "Metal",
-      "url": "https://metal.build",
-      "year": 2023,
-      "image": "/projects/metal-deploy-onbase.png",
-      "description": "dApp for deploying smart contracts. Next.js, Viem, &amp; Privy."
-    },
-    {
       "title": "Elara.world",
       "url": "https://elara.world",
       "year": 2021,
@@ -113,7 +98,7 @@
       "description": "Brochure-style business site. Next.js and Framer motion."
     },
     {
-      "title": "VICELAND",
+      "title": "VICE TV",
       "url": "https://vicetv.com",
       "year": 2016,
       "image": "/projects/vice-tv.png",
