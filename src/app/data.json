@@ -98,6 +98,13 @@
       "description": "Brochure-style business site. Next.js and Framer motion."
     },
     {
+      "title": "G9 Ventures",
+      "url": "https://g9.ventures",
+      "year": 2018,
+      "image": "/projects/g9.png",
+      "description": "Portfolio site for VC. Next.js and Contentful."
+    },
+    {
       "title": "VICE TV",
       "url": "https://vicetv.com",
       "year": 2016,
