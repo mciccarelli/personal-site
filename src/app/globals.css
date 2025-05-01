@@ -82,11 +82,11 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen text-base;
+		@apply bg-background text-foreground min-h-screen text-base tracking-tight lowercase;
 	}
 
 	h2 {
-		@apply mb-2 tracking-wide uppercase font-bold;
+		@apply mb-2 tracking-wide font-medium;
 	}
 
 	p {
@@ -98,7 +98,7 @@
 	}
 
 	a {
-		@apply text-foreground opacity-50 transition-opacity hover:opacity-100;
+		@apply text-foreground opacity-90 transition-opacity hover:opacity-100;
 	}
 
 	.fancy-link {

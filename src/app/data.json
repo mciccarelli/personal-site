@@ -1,11 +1,23 @@
 {
-  "siteTitle": "michael ciccarelli",
-  "siteDescription": "creative developer",
+  "siteTitle": "michael iccarelli",
+  "siteDescription": "creative developer & technology architect",
   "headline": "",
-  "bio": "<p>michael ciccarelli is a creative developer and technologist specializing in motion design, intuitive UX, and headless architecture. he builds web apps and digital products that merge design precision with engineering scalability.</p><p>based in brooklyn, ny, he runs a technology consultancy focused on consumer apps, B2B SaaS, and emerging tech—including blockchain, crypto, and DeFi.</p>",
+  "bio": "<p>michael ciccarelli designs and develops digital experiences where considered design meets technical excellence.</p><p>based in brooklyn, ny, he specializes in motion dynamics, intuitive interfaces, and scalable architecture—creating web applications that feel intentional at every interaction while functioning flawlessly at scale.</p>",
   "emailAddress": "mic@hael.cc",
   "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
+  "expertise": [
+    "motion-driven user experiences",
+    "headless architecture implementation",
+    "front-end systems & component design",
+    "digital product development",
+    "emerging technology integration"
+  ],
+  "studio": {
+    "name": "Third Index",
+    "description": "Michael is the founder of Third Index, a boutique technology studio that partners with forward-thinking clients across consumer applications, B2B SaaS platforms, and emerging technology spaces.",
+    "url": "https://thirdindex.co"
+  },
   "experience": [
     {
       "company": "...",
@@ -16,20 +28,20 @@
   ],
   "links": [
     {
-      "text": "Email",
+      "text": "Direct Email",
       "href": "mailto:mic@hael.cc"
     },
     {
-      "text": "Twitter/X",
-      "href": "https://x.com/mcrxlli"
+      "text": "Book a Call",
+      "href": "https://cal.com/haelcc/30min"
     },
     {
       "text": "Telegram",
-      "href": "http://t.me/mcrelli"
+      "href": "https://t.me/mcrelli"
     },
     {
-      "text": "LinkedIn",
-      "href": "https://linkedin.com/in/mciccarelli"
+      "text": "X/Twitter",
+      "href": "https://x.com/mcrxlli"
     }
   ],
   "wallets": [
