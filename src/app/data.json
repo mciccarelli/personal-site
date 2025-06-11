@@ -1,23 +1,18 @@
 {
   "siteTitle": "michael ciccarelli",
-  "siteDescription": "design engineer",
+  "siteDescription": "creative developer",
   "headline": "",
-  "bio": "<p>Michael Ciccarelli merges design sensibility with engineering precision to shape impactful digital experiences.</p><p>based in brooklyn, ny, he specializes in motion dynamics, intuitive interfaces, and scalable architecture—creating web applications that feel intentional at every interaction while functioning flawlessly at scale.</p>",
+  "bio": "<p>software engineer who builds digital products, designs interactive experiences, and consults on web development and emerging tech.</p><p>my <a class=\"fancy-link\" href=\"https://thirdindex.co\">studio</a> handles the full spectrum—from concept to deployment and everything in between.</p><p>for project inquiries: <a class=\"fancy-link\" href=\"http://cal.com/thirdindex/15min\">book a call</a>. or hit me up via <a class=\"fancy-link\" href=\"mailto:info@thirdindex.co\">email</a>, <a class=\"fancy-link\" href=\"https://t.me/mcrelli\">tg</a>, <a class=\"fancy-link\" href=\"https://x.com/mcrxlli\">x</a>.</p>",
   "emailAddress": "mic@hael.cc",
   "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
   "expertise": [
-    "motion-driven user experiences",
-    "headless architecture implementation",
-    "front-end systems & component design",
-    "digital product development",
-    "emerging technology integration"
+    "full-stack development",
+    "motion-driven interfaces",
+    "headless architecture",
+    "component systems & design",
+    "product development"
   ],
-  "studio": {
-    "name": "Third Index",
-    "description": "Michael is the founder of Third Index, a boutique technology studio that partners with forward-thinking clients across consumer applications, B2B SaaS platforms, and emerging technology spaces.",
-    "url": "https://thirdindex.co"
-  },
   "experience": [
     {
       "company": "...",
