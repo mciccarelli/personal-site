@@ -2,16 +2,16 @@
   "siteTitle": "michael ciccarelli",
   "siteDescription": "creative developer",
   "headline": "",
-  "bio": "<p>software engineer who builds digital products, designs interactive experiences, and consults on web development and emerging tech.</p><p>my <a class=\"fancy-link\" href=\"https://thirdindex.co\">studio</a> handles the full spectrum—from concept to deployment and everything in between.</p><p>for project inquiries: <a class=\"fancy-link\" href=\"http://cal.com/thirdindex/15min\">book a call</a>. or hit me up via <a class=\"fancy-link\" href=\"mailto:info@thirdindex.co\">email</a>, <a class=\"fancy-link\" href=\"https://t.me/mcrelli\">tg</a>, <a class=\"fancy-link\" href=\"https://x.com/mcrxlli\">x</a>.</p>",
+  "bio": "<p>software engineer who builds digital products, designs interactive experiences, and consults on web development and emerging tech.</p><p>my <a href=\"https://thirdindex.co\">studio</a> handles the full spectrum—from concept to deployment and everything in between.</p><p>for project inquiries: <a href=\"http://cal.com/thirdindex/15min\">book a call</a>. or hit me up via <a href=\"mailto:mic@hael.cc\">email</a>, <a href=\"https://t.me/mcrelli\">tg</a>, <a href=\"https://x.com/mcrxlli\">x</a>.</p>",
   "emailAddress": "mic@hael.cc",
   "calLink": "https://cal.com/haelcc/30min",
   "resume": "/michael_ciccarelli-resume.pdf",
   "expertise": [
-    "full-stack development",
-    "motion-driven interfaces",
-    "headless architecture",
-    "component systems & design",
-    "product development"
+    "react/typescript/next.js development",
+    "motion-driven user interfaces",
+    "headless cms integration & apis",
+    "component libraries & design systems",
+    "full-stack product development"
   ],
   "experience": [
     {

@@ -98,14 +98,10 @@
 	}
 
 	a {
-		@apply text-foreground opacity-90 transition-opacity hover:opacity-100;
+		@apply text-foreground/90 transition-colors hover:text-foreground relative;
 	}
 
-	.fancy-link {
-		@apply relative;
-	}
-
-	.fancy-link::after {
+	a::after {
 		@apply text-accent;
 		content: '';
 		position: absolute;
@@ -119,7 +115,7 @@
 		transition: transform 0.3s ease-out;
 	}
 
-	.fancy-link:hover::after {
+	a:hover::after {
 		transform: scaleX(1);
 	}
 }
