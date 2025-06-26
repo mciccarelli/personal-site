@@ -56,6 +56,13 @@
   ],
   "projects": [
     {
+      "title": "Modern Treasury",
+      "url": "https://moderntreasury.com",
+      "year": 2025,
+      "image": "/projects/mt-2025.jpg",
+      "description": "Marketing site for MT. Next.js, Sanity, Tailwind CSS."
+    },
+    {
       "title": "Amazon: The Bar",
       "url": "https://amazonthe.bar",
       "year": 2025,

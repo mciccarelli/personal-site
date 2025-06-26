@@ -37,7 +37,11 @@ const ListItem: React.FC<ListItemProps> = ({ title, description, url }) => {
 			>
 				<BlinkingDot />
 			</div>
-			<a className="whitespace-nowrap flex gap-x-px items-center" href={url} target="_blank">
+			<a
+				className="whitespace-nowrap no-underline flex gap-x-px items-center"
+				href={url}
+				target="_blank"
+			>
 				{title}{' '}
 			</a>
 			<div className="hidden md:block">

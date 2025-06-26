@@ -101,7 +101,7 @@
 		@apply text-foreground/90 transition-colors hover:text-foreground relative;
 	}
 
-	a::after {
+	a:not(.no-underline)::after {
 		@apply text-accent;
 		content: '';
 		position: absolute;
@@ -115,7 +115,7 @@
 		transition: transform 0.3s ease-out;
 	}
 
-	a:hover::after {
+	a:not(.no-underline):hover::after {
 		transform: scaleX(1);
 	}
 }
