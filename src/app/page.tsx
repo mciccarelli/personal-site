@@ -26,7 +26,7 @@ export default function Home() {
 								signal
 							</a>
 							, <a href="https://x.com/mcrxlli">x</a>,{' '}
-							<a href="https://www.instagram.com/mc__lli">ig</a>.
+							<a href="https://www.instagram.com/m1ke.xyz">ig</a>.
 						</div>
 					</div>
 

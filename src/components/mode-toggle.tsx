@@ -11,7 +11,7 @@ export function ModeToggle() {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="w-2 h-2 rounded-full border-2 border-foreground bg-foreground self-center"
+			className="w-2 h-2 rounded-full border-2 border-foreground bg-foreground self-center cursor-pointer"
 			aria-label="Toggle theme"
 		/>
 	);
