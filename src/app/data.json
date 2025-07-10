@@ -1,43 +1,13 @@
 {
-  "siteTitle": "michael ciccarelli",
-  "siteDescription": "creative developer",
-  "headline": "",
-  "bio": "<p>software engineer who builds digital products, designs interactive experiences, and consults on web development and emerging tech.</p><p>my <a href=\"https://thirdindex.co\">studio</a> handles the full spectrum—from concept to deployment and everything in between.</p><p>for project inquiries: <a href=\"http://cal.com/thirdindex/15min\">book a call</a>. or hit me up via <a href=\"mailto:mic@hael.cc\">email</a>, <a href=\"https://t.me/mcrelli\">tg</a>, <a href=\"https://signal.me/#eu/GVhbLY_OWFgXipDTou2OTpIonm05xVhb4iAywFVWb5PBl_qAd2JMF56o6JNiLkoo\">signal</a>, <a href=\"https://x.com/mcrxlli\">x</a>, <a href=\"https://www.instagram.com/mc__lli\">ig</a>.</p>",
-  "emailAddress": "mic@hael.cc",
-  "calLink": "https://cal.com/haelcc/30min",
-  "resume": "/michael_ciccarelli-resume.pdf",
+  "siteTitle": "michael ciccarelli — designer & developer | brooklyn, ny",
+  "siteDescription": "brooklyn-based creative developer specializing in frontend engineering, UI/UX design, and digital product development. 20+ years building web applications and user experiences.",
+  "emailAddress": "mikecicc@gmail.com",
   "expertise": [
-    "react/typescript/next.js development",
+    "react/next.js development",
     "motion-driven user interfaces",
-    "headless cms integration & apis",
-    "component libraries & design systems",
+    "headless cms integration & APIs",
+    "component libs & design systems",
     "full-stack product development"
-  ],
-  "experience": [
-    {
-      "company": "...",
-      "title": "...",
-      "dates": "...",
-      "description": "..."
-    }
-  ],
-  "links": [
-    {
-      "text": "Direct Email",
-      "href": "mailto:mic@hael.cc"
-    },
-    {
-      "text": "Book a Call",
-      "href": "https://cal.com/haelcc/30min"
-    },
-    {
-      "text": "Telegram",
-      "href": "https://t.me/mcrelli"
-    },
-    {
-      "text": "X/Twitter",
-      "href": "https://x.com/mcrxlli"
-    }
   ],
   "wallets": [
     {
