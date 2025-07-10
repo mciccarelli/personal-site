@@ -3,26 +3,7 @@
 import { useState, useEffect } from 'react';
 import { TextScramble } from '@/components/ui/text-scramble';
 
-const titles = [
-	'Software Engineer',
-	'Frontend Engineer',
-	'Creative Developer',
-	'Design Engineer',
-	'UI/UX Designer',
-	'Product Designer',
-	'Web Developer',
-	'Full-Stack Engineer',
-	'Creative Technologist',
-	'UI Engineer',
-	'Digital Designer',
-	'Frontend Designer',
-	'Product Engineer',
-	'JavaScript Engineer',
-	'Visual Designer',
-	'Design Technologist',
-	'Web Designer',
-	'User Experience Designer'
-];
+import data from '@/app/data.json';
 
 export default function Titles() {
 	const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -30,7 +11,7 @@ export default function Titles() {
 
 	const shuffleTitle = () => {
 		setTrigger(true);
-		setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+		setCurrentTitleIndex((prev) => (prev + 1) % data?.titles.length);
 	};
 
 	useEffect(() => {
@@ -51,7 +32,7 @@ export default function Titles() {
 				trigger={trigger}
 				onScrambleComplete={() => setTrigger(false)}
 			>
-				{titles[currentTitleIndex]}
+				{data?.titles[currentTitleIndex]}
 			</TextScramble>
 		</span>
 	);

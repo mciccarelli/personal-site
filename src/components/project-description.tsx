@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { TextEffect } from '@/components/ui/text-effect';
 
 interface ProjectDescriptionProps {
@@ -10,16 +9,6 @@ interface ProjectDescriptionProps {
 }
 
 const ProjectDescription: React.FC<ProjectDescriptionProps> = ({ text, trigger, setTrigger }) => {
-	// const [trigger, setTrigger] = useState(true);
-
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		setTrigger((prev) => !prev);
-	// 	}, 2000);
-
-	// 	return () => clearInterval(interval);
-	// }, []);
-
 	const blurSlideVariants = {
 		container: {
 			hidden: { opacity: 0 },
