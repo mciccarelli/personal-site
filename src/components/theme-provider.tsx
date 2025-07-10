@@ -25,16 +25,14 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({
 	children,
 	defaultTheme = 'system',
-	storageKey = 'kolumn-ui-theme',
+	storageKey = 'm1ke-ui-theme',
 	...props
 }: ThemeProviderProps) {
 	const [theme, setTheme] = useState<Theme>(defaultTheme);
-	// const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
 		const storedTheme = localStorage.getItem(storageKey) as Theme;
 		if (storedTheme) setTheme(storedTheme);
-		// setMounted(true);
 	}, []);
 
 	useEffect(() => {
@@ -61,10 +59,6 @@ export function ThemeProvider({
 			setTheme(theme);
 		}
 	};
-
-	// if (!mounted) {
-	// 	return null;
-	// }
 
 	return (
 		<ThemeProviderContext.Provider {...props} value={value}>
