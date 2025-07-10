@@ -32,7 +32,7 @@ export default function Home() {
 
 					<div className="grid grid-cols-2 gap-8">
 						<div className="space-y-4">
-							<h2>Work</h2>
+							<h2>Focus Areas</h2>
 							<ul className="list-disc list-inside">
 								{expertise.map((item) => (
 									<li key={item} className="text-foreground/80 marker:text-foreground">
@@ -44,7 +44,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="space-y-4">
-					<h2>Work</h2>
+					<h2>Selected Work</h2>
 					<ProjectList items={projects} />
 				</div>
 			</div>
