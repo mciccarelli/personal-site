@@ -1,33 +1,33 @@
 {
-  "siteTitle": "michael ciccarelli — designer & developer | brooklyn, ny",
-  "siteDescription": "brooklyn-based creative developer specializing in frontend engineering, UI/UX design, and digital product development. 20+ years building web applications and user experiences.",
+  "siteTitle": "m1ke.xyz — design engineer",
+  "siteDescription": "brooklyn-based design engineer specializing in frontend development, react/next.js, and interactive web experiences. 20+ years building digital products and user interfaces.",
   "emailAddress": "mikecicc@gmail.com",
   "titles": [
-	  "Software Engineer",
-	  "Frontend Engineer",
-	  "Creative Developer",
-	  "Design Engineer",
-	  "UI/UX Designer",
-	  "Product Designer",
-	  "Web Developer",
-	  "Full-Stack Engineer",
-	  "Creative Technologist",
-	  "UI Engineer",
-	  "Digital Designer",
-	  "Frontend Designer",
-	  "Product Engineer",
-	  "JavaScript Engineer",
-	  "Visual Designer",
-	  "Design Technologist",
-	  "Web Designer",
-	  "User Experience Designer"
+	  "software engineer",
+	  "frontend engineer",
+	  "creative developer",
+	  "design engineer",
+	  "ui/ux designer",
+	  "product designer",
+	  "web developer",
+	  "full-stack engineer",
+	  "creative technologist",
+	  "ui engineer",
+	  "digital designer",
+	  "frontend designer",
+	  "product engineer",
+	  "javascript engineer",
+	  "design technologist",
+	  "web designer",
+	  "user experience designer"
   ],
-  "expertise": [
-    "react/next.js development",
-    "animations & micro-interactions",
-    "headless cms integration & APIs",
-    "component libs & design systems",
-    "full-stack product development"
+  "expertise":[
+    "react/next.js & full-stack development",
+    "component libraries & design systems",
+    "animations, micro-interactions & ui/ux",
+    "headless cms integration & apis",
+    "e-commerce, web3 & payment systems",
+    "web performance optimization"
   ],
   "wallets": [
     {
@@ -45,6 +45,13 @@
     }
   ],
   "projects": [
+    {
+      "title": "Image Feed",
+      "url": "https://image-feed-chi.vercel.app/",
+      "year": 2025,
+      "image": "/projects/if-2025.jpg",
+      "description": "Demo built with Next.js, Unsplash API, Tailwind, & Framer Motion"
+    },
     {
       "title": "Modern Treasury",
       "url": "https://moderntreasury.com",
