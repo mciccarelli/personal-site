@@ -114,6 +114,13 @@
       "year": 2018,
       "image": "/projects/g9.png",
       "description": "Portfolio site for VC. Next.js and Contentful."
+    },
+    {
+      "title": "VICE",
+      "url": "https://vice.com",
+      "year": 2016,
+      "image": "/projects/vice-tv.png",
+      "description": "Editorial platform for VICE. React, Redux, and Node.js."
     }
   ]
 }
