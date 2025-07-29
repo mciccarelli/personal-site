@@ -15,7 +15,7 @@ export default function Home() {
 							experiences, and consulting on web development and emerging tech.
 						</div>
 						<div>
-							my <a href="https://thirdindex.co">consultancy</a> handles projects from concept to
+							my <a href="https://thirdindex.co">studio</a> handles projects from concept to
 							deployment and everything in between.{' '}
 							<a href="http://cal.com/thirdindex/15min">book a call</a> or reach out via{' '}
 							<a href="mailto:mikecicc@gmail.com">email</a>,{' '}
