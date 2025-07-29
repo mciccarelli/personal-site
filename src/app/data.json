@@ -114,13 +114,6 @@
       "year": 2018,
       "image": "/projects/g9.png",
       "description": "Portfolio site for VC. Next.js and Contentful."
-    },
-    {
-      "title": "VICE TV",
-      "url": "https://vicetv.com",
-      "year": 2016,
-      "image": "/projects/vice-tv.png",
-      "description": "Video publishing platform. React.js and a custom CMS"
     }
   ]
 }
