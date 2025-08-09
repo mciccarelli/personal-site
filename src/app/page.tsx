@@ -4,13 +4,26 @@ import { useState } from 'react';
 import { ProjectList, IconBtc, IconEth, IconSol } from '@/components';
 import data from '@/app/data.json';
 import { DollarSign } from 'lucide-react';
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 export default function Home() {
 	const { bio, projects, expertise, wallets, experience } = data;
 	const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
+	const copyToClipboard = (text: string, index: number) => {
+		navigator.clipboard.writeText(text);
+		setCopiedIndex(index);
+		setTimeout(() => setCopiedIndex(null), 2000);
+	};
+
 	return (
-		<div className="flex flex-col-reverse md:grid md:grid-cols-12 min-h-[calc(100vh-8rem-36px)] px-4 lg:px-0 gap-8 lg:gap-0 pt-4">
+		<TooltipProvider>
+			<div className="flex flex-col-reverse md:grid md:grid-cols-12 min-h-[calc(100vh-8rem-36px)] px-4 lg:px-0 gap-8 lg:gap-0 pt-4">
 			{/* Left Column - Empty Space on Desktop */}
 			<div className="hidden 2xl:block xl:col-span-1 2xl:col-span-3" />
 
@@ -120,39 +133,35 @@ export default function Home() {
 						<div className="space-y-1">
 							<h3 className="text-sm uppercase tracking-wider pl-4">Payment</h3>
 							<div className="space-y-1 text-xs text-foreground/80">
-								<div>
-									<DollarSign className="w-4 h-4 inline-block text-foreground/40 scale-[.85]" />
-									&nbsp;
+								<div className="flex items-center gap-1">
+									<DollarSign className="w-4 h-4 text-foreground/40 opacity-60" />
 									<a
-										className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer no-underline -translate-x-[2px] translate-y-px inline-block"
+										className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer no-underline"
 										href="https://buy.stripe.com/bJebJ10Zc0ck30Iga80Ba05"
 									>
-										Stripe
+										stripe
 									</a>
 								</div>
 								{wallets.map((wallet, index) => (
-									<div key={index} className="flex items-center gap-1 relative">
+									<div key={index} className="flex items-center gap-1">
 										<span className="opacity-60">
 											{wallet.symbol === 'ETH' && <IconEth />}
 											{wallet.symbol === 'BTC' && <IconBtc />}
 											{wallet.symbol === 'SOL' && <IconSol />}
 										</span>
-										<button
-											onClick={() => {
-												navigator.clipboard.writeText(wallet.address);
-												setCopiedIndex(index);
-												setTimeout(() => setCopiedIndex(null), 2000);
-											}}
-											className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
-											title={wallet.address}
-										>
-											{`${wallet.address.slice(0, 6)}...${wallet.address.slice(-4)}`}
-										</button>
-										{copiedIndex === index && (
-											<span className="absolute -right-4 text-[9px] uppercase">
-												{wallet.symbol} copied ✓
-											</span>
-										)}
+										<Tooltip>
+											<TooltipTrigger asChild>
+												<button
+													onClick={() => copyToClipboard(wallet.address, index)}
+													className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+												>
+													{`${wallet.address.slice(0, 6)}...${wallet.address.slice(-4)}`}
+												</button>
+											</TooltipTrigger>
+											<TooltipContent side="left" className="text-[10px] px-2 py-1 bg-foreground text-background border border-border/50">
+												{copiedIndex === index ? `${wallet.symbol} copied ✓` : `Click to copy ${wallet.symbol} address`}
+											</TooltipContent>
+										</Tooltip>
 									</div>
 								))}
 							</div>
@@ -161,5 +170,6 @@ export default function Home() {
 				</div>
 			</div>
 		</div>
+		</TooltipProvider>
 	);
 }
