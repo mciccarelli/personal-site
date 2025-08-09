@@ -12,19 +12,18 @@ export default function Home() {
 	return (
 		<div className="flex flex-col-reverse lg:grid lg:grid-cols-12 min-h-[calc(100vh-8rem-36px)] px-4 lg:px-0 gap-8 lg:gap-0 pt-4">
 			{/* Left Column - Empty Space on Desktop */}
-			<div className="hidden lg:block lg:col-span-5" />
+			<div className="hidden md:block md:col-span-2 lg:col-span-4" />
 
 			{/* Center Column - Scrollable Projects */}
-			<div className="lg:col-span-4 lg:overflow-y-auto lg:pr-8 lg:pl-4">
+			<div className="md:col-span-4 md:overflow-y-auto md:pr-8 md:pl-4">
 				<div className="pb-8">
-					<h3 className="text-sm uppercase tracking-wider pl-4">Selected Projects</h3>
-
+					<h3 className="text-sm uppercase tracking-wider pl-4 mb-px">Selected Projects</h3>
 					<ProjectList items={projects} />
 				</div>
 			</div>
 
 			{/* Right Column - Sticky Info */}
-			<div className="lg:col-span-3 lg:sticky lg:top-[52px] lg:h-fit lg:pl-8 lg:pr-8">
+			<div className="md:col-span-4 md:sticky md:top-[52px] md:h-fit md:pl-8 md:pr-8">
 				<div className="space-y-8">
 					{/* About */}
 					<div className="space-y-1">
@@ -125,7 +124,7 @@ export default function Home() {
 									<DollarSign className="w-4 h-4 inline-block text-foreground/40 scale-[.85]" />
 									&nbsp;
 									<a
-										className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer no-underline"
+										className="text-xs opacity-60 hover:opacity-100 transition-opacity cursor-pointer no-underline -translate-x-[2px] translate-y-px inline-block"
 										href="https://buy.stripe.com/bJebJ10Zc0ck30Iga80Ba05"
 									>
 										Stripe
