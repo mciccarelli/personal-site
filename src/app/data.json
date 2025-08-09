@@ -1,6 +1,13 @@
 {
   "siteTitle": "m1ke.xyz — design engineer",
   "siteDescription": "brooklyn-based design engineer specializing in frontend development, react/next.js, and interactive web experiences. 20+ years building digital products and user interfaces.",
+  "titles": [
+    "design engineer",
+    "frontend developer", 
+    "react specialist",
+    "ui/ux designer",
+    "web developer"
+  ],
   "emailAddress": "mikecicc@gmail.com",
   "bio": "michael ciccarelli designs and develops digital products and interactive experiences — from concept to deployment. brooklyn-based, working worldwide through  <a href=\"https://thirdindex.co\">thirdindex</a>.",
   "expertise":[
