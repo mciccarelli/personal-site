@@ -121,7 +121,7 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen text-xs leading-5 tracking-tight lowercase;
+		@apply bg-background text-foreground min-h-screen text-xs leading-5 tracking-tight;
 	}
 
 	h2 {
