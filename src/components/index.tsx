@@ -1,4 +1,5 @@
 export { default as BlinkingDot } from '@/components/blinking-dot';
+export { Feed } from '@/components/feed';
 export { default as Footer } from '@/components/footer';
 export { default as IconBtc } from '@/components/icon-btc';
 export { default as IconCheck } from '@/components/icon-check';
