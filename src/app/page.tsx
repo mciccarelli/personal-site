@@ -12,18 +12,18 @@ export default function Home() {
 	return (
 		<div className="flex flex-col-reverse md:grid md:grid-cols-12 min-h-[calc(100vh-8rem-36px)] px-4 lg:px-0 gap-8 lg:gap-0 pt-4">
 			{/* Left Column - Empty Space on Desktop */}
-			<div className="hidden xl:block xl:col-span-4" />
+			<div className="hidden 2xl:block xl:col-span-1 2xl:col-span-3" />
 
 			{/* Center Column - Scrollable Projects */}
-			<div className="md:col-span-6 xl:col-span-4 md:overflow-y-auto md:pr-8 md:pl-4">
-				<div className="pb-8 pl-2.5">
+			<div className="md:col-span-6 xl:col-span-6 2xl:col-span-5 md:overflow-y-auto md:pr-8 md:pl-4">
+				<div className="pb-8 md:pl-2.5">
 					<h3 className="text-sm uppercase tracking-wider pl-4 mb-px">Selected Projects</h3>
 					<ProjectList items={projects} />
 				</div>
 			</div>
 
 			{/* Right Column - Sticky Info */}
-			<div className="md:col-span-6 xl:col-span-4 md:sticky md:top-[52px] md:h-fit md:pl-8 md:pr-8">
+			<div className="md:col-span-6 xl:col-span-5 2xl:col-span-4 md:sticky md:top-[52px] md:h-fit md:pl-8 md:pr-8">
 				<div className="space-y-8">
 					{/* About */}
 					<div className="space-y-1">
