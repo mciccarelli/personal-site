@@ -28,7 +28,7 @@ export default function Home() {
 					{/* About */}
 					<div className="space-y-1">
 						<h3 className="text-sm uppercase tracking-wider pl-4">About</h3>
-						<div className="text-xs text-foreground/80">
+						<div className="text-xs text-foreground/80 text-balance">
 							<p dangerouslySetInnerHTML={{ __html: bio }} />
 						</div>
 					</div>
@@ -38,7 +38,7 @@ export default function Home() {
 						<h3 className="text-sm uppercase tracking-wider pl-4">Experience</h3>
 						<div className="space-y-1 text-xs text-foreground/80">
 							{/* Mobile: stacked, Desktop: grid */}
-							<div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
+							<div className="hidden lg:grid lg:grid-cols-[1fr_auto] lg:gap-8">
 								<div className="space-y-1">
 									{experience.map((item, index) => (
 										<div key={index}>
@@ -47,7 +47,7 @@ export default function Home() {
 										</div>
 									))}
 								</div>
-								<div className="space-y-1">
+								<div className="space-y-1 text-right">
 									{experience.map((item, index) => (
 										<div key={index}>
 											{item.start}—{item.end}
@@ -91,7 +91,7 @@ export default function Home() {
 					</div>
 
 					{/* Contact & Payment - Split Columns */}
-					<div className="grid grid-cols-2 gap-8">
+					<div className="grid grid-cols-[1fr_auto] gap-8">
 						{/* Contact */}
 						<div className="space-y-1">
 							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
