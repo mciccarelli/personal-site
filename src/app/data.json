@@ -19,8 +19,11 @@
 	  "javascript engineer",
 	  "design technologist",
 	  "web designer",
-	  "user experience designer"
+	  "user experience designer",
+	  "vibe coder",
+    "internet experimenter"
   ],
+  "bio": "michael ciccarelli designs and develops digital products and interactive experiences — from concept to deployment. brooklyn-based, working worldwide through  <a href=\"https://thirdindex.co\">thirdindex</a>.",
   "expertise":[
     "react/next.js & full-stack development",
     "component libraries & design systems",
@@ -44,14 +47,71 @@
       "address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
     }
   ],
-  "projects": [
+  "experience": [
     {
-      "title": "Image Feed",
-      "url": "https://image-feed-chi.vercel.app/",
-      "year": 2025,
-      "image": "/projects/if-2025.jpg",
-      "description": "Demo built with Next.js, Unsplash API, Tailwind, & Framer Motion"
+      "role": "Freelance",
+      "company": "",
+      "location": "Remote",
+      "start": 2018,
+      "end": "Present",
+      "bullets": [
+        "Advised clients on digital product strategy, UX/UI design, and frontend development.",
+        "Conducted workshops and training sessions on modern web technologies."
+      ]
     },
+    {
+      "role": "Design Engineer",
+      "company": "Modern Treasury",
+      "location": "New York",
+      "start": 2024,
+      "end": 2025,
+      "bullets": [
+        "Designed and developed responsive web interfaces and UI components for fintech platform.",
+        "Built brand-focused design systems, motion libraries, and integrated headless CMS."
+      ]
+    },
+    {
+      "role": "Frontend Engineer",
+      "company": "Metropolis",
+      "location": "Brooklyn",
+      "start": 2022,
+      "end": 2024,
+      "bullets": [
+        "Built metal.build (smart contract deployments) and pod.xyz (DAO governance platform).",
+        "Developed multiple Farcaster frames and EVM-compatible dApps."
+      ]
+    },
+    {
+      "role": "Senior Engineer II",
+      "company": "Axoni",
+      "location": "New York",
+      "start": 2021,
+      "end": 2022,
+      "bullets": [
+        "Developed React apps, data visualizations, and reusable UI libraries for fintech products."
+      ]
+    },
+    {
+      "role": "Lead Frontend",
+      "company": "VICE Media",
+      "location": "Brooklyn",
+      "start": 2014,
+      "end": 2018,
+      "bullets": [
+        "Led frontend for VICE's publishing platform across VICELAND, Noisey, i-D, and VICE News.",
+        "Architected migration from legacy LAMP stack to modern React architecture."
+      ]
+    },
+    {
+      "role": "Web Developer",
+      "company": "Condé Nast",
+      "location": "New York",
+      "start": 2012,
+      "end": 2014,
+      "bullets": ["Built responsive websites and interactive features for GQ, Wire"]
+    }
+  ],
+  "projects": [
     {
       "title": "Modern Treasury",
       "url": "https://moderntreasury.com",
@@ -100,6 +160,13 @@
       "year": 2020,
       "image": "/projects/the-well.png",
       "description": "E-commerce & booking site. Vue.js, Sanity, and Shopify."
+    },
+    {
+      "title": "ELDORADO",
+      "url": "https://eldo.us/",
+      "year": 2019,
+      "image": "/projects/eldorado.jpg",
+      "description": "Portfolio site for architecture firm using Next.js, Contentful."
     },
     {
       "title": "Revolve Law",
