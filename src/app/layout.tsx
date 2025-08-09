@@ -27,10 +27,10 @@ export default function RootLayout({
 			<body className={source_code_pro.className}>
 				<ThemeProvider defaultTheme="system" storageKey="m1ke-ui-theme">
 					<div className="min-h-dvh flex flex-col">
-						<header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm px-3 py-1.5">
+						<header className="fixed top-0 left-0 right-0 z-50 px-3 py-1.5">
 							<ModeToggle />
 						</header>
-						<main className="flex-1 pt-[36px]">{children}</main>
+						<main className="flex-1 pt-[36px] md:container md:ml-auto">{children}</main>
 						<Footer />
 					</div>
 				</ThemeProvider>
