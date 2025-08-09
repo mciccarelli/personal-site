@@ -56,7 +56,9 @@ export function Feed({ items }: FeedProps) {
 			{items.map((project, index) => (
 				<div
 					key={index}
-					ref={(el) => (itemRefs.current[index] = el)}
+					ref={(el) => {
+						itemRefs.current[index] = el;
+					}}
 					className={`transition-all duration-700 ease-out ${
 						visibleItems.has(index)
 							? 'opacity-100 translate-y-0 blur-0'
