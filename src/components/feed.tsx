@@ -52,7 +52,7 @@ export function Feed({ items }: FeedProps) {
 	}, [items]);
 
 	return (
-		<div className="space-y-16">
+		<div className="space-y-20 md:space-y-32">
 			{items.map((project, index) => (
 				<div
 					key={index}
@@ -67,13 +67,15 @@ export function Feed({ items }: FeedProps) {
 				>
 					<article className="space-y-3">
 						{project.image && (
-							<div className="relative w-full aspect-[16/10] overflow-hidden rounded-sm bg-black">
+							<div className="relative w-full overflow-hidden rounded-sm bg-black">
 								<Image
 									src={project.image}
 									alt={project.title}
-									fill
-									className="object-contain"
+									width={1200}
+									height={800}
+									className="w-full h-auto"
 									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+									style={{ objectFit: 'contain' }}
 								/>
 							</div>
 						)}

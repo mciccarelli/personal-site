@@ -25,7 +25,7 @@ export default function Home() {
 				{/* Center Column - Scrollable Projects */}
 				<div className="md:col-span-6 xl:col-span-6 2xl:col-span-5 md:overflow-y-auto md:pr-8 md:pl-4">
 					<div className="pb-8 md:pl-2.5">
-						<h3 className="text-sm uppercase tracking-wider pl-4 mb-6">Feed</h3>
+						<h3 className="text-sm uppercase tracking-wider pl-4 mb-2">Feed</h3>
 						<Feed items={projects} />
 					</div>
 				</div>

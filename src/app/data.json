@@ -128,21 +128,11 @@
       "technologies": "Next.js, Sanity, Tailwind CSS, Motion"
     },
     {
-      "title": "KelvonAgee.com",
-      "role": "Design & Development",
-      "url": "https://kelvonagee.com",
-      "repository": "https://github.com/thirdidx/kelvonagee.com",
-      "year": 2025,
-      "image": "/projects/kelvon-info.png",
-      "description": "Photography portfolio with optimized image delivery and immersive viewing experience.",
-      "technologies": "Next.js, Cloudinary, Tailwind CSS, Motion"
-    },
-    {
       "title": "ONE/OF",
       "role": "Design & Development",
       "url": "https://shoponeof.com",
       "year": 2024,
-      "image": "/projects/one-of.png",
+      "image": "/projects/one-of.jpg",
       "description": "Headless e-commerce platform with custom product configurator and seamless checkout.",
       "technologies": "Shopify (headless), Next.js, Sanity, Tailwind"
     },
@@ -155,6 +145,16 @@
       "image": "/projects/fig.jpg",
       "description": "Event landing page with integrated ticketing and real-time capacity management.",
       "technologies": "Next.js, Tailwind CSS, Stripe"
+    },
+    {
+      "title": "KelvonAgee.com",
+      "role": "Design & Development",
+      "url": "https://kelvonagee.com",
+      "repository": "https://github.com/thirdidx/kelvonagee.com",
+      "year": 2023,
+      "image": "/projects/kelvon-info.png",
+      "description": "Photography portfolio with optimized image delivery and immersive viewing experience.",
+      "technologies": "Next.js, Cloudinary, Tailwind CSS, Motion"
     },
     {
       "title": "Elara.world",
