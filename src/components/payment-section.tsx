@@ -14,7 +14,7 @@ interface PaymentSectionProps {
 	wallets: Wallet[];
 }
 
-export function PaymentSection({ wallets }: PaymentSectionProps) {
+export default function PaymentSection({ wallets }: PaymentSectionProps) {
 	const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
 	const copyToClipboard = (text: string, index: number) => {

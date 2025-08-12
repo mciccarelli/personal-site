@@ -2,7 +2,7 @@
 
 import { useTheme } from '@/components/theme-provider';
 
-export function ModeToggle() {
+export default function ModeToggle() {
 	const { theme, setTheme } = useTheme();
 	const toggleTheme = () => {
 		setTheme(theme === 'light' ? 'dark' : 'light');

@@ -21,7 +21,7 @@ interface FeedProps {
 	items: ProjectItem[];
 }
 
-export function Feed({ items }: FeedProps) {
+export default function Feed({ items }: FeedProps) {
 	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -46,12 +46,9 @@ export function Feed({ items }: FeedProps) {
 					onMouseLeave={() => setHoveredIndex(null)}
 				>
 					<div
-						className={cn(
-							'hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1',
-							{
-								'opacity-100': hoveredIndex === index || expandedIndex === index
-							}
-						)}
+						className={cn('hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1', {
+							'opacity-100': hoveredIndex === index || expandedIndex === index
+						})}
 					>
 						<BlinkingDot variant={expandedIndex === index ? 'default' : 'subdued'} />
 					</div>
@@ -59,8 +56,10 @@ export function Feed({ items }: FeedProps) {
 					<article>
 						<div
 							className={cn(
-								"text-xs cursor-pointer select-none transition-colors",
-								expandedIndex === index || hoveredIndex === index ? "text-foreground" : "text-muted-foreground"
+								'text-xs cursor-pointer select-none transition-colors',
+								expandedIndex === index || hoveredIndex === index
+									? 'text-foreground'
+									: 'text-muted-foreground'
 							)}
 							onClick={() => toggleExpanded(index)}
 						>
@@ -95,7 +94,7 @@ export function Feed({ items }: FeedProps) {
 										<div>{project.description}</div>
 										{(project.role || project.technologies) && (
 											<div className="text-muted-foreground/60">
-												{project.role && project.technologies 
+												{project.role && project.technologies
 													? `${project.role} • ${project.technologies}`
 													: project.role || project.technologies}
 											</div>

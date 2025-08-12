@@ -100,16 +100,6 @@
   ],
   "projects": [
     {
-      "title": "ImageFeed",
-      "role": "Design & Development",
-      "url": "https://image-feed-chi.vercel.app",
-      "repository": "https://github.com/mciccarelli/image-feed",
-      "year": 2025,
-      "image": "/projects/image-feed.jpg",
-      "description": "Interactive demo showcasing smooth infinite scroll and image optimization techniques.",
-      "technologies": "Next.js, Unsplash API, Tailwind, Framer Motion"
-    },
-    {
       "title": "Modern Treasury",
       "role": "Frontend Development",
       "url": "https://moderntreasury.com",
@@ -135,6 +125,16 @@
       "image": "/projects/one-of.jpg",
       "description": "Headless e-commerce platform with custom product configurator and seamless checkout.",
       "technologies": "Shopify (headless), Next.js, Sanity, Tailwind"
+    },
+    {
+      "title": "ImageFeed",
+      "role": "Design & Development",
+      "url": "https://image-feed-chi.vercel.app",
+      "repository": "https://github.com/mciccarelli/image-feed",
+      "year": 2025,
+      "image": "/projects/image-feed.jpg",
+      "description": "Interactive demo showcasing smooth infinite scroll.",
+      "technologies": "Next.js, Unsplash API, Tailwind, Framer Motion"
     },
     {
       "title": "FIG Fashion Show",

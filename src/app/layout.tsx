@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Footer, ModeToggle } from '@/components';
+import { ModeToggle, ThemeProvider } from '@/components';
 import { Source_Code_Pro } from 'next/font/google';
 
 import data from '@/app/data.json';
@@ -31,7 +30,6 @@ export default function RootLayout({
 							<ModeToggle />
 						</header>
 						<main className="flex-1 pt-[36px] md:container md:ml-auto">{children}</main>
-						<Footer />
 					</div>
 				</ThemeProvider>
 			</body>
