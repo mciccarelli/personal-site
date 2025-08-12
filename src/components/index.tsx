@@ -1,4 +1,5 @@
 export { default as BlinkingDot } from '@/components/blinking-dot';
+export { Feed } from '@/components/feed';
 export { default as Footer } from '@/components/footer';
 export { default as IconBtc } from '@/components/icon-btc';
 export { default as IconCheck } from '@/components/icon-check';
@@ -10,4 +11,5 @@ export { default as ProjectList } from '@/components/project-list';
 export { default as ProjectDescription } from '@/components/project-description';
 export { default as Titles } from '@/components/titles';
 export { default as Wallets } from '@/components/wallets';
+export { PaymentSection } from '@/components/payment-section';
 export { ThemeProvider } from '@/components/theme-provider';
