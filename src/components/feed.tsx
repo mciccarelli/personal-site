@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import Link from 'next/link';
-import { ExternalLink, Code2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BlinkingDot } from '@/components';
+import { cn } from '@/lib/utils';
 
 interface ProjectItem {
 	title: string;
@@ -21,119 +22,112 @@ interface FeedProps {
 }
 
 export function Feed({ items }: FeedProps) {
-	const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
-	const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-	useEffect(() => {
-		const observers = itemRefs.current.map((ref, index) => {
-			if (!ref) return null;
-
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							setVisibleItems((prev) => new Set(prev).add(index));
-						}
-					});
-				},
-				{
-					threshold: 0.1,
-					rootMargin: '0px 0px -50px 0px',
-				}
-			);
-
-			observer.observe(ref);
-			return observer;
-		});
-
-		return () => {
-			observers.forEach((observer) => observer?.disconnect());
-		};
-	}, [items]);
+	const toggleExpanded = (index: number) => {
+		setExpandedIndex(expandedIndex === index ? null : index);
+	};
 
 	return (
-		<div className="space-y-20 md:space-y-32">
+		<div className="space-y-0">
 			{items.map((project, index) => (
-				<div
+				<motion.div
 					key={index}
-					ref={(el) => {
-						itemRefs.current[index] = el;
+					className="relative"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{
+						duration: 0.5,
+						delay: index * 0.05,
+						ease: [0.21, 0.47, 0.32, 0.98]
 					}}
-					className={`transition-all duration-700 ease-out ${
-						visibleItems.has(index)
-							? 'opacity-100 translate-y-0 blur-0'
-							: 'opacity-0 translate-y-8 blur-sm'
-					}`}
+					onMouseEnter={() => setHoveredIndex(index)}
+					onMouseLeave={() => setHoveredIndex(null)}
 				>
-					<article className="space-y-3">
-						{project.image && (
-							<div className="relative w-full overflow-hidden rounded-sm bg-black">
-								<Image
-									src={project.image}
-									alt={project.title}
-									width={1200}
-									height={800}
-									className="w-full h-auto"
-									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-									style={{ objectFit: 'contain' }}
-								/>
-							</div>
+					<div
+						className={cn(
+							'hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1.5',
+							{
+								'opacity-100': hoveredIndex === index || expandedIndex === index
+							}
 						)}
-						<div className="space-y-1">
-							<div className="flex items-baseline justify-between gap-4">
-								<h3 className="text-sm font-medium flex items-baseline gap-2">
-									{project.url ? (
-										<Link
-											href={project.url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="hover:underline underline-offset-2 no-underline hover:decoration-red-500"
-										>
-											{project.title}
-										</Link>
-									) : (
-										<span>{project.title}</span>
-									)}
-									{project.role && (
-										<span className="text-xs font-normal text-muted-foreground">
-											({project.role})
-										</span>
-									)}
-								</h3>
-								<div className="flex items-center gap-2">
-									{project.url && (
-										<Link
-											href={project.url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-muted-foreground hover:text-foreground transition-colors no-underline"
-											aria-label={`Visit ${project.title}`}
-										>
-											<ExternalLink className="w-3.5 h-3.5" />
-										</Link>
-									)}
-									{project.repository && (
-										<Link
-											href={project.repository}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-muted-foreground hover:text-foreground transition-colors no-underline"
-											aria-label={`View source code for ${project.title}`}
-										>
-											<Code2 className="w-3.5 h-3.5" />
-										</Link>
-									)}
-								</div>
-							</div>
-							<p className="text-xs text-muted-foreground">
-								{project.description}
-								{project.technologies && (
-									<span className="text-muted-foreground/60"> {project.technologies}</span>
-								)}
-							</p>
+					>
+						<BlinkingDot variant={expandedIndex === index ? 'default' : 'subdued'} />
+					</div>
+
+					<article>
+						<div
+							className={cn(
+								"text-xs cursor-pointer select-none transition-colors",
+								expandedIndex === index || hoveredIndex === index ? "text-foreground" : "text-muted-foreground"
+							)}
+							onClick={() => toggleExpanded(index)}
+						>
+							{project.title}
 						</div>
+
+						<AnimatePresence>
+							{expandedIndex === index && (
+								<motion.div
+									initial={{ height: 0, opacity: 0 }}
+									animate={{
+										height: 'auto',
+										opacity: 1
+									}}
+									exit={{
+										height: 0,
+										opacity: 0
+									}}
+									transition={{
+										height: {
+											duration: 0.2,
+											ease: [0.32, 0.72, 0, 1]
+										},
+										opacity: {
+											duration: 0.15,
+											ease: 'easeInOut'
+										}
+									}}
+									style={{ overflow: 'visible' }}
+								>
+									<div className="text-xs text-muted-foreground pt-1 space-y-0.5 pb-2">
+										<div>{project.description}</div>
+										{(project.role || project.technologies) && (
+											<div className="text-muted-foreground/60">
+												{project.role && project.technologies 
+													? `${project.role} • ${project.technologies}`
+													: project.role || project.technologies}
+											</div>
+										)}
+										<div className="flex gap-3 mt-1">
+											{project.url && (
+												<Link
+													href={project.url}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+												>
+													Visit
+												</Link>
+											)}
+											{project.repository && (
+												<Link
+													href={project.repository}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+												>
+													Source
+												</Link>
+											)}
+										</div>
+									</div>
+								</motion.div>
+							)}
+						</AnimatePresence>
 					</article>
-				</div>
+				</motion.div>
 			))}
 		</div>
 	);

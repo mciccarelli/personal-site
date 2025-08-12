@@ -11,5 +11,5 @@ export { default as ProjectList } from '@/components/project-list';
 export { default as ProjectDescription } from '@/components/project-description';
 export { default as Titles } from '@/components/titles';
 export { default as Wallets } from '@/components/wallets';
-export { PaymentSection } from '@/components/PaymentSection';
+export { PaymentSection } from '@/components/payment-section';
 export { ThemeProvider } from '@/components/theme-provider';

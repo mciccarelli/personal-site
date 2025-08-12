@@ -115,7 +115,7 @@
       "url": "https://moderntreasury.com",
       "year": 2025,
       "image": "/projects/mt.png",
-      "description": "Marketing site for fintech platform handling $2T+ in transactions annually.",
+      "description": "Marketing site for fintech platform that processes $1 billion in instant payments annually.",
       "technologies": "Next.js, Sanity, Tailwind CSS"
     },
     {
