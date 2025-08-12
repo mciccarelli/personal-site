@@ -34,7 +34,7 @@ export function Feed({ items }: FeedProps) {
 			{items.map((project, index) => (
 				<motion.div
 					key={index}
-					className="relative"
+					className="relative  mb-1"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{
@@ -47,7 +47,7 @@ export function Feed({ items }: FeedProps) {
 				>
 					<div
 						className={cn(
-							'hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1.5',
+							'hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1',
 							{
 								'opacity-100': hoveredIndex === index || expandedIndex === index
 							}
