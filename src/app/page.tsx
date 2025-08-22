@@ -86,7 +86,7 @@ export default function Home() {
 								<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
 								<div className="space-y-1 text-xs text-foreground/80">
 									<div>
-										<a href="mailto:mic@hael.cc">mic[at]hael.cc</a>
+										<a href="mailto:hello@m1ke.xyz">hello[at]m1ke.xyz</a>
 									</div>
 									<div>
 										<a href="http://cal.com/thirdindex/15min">Schedule a call</a>
