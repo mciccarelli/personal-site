@@ -79,8 +79,8 @@ export default function Home() {
 							</ul>
 						</div>
 
-						{/* Contact & Payment - Split Columns */}
-						<div className="grid grid-cols-[1fr_auto] gap-8">
+						{/* Contact & Payment - Split Columns on Desktop, Stacked on Mobile */}
+						<div className="flex flex-col space-y-8 md:grid md:grid-cols-[1fr_auto] md:gap-8 md:space-y-0">
 							{/* Contact */}
 							<div className="space-y-1">
 								<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
