@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { ModeToggle, ThemeProvider } from '@/components';
 import { Source_Code_Pro } from 'next/font/google';
+import Image from 'next/image';
 
 import data from '@/app/data.json';
 
@@ -24,9 +25,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<ThemeProvider defaultTheme="system" storageKey="m1ke-ui-theme">
+				<ThemeProvider defaultTheme="system" storageKey="hael-ui-theme">
 					<div className="min-h-dvh flex flex-col">
-						<header className="fixed top-0 left-0 right-0 z-50 px-3 py-1.5">
+						<header className="fixed top-0 left-0 right-0 z-50 p-4 flex items-center">
 							<ModeToggle />
 						</header>
 						<main className="flex-1 pt-[36px] md:container md:ml-auto">{children}</main>
