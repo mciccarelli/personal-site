@@ -1,11 +1,11 @@
 @import 'tailwindcss';
 
-@theme inline {
-	--font-size-xs: 0.625rem;
-	--font-size-sm: 0.6875rem;
-	--font-size-base: 0.75rem;
-	--font-size-lg: 1rem;
-	--font-size-xl: 1.25rem;
+@theme {
+	--text-xs: 0.625rem;
+	--text-sm: 0.6875rem;
+	--text-base: 0.75rem;
+	--text-lg: 1rem;
+	--text-xl: 1.25rem;
 
 	--border-radius-sm: calc(var(--radius) - 4px);
 	--border-radius-md: calc(var(--radius) - 2px);
@@ -121,7 +121,7 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen text-xs leading-5 tracking-tight;
+		@apply bg-background text-foreground min-h-screen text-xs leading-5 uppercase;
 	}
 
 	h2 {

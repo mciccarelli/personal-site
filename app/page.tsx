@@ -1,6 +1,7 @@
-import { Feed, PaymentSection } from '@/components';
+import Feed from '@/components/feed';
+import PaymentSection from '@/components/payment-section';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import data from '@/app/data.json';
+import data from '../data.json';
 
 export default function Home() {
 	const { bio, projects, expertise, wallets, experience } = data;
@@ -39,8 +40,8 @@ export default function Home() {
 									<div className="space-y-1">
 										{experience.map((item, index) => (
 											<div key={index}>
-												{item.role}
-												{item.company ? `, ${item.company}` : ''}
+												{item.role}, {' '}
+												<span dangerouslySetInnerHTML={{ __html: item.company }} />
 											</div>
 										))}
 									</div>
@@ -69,9 +70,9 @@ export default function Home() {
 							</div>
 						</div>
 
-						{/* Services */}
+						{/* Capabilities */}
 						<div className="space-y-1">
-							<h3 className="text-sm uppercase tracking-wider pl-4">Services</h3>
+							<h3 className="text-sm uppercase tracking-wider pl-4">specialties</h3>
 							<ul className="space-y-1 text-xs text-foreground/80">
 								{expertise.map((item) => (
 									<li key={item}>{item}</li>
@@ -79,34 +80,28 @@ export default function Home() {
 							</ul>
 						</div>
 
-						{/* Contact & Payment - Split Columns on Desktop, Stacked on Mobile */}
-						<div className="flex flex-col space-y-8 md:grid md:grid-cols-[1fr_auto] md:gap-8 md:space-y-0">
-							{/* Contact */}
-							<div className="space-y-1">
-								<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
-								<div className="space-y-1 text-xs text-foreground/80">
-									<div>
-										<a href="mailto:m@ciccarelli.me">m[at]ciccarelli.me</a>
-									</div>
-									<div>
-										<a href="http://cal.com/thirdindex/15min">Schedule a call</a>
-									</div>
-									<div>
-										<a href="http://linkedin.com/in/mciccarelli/">LinkedIn</a>,{' '}
-										<a href="https://github.com/mciccarelli">GitHub</a>
-									</div>
-									<div>
-										<a href="https://x.com/mcrxlli">X</a>, <a href="https://t.me/mciccarelli">TG</a>,{' '}
-										<a href="https://signal.me/#eu/GVhbLY_OWFgXipDTou2OTpIonm05xVhb4iAywFVWb5PBl_qAd2JMF56o6JNiLkoo">
-											Signal
-										</a>
-									</div>
+						{/* Contact */}
+						<div className="space-y-1">
+							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
+							<div className="space-y-1 text-xs text-foreground/80">
+								<div>
+									<a href="mailto:m@ciccarelli.me">m@ciccarelli.me</a>
+								</div>
+								<div>
+									<a href="http://cal.com/thirdindex/15min">schedule a call</a>
+								</div>
+								<div>
+									<a href="https://github.com/mciccarelli">github</a>,{' '}
+									<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
+								</div>
+								<div>
+									<a href="https://x.com/mciccarelli">twitter/x</a>, <a href="https://t.me/mciccarelli">tg</a>
 								</div>
 							</div>
-
-							{/* Payment */}
-							<PaymentSection wallets={wallets} />
 						</div>
+
+						{/* Payment */}
+						<PaymentSection wallets={wallets} />
 					</div>
 				</div>
 			</div>

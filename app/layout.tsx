@@ -1,12 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { ModeToggle, ThemeProvider } from '@/components';
+import ModeToggle from '@/components/mode-toggle';
+import ThemeProvider from '@/components/theme-provider';
 import { Source_Code_Pro } from 'next/font/google';
-import Image from 'next/image';
 
-import data from '@/app/data.json';
+import data from '../data.json';
 
-export const source_code_pro = Source_Code_Pro({
+const source_code_pro = Source_Code_Pro({
 	subsets: ['latin'],
 	display: 'swap',
 	weight: ['400', '500', '600', '700']
@@ -14,7 +14,10 @@ export const source_code_pro = Source_Code_Pro({
 
 export const metadata: Metadata = {
 	title: data?.siteTitle,
-	description: data?.siteDescription
+	description: data?.siteDescription,
+	icons: {
+		icon: '/favicon.ico'
+	}
 };
 
 export default function RootLayout({

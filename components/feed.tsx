@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BlinkingDot } from '@/components';
+import BlinkingDot from '@/components/blinking-dot';
 import { cn } from '@/lib/utils';
 
 interface ProjectItem {
@@ -46,7 +46,7 @@ export default function Feed({ items }: FeedProps) {
 					onMouseLeave={() => setHoveredIndex(null)}
 				>
 					<div
-						className={cn('hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-1', {
+						className={cn('hidden md:flex opacity-0 transition-opacity absolute -left-3.5 top-[2.5px]', {
 							'opacity-100': hoveredIndex === index || expandedIndex === index
 						})}
 					>
@@ -107,7 +107,7 @@ export default function Feed({ items }: FeedProps) {
 													rel="noopener noreferrer"
 													className="text-muted-foreground hover:text-foreground underline underline-offset-2"
 												>
-													Visit
+													visit
 												</Link>
 											)}
 											{project.repository && (
@@ -117,7 +117,7 @@ export default function Feed({ items }: FeedProps) {
 													rel="noopener noreferrer"
 													className="text-muted-foreground hover:text-foreground underline underline-offset-2"
 												>
-													Source
+													source
 												</Link>
 											)}
 										</div>

@@ -1,0 +1,193 @@
+{
+	"siteTitle": "ciccarelli",
+	"siteDescription": "brooklyn-based design engineer building modern interfaces and digital products.",
+	"emailAddress": "m@ciccarelli.me",
+	"titles": [
+		"design engineer",
+		"frontend developer",
+		"full-stack developer",
+		"react specialist",
+		"ui/ux designer",
+		"web3 developer"
+	],
+	"bio": "michael ciccarelli designs and builds digital products and interactive experiences. he focuses on crafting intuitive interfaces with attention to detail, motion, and performance. brooklyn-based, available worldwide.",
+	"expertise": [
+		"react/next.js & full-stack development",
+		"component libraries & design systems",
+		"animations, micro-interactions & ui/ux",
+		"headless cms integration & apis",
+		"e-commerce, web3 & payment systems",
+		"web performance optimization"
+	],
+	"wallets": [
+		{
+			"symbol": "ETH",
+			"address": "0x85760ef61c0ccB7BCC4C7A0116d80D59D92e736d",
+			"ens": "hael.eth"
+		},
+		{
+			"symbol": "BTC",
+			"address": "bc1q6ycngc7e8hjxwdasnlc87rmasa485f0c2p8f97"
+		},
+		{
+			"symbol": "SOL",
+			"address": "A5xK5o6H5BeoUj1zEHU7RFd2JAWbKUxzQjHcNm3ducq8"
+		}
+	],
+	"experience": [
+		{
+			"role": "founder",
+			"company": "<a href=\"https://thirdindex.co\">thirdindex</a>",
+			"location": "remote",
+			"start": 2024,
+			"end": "Present",
+			"bullets": [
+				"advise clients on digital product strategy, ui/ux design, and frontend development.",
+				"conduct workshops and training sessions on modern web technologies."
+			]
+		},
+		{
+			"role": "design engineer",
+			"company": "modern treasury",
+			"location": "new york",
+			"start": 2024,
+			"end": 2025,
+			"bullets": [
+				"designed and developed responsive web interfaces and ui components for fintech platform.",
+				"built brand-focused design systems, motion libraries, and integrated headless CMS."
+			]
+		},
+		{
+			"role": "senior engineer ii",
+			"company": "axoni",
+			"location": "new york",
+			"start": 2021,
+			"end": 2022,
+			"bullets": [
+				"developed react apps, data visualizations, and reusable ui libraries for fintech products."
+			]
+		},
+		{
+			"role": "lead frontend",
+			"company": "vice media",
+			"location": "brooklyn",
+			"start": 2014,
+			"end": 2018,
+			"bullets": [
+				"led frontend for vice's publishing platform across viceland, noisey, i-d, and vice news.",
+				"architected migration from legacy lamp stack to modern react architecture."
+			]
+		},
+		{
+			"role": "web developer",
+			"company": "condé nast",
+			"location": "new york",
+			"start": 2012,
+			"end": 2014,
+			"bullets": ["built responsive websites and interactive features for gq, wire"]
+		}
+	],
+	"projects": [
+		{
+			"title": "modern treasury",
+			"role": "frontend development",
+			"url": "https://moderntreasury.com",
+			"year": 2025,
+			"image": "/projects/mt.png",
+			"description": "marketing site for fintech platform that processes $1 billion in instant payments annually.",
+			"technologies": "next.js, sanity, tailwind"
+		},
+		{
+			"title": "amazon: the bar",
+			"role": "frontend development",
+			"url": "https://amazonthe.bar",
+			"year": 2025,
+			"image": "/projects/the-bar-2024.jpg",
+			"description": "sleek portfolio for creative collective featuring custom animations and dynamic layouts.",
+			"technologies": "next.js, sanity, tailwind, motion"
+		},
+		{
+			"title": "one/of",
+			"role": "design & development",
+			"url": "https://shoponeof.com",
+			"year": 2024,
+			"image": "/projects/one-of.jpg",
+			"description": "headless e-commerce platform with custom product configurator and seamless checkout.",
+			"technologies": "shopify (headless), next.js, sanity, tailwind"
+		},
+		{
+			"title": "image feed",
+			"role": "design & development",
+			"url": "https://image-feed-chi.vercel.app",
+			"repository": "https://github.com/mciccarelli/image-feed",
+			"year": 2025,
+			"image": "/projects/image-feed.jpg",
+			"description": "interactive demo showcasing smooth infinite scroll.",
+			"technologies": "next.js, unsplash api, tailwind, framer motion"
+		},
+		{
+			"title": "kelvonagee.com",
+			"role": "design & development",
+			"url": "https://kelvonagee.com",
+			"repository": "https://github.com/thirdidx/kelvonagee.com",
+			"year": 2023,
+			"image": "/projects/kelvon-info.png",
+			"description": "photography portfolio with optimized image delivery and immersive viewing experience.",
+			"technologies": "next.js, cloudinary, tailwind, motion"
+		},
+		{
+			"title": "elara.world",
+			"role": "fullstack development",
+			"url": "https://elara.world",
+			"year": 2021,
+			"image": "/projects/elara-world.png",
+			"description": "community hub combining content publishing with integrated merchandise store.",
+			"technologies": "next.js, sanity, shopify"
+		},
+		{
+			"title": "the well",
+			"role": "fullstack development",
+			"url": "https://the-well.com",
+			"year": 2020,
+			"image": "/projects/the-well.png",
+			"description": "wellness platform merging e-commerce with appointment booking and member management.",
+			"technologies": "vue.js, sanity, shopify"
+		},
+		{
+			"title": "eldorado",
+			"role": "frontend development",
+			"url": "https://eldo.us/",
+			"year": 2019,
+			"image": "/projects/eldo.png",
+			"description": "minimalist architecture portfolio emphasizing visual storytelling and project narratives.",
+			"technologies": "next.js, contentful"
+		},
+		{
+			"title": "revolve law",
+			"role": "frontend development",
+			"url": "https://revolvelawgroup.com",
+			"year": 2019,
+			"image": "/projects/revolve-law.png",
+			"description": "professional services site with subtle animations and streamlined contact flows.",
+			"technologies": "next.js, framer motion"
+		},
+		{
+			"title": "g9 ventures",
+			"role": "Design & Development",
+			"url": "https://g9.ventures",
+			"year": 2018,
+			"image": "/projects/g9-ventures.png",
+			"description": "vc portfolio showcasing investment thesis and company highlights.",
+			"technologies": "next.js, contentful"
+		},
+		{
+			"title": "vice",
+			"role": "lead frontend development",
+			"url": "https://vice.com",
+			"year": 2016,
+			"image": "/projects/vice.png",
+			"description": "high-traffic editorial platform serving millions of readers with real-time content delivery.",
+			"technologies": "react.js, redux, node.js"
+		}
+	]
+}
