@@ -40,8 +40,7 @@ export default function Home() {
 									<div className="space-y-1">
 										{experience.map((item, index) => (
 											<div key={index}>
-												{item.role}, {' '}
-												<span dangerouslySetInnerHTML={{ __html: item.company }} />
+												{item.role}, <span dangerouslySetInnerHTML={{ __html: item.company }} />
 											</div>
 										))}
 									</div>
@@ -85,7 +84,7 @@ export default function Home() {
 							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
 							<div className="space-y-1 text-xs text-foreground/80">
 								<div>
-									<a href="mailto:m@ciccarelli.me">m@ciccarelli.me</a>
+									<a href="mailto:mic@hael.cc">mic@hael.cc</a>
 								</div>
 								<div>
 									<a href="http://cal.com/thirdindex/15min">schedule a call</a>
@@ -95,7 +94,8 @@ export default function Home() {
 									<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
 								</div>
 								<div>
-									<a href="https://x.com/mciccarelli">twitter/x</a>, <a href="https://t.me/mciccarelli">tg</a>
+									<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
+									<a href="https://t.me/mciccarelli">tg</a>
 								</div>
 							</div>
 						</div>
