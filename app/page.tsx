@@ -8,25 +8,18 @@ export default function Home() {
 
 	return (
 		<TooltipProvider>
-			<div className="flex flex-col-reverse md:grid md:grid-cols-12 px-4 lg:px-0 gap-8 lg:gap-0 pt-4">
-				{/* Left Column - Empty Space on Desktop */}
-				<div className="hidden xl:block lg:col-span-1 xl:col-span-3" />
+			<div className="grid grid-cols-1 md:grid-cols-12 gap-8 px-4 md:px-8 pt-4 pb-16">
+				{/* Left Whitespace */}
+				<div className="hidden md:block md:col-span-5"></div>
 
-				{/* Center Column - Scrollable Projects */}
-				<div className="md:col-span-6 lg:col-span-6 xl:col-span-5 md:overflow-y-auto md:pr-8 md:pl-4">
-					<div className="pb-8 md:pl-2.5">
-						<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Projects</h3>
-						<Feed items={projects} />
-					</div>
-				</div>
-
-				{/* Right Column - Sticky Info */}
-				<div className="md:col-span-6 lg:col-span-5 xl:col-span-4 md:sticky md:top-[52px] md:h-fit md:pl-8 md:pr-8">
-					<div className="space-y-8">
+				{/* Content Area */}
+				<div className="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+					{/* Right Column - Everything (First on mobile) */}
+					<div className="space-y-8 md:order-2">
 						{/* About */}
 						<div className="space-y-1">
 							<h3 className="text-sm uppercase tracking-wider pl-4">About</h3>
-							<div className="text-xs text-foreground/80 text-balance">
+							<div className="text-xs text-foreground/80">
 								<p dangerouslySetInnerHTML={{ __html: bio }} />
 							</div>
 						</div>
@@ -35,43 +28,27 @@ export default function Home() {
 						<div className="space-y-1">
 							<h3 className="text-sm uppercase tracking-wider pl-4">Experience</h3>
 							<div className="space-y-1 text-xs text-foreground/80">
-								{/* Mobile: stacked, Desktop: grid */}
-								<div className="hidden lg:grid lg:grid-cols-[1fr_auto] lg:gap-8">
-									<div className="space-y-1">
-										{experience.map((item, index) => (
-											<div key={index}>
-												{item.role}, <span dangerouslySetInnerHTML={{ __html: item.company }} />
-											</div>
-										))}
+								{experience.map((item, index) => (
+									<div key={index} className="flex justify-between gap-4">
+										<span className="flex-1">
+											{item.role}
+											{item.company && (
+												<>
+													, <span dangerouslySetInnerHTML={{ __html: item.company }} />
+												</>
+											)}
+										</span>
+										<span className="whitespace-nowrap">
+											{item.start}—{item.end}
+										</span>
 									</div>
-									<div className="space-y-1 text-right">
-										{experience.map((item, index) => (
-											<div key={index}>
-												{item.start}—{item.end}
-											</div>
-										))}
-									</div>
-								</div>
-								{/* Mobile: combined */}
-								<div className="lg:hidden space-y-1">
-									{experience.map((item, index) => (
-										<div key={index} className="flex justify-between">
-											<span>
-												{item.role}
-												{item.company ? `, ${item.company}` : ''}
-											</span>
-											<span>
-												{item.start}—{item.end}
-											</span>
-										</div>
-									))}
-								</div>
+								))}
 							</div>
 						</div>
 
-						{/* Capabilities */}
+						{/* Specialties */}
 						<div className="space-y-1">
-							<h3 className="text-sm uppercase tracking-wider pl-4">specialties</h3>
+							<h3 className="text-sm uppercase tracking-wider pl-4">Specialties</h3>
 							<ul className="space-y-1 text-xs text-foreground/80">
 								{expertise.map((item) => (
 									<li key={item}>{item}</li>
@@ -79,29 +56,42 @@ export default function Home() {
 							</ul>
 						</div>
 
-						{/* Contact */}
+						{/* Contact & Payment */}
 						<div className="space-y-1">
-							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
-							<div className="space-y-1 text-xs text-foreground/80">
-								<div>
-									<a href="mailto:mic@hael.cc">mic@hael.cc</a>
+							<div className="flex flex-col md:flex-row md:gap-8">
+								{/* Contact */}
+								<div className="flex-1 space-y-1">
+									<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
+									<div className="space-y-1 text-xs text-foreground/80">
+										<div>
+											<a href="mailto:mic@hael.cc">mic@hael.cc</a>
+										</div>
+										<div>
+											<a href="http://cal.com/thirdindex/15min">schedule a call</a>
+										</div>
+										<div>
+											<a href="https://github.com/mciccarelli">github</a>,{' '}
+											<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
+										</div>
+										<div>
+											<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
+											<a href="https://t.me/mciccarelli">tg</a>
+										</div>
+									</div>
 								</div>
-								<div>
-									<a href="http://cal.com/thirdindex/15min">schedule a call</a>
-								</div>
-								<div>
-									<a href="https://github.com/mciccarelli">github</a>,{' '}
-									<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
-								</div>
-								<div>
-									<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
-									<a href="https://t.me/mciccarelli">tg</a>
+
+								{/* Payment */}
+								<div className="flex-1 mt-8 md:mt-0">
+									<PaymentSection wallets={wallets} />
 								</div>
 							</div>
 						</div>
+					</div>
 
-						{/* Payment */}
-						<PaymentSection wallets={wallets} />
+					{/* Left Column - Projects (Last on mobile) */}
+					<div className="md:order-1">
+						<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Projects</h3>
+						<Feed items={projects} />
 					</div>
 				</div>
 			</div>
