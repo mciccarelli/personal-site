@@ -10,14 +10,14 @@
 		"ui/ux designer",
 		"web3 developer"
 	],
-	"bio": "michael ciccarelli designs and builds digital products and interactive experiences. he focuses on crafting intuitive interfaces with attention to detail, motion, and performance. brooklyn-based, available worldwide.",
+	"bio": "Michael Ciccarelli builds digital products with two decades of engineering and design experience. He focuses on intuitive interfaces, smooth motion, and performance. Brooklyn-based, available worldwide through <a href=\"https://thirdindex.co\">thirdindex</a>.",
 	"expertise": [
-		"react/next.js & full-stack development",
-		"component libraries & design systems",
-		"animations, micro-interactions & ui/ux",
-		"headless cms integration & apis",
-		"e-commerce, web3 & payment systems",
-		"web performance optimization"
+		"React/Next.js & full-stack dev",
+		"Design systems & component libraries",
+		"Animations & UI/UX",
+		"Headless CMS & APIs",
+		"E-commerce, Web3, payments",
+		"Performance optimization"
 	],
 	"wallets": [
 		{
@@ -36,8 +36,7 @@
 	],
 	"experience": [
 		{
-			"role": "founder",
-			"company": "<a href=\"https://thirdindex.co\">thirdindex</a>",
+			"role": "Independent Consultant",
 			"location": "remote",
 			"start": 2024,
 			"end": "Present",
