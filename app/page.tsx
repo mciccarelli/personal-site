@@ -52,7 +52,7 @@ export default function Home() {
 
 					{/* Specialties */}
 					<div className="space-y-1">
-						<h3 className="text-sm uppercase tracking-wider pl-4">What I Do</h3>
+						<h3 className="text-sm uppercase tracking-wider pl-4">Focus areas</h3>
 						<ul className="space-y-1 text-xs text-foreground/80">
 							{expertise.map((item) => (
 								<li key={item}>{item}</li>
