@@ -32,17 +32,8 @@ export default function PaymentSection({ wallets }: PaymentSectionProps) {
 
 	return (
 		<div className="space-y-1">
-			<h3 className="text-sm uppercase tracking-wider pl-4">Payment</h3>
+			<h3 className="text-sm uppercase tracking-wider pl-4">Wallets</h3>
 			<div className="space-y-1 text-xs text-foreground/80">
-				<div className="flex items-center -ml-1">
-					<DollarSign className="w-3.5 h-3.5 text-foreground/40 opacity-60" />
-					<a
-						className="text-xs hover:opacity-100 transition-opacity cursor-pointer no-underline ml-1"
-						href="https://buy.stripe.com/bJebJ10Zc0ck30Iga80Ba05"
-					>
-						stripe
-					</a>
-				</div>
 				{wallets.map((wallet, index) => (
 					<div key={index} className="flex items-center -ml-1">
 						<span className="opacity-60">
@@ -77,6 +68,15 @@ export default function PaymentSection({ wallets }: PaymentSectionProps) {
 						</Tooltip>
 					</div>
 				))}
+				{/* <div className="flex items-center -ml-1">
+					<DollarSign className="w-3.5 h-3.5 text-foreground/40 opacity-60" />
+					<a
+						className="text-xs hover:opacity-100 transition-opacity cursor-pointer no-underline ml-1"
+						href="https://buy.stripe.com/bJebJ10Zc0ck30Iga80Ba05"
+					>
+						stripe
+					</a>
+				</div> */}
 			</div>
 		</div>
 	);
