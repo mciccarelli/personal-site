@@ -88,6 +88,15 @@
 	],
 	"projects": [
 		{
+			"title": "legend.xyz",
+			"role": "frontend development",
+			"url": "https://legend.xyz",
+			"year": 2025,
+			"image": "/projects/legend.png",
+			"description": "Marketing site for Legend, an embedded smart contract wallet built as a UI/UX layer on top of existing open DeFi protocols. ",
+			"technologies": "next.js, tailwind, webgl"
+		},
+		{
 			"title": "modern treasury",
 			"role": "frontend development",
 			"url": "https://moderntreasury.com",
