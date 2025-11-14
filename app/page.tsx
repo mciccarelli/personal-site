@@ -67,10 +67,10 @@ export default function Home() {
 							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
 							<div className="space-y-1 text-xs text-foreground/80">
 								<div>
-									<a href="mailto:mic@hael.cc">mic@hael.cc</a>
+									<a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
 								</div>
 								<div>
-									<a href="http://cal.com/thirdindex/15min">schedule a call</a>
+									<a href="http://cal.com/atra-systems/15min">schedule a call</a>
 								</div>
 								<div>
 									<a href="https://github.com/mciccarelli">github</a>,{' '}

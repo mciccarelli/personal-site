@@ -28,7 +28,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<ThemeProvider defaultTheme="system" storageKey="hael-ui-theme">
+				<ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
 					<div className="min-h-dvh flex flex-col">
 						<header className="fixed top-0 left-0 right-0 z-50 p-4 flex items-center">
 							<ModeToggle />
