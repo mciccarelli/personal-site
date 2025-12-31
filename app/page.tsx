@@ -77,7 +77,7 @@ export default function Home() {
 									<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
 								</div>
 								<div>
-									<a href="https://x.com/mcrxlli">twitter/x</a>,{' '}
+									<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
 									<a href="https://t.me/mciccarelli">tg</a>
 								</div>
 							</div>

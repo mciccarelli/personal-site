@@ -1,6 +1,6 @@
 {
 	"siteTitle": "michael ciccarelli",
-	"siteDescription": "las vegas-based software engineer and designer building web platforms and digital products.",
+	"siteDescription": "software engineer and designer building web platforms and digital products.",
 	"emailAddress": "michael@atra.xyz",
 	"titles": [
 		"design engineer",
@@ -10,7 +10,7 @@
 		"ui/ux designer",
 		"web3 developer"
 	],
-	"bio": "michael ciccarelli is a software engineer and designer based in las vegas, nevada. twenty years of experience building web platforms across fintech, media, and emerging technology. focused on frontend systems, interface design, interaction, and performance. available for work through <a href=\"https://atra.xyz\">atra systems</a>.",
+	"bio": "michael ciccarelli is a software engineer and designer with twenty years of experience building web platforms across fintech, media, and emerging technology. focused on frontend systems, interface design, interaction, and performance. available for work through <a href=\"https://atra.xyz\">atra systems</a>.",
 	"expertise": [
 		"React/Next.js & full-stack dev",
 		"Design systems & component libraries",
