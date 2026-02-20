@@ -1,23 +1,17 @@
 {
 	"siteTitle": "michael ciccarelli",
-	"siteDescription": "software engineer and designer building web platforms and digital products.",
-	"emailAddress": "michael@atra.xyz",
-	"titles": [
-		"design engineer",
-		"frontend developer",
-		"full-stack developer",
-		"react specialist",
-		"ui/ux designer",
-		"web3 developer"
-	],
-	"bio": "michael ciccarelli is a software engineer and designer with twenty years of experience building web platforms across fintech, media, and emerging technology. focused on frontend systems, interface design, interaction, and performance. available for work through <a href=\"https://atra.xyz\">atra systems</a>.",
+	"siteDescription": "design engineer and consultant building web platforms and digital products.",
+	"emailAddress": "mc@atra.xyz",
+	"bio": "Michael Ciccarelli is a design engineer and consultant based in Las Vegas. Twenty years building web platforms across fintech, media, and emerging technology — focused on frontend systems, interface design, and AI integration. Currently consulting through <a href=\"https://atra.xyz\">atra systems</a>.",
 	"expertise": [
-		"React/Next.js & full-stack dev",
-		"Design systems & component libraries",
-		"Animations & UI/UX",
-		"Headless CMS & APIs",
-		"E-commerce, Web3, payments",
-		"Performance optimization"
+		"Frontend engineering & React/Next.js",
+		"Motion, interaction & UI/UX",
+		"Full-stack development & API integration",
+		"Headless CMS & content platforms",
+		"E-commerce & payments",
+		"Design Systems & Component Libraries",
+		"AI integration & workflow automation",
+		"Web3 & decentralized applications"
 	],
 	"wallets": [
 		{
@@ -38,7 +32,7 @@
 		{
 			"role": "Independent Consultant",
 			"location": "remote",
-			"start": 2024,
+			"start": 2018,
 			"end": "Present",
 			"bullets": [
 				"advise clients on digital product strategy, ui/ux design, and frontend development.",
@@ -87,6 +81,15 @@
 		}
 	],
 	"projects": [
+		{
+			"title": "bankroll.fyi",
+			"role": "design & development",
+			"url": "https://bankroll.fyi",
+			"year": 2026,
+			"image": "/projects/bankroll.png",
+			"description": "Bet tracker app for managing wagers, tracking performance, and analyzing betting history.",
+			"technologies": "next.js, supabase, tailwind"
+		},
 		{
 			"title": "legend.xyz",
 			"role": "frontend development",
@@ -178,15 +181,6 @@
 			"image": "/projects/revolve-law.png",
 			"description": "professional services site with subtle animations and streamlined contact flows.",
 			"technologies": "next.js, framer motion"
-		},
-		{
-			"title": "g9 ventures",
-			"role": "Design & Development",
-			"url": "https://g9.ventures",
-			"year": 2018,
-			"image": "/projects/g9-ventures.png",
-			"description": "vc portfolio showcasing investment thesis and company highlights.",
-			"technologies": "next.js, contentful"
 		},
 		{
 			"title": "vice",

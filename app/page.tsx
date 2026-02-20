@@ -14,7 +14,7 @@ export default function Home() {
 
 				{/* Middle Column - Projects (Last on mobile) */}
 				<div className="order-2 md:order-1">
-					<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Recent Projects</h3>
+					<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Selected Projects</h3>
 					<Feed items={projects} />
 				</div>
 
@@ -67,7 +67,7 @@ export default function Home() {
 							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
 							<div className="space-y-1 text-xs text-foreground/80">
 								<div>
-									<a href="mailto:michael@atra.xyz">michael@atra.xyz</a>
+									<a href="mailto:mc@atra.xyz">mc@atra.xyz</a>
 								</div>
 								<div>
 									<a href="http://cal.com/atra-systems/15min">schedule a call</a>
@@ -78,6 +78,7 @@ export default function Home() {
 								</div>
 								<div>
 									<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
+									<a href="https://instagram.com/mciccarelli">ig</a>,{' '}
 									<a href="https://t.me/mciccarelli">tg</a>
 								</div>
 							</div>
