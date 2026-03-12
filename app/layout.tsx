@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceCodePro.variable} ${saolDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceCodePro.variable} ${saolDisplay.variable} scroll-smooth`}>
       <body className="flex min-h-screen flex-col">
         <Header />
         <div className="flex-1">{children}</div>
