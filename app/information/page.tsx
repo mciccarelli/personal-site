@@ -46,10 +46,10 @@ export default function InformationPage() {
     <main className="flex flex-col px-4 pt-28 pb-24 font-sans md:pt-24" style={{ gap: '5rem' }}>
       {/* About */}
       <section className="grid grid-cols-1 md:grid-cols-4">
-        <div className="col-span-1 max-w-5xl space-y-4 md:col-span-3">
+        <div className="col-span-1 space-y-4 md:col-span-2 md:col-start-2">
           <TextReveal
             as="p"
-            className="text-foreground font-sans text-xl font-medium leading-[1.35] tracking-tight md:text-2xl"
+            className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
             Fullstack engineer. Most of the work lives where technical rigor and design quality
             have to coexist.
@@ -57,7 +57,7 @@ export default function InformationPage() {
           <TextReveal
             as="p"
             delay={0.15}
-            className="text-foreground font-sans text-xl font-medium leading-[1.35] tracking-tight md:text-2xl"
+            className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
             Day to day that means React, Next.js, and TypeScript — building interfaces, component
             systems, and the infrastructure behind modern web applications.
@@ -65,7 +65,7 @@ export default function InformationPage() {
           <TextReveal
             as="p"
             delay={0.3}
-            className="text-foreground font-sans text-xl font-medium leading-[1.35] tracking-tight md:text-2xl"
+            className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
             Projects frequently involve motion and interaction, headless CMS architecture, API
             integrations, e-commerce, and fintech — payments, web3, and decentralized
@@ -74,7 +74,7 @@ export default function InformationPage() {
           <TextReveal
             as="p"
             delay={0.45}
-            className="text-foreground font-sans text-xl font-medium leading-[1.35] tracking-tight md:text-2xl"
+            className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
             Independent, based in Las Vegas. Available for consulting and select project work.{' '}
             <a

@@ -31,14 +31,14 @@ const saolDisplay = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Michael Ciccarelli — Fullstack Engineer',
-    template: '%s — Michael Ciccarelli',
+    default: 'michael ciccarelli — design engineer',
+    template: '%s — michael ciccarelli',
   },
   description:
     'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   keywords: [
+    'design engineer',
     'fullstack engineer',
-    'frontend developer',
     'React',
     'Next.js',
     'TypeScript',
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Michael Ciccarelli',
-    title: 'Michael Ciccarelli — Fullstack Engineer',
+    title: 'michael ciccarelli — design engineer',
     description:
       'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Michael Ciccarelli — Fullstack Engineer',
+    title: 'michael ciccarelli — design engineer',
     description:
       'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
