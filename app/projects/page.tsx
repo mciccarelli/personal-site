@@ -98,7 +98,7 @@ export default function WorkPage() {
   return (
     <main className="px-4 pt-28 pb-24 md:pt-24">
       <div className="grid grid-cols-1 md:grid-cols-4">
-        <div className="md:col-span-3 md:col-start-1">
+        <div className="md:col-span-3 md:col-start-1 -space-y-1 md:-space-y-2">
           {projects.map((project, i) => {
             const isOpen = openIndex === i;
             return (

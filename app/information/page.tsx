@@ -51,25 +51,21 @@ export default function InformationPage() {
             as="p"
             className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
-            Fullstack engineer. Most of the work lives where technical rigor and design quality
-            have to coexist.
+            Full-stack engineer and creative technologist — most of my work sits at the intersection of technical rigor and design quality.
           </TextReveal>
           <TextReveal
             as="p"
             delay={0.15}
             className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
-            Day to day that means React, Next.js, and TypeScript — building interfaces, component
-            systems, and the infrastructure behind modern web applications.
+            Day to day that means TypeScript and modern frameworks: building interfaces, component systems, and the infrastructure behind complex web applications.
           </TextReveal>
           <TextReveal
             as="p"
             delay={0.3}
             className="text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight md:text-xl"
           >
-            Projects frequently involve motion and interaction, headless CMS architecture, API
-            integrations, e-commerce, and fintech — payments, web3, and decentralized
-            applications.
+            Projects frequently involve motion and interaction, headless CMS architecture, API integrations, e-commerce, and fintech.
           </TextReveal>
           <TextReveal
             as="p"
