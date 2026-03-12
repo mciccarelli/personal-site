@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import Cal, { getCalApi } from '@calcom/embed-react';
 import { TextReveal } from '@/components/TextReveal';
+import { Mail, Github, Instagram, Linkedin } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,10 +53,7 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          type: 'contact',
-          ...formData,
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -84,17 +82,76 @@ export default function ContactPage() {
       <section className="md:col-span-2 md:col-start-2">
         <TextReveal
           as="h2"
-          className="text-muted-foreground mb-8 font-mono text-xs tracking-widest uppercase"
+          className="text-muted-foreground mb-4 font-mono text-xs tracking-widest uppercase"
         >
           Contact
         </TextReveal>
 
+        <TextReveal delay={0.15}>
+          <ul className="text-muted-foreground mb-4 flex list-none gap-4 md:hidden">
+            <li>
+              <a href="mailto:m@ciccarel.li" className="hover:text-foreground transition-colors">
+                <Mail size={16} />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <Github size={16} />
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <Instagram size={16} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mciccarelli/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <Linkedin size={16} />
+              </a>
+            </li>
+          </ul>
+        </TextReveal>
+
         <TextReveal delay={0.25}>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="relative z-10">
-              <TabsTrigger value="message">send a message</TabsTrigger>
-              <TabsTrigger value="call">schedule a call</TabsTrigger>
-            </TabsList>
+            <div className="flex items-center justify-between">
+              <TabsList className="relative z-10">
+                <TabsTrigger value="message">send a message</TabsTrigger>
+                <TabsTrigger value="call">schedule a call</TabsTrigger>
+              </TabsList>
+              <ul className="text-muted-foreground hidden list-none gap-4 md:flex">
+                <li>
+                  <a href="mailto:m@ciccarel.li" className="hover:text-foreground transition-colors">
+                    <Mail size={16} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    <Github size={16} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    <Instagram size={16} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/mciccarelli/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    <Linkedin size={16} />
+                  </a>
+                </li>
+              </ul>
+            </div>
 
             <TabsContent value="message">
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -182,14 +239,14 @@ export default function ContactPage() {
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="border border-green-500/20 bg-green-500/10 p-4 text-green-600">
-                    <p className="font-mono text-sm">Thanks! I'll be in touch soon.</p>
+                  <div className="border-muted-foreground/20 border p-4">
+                    <p className="text-muted-foreground font-mono text-sm">Thanks! I'll be in touch soon.</p>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="border border-red-500/20 bg-red-500/10 p-4 text-red-600">
-                    <p className="font-mono text-sm">
+                  <div className="border-muted-foreground/20 border p-4">
+                    <p className="text-muted-foreground font-mono text-sm">
                       Something went wrong. Please try again or email me directly.
                     </p>
                   </div>
@@ -210,6 +267,7 @@ export default function ContactPage() {
           </Tabs>
         </TextReveal>
       </section>
+
     </main>
   );
 }
