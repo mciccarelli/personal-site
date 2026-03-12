@@ -111,117 +111,231 @@ export default function Contact() {
               </p>
             </div>
           ) : (
-            <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <div className="mb-8">
-                <TabsList className="relative z-10">
-                  <TabsTrigger value="message">send a message</TabsTrigger>
-                  <TabsTrigger value="call">book a call</TabsTrigger>
-                </TabsList>
+            <>
+              {/* Mobile: direct links */}
+              <div className="mb-8 space-y-2 md:hidden">
+                <a
+                  href="mailto:m@ciccarel.li"
+                  className="text-muted-foreground hover:text-foreground block font-mono text-[10px] uppercase tracking-widest transition-colors"
+                >
+                  &rarr;&nbsp;m@ciccarel.li
+                </a>
+                <a
+                  href="https://cal.com/ciccarelli/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground block font-mono text-[10px] uppercase tracking-widest transition-colors"
+                >
+                  &rarr;&nbsp;Book a call
+                </a>
               </div>
 
-              <TabsContent value="message">
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Honeypot */}
-                  <input
-                    type="text"
-                    name="website"
-                    autoComplete="off"
-                    tabIndex={-1}
-                    aria-hidden="true"
-                    className="absolute h-0 w-0 overflow-hidden opacity-0"
-                  />
-
-                  <div className="grid gap-8 md:grid-cols-2">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-muted-foreground block font-mono text-xs uppercase">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className={inputClass}
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-muted-foreground block font-mono text-xs uppercase">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className={inputClass}
-                        placeholder="your@email.com"
-                      />
-                    </div>
+              {/* Desktop: tabs with embedded cal */}
+              <div className="mb-8 hidden md:block">
+                <Tabs value={activeTab} onValueChange={setActiveTab}>
+                  <div className="mb-8">
+                    <TabsList className="relative z-10">
+                      <TabsTrigger value="message">send a message</TabsTrigger>
+                      <TabsTrigger value="call">book a call</TabsTrigger>
+                    </TabsList>
                   </div>
 
+                  <TabsContent value="message">
+                    <form onSubmit={handleSubmit} className="space-y-8">
+                      {/* Honeypot */}
+                      <input
+                        type="text"
+                        name="website"
+                        autoComplete="off"
+                        tabIndex={-1}
+                        aria-hidden="true"
+                        className="absolute h-0 w-0 overflow-hidden opacity-0"
+                      />
+
+                      <div className="grid gap-8 md:grid-cols-2">
+                        <div className="space-y-2">
+                          <label htmlFor="name-desktop" className="text-muted-foreground block font-mono text-xs uppercase">
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name-desktop"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className={inputClass}
+                            placeholder="Your name"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="email-desktop" className="text-muted-foreground block font-mono text-xs uppercase">
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            id="email-desktop"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className={inputClass}
+                            placeholder="your@email.com"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="company-desktop" className="text-muted-foreground block font-mono text-xs uppercase">
+                          Company (optional)
+                        </label>
+                        <input
+                          type="text"
+                          id="company-desktop"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          className={inputClass}
+                          placeholder="Your company"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="message-desktop" className="text-muted-foreground block font-mono text-xs uppercase">
+                          Message
+                        </label>
+                        <textarea
+                          id="message-desktop"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                          rows={4}
+                          className={inputClass}
+                          placeholder="Tell me about your project..."
+                        />
+                      </div>
+
+                      <div className="pt-8">
+                        <button type="submit" disabled={isSubmitting} className="btn w-full md:w-auto">
+                          {isSubmitting ? 'Sending...' : 'Send message'}
+                        </button>
+                      </div>
+
+                      {submitStatus === 'error' && (
+                        <div className="border-neutral-800/40 border p-4">
+                          <p className="text-muted-foreground font-mono text-sm">
+                            Something went wrong. Please try again or email me directly.
+                          </p>
+                        </div>
+                      )}
+                    </form>
+                  </TabsContent>
+
+                  <TabsContent value="call" className="-mx-32 mt-0 lg:-mx-48">
+                    <div className="-mt-4 h-[700px] overflow-hidden">
+                      <Cal
+                        namespace="15min"
+                        calLink="ciccarelli/15min"
+                        style={{ width: '100%', height: '100%', overflow: 'hidden' }}
+                        config={{ layout: 'month_view', theme: 'dark' }}
+                      />
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </div>
+
+              {/* Mobile: form only (no tabs) */}
+              <form onSubmit={handleSubmit} className="space-y-8 md:hidden">
+                {/* Honeypot */}
+                <input
+                  type="text"
+                  name="website"
+                  autoComplete="off"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  className="absolute h-0 w-0 overflow-hidden opacity-0"
+                />
+
+                <div className="grid gap-8">
                   <div className="space-y-2">
-                    <label htmlFor="company" className="text-muted-foreground block font-mono text-xs uppercase">
-                      Company (optional)
+                    <label htmlFor="name-mobile" className="text-muted-foreground block font-mono text-xs uppercase">
+                      Name
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={inputClass}
-                      placeholder="Your company"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-muted-foreground block font-mono text-xs uppercase">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                      id="name-mobile"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
                       required
-                      rows={4}
                       className={inputClass}
-                      placeholder="Tell me about your project..."
+                      placeholder="Your name"
                     />
                   </div>
-
-                  <div className="pt-8">
-                    <button type="submit" disabled={isSubmitting} className="btn w-full md:w-auto">
-                      {isSubmitting ? 'Sending...' : 'Send message'}
-                    </button>
+                  <div className="space-y-2">
+                    <label htmlFor="email-mobile" className="text-muted-foreground block font-mono text-xs uppercase">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email-mobile"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className={inputClass}
+                      placeholder="your@email.com"
+                    />
                   </div>
+                </div>
 
-                  {submitStatus === 'error' && (
-                    <div className="border-neutral-800/40 border p-4">
-                      <p className="text-muted-foreground font-mono text-sm">
-                        Something went wrong. Please try again or email me directly.
-                      </p>
-                    </div>
-                  )}
-                </form>
-              </TabsContent>
-
-              <TabsContent value="call" className="-mx-4 mt-0 md:-mx-32 lg:-mx-48">
-                <div className="-mt-4 h-[700px] overflow-x-auto overflow-y-hidden">
-                  <Cal
-                    namespace="15min"
-                    calLink="ciccarelli/15min"
-                    style={{ width: '100%', height: '100%', overflow: 'hidden' }}
-                    config={{ layout: 'month_view', theme: 'dark' }}
+                <div className="space-y-2">
+                  <label htmlFor="company-mobile" className="text-muted-foreground block font-mono text-xs uppercase">
+                    Company (optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="company-mobile"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className={inputClass}
+                    placeholder="Your company"
                   />
                 </div>
-              </TabsContent>
-            </Tabs>
+
+                <div className="space-y-2">
+                  <label htmlFor="message-mobile" className="text-muted-foreground block font-mono text-xs uppercase">
+                    Message
+                  </label>
+                  <textarea
+                    id="message-mobile"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className={inputClass}
+                    placeholder="Tell me about your project..."
+                  />
+                </div>
+
+                <div className="pt-8">
+                  <button type="submit" disabled={isSubmitting} className="btn w-full">
+                    {isSubmitting ? 'Sending...' : 'Send message'}
+                  </button>
+                </div>
+
+                {submitStatus === 'error' && (
+                  <div className="border-neutral-800/40 border p-4">
+                    <p className="text-muted-foreground font-mono text-sm">
+                      Something went wrong. Please try again or email me directly.
+                    </p>
+                  </div>
+                )}
+              </form>
+            </>
           )}
         </div>
       </div>
