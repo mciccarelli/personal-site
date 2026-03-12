@@ -1,96 +1,45 @@
-import Feed from '@/components/feed';
-import PaymentSection from '@/components/payment-section';
-import { TooltipProvider } from '@/components/ui/tooltip';
-import data from '../data.json';
+'use client';
+
+import React from 'react';
+import IntroText from './components/IntroText';
+
+function Clock() {
+  const [time, setTime] = React.useState('');
+
+  React.useEffect(() => {
+    function tick() {
+      setTime(
+        new Date().toLocaleTimeString('en-US', {
+          timeZone: 'America/Los_Angeles',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true,
+        }) + ' PST',
+      );
+    }
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return <>{time}</>;
+}
 
 export default function Home() {
-	const { bio, projects, expertise, wallets, experience } = data;
-
-	return (
-		<TooltipProvider>
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8 pt-4 pb-16">
-				{/* Left Whitespace */}
-				<div className="hidden md:block"></div>
-
-				{/* Middle Column - Projects (Last on mobile) */}
-				<div className="order-2 md:order-1">
-					<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Selected Projects</h3>
-					<Feed items={projects} />
-				</div>
-
-				{/* Right Column - Everything (First on mobile) */}
-				<div className="space-y-8 order-1 md:order-2">
-					{/* About */}
-					<div className="space-y-1">
-						<h3 className="text-sm uppercase tracking-wider pl-4">About</h3>
-						<div className="text-xs text-foreground/80">
-							<p dangerouslySetInnerHTML={{ __html: bio }} />
-						</div>
-					</div>
-
-					{/* Experience */}
-					<div className="space-y-1">
-						<h3 className="text-sm uppercase tracking-wider pl-4">Experience</h3>
-						<div className="space-y-1 text-xs text-foreground/80">
-							{experience.map((item, index) => (
-								<div key={index} className="flex justify-between gap-4">
-									<span className="flex-1">
-										{item.role}
-										{item.company && (
-											<>
-												, <span dangerouslySetInnerHTML={{ __html: item.company }} />
-											</>
-										)}
-									</span>
-									<span className="whitespace-nowrap">
-										{item.start}—{item.end}
-									</span>
-								</div>
-							))}
-						</div>
-					</div>
-
-					{/* Specialties */}
-					<div className="space-y-1">
-						<h3 className="text-sm uppercase tracking-wider pl-4">Focus areas</h3>
-						<ul className="space-y-1 text-xs text-foreground/80">
-							{expertise.map((item) => (
-								<li key={item}>{item}</li>
-							))}
-						</ul>
-					</div>
-
-					{/* Contact & Payment */}
-					<div className="space-y-8">
-						{/* Contact */}
-						<div className="space-y-1">
-							<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
-							<div className="space-y-1 text-xs text-foreground/80">
-								<div>
-									<a href="mailto:mc@atra.xyz">mc@atra.xyz</a>
-								</div>
-								<div>
-									<a href="http://cal.com/atra-systems/15min">schedule a call</a>
-								</div>
-								<div>
-									<a href="https://github.com/mciccarelli">github</a>,{' '}
-									<a href="http://linkedin.com/in/mciccarelli/">linkedin</a>
-								</div>
-								<div>
-									<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
-									<a href="https://instagram.com/mciccarelli">ig</a>,{' '}
-									<a href="https://t.me/mciccarelli">tg</a>
-								</div>
-							</div>
-						</div>
-
-						{/* Payment */}
-						<div>
-							<PaymentSection wallets={wallets} />
-						</div>
-					</div>
-				</div>
-			</div>
-		</TooltipProvider>
-	);
+  return (
+    <main className="px-4 pt-28 md:pt-24">
+      <div className="grid grid-cols-1 md:grid-cols-4">
+        <IntroText />
+      </div>
+      <div className="mt-12 grid grid-cols-1 font-mono text-[10px] text-neutral-500 uppercase md:grid-cols-4">
+        <div className="md:col-start-2">
+          <span className="block">Las Vegas, NV</span>
+          <span className="block">
+            <Clock />
+          </span>
+        </div>
+      </div>
+    </main>
+  );
 }
