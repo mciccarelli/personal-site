@@ -44,7 +44,7 @@ export function ScrollReveal({
         scrollTrigger: {
           trigger: el,
           start: 'top 90%',
-          toggleActions: 'play reverse play reverse',
+          once: true,
         },
       });
     } else {
@@ -60,7 +60,7 @@ export function ScrollReveal({
         scrollTrigger: {
           trigger: el,
           start: 'top 85%',
-          toggleActions: 'play reverse play reverse',
+          once: true,
         },
       });
     }

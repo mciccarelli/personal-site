@@ -1,33 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { ScrollReveal } from '@/components/ScrollReveal';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { projects } from '@/app/data';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el) return;
+
+    const items = el.querySelectorAll('.project-item');
+    gsap.set(items, { y: 40, opacity: 0, filter: 'blur(6px)' });
+
+    const tween = gsap.to(items, {
+      y: 0,
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 0.5,
+      stagger: 0.06,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        once: true,
+      },
+    });
+
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  }, []);
 
   return (
     <section id="projects" className="mt-24 min-h-dvh px-4 py-24">
       <div className="grid grid-cols-1 md:grid-cols-4">
-        <div className="space-y-1 text-right md:col-span-3 md:col-start-2 md:-space-y-2">
+        <div ref={listRef} className="space-y-1 text-right md:col-span-3 md:col-start-2 md:-space-y-2">
           {projects.map((project, i) => {
             const isOpen = openIndex === i;
             return (
-              <div key={i}>
-                <ScrollReveal delay={i * 0.05}>
-                  <button
-                    onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="block w-full py-1 text-right md:py-0.5"
+              <div key={i} className="project-item" style={{ opacity: 0 }}>
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  className="block w-full py-1 text-right md:py-0.5"
+                >
+                  <span
+                    className={`font-serif text-3xl leading-none tracking-tight uppercase transition-colors duration-300 hover:text-white md:text-5xl lg:text-6xl ${isOpen ? 'text-white' : 'text-neutral-500'}`}
                   >
-                    <span
-                      className={`font-serif text-3xl leading-none tracking-tight uppercase transition-colors duration-300 hover:text-white md:text-5xl lg:text-6xl ${isOpen ? 'text-white' : 'text-neutral-500'}`}
-                    >
-                      {project.title}
-                    </span>
-                  </button>
-                </ScrollReveal>
+                    {project.title}
+                  </span>
+                </button>
 
                 <AnimatePresence initial={false}>
                   {isOpen && (

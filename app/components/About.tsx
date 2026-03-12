@@ -1,12 +1,22 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 interface AboutProps {
   visible: boolean;
 }
 
 export default function About({ visible }: AboutProps) {
+  const [hasShown, setHasShown] = useState(false);
+
+  useEffect(() => {
+    if (visible && !hasShown) {
+      setHasShown(true);
+    }
+  }, [visible, hasShown]);
+
   const base = 'text-foreground font-sans text-lg font-medium leading-[1.4] tracking-tight transition-all duration-700 md:text-xl';
-  const show = visible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0';
+  const show = hasShown ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0';
 
   return (
     <section id="about" className="mt-12 scroll-mt-48 px-4">
