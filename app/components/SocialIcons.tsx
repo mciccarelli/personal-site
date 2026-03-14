@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 
 interface SocialIconsProps {
   className?: string;
@@ -8,6 +8,11 @@ interface SocialIconsProps {
 export default function SocialIcons({ className, size = 16 }: SocialIconsProps) {
   return (
     <ul className={`text-muted-foreground flex list-none gap-3 ${className ?? ''}`}>
+      <li>
+        <a href="mailto:m@ciccarel.li" className="hover:text-foreground transition-colors">
+          <Mail size={size} />
+        </a>
+      </li>
       <li>
         <a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
           <Github size={size} />

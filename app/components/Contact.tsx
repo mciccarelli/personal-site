@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import Cal, { getCalApi } from '@calcom/embed-react';
+import SocialIcons from './SocialIcons';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -92,13 +93,16 @@ export default function Contact() {
     <section id="contact" className="min-h-dvh px-4 py-24">
       <div className="grid grid-cols-1 md:grid-cols-4">
         <div className="md:col-span-2 md:col-start-2">
-          <div className="mb-8">
+          <div className="mb-4">
             <h2 className="text-foreground font-sans text-2xl font-bold tracking-tight md:text-3xl">
               Get in touch
             </h2>
             <p className="text-muted-foreground mt-3 font-mono text-[10px] uppercase tracking-widest">
               Available for consulting, freelance &amp; collaboration.
             </p>
+            <div className="mt-4">
+              <SocialIcons size={14} />
+            </div>
           </div>
 
           {submitStatus === 'success' ? (
@@ -113,7 +117,7 @@ export default function Contact() {
           ) : (
             <>
               {/* Mobile: direct links */}
-              <div className="mb-8 space-y-2 md:hidden">
+              <div className="mb-4 space-y-2 md:hidden">
                 <a
                   href="mailto:m@ciccarel.li"
                   className="text-muted-foreground hover:text-foreground block font-mono text-[10px] uppercase tracking-widest transition-colors"
@@ -131,9 +135,9 @@ export default function Contact() {
               </div>
 
               {/* Desktop: tabs with embedded cal */}
-              <div className="mb-8 hidden md:block">
+              <div className="mb-4 hidden md:block">
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
-                  <div className="mb-8">
+                  <div className="mb-4">
                     <TabsList className="relative z-10">
                       <TabsTrigger value="message">send a message</TabsTrigger>
                       <TabsTrigger value="call">book a call</TabsTrigger>

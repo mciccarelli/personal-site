@@ -1,5 +1,3 @@
-import SocialIcons from './SocialIcons';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -10,9 +8,6 @@ export default function Footer() {
         <a href="mailto:m@ciccarel.li" className="hover:text-foreground transition-colors">
           m@ciccarel.li
         </a>
-      </div>
-      <div className="flex justify-end md:col-start-4">
-        <SocialIcons size={12} className="text-neutral-600" />
       </div>
     </footer>
   );
