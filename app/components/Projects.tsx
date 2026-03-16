@@ -136,7 +136,7 @@ export default function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4">
-        <div ref={listRef} className="-space-y-1 text-right md:col-span-3 md:col-start-2 md:-space-y-4">
+        <div ref={listRef} className="space-y-0 text-right md:col-span-3 md:col-start-2 md:-space-y-2">
           {projects.map((project, i) => {
             const isOpen = openIndex === i;
             return (
