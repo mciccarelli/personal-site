@@ -53,7 +53,7 @@ const fragmentShader = `
   }
 `;
 
-const IMG_WIDTH = 320;
+const IMG_WIDTH = 520;
 
 interface ProjectImageProps {
   src: string;

@@ -62,8 +62,8 @@ export default function Projects() {
 
     // Left column area: 16px from left edge of section
     const x = 16;
-    // Vertically center the image (~180px tall) on the hovered item
-    const imgHeight = 180;
+    // Vertically center the image (~290px tall) on the hovered item
+    const imgHeight = 290;
     const y = itemRect.top - sectionRect.top + (itemRect.height - imgHeight) / 2;
 
     targetPos.current.x = x;
@@ -150,10 +150,10 @@ export default function Projects() {
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   onMouseEnter={() => setHoverIndex(i)}
                   onMouseLeave={() => setHoverIndex(null)}
-                  className="block w-full py-0.5 text-right md:py-0"
+                  className="relative z-20 block w-full py-0.5 text-right mix-blend-difference md:py-0"
                 >
                   <span
-                    className={`font-serif text-4xl leading-[0.85] tracking-tight uppercase transition-colors duration-300 hover:text-white md:text-7xl lg:text-9xl ${isOpen ? 'text-white' : 'text-neutral-500'}`}
+                    className={`font-serif text-4xl leading-[0.85] tracking-tight whitespace-nowrap uppercase transition-colors duration-300 hover:text-white md:text-6xl lg:text-8xl xl:text-9xl ${isOpen ? 'text-white' : 'text-neutral-500'}`}
                   >
                     {project.title}
                   </span>

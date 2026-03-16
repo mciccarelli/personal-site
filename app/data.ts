@@ -23,7 +23,7 @@ export const projects: Project[] = [
     image: '/projects/bankrollfyi.png',
   },
   {
-    title: 'Legend',
+    title: 'Legend.xyz',
     role: 'Frontend Development',
     url: 'https://legend.xyz',
     description:
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     image: '/projects/mt.jpg',
   },
   {
-    title: 'Elara World',
+    title: 'elara.world',
     role: 'Fullstack Development',
     url: 'https://elara.world',
     description: 'Community hub combining content publishing with integrated merchandise store.',
