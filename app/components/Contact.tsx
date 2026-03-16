@@ -20,7 +20,7 @@ export default function Contact() {
   useEffect(() => {
     if (activeTab === 'call') {
       (async function () {
-        const cal = await getCalApi({ namespace: '15min' });
+        const cal = await getCalApi({ namespace: '30min' });
         cal('ui', {
           hideEventTypeDetails: false,
           layout: 'month_view',
@@ -125,7 +125,7 @@ export default function Contact() {
                   &rarr;&nbsp;m@ciccarel.li
                 </a>
                 <a
-                  href="https://cal.com/ciccarelli/15min"
+                  href="https://cal.com/ciccarelli/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground block font-mono text-[10px] uppercase tracking-widest transition-colors"
@@ -239,8 +239,8 @@ export default function Contact() {
                   <TabsContent value="call" className="-mx-32 mt-0 lg:-mx-48">
                     <div className="-mt-4 h-[700px] overflow-hidden">
                       <Cal
-                        namespace="15min"
-                        calLink="ciccarelli/15min"
+                        namespace="30min"
+                        calLink="ciccarelli/30min"
                         style={{ width: '100%', height: '100%', overflow: 'hidden' }}
                         config={{ layout: 'month_view', theme: 'dark' }}
                       />

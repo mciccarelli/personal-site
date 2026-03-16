@@ -125,7 +125,7 @@ export const faqs: FAQ[] = [
   {
     question: "What's your stack?",
     answer:
-      "Next.js, React, TypeScript on the frontend. Node.js, PostgreSQL, Supabase on the backend. Tailwind, Framer Motion, GSAP for styling and animation. Stripe for payments. Sanity and Shopify (headless) for content and commerce. Stack is flexible — I pick what fits the project.",
+      "Next.js, React, TypeScript. Node.js, PostgreSQL, Supabase. Tailwind, Framer Motion, GSAP. Stripe, Sanity, Shopify headless. Figma, Claude Code, Cursor, Midjourney. Stack is flexible — I pick what fits.",
   },
   {
     question: 'Do you work with agencies?',
