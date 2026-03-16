@@ -17,9 +17,8 @@ export default function Hero({ time, scrolledPastHero }: HeroProps) {
           perWord
           className="text-foreground col-span-1 font-sans text-2xl leading-tight font-bold tracking-tight md:col-span-3 md:text-3xl lg:text-4xl"
         >
-          MICHAEL CICCARELLI is a software engineer building bespoke web platforms and digital
-          interfaces. Two decades working across fintech, media, e-commerce, and emerging technology
-          — clients include Condé Nast, Amazon, VICE, and Pentagram.
+          MICHAEL CICCARELLI is a software engineer with two decades building web platforms and
+          digital interfaces across fintech, media, e-commerce, and emerging technology.
         </TextReveal>
       </div>
       <div className="mt-12 grid grid-cols-1 font-mono text-[10px] text-neutral-500 uppercase md:grid-cols-4">

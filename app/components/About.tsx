@@ -24,18 +24,15 @@ export default function About({ visible }: AboutProps) {
       <div className="grid grid-cols-1 md:grid-cols-4">
         <div className="col-span-1 space-y-4 md:col-span-2 md:col-start-2 max-w-2xl">
           <p className={`${base} ${show}`}>
-            Fullstack engineer with a frontend focus and a keen eye for design. My work sits at the
-            intersection of technical rigor and design quality.
+            Fullstack engineer, frontend-focused, with a genuine interest in how things look and
+            feel. I work at the intersection of technical rigor and design quality — building
+            interfaces, component systems, and the infrastructure behind complex web applications.
           </p>
           <p className={`${base} delay-100 ${show}`}>
-            Day to day that means TypeScript and modern web frameworks: building interfaces,
-            component systems, and the infrastructure behind complex web applications.
+            TypeScript and modern web frameworks day to day. Projects often touch motion and
+            interaction, headless CMS, API integrations, e-commerce, and fintech.
           </p>
           <p className={`${base} delay-200 ${show}`}>
-            Projects frequently involve motion and interaction, headless CMS architecture, API
-            integrations, e-commerce, and fintech.
-          </p>
-          <p className={`${base} delay-300 ${show}`}>
             Independent, based in Las Vegas. Available for consulting and select project work.{' '}
             <a href="#contact" className="underline-offset-4">
               Get in touch

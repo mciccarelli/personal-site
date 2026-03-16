@@ -4,6 +4,7 @@ export interface Project {
   url: string;
   description: string;
   technologies: string;
+  image: string;
 }
 
 export interface FAQ {
@@ -17,8 +18,9 @@ export const projects: Project[] = [
     role: 'Design & Development',
     url: 'https://bankroll.fyi',
     description:
-      'Bet tracker app for managing wagers, tracking performance, and analyzing betting history.',
+      'Bet tracker for logging wagers, reviewing performance, and digging into your history.',
     technologies: 'Next.js, Tailwind, Supabase',
+    image: '/projects/bankrollfyi.png',
   },
   {
     title: 'Legend',
@@ -27,6 +29,7 @@ export const projects: Project[] = [
     description:
       'Marketing site for Legend, an embedded smart contract wallet built as a UI/UX layer on top of existing open DeFi protocols.',
     technologies: 'Next.js, Tailwind, WebGL',
+    image: '/projects/legend.jpg',
   },
   {
     title: 'Amazon: The Bar',
@@ -35,6 +38,7 @@ export const projects: Project[] = [
     description:
       'Portfolio for creative collective featuring custom animations and dynamic layouts.',
     technologies: 'Next.js, Sanity, Tailwind, Motion',
+    image: '/projects/the-bar.jpg',
   },
   {
     title: 'One/Of',
@@ -42,6 +46,7 @@ export const projects: Project[] = [
     url: 'https://shoponeof.com',
     description: 'E-commerce platform with custom booking system and Shopify checkout.',
     technologies: 'Shopify (Headless), Next.js, Sanity, Cal.com',
+    image: '/projects/one-of.jpg',
   },
   {
     title: 'Modern Treasury',
@@ -50,6 +55,7 @@ export const projects: Project[] = [
     description:
       'Marketing site for fintech platform that processes $1 billion in instant payments annually.',
     technologies: 'Next.js, Sanity, Tailwind',
+    image: '/projects/mt.jpg',
   },
   {
     title: 'Elara World',
@@ -57,6 +63,7 @@ export const projects: Project[] = [
     url: 'https://elara.world',
     description: 'Community hub combining content publishing with integrated merchandise store.',
     technologies: 'Next.js, Sanity, Shopify',
+    image: '/projects/elara.jpg',
   },
   {
     title: 'Revolve Law',
@@ -64,6 +71,7 @@ export const projects: Project[] = [
     url: 'https://revolvelawgroup.com',
     description: 'Professional services site with subtle animations and streamlined contact flows.',
     technologies: 'Next.js, Tailwind, Sanity',
+    image: '/projects/revolve.jpg',
   },
   {
     title: 'Kelvon Agee',
@@ -72,6 +80,7 @@ export const projects: Project[] = [
     description:
       'Photography portfolio with optimized image delivery and immersive viewing experience.',
     technologies: 'Next.js, Cloudinary',
+    image: '/projects/kelvon.jpg',
   },
   {
     title: 'The Well',
@@ -80,6 +89,7 @@ export const projects: Project[] = [
     description:
       'Wellness platform merging e-commerce with appointment booking and member management.',
     technologies: 'Vue.js, Sanity, Shopify',
+    image: '/projects/the-well.jpg',
   },
   {
     title: 'El Dorado',
@@ -88,6 +98,7 @@ export const projects: Project[] = [
     description:
       'Minimalist architecture portfolio emphasizing visual storytelling and project narratives.',
     technologies: 'Next.js, Contentful',
+    image: '/projects/eldo.jpg',
   },
   {
     title: 'VICE',
@@ -96,6 +107,7 @@ export const projects: Project[] = [
     description:
       'High-traffic editorial platform serving millions of readers with real-time content delivery.',
     technologies: 'React.js, Redux, Node.js',
+    image: '/projects/vice.jpg',
   },
 ];
 
