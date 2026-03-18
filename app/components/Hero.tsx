@@ -15,10 +15,10 @@ export default function Hero({ time, scrolledPastHero }: HeroProps) {
         <TextReveal
           as="h1"
           perWord
-          className="text-foreground col-span-1 font-sans text-2xl leading-tight font-bold tracking-tight md:col-span-3 md:text-3xl lg:text-4xl"
+          className="text-foreground col-span-1 font-sans text-2xl leading-[1.1] font-bold tracking-tight md:col-span-3 md:text-3xl lg:text-5xl"
         >
-          MICHAEL CICCARELLI is a software engineer with two decades building web platforms and
-          digital interfaces across fintech, media, e-commerce, and emerging technology.
+          MICHAEL CICCARELLI is a frontend / design engineer with two decades building high-quality
+          product interfaces and web platforms across fintech, media, and e-commerce.
         </TextReveal>
       </div>
       <div className="mt-12 grid grid-cols-1 font-mono text-[10px] text-neutral-500 uppercase md:grid-cols-4">

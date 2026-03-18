@@ -115,7 +115,7 @@ export const faqs: FAQ[] = [
   {
     question: 'What kind of work do you take on?',
     answer:
-      "Frontend architecture, design engineering, technical consulting, and hands-on build work. I'm most useful on projects where design quality and engineering rigor need to coexist — product interfaces, design systems, complex interactive builds.",
+      "Architecture (frontend + full-stack), design engineering, and hands-on product work. Best suited for projects where design quality and engineering rigor need to coexist — product interfaces, design systems, and complex interactive builds.",
   },
   {
     question: 'How do engagements typically work?',
