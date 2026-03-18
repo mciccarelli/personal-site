@@ -18,8 +18,8 @@ export const projects: Project[] = [
     role: 'Design & Development',
     url: 'https://bankroll.fyi',
     description:
-      'Bet tracker for logging wagers, reviewing performance, and digging into your history.',
-    technologies: 'Next.js, Tailwind, Supabase',
+      'built for poker players and bettors who want to know their real numbers. log sessions, track ROI, review your history.',
+    technologies: 'Next.js, Tailwind, Base UI, Supabase',
     image: '/projects/bankrollfyi.png',
   },
   {
