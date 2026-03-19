@@ -1,56 +1,83 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import FAQ from './components/FAQ';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import FooterMark from './components/FooterMark';
-
-function useClock() {
-  const [time, setTime] = useState('');
-
-  useEffect(() => {
-    function tick() {
-      setTime(
-        new Date().toLocaleTimeString('en-US', {
-          timeZone: 'America/Los_Angeles',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: true,
-        }) + ' PST',
-      );
-    }
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  return time;
-}
+import Clock from '@/components/clock';
+import Feed from '@/components/feed';
+import ServicesSection from '@/components/services-section';
+import BookCallDrawer from '@/components/book-call-drawer';
+import ContactDrawer from '@/components/contact-drawer';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import data from '../data.json';
 
 export default function Home() {
-  const time = useClock();
-  const [scrolledPastHero, setScrolledPastHero] = useState(false);
+	const { bio, expertise, projects, services, process: processSteps } = data;
 
-  useEffect(() => {
-    function onScroll() {
-      setScrolledPastHero(window.scrollY > 32);
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+	return (
+		<TooltipProvider>
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-[30px] md:px-8 pt-4 pb-16">
+				{/* Left Whitespace */}
+				<div className="hidden md:block"></div>
 
-  return (
-    <main>
-      <Hero time={time} scrolledPastHero={scrolledPastHero} />
-      <About visible={scrolledPastHero} />
-      <FAQ />
-      <Projects />
-      <Contact />
-      <FooterMark />
-    </main>
-  );
+				{/* Middle Column - Projects (Last on mobile) */}
+				<div className="order-2 md:order-1">
+					<h3 className="text-sm uppercase tracking-wider pl-4 mb-1">Projects</h3>
+					<Feed items={projects} />
+				</div>
+
+				{/* Right Column - Everything (First on mobile) */}
+				<div className="space-y-8 order-1 md:order-2">
+					{/* About */}
+					<div className="space-y-1">
+						<h3 className="text-sm uppercase tracking-wider pl-4">About</h3>
+						<div className="text-xs text-foreground/80">
+							{bio.map((paragraph, i) => (
+								<p key={i}>
+									{paragraph}
+									{i === bio.length - 1 && <> <Clock /></>}
+								</p>
+							))}
+						</div>
+					</div>
+
+					{/* Focus Areas */}
+					<div className="space-y-1">
+						<h3 className="text-sm uppercase tracking-wider pl-4">Focus areas</h3>
+						<ul className="space-y-1 text-xs text-foreground/80">
+							{expertise.map((item) => (
+								<li key={item}>{item}</li>
+							))}
+						</ul>
+					</div>
+
+					{/* Services */}
+					<ServicesSection services={services} />
+
+					{/* Contact */}
+					<div className="space-y-1">
+						<h3 className="text-sm uppercase tracking-wider pl-4">Contact</h3>
+						<div className="space-y-1 text-xs text-foreground/80">
+							<div><BookCallDrawer /></div>
+							<div><ContactDrawer processSteps={processSteps} /></div>
+							<div>
+								<a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
+							</div>
+						</div>
+					</div>
+
+					{/* Social */}
+					<div className="space-y-1">
+						<h3 className="text-sm uppercase tracking-wider pl-4">Social</h3>
+						<div className="space-y-1 text-xs text-foreground/80">
+							<div>
+								<a href="https://x.com/mciccarelli">twitter/x</a>,{' '}
+								<a href="https://instagram.com/mciccarelli">ig</a>,{' '}
+								<a href="https://t.me/mciccarelli">tg</a>
+							</div>
+							<div>
+								<a href="https://github.com/mciccarelli">github</a>,{' '}
+								<a href="https://www.linkedin.com/in/mciccarelli/">linkedin</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</TooltipProvider>
+	);
 }
