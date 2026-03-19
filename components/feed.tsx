@@ -51,7 +51,7 @@ export default function Feed({ items }: FeedProps) {
 								'text-xs cursor-pointer select-none transition-colors',
 								expandedIndex === index || hoveredIndex === index
 									? 'text-foreground'
-									: 'text-muted-foreground'
+									: 'text-foreground/80'
 							)}
 							onClick={() => toggleExpanded(index)}
 						>
