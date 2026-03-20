@@ -62,7 +62,7 @@ export default function ContactForm() {
 			<input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" className="absolute h-0 w-0 overflow-hidden opacity-0" />
 			<div className="space-y-1">
 				<label htmlFor="contact-name" className="text-muted-foreground block text-xs">Name</label>
-				<input type="text" id="contact-name" name="name" value={formData.name} onChange={handleChange} required className={inputClass} placeholder="Your name" />
+				<input type="text" id="contact-name" name="name" value={formData.name} onChange={handleChange} required className={inputClass} placeholder="your name" />
 			</div>
 			<div className="space-y-1">
 				<label htmlFor="contact-email" className="text-muted-foreground block text-xs">Email</label>
@@ -70,11 +70,11 @@ export default function ContactForm() {
 			</div>
 			<div className="space-y-1">
 				<label htmlFor="contact-company" className="text-muted-foreground block text-xs">Company (optional)</label>
-				<input type="text" id="contact-company" name="company" value={formData.company} onChange={handleChange} className={inputClass} placeholder="Your company" />
+				<input type="text" id="contact-company" name="company" value={formData.company} onChange={handleChange} className={inputClass} placeholder="your company" />
 			</div>
 			<div className="space-y-1">
 				<label htmlFor="contact-message" className="text-muted-foreground block text-xs">Message</label>
-				<textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} required rows={4} className={inputClass} placeholder="Tell me about your project..." />
+				<textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} required rows={4} className={inputClass} placeholder="tell me about your project..." />
 			</div>
 			<button type="submit" disabled={isSubmitting} className="w-full text-xs border border-border bg-transparent px-3 py-2 text-foreground transition-colors hover:border-accent hover:bg-accent hover:text-white cursor-pointer disabled:opacity-50">
 				{isSubmitting ? 'Sending...' : 'Send message'}
