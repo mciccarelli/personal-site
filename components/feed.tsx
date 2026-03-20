@@ -45,7 +45,7 @@ export default function Feed({ items }: FeedProps) {
 					onMouseLeave={() => setHoveredIndex(null)}
 				>
 					<div
-						className={cn('flex opacity-0 transition-opacity absolute -left-3.5 top-[2.5px]', {
+						className={cn('flex opacity-0 transition-opacity absolute -left-3.5 top-[3px]', {
 							'opacity-100': hoveredIndex === index || expandedIndex === index
 						})}
 					>

@@ -29,7 +29,7 @@ export default function SiteNav() {
 					>
 						<div
 							className={cn(
-								'flex opacity-0 transition-opacity absolute -left-3 top-[4px]',
+								'flex opacity-0 transition-opacity absolute -left-3 top-[3px]',
 								{ 'opacity-100': hoveredIndex === index || isActive }
 							)}
 						>
