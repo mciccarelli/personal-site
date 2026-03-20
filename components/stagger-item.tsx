@@ -9,7 +9,7 @@ interface StaggerItemProps {
 	className?: string;
 }
 
-export default function StaggerItem({ children, index, baseDelay = 0.5, className }: StaggerItemProps) {
+export default function StaggerItem({ children, index, baseDelay = 0.1, className }: StaggerItemProps) {
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 8 }}

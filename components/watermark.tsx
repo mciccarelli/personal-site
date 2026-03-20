@@ -45,7 +45,7 @@ export default function Watermark() {
 					const offCtx = off.getContext('2d');
 					if (!offCtx) return;
 
-					// Scale SVG to fill container width with some padding
+					// Scale SVG to fill width — container is oversized to avoid clipping
 					const scale = (rect.width * 0.85) / img.naturalWidth;
 					const drawW = img.naturalWidth * scale;
 					const drawH = img.naturalHeight * scale;
@@ -132,16 +132,18 @@ export default function Watermark() {
 			mouseRef.current = { ...mouseRef.current, active: false };
 		};
 
-		gsap.set(container, { y: 15, opacity: 0 });
+		gsap.set(container, { opacity: 0 });
 
 		init().then(() => {
 			rafRef.current = requestAnimationFrame(animate);
 
 			gsap.to(container, {
-				y: 0,
 				opacity: 1,
-				duration: 0.5,
-				ease: 'power3.out',
+				duration: 0.3,
+				ease: 'power2.out',
+				onComplete: () => {
+					window.dispatchEvent(new Event('watermark-ready'));
+				},
 			});
 		});
 
@@ -170,7 +172,7 @@ export default function Watermark() {
 			ref={containerRef}
 			className="hidden md:flex fixed left-0 right-0 z-0 select-none items-center justify-center px-6 cursor-default bottom-[8vh]"
 			aria-hidden="true"
-			style={{ height: 'clamp(6rem, 13vw, 18rem)' }}
+			style={{ height: 'clamp(12rem, 25vw, 30rem)' }}
 		>
 			<canvas ref={canvasRef} className="w-full h-full pointer-events-auto" />
 		</div>
