@@ -30,7 +30,7 @@ export default function BookCallDrawer() {
 				href="https://cal.com/ciccarelli/intro"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="md:hidden uppercase"
+				className="md:hidden"
 			>
 				Book a Call
 			</a>
@@ -38,7 +38,7 @@ export default function BookCallDrawer() {
 			{/* Desktop: drawer */}
 			<span className="hidden md:inline">
 				<Drawer.Root direction="right" noBodyStyles handleOnly>
-					<Drawer.Trigger className="text-foreground/90 transition-colors hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2 cursor-pointer uppercase">
+					<Drawer.Trigger className="text-foreground/90 transition-colors hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2 cursor-pointer">
 						Book a Call
 					</Drawer.Trigger>
 					<Drawer.Portal>
@@ -48,13 +48,13 @@ export default function BookCallDrawer() {
 							style={{ height: '100dvh' }}
 						>
 							<div className="flex items-center justify-between px-4 py-3 border-b border-border shrink-0">
-								<Drawer.Title className="text-sm uppercase tracking-wider m-0">
+								<Drawer.Title className="text-sm tracking-wide m-0">
 									Book a Call
 								</Drawer.Title>
 								<Drawer.Description className="sr-only">
 									Schedule a call via Cal.com
 								</Drawer.Description>
-								<Drawer.Close className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors uppercase">
+								<Drawer.Close className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">
 									Close
 								</Drawer.Close>
 							</div>

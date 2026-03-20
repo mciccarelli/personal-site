@@ -1,9 +1,17 @@
 @import 'tailwindcss';
 
+@font-face {
+	font-family: 'Saol Display';
+	src: url('/fonts/SaolDisplay-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 @theme {
-	--text-xs: 0.625rem;
-	--text-sm: 0.6875rem;
-	--text-base: 0.75rem;
+	--text-xs: 0.6875rem;
+	--text-sm: 0.75rem;
+	--text-base: 0.8125rem;
 	--text-lg: 1rem;
 	--text-xl: 1.25rem;
 
@@ -102,11 +110,15 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen text-xs leading-5 uppercase;
+		@apply bg-background text-foreground min-h-screen text-xs leading-relaxed;
 	}
 
 	h2 {
-		@apply mb-2 tracking-wide font-medium;
+		@apply mb-2 font-semibold;
+	}
+
+	h3 {
+		@apply font-medium;
 	}
 
 	p {

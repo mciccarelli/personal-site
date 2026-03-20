@@ -1,0 +1,64 @@
+import type { Metadata } from 'next';
+import PageGrid from '@/components/page-grid';
+import Clock from '@/components/clock';
+import StaggerItem from '@/components/stagger-item';
+
+export const metadata: Metadata = {
+	title: 'Information',
+};
+
+const contactLines = [
+	{ text: 'michael ciccarelli' },
+	{ text: 'email', href: 'mailto:m@ciccarel.li', linkText: 'm@ciccarel.li' },
+	{ type: 'social' as const },
+];
+
+const aboutParagraphs = [
+	'michael ciccarelli is a design engineer building web interfaces and product systems. two decades across fintech, media, and e-commerce — focused on interaction, motion, and the details that shape how products feel.',
+	'my work spans frontend engineering, interaction and interface design, and application architecture — including design systems, api integrations, headless cms, e-commerce, and emerging areas like ai and web3.',
+];
+
+export default function InformationPage() {
+	return (
+		<PageGrid>
+			{/* Contact info — cols 3-4 */}
+			<div className="md:col-start-3 md:col-span-2 mb-10 md:mb-0">
+				<div className="space-y-1 text-xs text-foreground/80">
+					<StaggerItem index={0}>
+						michael ciccarelli
+					</StaggerItem>
+					<StaggerItem index={1}>
+						email <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
+					</StaggerItem>
+					<StaggerItem index={2}>
+						<a href="https://x.com/mciccarelli" target="_blank" rel="noopener noreferrer">x</a>
+						{' / '}
+						<a href="https://instagram.com/mciccarelli" target="_blank" rel="noopener noreferrer">ig</a>
+						{' / '}
+						<a href="https://t.me/mciccarelli" target="_blank" rel="noopener noreferrer">tg</a>
+						{' / '}
+						<a href="https://www.linkedin.com/in/mciccarelli/" target="_blank" rel="noopener noreferrer">li</a>
+						{' / '}
+						<a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer">gh</a>
+						{'  '}
+						<span className="text-foreground/50 select-all">mciccarelli</span>
+					</StaggerItem>
+				</div>
+			</div>
+
+			{/* About — cols 7-8 */}
+			<div className="md:col-start-7 md:col-span-2">
+				<div className="text-xs text-foreground/80 space-y-4">
+					{aboutParagraphs.map((text, i) => (
+						<StaggerItem key={i} index={i} baseDelay={0.15}>
+							{text}
+						</StaggerItem>
+					))}
+					<StaggerItem index={aboutParagraphs.length} baseDelay={0.15}>
+						independent, based in las vegas, nevada <Clock />
+					</StaggerItem>
+				</div>
+			</div>
+		</PageGrid>
+	);
+}
