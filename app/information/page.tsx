@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageGrid from '@/components/page-grid';
 import Clock from '@/components/clock';
 import StaggerItem from '@/components/stagger-item';
+import SocialLinks from '@/components/social-links';
 
 export const metadata: Metadata = {
 	title: 'Information',
@@ -31,17 +32,7 @@ export default function InformationPage() {
 						email <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
 					</StaggerItem>
 					<StaggerItem index={2}>
-						<a href="https://x.com/mciccarelli" target="_blank" rel="noopener noreferrer">x</a>
-						{' / '}
-						<a href="https://instagram.com/mciccarelli" target="_blank" rel="noopener noreferrer">ig</a>
-						{' / '}
-						<a href="https://t.me/mciccarelli" target="_blank" rel="noopener noreferrer">tg</a>
-						{' / '}
-						<a href="https://www.linkedin.com/in/mciccarelli/" target="_blank" rel="noopener noreferrer">li</a>
-						{' / '}
-						<a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer">gh</a>
-						{'  '}
-						<span className="text-foreground/50 select-all">mciccarelli</span>
+						<SocialLinks />
 					</StaggerItem>
 				</div>
 			</div>
