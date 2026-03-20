@@ -1,6 +1,7 @@
 'use client';
 
 import { Collapsible } from '@base-ui-components/react';
+import { motion } from 'motion/react';
 import BlinkingDot from '@/components/blinking-dot';
 
 interface Service {
@@ -17,18 +18,27 @@ interface ServicesSectionProps {
 
 export default function ServicesSection({ services }: ServicesSectionProps) {
 	return (
-		<div className="space-y-1">
-			<h3 className="text-sm uppercase tracking-wider pl-4">Services</h3>
+		<div>
 			<div className="space-y-0 text-xs">
 				{services.map((service, index) => (
-					<Collapsible.Root key={index} className="group/service relative">
+					<motion.div
+						key={index}
+						initial={{ opacity: 0, y: 8 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							duration: 0.3,
+							delay: index * 0.04,
+							ease: [0.25, 0.1, 0.25, 1],
+						}}
+					>
+					<Collapsible.Root className="group/service relative">
 						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[5px] group-hover/service:opacity-100 group-has-data-[panel-open]/service:opacity-100">
 							<BlinkingDot variant="subdued" />
 						</div>
 						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[5px] group-has-data-[panel-open]/service:opacity-100 group-hover/service:group-has-data-[panel-open]/service:opacity-100">
 							<BlinkingDot variant="default" />
 						</div>
-						<Collapsible.Trigger className="w-full text-left text-xs uppercase text-foreground/80 hover:text-foreground cursor-pointer transition-colors py-0.5 data-[panel-open]:text-foreground">
+						<Collapsible.Trigger className="w-full text-left text-xs text-foreground/80 hover:text-foreground cursor-pointer transition-colors py-0.5 data-[panel-open]:text-foreground">
 							{service.title}
 						</Collapsible.Trigger>
 						<Collapsible.Panel className="h-[var(--collapsible-panel-height)] overflow-hidden transition-[height] duration-200 ease-out data-[ending-style]:h-0 data-[starting-style]:h-0">
@@ -44,6 +54,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
 							</div>
 						</Collapsible.Panel>
 					</Collapsible.Root>
+					</motion.div>
 				))}
 			</div>
 		</div>

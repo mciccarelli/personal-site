@@ -31,9 +31,16 @@ export default function Feed({ items }: FeedProps) {
 	return (
 		<div className="space-y-0">
 			{items.map((project, index) => (
-				<div
+				<motion.div
 					key={index}
 					className="relative mb-1"
+					initial={{ opacity: 0, y: 8 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{
+						duration: 0.3,
+						delay: index * 0.04,
+						ease: [0.25, 0.1, 0.25, 1],
+					}}
 					onMouseEnter={() => setHoveredIndex(index)}
 					onMouseLeave={() => setHoveredIndex(null)}
 				>
@@ -91,7 +98,7 @@ export default function Feed({ items }: FeedProps) {
 													: project.role || project.technologies}
 											</div>
 										)}
-										<div className="flex gap-3 mt-1 uppercase">
+										<div className="flex gap-3 mt-1">
 											{project.url && (
 												<Link
 													href={project.url}
@@ -110,12 +117,12 @@ export default function Feed({ items }: FeedProps) {
 														preview
 													</PreviewCard.Trigger>
 													<PreviewCard.Portal>
-														<PreviewCard.Positioner sideOffset={8} side="top" align="start">
-															<PreviewCard.Popup className="z-50 rounded-sm border border-border bg-background shadow-lg overflow-hidden">
+														<PreviewCard.Positioner sideOffset={12} side="right" align="start" collisionPadding={16}>
+															<PreviewCard.Popup className="z-[150] rounded-sm border border-border bg-background shadow-lg overflow-hidden">
 																<img
 																	src={project.image}
 																	alt={project.title}
-																	className="w-[320px] block"
+																	className="w-[480px] block"
 																/>
 															</PreviewCard.Popup>
 														</PreviewCard.Positioner>
@@ -128,7 +135,7 @@ export default function Feed({ items }: FeedProps) {
 							)}
 						</AnimatePresence>
 					</article>
-				</div>
+				</motion.div>
 			))}
 		</div>
 	);

@@ -1,14 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import ModeToggle from '@/components/mode-toggle';
 import ThemeProvider from '@/components/theme-provider';
-import { Source_Code_Pro } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
-const source_code_pro = Source_Code_Pro({
+const spaceGrotesk = Space_Grotesk({
 	subsets: ['latin'],
 	display: 'swap',
-	weight: ['400', '500', '600', '700']
 });
 
 export const metadata: Metadata = {
@@ -57,14 +55,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={source_code_pro.className}>
+			<body className={spaceGrotesk.className}>
 				<ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-					<div className="min-h-dvh flex flex-col">
-						<header className="fixed top-0 left-0 right-0 z-50 p-4 flex items-center pointer-events-none">
-							<ModeToggle />
-						</header>
-						<main className="flex-1 pt-[36px] md:container md:ml-auto">{children}</main>
-					</div>
+					<main className="min-h-dvh lowercase">{children}</main>
 				</ThemeProvider>
 				<Analytics />
 			</body>
