@@ -1,21 +1,4 @@
 {
-	"siteTitle": "michael ciccarelli — design engineer",
-	"siteDescription": "Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.",
-	"emailAddress": "m@ciccarel.li",
-	"bio": [
-		"MICHAEL CICCARELLI is a design engineer building web interfaces and product systems. Two decades across fintech, media, and e-commerce — focused on interaction, motion, and the details that shape how products feel.",
-		"Independent, based in Las Vegas, Nevada"
-	],
-	"expertise": [
-		"Frontend engineering (React, Next.js)",
-		"Motion, interaction, and interface design",
-		"Application architecture and API integration",
-		"Design systems and component libraries",
-		"Headless CMS and content platforms",
-		"E-commerce and payments",
-		"AI integration and workflow automation",
-		"Web3 and decentralized applications"
-	],
 	"services": [
 		{
 			"title": "Web Platform",

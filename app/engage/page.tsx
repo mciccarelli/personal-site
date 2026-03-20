@@ -24,7 +24,7 @@ export default function EngagePage() {
 			<div className="md:col-start-5 md:col-span-2 mb-10 md:mb-0">
 				<div className="space-y-3 text-xs text-foreground/80">
 					{processSteps.map((step, index) => (
-						<StaggerItem key={index} index={index} baseDelay={0.2}>
+						<StaggerItem key={index} index={index} baseDelay={0.7}>
 							<div className="flex gap-3">
 								<span className="text-muted-foreground shrink-0 w-4 text-right">
 									{String(index + 1).padStart(2, '0')}
@@ -37,7 +37,7 @@ export default function EngagePage() {
 			</div>
 
 			{/* Contact form — cols 7-8 */}
-			<StaggerItem index={0} baseDelay={0.4} className="md:col-start-7 md:col-span-2 space-y-3">
+			<StaggerItem index={0} baseDelay={0.9} className="md:col-start-7 md:col-span-2 space-y-3">
 				<p className="text-xs text-foreground/80">
 					send a message or <BookCallButton /> to discuss your project.
 				</p>

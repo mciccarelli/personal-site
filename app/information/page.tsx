@@ -41,11 +41,11 @@ export default function InformationPage() {
 			<div className="md:col-start-7 md:col-span-2">
 				<div className="text-xs text-foreground/80 space-y-4">
 					{aboutParagraphs.map((text, i) => (
-						<StaggerItem key={i} index={i} baseDelay={0.15}>
+						<StaggerItem key={i} index={i} baseDelay={0.7}>
 							{text}
 						</StaggerItem>
 					))}
-					<StaggerItem index={aboutParagraphs.length} baseDelay={0.15}>
+					<StaggerItem index={aboutParagraphs.length} baseDelay={0.7}>
 						independent, based in las vegas, nevada <Clock />
 					</StaggerItem>
 				</div>

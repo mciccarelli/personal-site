@@ -3,11 +3,15 @@ import type { Metadata } from 'next';
 import ThemeProvider from '@/components/theme-provider';
 import { Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import Watermark from '@/components/watermark';
+import ModeToggle from '@/components/mode-toggle';
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ['latin'],
 	display: 'swap',
 });
+
+const TAGLINE = 'design engineer & consultant';
 
 export const metadata: Metadata = {
 	title: {
@@ -57,7 +61,18 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={spaceGrotesk.className}>
 				<ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-					<main className="min-h-dvh lowercase">{children}</main>
+					<main className="min-h-dvh lowercase overflow-hidden">
+						<Watermark />
+						{children}
+						{/* Theme toggle — fixed bottom-left */}
+						<div className="fixed bottom-5 left-5 md:left-7 z-50">
+							<ModeToggle />
+						</div>
+						{/* Tagline — fixed bottom-right on desktop */}
+						<div className="hidden md:block fixed bottom-5 right-8 z-50 text-[0.6rem] text-muted-foreground/40">
+							{TAGLINE}
+						</div>
+					</main>
 				</ThemeProvider>
 				<Analytics />
 			</body>

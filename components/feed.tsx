@@ -38,7 +38,7 @@ export default function Feed({ items }: FeedProps) {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{
 						duration: 0.3,
-						delay: index * 0.04,
+						delay: 0.5 + index * 0.04,
 						ease: [0.25, 0.1, 0.25, 1],
 					}}
 					onMouseEnter={() => setHoveredIndex(index)}

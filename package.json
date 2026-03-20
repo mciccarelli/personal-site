@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-rc.0",
-    "@radix-ui/react-tooltip": "^1.2.8",
     "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "gsap": "^3.14.2",

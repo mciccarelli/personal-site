@@ -3,106 +3,176 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
-const LETTERS = 'CICCARELLI'.split('');
+interface Particle {
+	homeX: number;
+	homeY: number;
+	x: number;
+	y: number;
+	vx: number;
+	vy: number;
+}
 
 export default function Watermark() {
 	const containerRef = useRef<HTMLDivElement>(null);
-	const lettersRef = useRef<(HTMLSpanElement | null)[]>([]);
+	const canvasRef = useRef<HTMLCanvasElement>(null);
+	const particlesRef = useRef<Particle[]>([]);
+	const mouseRef = useRef({ x: -9999, y: -9999, active: false });
+	const rafRef = useRef<number>(0);
 
 	useEffect(() => {
 		const container = containerRef.current;
-		const letters = lettersRef.current.filter(Boolean) as HTMLSpanElement[];
-		if (!container || letters.length === 0) return;
+		const canvas = canvasRef.current;
+		if (!container || !canvas) return;
+
+		const ctx = canvas.getContext('2d');
+		if (!ctx) return;
+
+		const dpr = window.devicePixelRatio || 1;
+
+		const init = () => {
+			const rect = container.getBoundingClientRect();
+			canvas.width = rect.width * dpr;
+			canvas.height = rect.height * dpr;
+			canvas.style.width = `${rect.width}px`;
+			canvas.style.height = `${rect.height}px`;
+
+			return new Promise<void>((resolve) => {
+				const img = new Image();
+				img.onload = () => {
+					const off = document.createElement('canvas');
+					off.width = canvas.width;
+					off.height = canvas.height;
+					const offCtx = off.getContext('2d');
+					if (!offCtx) return;
+
+					// Scale SVG to fill container width with some padding
+					const scale = (rect.width * 0.85) / img.naturalWidth;
+					const drawW = img.naturalWidth * scale;
+					const drawH = img.naturalHeight * scale;
+					const drawX = (rect.width - drawW) / 2;
+					const drawY = (rect.height - drawH) / 2;
+
+					offCtx.scale(dpr, dpr);
+					offCtx.drawImage(img, drawX, drawY, drawW, drawH);
+
+					const imageData = offCtx.getImageData(0, 0, off.width, off.height);
+					const pixels = imageData.data;
+					const gap = Math.round(4 * dpr);
+					const particles: Particle[] = [];
+
+					for (let y = 0; y < off.height; y += gap) {
+						for (let x = 0; x < off.width; x += gap) {
+							const i = (y * off.width + x) * 4;
+							if (pixels[i + 3] > 128) {
+								const px = x / dpr;
+								const py = y / dpr;
+								particles.push({ homeX: px, homeY: py, x: px, y: py, vx: 0, vy: 0 });
+							}
+						}
+					}
+
+					particlesRef.current = particles;
+					resolve();
+				};
+				img.src = '/CICCARELLI.svg';
+			});
+		};
+
+		const getColor = () => {
+			const isDark = document.documentElement.classList.contains('dark');
+			return isDark ? 'rgba(250, 245, 243, 0.14)' : 'rgba(10, 9, 8, 0.22)';
+		};
+
+		const animate = () => {
+			const rect = container.getBoundingClientRect();
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			ctx.clearRect(0, 0, rect.width, rect.height);
+
+			const mouse = mouseRef.current;
+			const particles = particlesRef.current;
+			const color = getColor();
+			const radius = 130;
+			const mouseLocalX = mouse.x - rect.left;
+			const mouseLocalY = mouse.y - rect.top;
+
+			ctx.fillStyle = color;
+			ctx.beginPath();
+
+			for (const p of particles) {
+				if (mouse.active) {
+					const dx = p.x - mouseLocalX;
+					const dy = p.y - mouseLocalY;
+					const dist = Math.sqrt(dx * dx + dy * dy);
+					if (dist < radius && dist > 0) {
+						const force = ((radius - dist) / radius) * 3;
+						p.vx += (dx / dist) * force;
+						p.vy += (dy / dist) * force;
+					}
+				}
+
+				p.vx += (p.homeX - p.x) * 0.025;
+				p.vy += (p.homeY - p.y) * 0.025;
+				p.vx *= 0.9;
+				p.vy *= 0.9;
+				p.x += p.vx;
+				p.y += p.vy;
+
+				ctx.rect(p.x, p.y, 1.5, 1.5);
+			}
+
+			ctx.fill();
+			rafRef.current = requestAnimationFrame(animate);
+		};
 
 		const handleMouseMove = (e: MouseEvent) => {
-			const mouseX = e.clientX;
-			const mouseY = e.clientY;
-
-			letters.forEach((letter) => {
-				const rect = letter.getBoundingClientRect();
-				const cx = rect.left + rect.width / 2;
-				const cy = rect.top + rect.height / 2;
-
-				const dx = mouseX - cx;
-				const dy = mouseY - cy;
-				const distance = Math.sqrt(dx * dx + dy * dy);
-				const radius = 250;
-
-				if (distance < radius) {
-					const strength = 1 - distance / radius;
-					const eased = strength * strength;
-					const pushY = -eased * 18;
-					const pushX = -(dx / radius) * eased * 8;
-					const rotate = (dx / radius) * eased * 4;
-
-					gsap.to(letter, {
-						y: pushY,
-						x: pushX,
-						rotation: rotate,
-						duration: 0.4,
-						ease: 'power2.out',
-						overwrite: 'auto',
-					});
-				} else {
-					gsap.to(letter, {
-						y: 0,
-						x: 0,
-						rotation: 0,
-						duration: 0.6,
-						ease: 'power2.out',
-						overwrite: 'auto',
-					});
-				}
-			});
+			mouseRef.current = { x: e.clientX, y: e.clientY, active: true };
 		};
 
 		const handleMouseLeave = () => {
-			letters.forEach((letter) => {
-				gsap.to(letter, {
-					y: 0,
-					x: 0,
-					rotation: 0,
-					duration: 0.8,
-					ease: 'elastic.out(1, 0.4)',
-					overwrite: 'auto',
-				});
-			});
+			mouseRef.current = { ...mouseRef.current, active: false };
 		};
+
+		gsap.set(container, { y: 15, opacity: 0 });
+
+		init().then(() => {
+			rafRef.current = requestAnimationFrame(animate);
+
+			gsap.to(container, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: 'power3.out',
+			});
+		});
 
 		container.addEventListener('mousemove', handleMouseMove);
 		container.addEventListener('mouseleave', handleMouseLeave);
 
+		const handleResize = () => {
+			init().then(() => {
+				if (!rafRef.current) {
+					rafRef.current = requestAnimationFrame(animate);
+				}
+			});
+		};
+		window.addEventListener('resize', handleResize);
+
 		return () => {
+			cancelAnimationFrame(rafRef.current);
 			container.removeEventListener('mousemove', handleMouseMove);
 			container.removeEventListener('mouseleave', handleMouseLeave);
+			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
 	return (
 		<div
 			ref={containerRef}
-			className="hidden md:flex fixed left-0 right-0 z-[201] pointer-events-auto select-none items-center justify-center px-6 cursor-default bottom-[8vh]"
+			className="hidden md:flex fixed left-0 right-0 z-0 select-none items-center justify-center px-6 cursor-default bottom-[8vh]"
 			aria-hidden="true"
-			data-intro-watermark
+			style={{ height: 'clamp(6rem, 13vw, 18rem)' }}
 		>
-			<span
-				className="text-foreground/[0.07] leading-none whitespace-nowrap normal-case flex"
-				style={{
-					fontFamily: "'Saol Display', serif",
-					fontSize: 'clamp(3rem, 11vw, 16rem)',
-				}}
-			>
-				{LETTERS.map((letter, i) => (
-					<span
-						key={i}
-						ref={(el) => { lettersRef.current[i] = el; }}
-						data-intro-letter
-						className="inline-block will-change-transform"
-					>
-						{letter}
-					</span>
-				))}
-			</span>
+			<canvas ref={canvasRef} className="w-full h-full pointer-events-auto" />
 		</div>
 	);
 }
