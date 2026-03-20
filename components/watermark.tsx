@@ -86,7 +86,7 @@ export default function Watermark() {
 			data-intro-watermark
 		>
 			<span
-				className="text-foreground/[0.03] leading-none whitespace-nowrap normal-case flex"
+				className="text-foreground/[0.07] leading-none whitespace-nowrap normal-case flex"
 				style={{
 					fontFamily: "'Saol Display', serif",
 					fontSize: 'clamp(3rem, 11vw, 16rem)',
