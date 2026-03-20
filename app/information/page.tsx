@@ -16,7 +16,7 @@ const contactLines = [
 
 const aboutParagraphs = [
 	'michael ciccarelli is a design engineer building web interfaces and product systems. two decades across fintech, media, and e-commerce — focused on interaction, motion, and the details that shape how products feel.',
-	'my work spans frontend engineering, interaction and interface design, and application architecture — including design systems, api integrations, headless cms, e-commerce, and emerging areas like ai and web3.',
+	'my work spans frontend engineering, interaction and interface design, and application architecture — including design systems, APIs and backend systems, headless CMS, e-commerce platforms, and emerging areas like AI and web3.',
 ];
 
 export default function InformationPage() {

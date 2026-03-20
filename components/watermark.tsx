@@ -81,7 +81,7 @@ export default function Watermark() {
 	return (
 		<div
 			ref={containerRef}
-			className="fixed left-0 right-0 z-[201] pointer-events-auto select-none flex items-center justify-center px-2 md:px-6 cursor-default bottom-[11px] md:bottom-[8vh]"
+			className="hidden md:flex fixed left-0 right-0 z-[201] pointer-events-auto select-none items-center justify-center px-6 cursor-default bottom-[8vh]"
 			aria-hidden="true"
 			data-intro-watermark
 		>
