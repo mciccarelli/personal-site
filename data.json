@@ -58,10 +58,11 @@
 		}
 	],
 	"process": [
-		"You tell me what you need. I'll ask the right questions.",
-		"I scope it and quote it. You get a fixed price and a clear deliverable. No hourly billing, no surprises.",
-		"I build it. Fast, communicative, and on deadline. You'll have visibility the whole way.",
-		"You ship it. I hand off clean code, documentation, and anything your team needs to maintain it."
+		"you tell me what you need. i'll ask the right questions.",
+		"i scope it and quote it. fixed price, clear deliverable. no hourly billing, no surprises.",
+		"i build it. fast, communicative, on deadline. full visibility the whole way.",
+		"you ship it. clean code, documentation, everything your team needs to take it forward.",
+		"optionally, i stick around. retainer and maintenance arrangements available for ongoing work."
 	],
 	"projects": [
 		{

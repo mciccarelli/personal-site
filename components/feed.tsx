@@ -112,7 +112,7 @@ export default function Feed({ items }: FeedProps) {
 											{project.image && (
 												<PreviewCard.Root>
 													<PreviewCard.Trigger
-														className="text-muted-foreground hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2 cursor-pointer"
+														className="hidden md:inline text-muted-foreground hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2 cursor-pointer"
 													>
 														preview
 													</PreviewCard.Trigger>
@@ -122,7 +122,7 @@ export default function Feed({ items }: FeedProps) {
 																<img
 																	src={project.image}
 																	alt={project.title}
-																	className="w-[480px] block"
+																	className="w-[640px] block"
 																/>
 															</PreviewCard.Popup>
 														</PreviewCard.Positioner>
