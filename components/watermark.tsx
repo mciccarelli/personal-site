@@ -31,6 +31,7 @@ export default function Watermark() {
 
 		const init = () => {
 			const rect = container.getBoundingClientRect();
+			if (rect.width === 0 || rect.height === 0) return Promise.resolve();
 			canvas.width = rect.width * dpr;
 			canvas.height = rect.height * dpr;
 			canvas.style.width = `${rect.width}px`;
