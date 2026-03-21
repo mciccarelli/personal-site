@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { PreviewCard } from '@base-ui-components/react';
@@ -23,6 +23,11 @@ interface FeedProps {
 export default function Feed({ items }: FeedProps) {
 	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+	const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+
+	const handleImageLoad = useCallback((src: string) => {
+		setLoadedImages(prev => new Set(prev).add(src));
+	}, []);
 
 	const toggleExpanded = (index: number) => {
 		setExpandedIndex(expandedIndex === index ? null : index);
@@ -119,11 +124,20 @@ export default function Feed({ items }: FeedProps) {
 													<PreviewCard.Portal>
 														<PreviewCard.Positioner sideOffset={12} side="right" align="start" collisionPadding={16}>
 															<PreviewCard.Popup className="z-[150] rounded-sm border border-border bg-background shadow-lg overflow-hidden">
-																<img
-																	src={project.image}
-																	alt={project.title}
-																	className="w-[640px] block"
-																/>
+																<div className="relative w-[640px]">
+																	{!loadedImages.has(project.image!) && (
+																		<div className="w-[640px] aspect-video bg-muted animate-pulse" />
+																	)}
+																	<motion.img
+																		src={project.image}
+																		alt={project.title}
+																		className="w-[640px] block"
+																		initial={{ opacity: 0 }}
+																		animate={{ opacity: loadedImages.has(project.image!) ? 1 : 0 }}
+																		transition={{ duration: 0.3, ease: 'easeOut' }}
+																		onLoad={() => handleImageLoad(project.image!)}
+																	/>
+																</div>
 															</PreviewCard.Popup>
 														</PreviewCard.Positioner>
 													</PreviewCard.Portal>

@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 	display: 'swap',
 });
 
-const TAGLINE = 'design engineer & consultant';
+const TAGLINE = 'independent design engineer';
 
 export const metadata: Metadata = {
 	title: {
