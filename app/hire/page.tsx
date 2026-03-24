@@ -17,9 +17,11 @@ export default function EngagePage() {
     <>
       {/* Services — cols 3-4 */}
       <ColumnReveal className="mb-10 md:col-span-2 md:col-start-3 md:mb-0">
+        <p className="mb-1 font-serif text-xl leading-tight font-light">
+          here&apos;s how i typically work.
+        </p>
         <p className="text-foreground/80 mb-4 text-xs">
-          my typical engagements are listed below. <br />
-          send a message or <BookCallButton /> to discuss a project.
+          send a message or <BookCallButton />.
         </p>
         <ServicesSection services={services} />
       </ColumnReveal>
@@ -27,10 +29,10 @@ export default function EngagePage() {
       {/* Headline + Process steps — cols 5-6 */}
       <ColumnReveal className="mb-10 md:col-span-2 md:col-start-5 md:mb-0">
         <h1 className="text-foreground mb-1 font-serif text-xl leading-tight font-light">
-          let&apos;s build something.
+          let&apos;s work together.
         </h1>
         <p className="text-muted-foreground mb-4 text-xs">
-          tell me what you need and how involved you want to be. i&apos;ll work around you.
+          tell me what you need. i&apos;ll figure out the rest.
         </p>
 
         <StaggerList className="text-foreground/80 space-y-3 text-xs">

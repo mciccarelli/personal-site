@@ -11,9 +11,9 @@ export default function Home() {
         <Feed items={projects} />
       </ColumnReveal>
 
-      <ColumnReveal className="hidden md:block md:col-span-2 md:col-start-7">
+      <ColumnReveal className="hidden md:col-span-2 md:col-start-7 md:block">
         <p className="text-foreground/80 text-xs">
-          michael ciccarelli is a design engineer building web interfaces and product systems.
+          michael ciccarelli — design engineer building interfaces and the systems behind them.
         </p>
       </ColumnReveal>
     </>

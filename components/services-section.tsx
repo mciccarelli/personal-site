@@ -32,10 +32,10 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
 						}}
 					>
 					<Collapsible.Root className="group/service relative">
-						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[5px] group-hover/service:opacity-100 group-has-data-[panel-open]/service:opacity-100">
+						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[6px] group-hover/service:opacity-100 group-has-data-[panel-open]/service:opacity-100">
 							<BlinkingDot variant="subdued" />
 						</div>
-						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[5px] group-has-data-[panel-open]/service:opacity-100 group-hover/service:group-has-data-[panel-open]/service:opacity-100">
+						<div className="flex opacity-0 transition-opacity absolute -left-3.5 top-[6px] group-has-data-[panel-open]/service:opacity-100 group-hover/service:group-has-data-[panel-open]/service:opacity-100">
 							<BlinkingDot variant="default" />
 						</div>
 						<Collapsible.Trigger className="w-full text-left text-xs text-foreground/80 hover:text-foreground cursor-pointer transition-colors py-0.5 data-[panel-open]:text-foreground lowercase">

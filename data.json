@@ -2,10 +2,10 @@
 	"services": [
 		{
 			"title": "web platform",
-			"description": "modern web built on next.js — marketing sites, content systems, commerce, saas, crypto and onchain apps.",
+			"description": "full-stack web builds on next.js — marketing sites, content systems, commerce, saas, crypto and onchain apps.",
 			"deliverables": [
-				"next.js / typescript frontend",
-				"headless cms integration",
+				"next.js / typescript",
+				"headless cms",
 				"e-commerce and payments",
 				"performance and seo"
 			],
@@ -14,7 +14,7 @@
 		},
 		{
 			"title": "ui engineering",
-			"description": "figma-to-code execution — component systems, interaction, and production-ready ui.",
+			"description": "figma to production — component systems, interaction, and motion.",
 			"deliverables": [
 				"react / next.js",
 				"component libraries",
@@ -25,7 +25,7 @@
 		},
 		{
 			"title": "embedded ic",
-			"description": "principal-level frontend, embedded in your team — shipping alongside your engineers where design quality and engineering rigor need to coexist.",
+			"description": "principal-level frontend, embedded in your team — where design quality and engineering rigor are equally non-negotiable.",
 			"deliverables": [
 				"product development",
 				"architecture",
@@ -36,33 +36,33 @@
 		},
 		{
 			"title": "ai integration",
-			"description": "practical ai features scoped to real use cases — not demos, not experiments.",
+			"description": "ai-powered features built for production — llm integrations, chat interfaces, and custom tooling.",
 			"deliverables": [
-				"llm integrations",
-				"rag pipelines",
-				"chat interfaces",
-				"prompt design"
+				"llm api integration",
+				"chat and assistant interfaces",
+				"streaming and real-time responses",
+				"ai-powered search and filtering"
 			],
 			"price": "starting at $4,000"
 		},
 		{
 			"title": "advisory",
-			"description": "short-term consulting on architecture, frontend systems, or product direction.",
+			"description": "short-term engagements or ongoing retainers — architecture, frontend systems, or product direction.",
 			"deliverables": [
 				"codebase review",
 				"design system strategy",
 				"performance audits",
-				"ongoing advisory"
+				"ongoing advisory and check-ins"
 			],
-			"price": "starting at $1,500"
+			"price": "monthly retainers available · reach out to discuss"
 		}
 	],
 	"process": [
-		"you tell me what you need. i'll figure out the rest.",
+		"you tell me what you need.",
 		"i scope it and send it over.",
 		"i build it. fast, communicative, on time.",
-		"you ship. clean code, docs, everything your team needs.",
-		"optionally, i stick around. retainer and maintenance available."
+		"you ship.",
+		"optionally, i stick around."
 	],
 	"projects": [
 		{

@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 const aboutParagraphs = [
-  'two decades across fintech, media, and e-commerce — focused on interaction, motion, and the details that shape how products feel.',
-  'past clients include condé nast, pentagram, knoll, and amazon. work spans trading infrastructure, design systems, editorial platforms, and commerce experiences — often embedded as a principal-level ic where engineering rigor and design quality need to coexist.',
-  'i build interfaces and the systems behind them — component libraries, APIs, headless platforms, and backend infrastructure — across commerce, payments, AI, and crypto.',
+  'two decades across fintech, media, and e-commerce — focused on interaction, motion, and the craft of building for the web.',
+  'past clients include modern treasury, amazon, condé nast, and pentagram. work spans trading infrastructure, payments, design systems, editorial platforms, and commerce experiences — often embedded as a principal-level ic where engineering rigor and design quality need to coexist.',
+  'i build interfaces and the systems behind them.',
 ];
 
 export default function InformationPage() {
