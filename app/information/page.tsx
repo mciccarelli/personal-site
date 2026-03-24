@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Clock from '@/components/clock';
 import ColumnReveal from '@/components/column-reveal';
+import CurtainReveal from '@/components/curtain-reveal';
 import StaggerList from '@/components/stagger-list';
 import SocialLinks from '@/components/social-links';
 
@@ -31,16 +32,15 @@ export default function InformationPage() {
 
       {/* Photo — cols 3-4, between contact and about on mobile */}
       <ColumnReveal className="order-2 mb-6 md:order-none md:col-span-2 md:col-start-3 md:row-start-1 md:mb-0">
-        <div className="relative max-w-[200px] md:max-w-none">
+        <CurtainReveal className="max-w-[200px] overflow-hidden md:max-w-none">
           <Image
             src="/mc.jpg"
             alt="Michael Ciccarelli"
             width={800}
             height={1002}
-            className="w-full opacity-60 mix-blend-multiply dark:mix-blend-screen dark:opacity-40"
+            className="w-full -mb-px block opacity-60 mix-blend-multiply dark:mix-blend-screen dark:opacity-40"
           />
-          <div className="absolute inset-0 shadow-[inset_0_0_0_3px_hsl(var(--background))]" />
-        </div>
+        </CurtainReveal>
       </ColumnReveal>
 
       {/* About — cols 7-8 */}
