@@ -46,7 +46,7 @@ export default function ContactForm() {
 	};
 
 	const inputClass =
-		'text-foreground placeholder:text-muted-foreground/40 focus:border-foreground w-full border-0 border-b border-border bg-transparent px-0 py-2 text-xs transition-colors focus:outline-none';
+		'text-foreground placeholder:text-muted-foreground/40 focus:border-foreground w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base md:text-xs transition-colors focus:outline-none';
 
 	if (submitStatus === 'success') {
 		return (

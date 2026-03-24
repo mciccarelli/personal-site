@@ -66,9 +66,9 @@ export default function RootLayout({
 
             <IntroReveal>
               <div className="relative z-10 grid grid-cols-1 px-8 pt-6 pb-24 md:grid-cols-8 md:gap-x-12 md:pr-8 md:pb-16 md:pl-10">
-                {/* Tagline — above nav on mobile */}
-                <div className="text-muted-foreground/40 mb-4 max-w-[200px] text-[0.6rem] md:hidden">
-                  michael ciccarelli
+                {/* Intro — mobile only, above nav */}
+                <div className="text-foreground/60 mb-4 max-w-[200px] text-xs md:hidden">
+                  michael ciccarelli is a design engineer building web interfaces and product systems.
                 </div>
 
                 <div className="mb-6 self-start md:sticky md:top-6 md:col-span-2 md:mb-0">
