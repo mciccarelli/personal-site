@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <>
-      <ColumnReveal className="md:col-span-2 md:col-start-3">
+      <ColumnReveal className="md:col-span-2 md:col-start-5">
         <Feed items={projects} />
       </ColumnReveal>
 

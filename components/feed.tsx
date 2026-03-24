@@ -97,7 +97,7 @@ export default function Feed({ items }: FeedProps) {
 						className="absolute z-[100] rounded-sm border border-border bg-background shadow-lg overflow-hidden"
 						style={{
 							top: card.y,
-							left: 'calc(100%)',
+							right: 'calc(100% + 32px)',
 						}}
 						initial={{ clipPath: 'inset(0 0 100% 0)', opacity: 0 }}
 						animate={card.exiting
@@ -108,10 +108,12 @@ export default function Feed({ items }: FeedProps) {
 						transition={{
 							clipPath: {
 								duration: 0.6,
+								delay: card.exiting ? 0.4 : 0,
 								ease: [0.4, 0, 0.2, 1],
 							},
 							opacity: {
 								duration: 0.4,
+								delay: card.exiting ? 0.4 : 0,
 								ease: 'easeOut',
 							},
 						}}
@@ -141,12 +143,12 @@ export default function Feed({ items }: FeedProps) {
 					key={index}
 					ref={(el) => { if (el) rowRefs.current.set(index, el); }}
 					className="relative mb-1"
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
+					initial={{ opacity: 0, y: 6 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{
-						duration: 0.25,
-						delay: index * 0.03,
-						ease: 'easeOut',
+						duration: 0.3,
+						delay: 0.15 + index * 0.04,
+						ease: [0.25, 0.1, 0.25, 1],
 					}}
 					onMouseEnter={() => {
 						setHoveredIndex(index);
@@ -219,7 +221,7 @@ export default function Feed({ items }: FeedProps) {
 												href={project.url}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="text-muted-foreground hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2"
+												className="text-muted-foreground hover:text-foreground underline decoration-red-500 underline-offset-2"
 											>
 												visit
 											</Link>
