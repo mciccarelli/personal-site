@@ -1,75 +1,75 @@
 {
 	"services": [
 		{
-			"title": "Web Platform",
-			"description": "Modern web platforms built on Next.js — from marketing sites to content systems and commerce.",
+			"title": "web platform",
+			"description": "modern web built on next.js — marketing sites, content systems, commerce, saas, crypto and onchain apps.",
 			"deliverables": [
-				"Next.js frontend (Vercel or preferred hosting)",
-				"CMS integration (Sanity or similar)",
-				"E-commerce (Shopify / Stripe, if needed)",
-				"Performance, SEO, and clean architecture"
+				"next.js / typescript frontend",
+				"headless cms integration",
+				"e-commerce and payments",
+				"performance and seo"
 			],
-			"timeline": "2–6 week delivery depending on scope",
-			"price": "Starting at $8,000"
+			"timeline": "2–6 weeks",
+			"price": "starting at $10,000"
 		},
 		{
-			"title": "Design Engineering",
-			"description": "High-fidelity frontend implementation from design — component systems, interaction, and production-ready UI.",
+			"title": "ui engineering",
+			"description": "figma-to-code execution — component systems, interaction, and production-ready ui.",
 			"deliverables": [
-				"Figma-to-code execution (React / Next.js)",
-				"Component libraries and design systems",
-				"Interaction, motion, and polish",
-				"Scalable, maintainable UI"
+				"react / next.js",
+				"component libraries",
+				"motion and polish",
+				"design systems"
 			],
-			"price": "Starting at $3,000"
+			"price": "starting at $3,000"
 		},
 		{
-			"title": "Embedded (Principal IC)",
-			"description": "I join your team as a principal-level IC — embedded in your sprints, shipping alongside your engineers. Best for teams that need senior frontend leadership and hands-on product work where design quality and engineering rigor need to coexist.",
+			"title": "embedded ic",
+			"description": "principal-level frontend, embedded in your team — shipping alongside your engineers where design quality and engineering rigor need to coexist.",
 			"deliverables": [
-				"Embedded in your workflow, tools, and cadence",
-				"Hands-on product development and code review",
-				"Frontend architecture and technical direction",
-				"Fractional or full-time, weekly or monthly"
+				"product development",
+				"architecture",
+				"code review",
+				"fractional or full-time"
 			],
-			"price": "Starting at $12,000/mo"
+			"price": "starting at $15,000/mo"
 		},
 		{
-			"title": "AI Integration",
-			"description": "Practical AI features for products and internal tools — scoped to real use cases.",
+			"title": "ai integration",
+			"description": "practical ai features scoped to real use cases — not demos, not experiments.",
 			"deliverables": [
-				"LLM integrations (OpenAI, Anthropic, open-source)",
-				"RAG pipelines, chat interfaces, automation",
-				"Prompt design and evaluation",
-				"System architecture and implementation"
+				"llm integrations",
+				"rag pipelines",
+				"chat interfaces",
+				"prompt design"
 			],
-			"price": "Starting at $4,000"
+			"price": "starting at $4,000"
 		},
 		{
-			"title": "Technical Advisory",
-			"description": "Short-term consulting on architecture, frontend systems, or product direction.",
+			"title": "advisory",
+			"description": "short-term consulting on architecture, frontend systems, or product direction.",
 			"deliverables": [
-				"Codebase and architecture review",
-				"Frontend and design system strategy",
-				"Performance and UX audits",
-				"Ongoing advisory (weekly or monthly)"
+				"codebase review",
+				"design system strategy",
+				"performance audits",
+				"ongoing advisory"
 			],
-			"price": "Starting at $1,500"
+			"price": "starting at $1,500"
 		}
 	],
 	"process": [
-		"you tell me what you need. i'll ask the right questions.",
-		"i scope it and quote it. fixed price, clear deliverable. no hourly billing, no surprises.",
-		"i build it. fast, communicative, on deadline. full visibility the whole way.",
-		"you ship it. clean code, documentation, everything your team needs to take it forward.",
-		"optionally, i stick around. retainer and maintenance arrangements available for ongoing work."
+		"you tell me what you need. i'll figure out the rest.",
+		"i scope it and send it over.",
+		"i build it. fast, communicative, on time.",
+		"you ship. clean code, docs, everything your team needs.",
+		"optionally, i stick around. retainer and maintenance available."
 	],
 	"projects": [
 		{
 			"title": "bankroll.fyi",
 			"role": "Design & Development",
 			"url": "https://bankroll.fyi",
-			"description": "built for poker players and bettors who want to know their real numbers. log sessions, track ROI, review your history.",
+			"description": "a bankroll tracker for poker players. log sessions, see your roi, review your full history in one place.",
 			"technologies": "Next.js, Tailwind, Base UI, Supabase",
 			"image": "/projects/bankrollfyi.png"
 		},

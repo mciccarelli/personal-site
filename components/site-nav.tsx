@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 const navItems = [
 	{ label: 'projects', href: '/' },
 	{ label: 'information', href: '/information' },
-	{ label: 'engage', href: '/engage' },
+	{ label: 'hire', href: '/hire' },
 ];
 
 export default function SiteNav() {

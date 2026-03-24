@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     template: '%s — michael ciccarelli',
   },
   description:
-    'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+    'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   keywords: [
     'design engineer',
-    'fullstack engineer',
     'React',
     'Next.js',
     'TypeScript',
-    'web applications',
+    'web interfaces',
+    'product systems',
     'design systems',
     'freelance developer',
     'Las Vegas',
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: 'Michael Ciccarelli',
     title: 'michael ciccarelli',
     description:
-      'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+      'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'michael ciccarelli',
     description:
-      'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+      'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },

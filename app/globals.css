@@ -17,6 +17,8 @@
 }
 
 @theme {
+	--font-serif: 'Saol Display', serif;
+
 	--text-xs: 0.6875rem;
 	--text-sm: 0.75rem;
 	--text-base: 0.8125rem;
