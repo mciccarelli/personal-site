@@ -9,83 +9,82 @@ import SiteNav from '@/components/site-nav';
 import IntroReveal from '@/components/intro-reveal';
 
 const spaceGrotesk = Space_Grotesk({
-	subsets: ['latin'],
-	display: 'swap',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-
 export const metadata: Metadata = {
-	title: {
-		default: 'michael ciccarelli — design engineer',
-		template: '%s — michael ciccarelli',
-	},
-	description:
-		'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
-	keywords: [
-		'design engineer',
-		'fullstack engineer',
-		'React',
-		'Next.js',
-		'TypeScript',
-		'web applications',
-		'design systems',
-		'freelance developer',
-		'Las Vegas',
-	],
-	authors: [{ name: 'Michael Ciccarelli' }],
-	creator: 'Michael Ciccarelli',
-	openGraph: {
-		type: 'website',
-		locale: 'en_US',
-		siteName: 'Michael Ciccarelli',
-		title: 'michael ciccarelli — design engineer',
-		description:
-			'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: 'michael ciccarelli — design engineer',
-		description:
-			'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
-	},
-	icons: {
-		icon: { url: '/favicon.svg', type: 'image/svg+xml' }
-	}
+  title: {
+    default: 'michael ciccarelli',
+    template: '%s — michael ciccarelli',
+  },
+  description:
+    'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+  keywords: [
+    'design engineer',
+    'fullstack engineer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'web applications',
+    'design systems',
+    'freelance developer',
+    'Las Vegas',
+  ],
+  authors: [{ name: 'Michael Ciccarelli' }],
+  creator: 'Michael Ciccarelli',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Michael Ciccarelli',
+    title: 'michael ciccarelli',
+    description:
+      'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'michael ciccarelli',
+    description:
+      'Fullstack engineer building modern web applications, interfaces, and design systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+  },
+  icons: {
+    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+  },
 };
 
 export default function RootLayout({
-	children
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={spaceGrotesk.className}>
-				<ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-					<main className="min-h-dvh lowercase overflow-hidden">
-						<Watermark />
+  return (
+    <html lang="en">
+      <body className={spaceGrotesk.className}>
+        <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
+          <main className="min-h-dvh overflow-hidden lowercase">
+            <Watermark />
 
-						<IntroReveal>
-							<div className="relative z-10 grid grid-cols-1 md:grid-cols-8 md:gap-x-12 px-8 md:pl-10 md:pr-8 pt-6 pb-24 md:pb-16">
-								{/* Tagline — above nav on mobile */}
-								<div className="md:hidden text-[0.6rem] text-muted-foreground/40 mb-4 max-w-[200px]">
-									michael ciccarelli
-								</div>
+            <IntroReveal>
+              <div className="relative z-10 grid grid-cols-1 px-8 pt-6 pb-24 md:grid-cols-8 md:gap-x-12 md:pr-8 md:pb-16 md:pl-10">
+                {/* Tagline — above nav on mobile */}
+                <div className="text-muted-foreground/40 mb-4 max-w-[200px] text-[0.6rem] md:hidden">
+                  michael ciccarelli
+                </div>
 
-								<div className="md:col-span-2 md:sticky md:top-6 self-start mb-6 md:mb-0">
-									<SiteNav />
-								</div>
-								{children}
-							</div>
+                <div className="mb-6 self-start md:sticky md:top-6 md:col-span-2 md:mb-0">
+                  <SiteNav />
+                </div>
+                {children}
+              </div>
 
-							<div className="fixed bottom-5 left-5 md:left-7 z-50">
-								<ModeToggle />
-							</div>
-						</IntroReveal>
-					</main>
-				</ThemeProvider>
-				<Analytics />
-			</body>
-		</html>
-	);
+              <div className="fixed bottom-5 left-5 z-50 md:left-7">
+                <ModeToggle />
+              </div>
+            </IntroReveal>
+          </main>
+        </ThemeProvider>
+        <Analytics />
+      </body>
+    </html>
+  );
 }
