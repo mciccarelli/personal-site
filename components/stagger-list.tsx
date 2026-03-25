@@ -18,8 +18,8 @@ export default function StaggerList({ children, className }: StaggerListProps) {
 			{items.map((child, index) => (
 				<motion.div
 					key={index}
-					initial={false}
-					animate={{ opacity: ready ? 1 : 0 }}
+					initial={{ opacity: 0 }}
+					animate={ready ? { opacity: 1 } : { opacity: 0 }}
 					transition={{
 						duration: 0.25,
 						delay: ready ? index * 0.03 : 0,

@@ -13,7 +13,7 @@ export default function CurtainReveal({ children, className }: CurtainRevealProp
 
 	return (
 		<motion.div
-			initial={false}
+			initial={{ clipPath: 'inset(0 0 100% 0)', opacity: 0 }}
 			animate={ready
 				? { clipPath: 'inset(0 0 0% 0)', opacity: 1 }
 				: { clipPath: 'inset(0 0 100% 0)', opacity: 0 }
@@ -21,12 +21,10 @@ export default function CurtainReveal({ children, className }: CurtainRevealProp
 			transition={{
 				clipPath: {
 					duration: 0.8,
-					delay: ready ? 0.2 : 0,
 					ease: [0.4, 0, 0.2, 1],
 				},
 				opacity: {
 					duration: 0.5,
-					delay: ready ? 0.2 : 0,
 					ease: 'easeOut',
 				},
 			}}
