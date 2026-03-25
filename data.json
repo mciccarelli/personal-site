@@ -25,7 +25,7 @@
 		},
 		{
 			"title": "embedded ic",
-			"description": "principal-level frontend, embedded in your team — where design quality and engineering rigor are equally non-negotiable.",
+			"description": "principal-level frontend, embedded in your team — where engineering rigor and design quality need to coexist.",
 			"deliverables": [
 				"product development",
 				"architecture",
@@ -85,7 +85,7 @@
 			"title": "bankroll.fyi",
 			"role": "Design & Development",
 			"url": "https://bankroll.fyi",
-			"description": "i built this for myself. log your sessions, track your roi, know your numbers.",
+			"description": "i built this for myself. log sessions, manage your ledger, track roi, and access tools — all in one place.",
 			"technologies": "Next.js, Tailwind, Base UI, Supabase",
 			"image": "/projects/bankrollfyi.png"
 		},
