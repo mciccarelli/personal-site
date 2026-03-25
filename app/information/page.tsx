@@ -5,6 +5,7 @@ import ColumnReveal from '@/components/column-reveal';
 import CurtainReveal from '@/components/curtain-reveal';
 import StaggerList from '@/components/stagger-list';
 import SocialLinks from '@/components/social-links';
+import DelayedFade from '@/components/delayed-fade';
 
 export const metadata: Metadata = {
   title: 'Information',
@@ -42,6 +43,16 @@ export default function InformationPage() {
             className="w-full -mb-px block opacity-60 mix-blend-multiply dark:mix-blend-screen dark:opacity-40"
           />
         </CurtainReveal>
+        <DelayedFade delay={1}>
+          <a
+            href="https://kelvonagee.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground/40 hover:text-muted-foreground mt-1 block text-[10px] transition-colors"
+          >
+            photo: kelvon agee
+          </a>
+        </DelayedFade>
       </ColumnReveal>
 
       {/* About — cols 7-8 */}
