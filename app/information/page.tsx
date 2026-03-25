@@ -38,6 +38,7 @@ export default function InformationPage() {
             alt="Michael Ciccarelli"
             width={800}
             height={1002}
+            loading="eager"
             className="w-full -mb-px block opacity-60 mix-blend-multiply dark:mix-blend-screen dark:opacity-40"
           />
         </CurtainReveal>

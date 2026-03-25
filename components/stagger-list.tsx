@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { useWatermarkReady } from '@/hooks/use-watermark-ready';
 
 interface StaggerListProps {
 	children: React.ReactNode;
@@ -9,6 +10,7 @@ interface StaggerListProps {
 }
 
 export default function StaggerList({ children, className }: StaggerListProps) {
+	const ready = useWatermarkReady();
 	const items = React.Children.toArray(children);
 
 	return (
@@ -16,11 +18,11 @@ export default function StaggerList({ children, className }: StaggerListProps) {
 			{items.map((child, index) => (
 				<motion.div
 					key={index}
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
+					initial={false}
+					animate={{ opacity: ready ? 1 : 0 }}
 					transition={{
 						duration: 0.25,
-						delay: index * 0.03,
+						delay: ready ? index * 0.03 : 0,
 						ease: 'easeOut',
 					}}
 				>

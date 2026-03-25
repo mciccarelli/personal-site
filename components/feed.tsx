@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import BlinkingDot from '@/components/blinking-dot';
 import { cn } from '@/lib/utils';
+import { useWatermarkReady } from '@/hooks/use-watermark-ready';
 
 interface ProjectItem {
 	title: string;
@@ -30,6 +31,7 @@ let cardId = 0;
 const EXIT_DELAY = 1200;
 
 export default function Feed({ items }: FeedProps) {
+	const ready = useWatermarkReady();
 	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 	const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
@@ -144,10 +146,10 @@ export default function Feed({ items }: FeedProps) {
 					ref={(el) => { if (el) rowRefs.current.set(index, el); }}
 					className="relative mb-1"
 					initial={{ opacity: 0, y: 6 }}
-					animate={{ opacity: 1, y: 0 }}
+					animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
 					transition={{
 						duration: 0.3,
-						delay: 0.15 + index * 0.04,
+						delay: index * 0.04,
 						ease: [0.25, 0.1, 0.25, 1],
 					}}
 					onMouseEnter={() => {
