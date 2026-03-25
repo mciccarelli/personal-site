@@ -66,18 +66,10 @@
 	],
 	"projects": [
 		{
-			"title": "bankroll.fyi",
-			"role": "Design & Development",
-			"url": "https://bankroll.fyi",
-			"description": "a bankroll tracker for poker players. log sessions, see your roi, review your full history in one place.",
-			"technologies": "Next.js, Tailwind, Base UI, Supabase",
-			"image": "/projects/bankrollfyi.png"
-		},
-		{
-			"title": "Legend.xyz",
+			"title": "Legend",
 			"role": "Frontend Development",
 			"url": "https://legend.xyz",
-			"description": "Marketing site for Legend, an embedded smart contract wallet built as a UI/UX layer on top of existing open DeFi protocols.",
+			"description": "legend.xyz — marketing site for an embedded smart contract wallet built on open DeFi protocols.",
 			"technologies": "Next.js, Tailwind, WebGL",
 			"image": "/projects/legend.jpg"
 		},
@@ -85,15 +77,23 @@
 			"title": "Amazon: The Bar",
 			"role": "Frontend Development",
 			"url": "https://amazonthe.bar",
-			"description": "Portfolio for creative collective featuring custom animations and dynamic layouts.",
+			"description": "creative agency site. custom animations, dynamic layouts, nothing off the shelf.",
 			"technologies": "Next.js, Sanity, Tailwind, Motion",
 			"image": "/projects/the-bar.jpg"
+		},
+		{
+			"title": "bankroll.fyi",
+			"role": "Design & Development",
+			"url": "https://bankroll.fyi",
+			"description": "i built this for myself. log your sessions, track your roi, know your numbers.",
+			"technologies": "Next.js, Tailwind, Base UI, Supabase",
+			"image": "/projects/bankrollfyi.png"
 		},
 		{
 			"title": "One/Of",
 			"role": "Design & Development",
 			"url": "https://shoponeof.com",
-			"description": "E-commerce platform with custom booking system and Shopify checkout.",
+			"description": "e-commerce site for one/of — custom booking system and shopify checkout.",
 			"technologies": "Shopify (Headless), Next.js, Sanity, Cal.com",
 			"image": "/projects/one-of.jpg"
 		},
@@ -101,7 +101,7 @@
 			"title": "Modern Treasury",
 			"role": "Frontend Development",
 			"url": "https://moderntreasury.com",
-			"description": "Marketing site for fintech platform that processes $1 billion in instant payments annually.",
+			"description": "ui design system for modern treasury, a fintech platform processing $1b+ in payments annually.",
 			"technologies": "Next.js, Sanity, Tailwind",
 			"image": "/projects/mt.jpg"
 		},
