@@ -87,7 +87,7 @@
 			"url": "https://bankroll.fyi",
 			"description": "i built this for myself. log sessions, manage your ledger, track roi, and access tools — all in one place.",
 			"technologies": "Next.js, Tailwind, Base UI, Supabase",
-			"image": "/projects/bankrollfyi.png"
+			"image": "/projects/bankrollfyi.jpg"
 		},
 		{
 			"title": "One/Of",
