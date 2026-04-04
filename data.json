@@ -2,7 +2,7 @@
 	"services": [
 		{
 			"title": "web platform",
-			"description": "full-stack web builds on next.js — marketing sites, content systems, commerce, saas, crypto and onchain apps.",
+			"description": "full-stack web platforms on next.js — marketing, content, commerce, and product applications.",
 			"deliverables": [
 				"next.js / typescript",
 				"headless cms",
@@ -25,7 +25,7 @@
 		},
 		{
 			"title": "embedded ic",
-			"description": "principal-level frontend, embedded in your team — where engineering rigor and design quality need to coexist.",
+			"description": "principal-level frontend, embedded with your team — where engineering rigor and design quality meet.",
 			"deliverables": [
 				"product development",
 				"architecture",
@@ -36,33 +36,33 @@
 		},
 		{
 			"title": "ai integration",
-			"description": "ai-powered features built for production — llm integrations, chat interfaces, and custom tooling.",
+			"description": "production-ready ai features — llm integrations, interfaces, and tooling.",
 			"deliverables": [
 				"llm api integration",
 				"chat and assistant interfaces",
 				"streaming and real-time responses",
-				"ai-powered search and filtering"
+				"ai-powered search and workflows"
 			],
 			"price": "starting at $4,000"
 		},
 		{
 			"title": "advisory",
-			"description": "short-term engagements or ongoing retainers — architecture, frontend systems, or product direction.",
+			"description": "short-term or ongoing — architecture, systems, and product direction.",
 			"deliverables": [
 				"codebase review",
-				"design system strategy",
+				"design systems",
 				"performance audits",
-				"ongoing advisory and check-ins"
+				"ongoing advisory"
 			],
-			"price": "monthly retainers available · reach out to discuss"
+			"price": "monthly retainers available"
 		}
 	],
 	"process": [
-		"you tell me what you need.",
-		"i scope it and send it over.",
-		"i build it. fast, communicative, on time.",
-		"you ship.",
-		"optionally, i stick around."
+		"you share context",
+		"i scope and propose",
+		"i build",
+		"you ship",
+		"ongoing support, if needed"
 	],
 	"projects": [
 		{

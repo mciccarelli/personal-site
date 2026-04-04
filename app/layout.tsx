@@ -7,6 +7,7 @@ import Watermark from '@/components/watermark';
 import ModeToggle from '@/components/mode-toggle';
 import SiteNav from '@/components/site-nav';
 import IntroReveal from '@/components/intro-reveal';
+import HeroIntro from '@/components/hero-intro';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -15,37 +16,38 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'michael ciccarelli',
+    default: 'michael ciccarelli — design engineer',
     template: '%s — michael ciccarelli',
   },
   description:
-    'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+    'Design engineer building product interfaces and web platforms. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   keywords: [
+    'michael ciccarelli',
     'design engineer',
+    'frontend engineer',
     'React',
     'Next.js',
     'TypeScript',
-    'web interfaces',
-    'product systems',
+    'web platforms',
+    'product interfaces',
     'design systems',
-    'freelance developer',
     'Las Vegas',
   ],
-  authors: [{ name: 'Michael Ciccarelli' }],
-  creator: 'Michael Ciccarelli',
+  authors: [{ name: 'michael ciccarelli' }],
+  creator: 'michael ciccarelli',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Michael Ciccarelli',
-    title: 'michael ciccarelli',
+    siteName: 'michael ciccarelli',
+    title: 'michael ciccarelli — design engineer',
     description:
-      'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+      'Design engineer building product interfaces and web platforms. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'michael ciccarelli',
+    title: 'michael ciccarelli — design engineer',
     description:
-      'Design engineer building web interfaces and product systems. React, Next.js, TypeScript. Independent, based in Las Vegas.',
+      'Design engineer building product interfaces and web platforms. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -67,10 +69,7 @@ export default function RootLayout({
             <IntroReveal>
               <div className="relative z-10 grid grid-cols-1 px-8 pt-6 pb-24 md:grid-cols-8 md:gap-x-12 md:pr-8 md:pb-16 md:pl-10">
                 {/* Intro — mobile only, above nav */}
-                <div className="text-foreground/60 mb-4 max-w-[200px] text-xs md:hidden">
-                  michael ciccarelli — design engineer building interfaces and the systems behind
-                  them.
-                </div>
+                <HeroIntro className="text-foreground/60 mb-4 max-w-xs md:hidden" />
 
                 <div className="mb-6 self-start md:sticky md:top-6 md:col-span-2 md:mb-0">
                   <SiteNav />

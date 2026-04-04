@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const aboutParagraphs = [
-  'two decades across fintech, media, and e-commerce — focused on interaction, motion, and the craft of building for the web.',
-  'past clients include modern treasury, amazon, condé nast, and pentagram. work spans trading infrastructure, payments, design systems, editorial platforms, and commerce experiences — often embedded as a principal-level ic where engineering rigor and design quality are equally non-negotiable.',
-  'i prototype in code, ship production interfaces, and work ai-first — cursor and claude code are default parts of my workflow, not experiments. i build interfaces and the systems behind them.',
+  'two decades across fintech, media, and e-commerce — focused on interaction, motion, and implementation detail.',
+  'past clients include modern treasury, amazon, condé nast, and pentagram. work spans trading infrastructure, payments, design systems, editorial platforms, and commerce — often embedded as a principal-level ic where engineering rigor and design quality are equally non-negotiable.',
+  'i prototype in code and ship production interfaces. ai is part of the workflow — cursor and claude code as default tools, not experiments.',
 ];
 
 export default function InformationPage() {
@@ -40,7 +40,7 @@ export default function InformationPage() {
             width={800}
             height={1002}
             loading="eager"
-            className="w-full -mb-px block opacity-60 mix-blend-multiply dark:mix-blend-screen dark:opacity-40"
+            className="w-full -mb-px block"
           />
         </CurtainReveal>
         <DelayedFade delay={1}>

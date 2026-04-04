@@ -1,5 +1,6 @@
 import Feed from '@/components/feed';
 import ColumnReveal from '@/components/column-reveal';
+import HeroIntro from '@/components/hero-intro';
 import data from '../data.json';
 
 export default function Home() {
@@ -12,9 +13,7 @@ export default function Home() {
       </ColumnReveal>
 
       <ColumnReveal className="hidden md:col-span-2 md:col-start-7 md:block">
-        <p className="text-foreground/80 text-xs">
-          michael ciccarelli — design engineer building interfaces and the systems behind them.
-        </p>
+        <HeroIntro className="text-foreground/80" />
       </ColumnReveal>
     </>
   );
