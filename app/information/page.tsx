@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 const aboutParagraphs = [
-  'two decades across fintech, media, and e-commerce — focused on interaction, motion, and implementation detail.',
-  'past clients include modern treasury, amazon, condé nast, and pentagram. work spans trading infrastructure, payments, design systems, editorial platforms, and commerce — often embedded as a principal-level ic where engineering rigor and design quality are equally non-negotiable.',
+  'two decades building for the web — creative agencies, fintech, media, and e-commerce. focused on frontend engineering, motion, and implementation detail.',
+  'past clients include modern treasury, amazon, condé nast, and pentagram. work spans editorial platforms, marketing and portfolio sites, design systems, trading infrastructure, payments, and commerce — often embedded as a principal-level ic where engineering and design quality are both non-negotiable.',
   'i prototype in code and ship production interfaces. ai is part of the workflow — cursor and claude code as default tools, not experiments.',
 ];
 
