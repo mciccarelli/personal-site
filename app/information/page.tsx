@@ -25,7 +25,7 @@ export default function InformationPage() {
         <StaggerList className="text-foreground/80 space-y-1 text-xs">
           <div>michael ciccarelli</div>
           <div>
-            email <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
+            email <a href="mailto:mc@thirdindex.co">mc@thirdindex.co</a>
           </div>
           <SocialLinks />
         </StaggerList>

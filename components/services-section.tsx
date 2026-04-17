@@ -9,7 +9,6 @@ interface Service {
 	description: string;
 	deliverables: string[];
 	timeline?: string;
-	price: string;
 }
 
 interface ServicesSectionProps {
@@ -50,7 +49,6 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
 									))}
 								</ul>
 								{service.timeline && <p className="text-foreground/60 mb-0">{service.timeline}</p>}
-								<p className="text-foreground/60 mb-0">{service.price}</p>
 							</div>
 						</Collapsible.Panel>
 					</Collapsible.Root>

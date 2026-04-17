@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import ThemeProvider from '@/components/theme-provider';
-import { Space_Grotesk } from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import Watermark from '@/components/watermark';
 import ModeToggle from '@/components/mode-toggle';
@@ -9,8 +9,9 @@ import SiteNav from '@/components/site-nav';
 import IntroReveal from '@/components/intro-reveal';
 import HeroIntro from '@/components/hero-intro';
 
-const spaceGrotesk = Space_Grotesk({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
+  weight: ['400', '700'],
   display: 'swap',
 });
 
@@ -61,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>
+      <body className={spaceMono.className}>
         <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
           <main className="min-h-dvh overflow-hidden lowercase">
             <Watermark />

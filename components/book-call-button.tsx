@@ -47,7 +47,7 @@ export default function BookCallButton() {
 						>
 							{open && (
 								<iframe
-									src={`https://cal.com/ciccarelli/intro?layout=month_view&theme=${resolvedTheme}`}
+									src={`https://cal.com/thirdindex/intro?layout=month_view&theme=${resolvedTheme}`}
 									className="w-full h-full border-0"
 									allow="payment"
 								/>

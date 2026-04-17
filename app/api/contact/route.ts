@@ -36,7 +36,7 @@ ${message}
 
     const result = await resend.emails.send({
       from: 'Contact Form <noreply@ciccarel.li>',
-      to: ['m@ciccarel.li'],
+      to: ['mc@thirdindex.co'],
       subject,
       text: emailContent,
       html: emailContent.replace(/\n/g, '<br>'),

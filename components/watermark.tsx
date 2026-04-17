@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { GeistPixelSquare } from 'geist/font/pixel';
 
 interface Particle {
 	homeX: number;
@@ -41,24 +42,33 @@ export default function Watermark() {
 			canvas.style.width = `${rect.width}px`;
 			canvas.style.height = `${rect.height}px`;
 
-			return new Promise<void>((resolve) => {
-				const img = new Image();
-				img.onload = () => {
+			const fontFamily = getComputedStyle(container).fontFamily || 'monospace';
+			const text = 'ciccarelli';
+			const referenceSize = 100;
+			const probe = `400 ${referenceSize}px ${fontFamily}`;
+
+			return (document.fonts?.load(probe) ?? Promise.resolve())
+				.then(() => document.fonts?.ready ?? Promise.resolve())
+				.then(() => {
 					const off = document.createElement('canvas');
 					off.width = canvas.width;
 					off.height = canvas.height;
 					const offCtx = off.getContext('2d');
 					if (!offCtx) return;
 
-					// Scale SVG to fill width — container is oversized to avoid clipping
-					const scale = (rect.width * 0.85) / img.naturalWidth;
-					const drawW = img.naturalWidth * scale;
-					const drawH = img.naturalHeight * scale;
-					const drawX = (rect.width - drawW) / 2;
-					const drawY = (rect.height - drawH) / 2;
-
 					offCtx.scale(dpr, dpr);
-					offCtx.drawImage(img, drawX, drawY, drawW, drawH);
+
+					// Fit text to ~85% of container width by measuring then scaling
+					offCtx.font = probe;
+					const metrics = offCtx.measureText(text);
+					const targetWidth = rect.width * 0.85;
+					const fontSize = (targetWidth / metrics.width) * referenceSize;
+
+					offCtx.font = `400 ${fontSize}px ${fontFamily}`;
+					offCtx.textAlign = 'center';
+					offCtx.textBaseline = 'middle';
+					offCtx.fillStyle = '#000';
+					offCtx.fillText(text, rect.width / 2, rect.height / 2);
 
 					const imageData = offCtx.getImageData(0, 0, off.width, off.height);
 					const pixels = imageData.data;
@@ -89,10 +99,7 @@ export default function Watermark() {
 					}
 
 					particlesRef.current = particles;
-					resolve();
-				};
-				img.src = '/CICCARELLI.svg';
-			});
+				});
 		};
 
 		const getColor = () => {
@@ -267,7 +274,7 @@ export default function Watermark() {
 	return (
 		<div
 			ref={containerRef}
-			className="hidden md:flex fixed left-0 right-0 z-0 select-none items-end justify-center px-6 cursor-default bottom-5"
+			className={`${GeistPixelSquare.className} hidden md:flex fixed left-0 right-0 z-0 select-none items-end justify-center px-6 cursor-default bottom-5`}
 			aria-hidden="true"
 			style={{ height: 'clamp(12rem, 25vw, 30rem)' }}
 		>

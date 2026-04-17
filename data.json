@@ -9,8 +9,7 @@
 				"e-commerce and payments",
 				"performance and seo"
 			],
-			"timeline": "2–6 weeks",
-			"price": "starting at $10,000"
+			"timeline": "2–6 weeks"
 		},
 		{
 			"title": "ui engineering",
@@ -20,8 +19,7 @@
 				"component libraries",
 				"motion and polish",
 				"design systems"
-			],
-			"price": "starting at $3,000"
+			]
 		},
 		{
 			"title": "embedded ic",
@@ -31,8 +29,7 @@
 				"architecture",
 				"code review",
 				"fractional or full-time"
-			],
-			"price": "starting at $15,000/mo"
+			]
 		},
 		{
 			"title": "ai integration",
@@ -42,8 +39,7 @@
 				"chat and assistant interfaces",
 				"streaming and real-time responses",
 				"ai-powered search and workflows"
-			],
-			"price": "starting at $4,000"
+			]
 		},
 		{
 			"title": "advisory",
@@ -53,8 +49,7 @@
 				"design systems",
 				"performance audits",
 				"ongoing advisory"
-			],
-			"price": "monthly retainers available"
+			]
 		}
 	],
 	"process": [
