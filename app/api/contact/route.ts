@@ -24,7 +24,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
-    const subject = `New Contact Message from ${name}`;
+    const safeName = name.replace(/[\r\n]+/g, ' ').trim().slice(0, 80);
+    const subject = safeName ? `New contact message from ${safeName}` : 'New contact message';
     const emailContent = `
 Name: ${name}
 Email: ${email}
@@ -40,7 +41,6 @@ ${message}
       subject,
       text: emailContent,
       html: emailContent.replace(/\n/g, '<br>'),
-      replyTo: email,
     });
 
     if (result.error) {
