@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Clock from '@/components/clock';
 import ColumnReveal from '@/components/column-reveal';
 import CurtainReveal from '@/components/curtain-reveal';
 import StaggerList from '@/components/stagger-list';
@@ -40,7 +39,7 @@ export default function InformationPage() {
             width={800}
             height={1002}
             loading="eager"
-            className="w-full -mb-px block"
+            className="-mb-px block w-full"
           />
         </CurtainReveal>
         <DelayedFade delay={1}>
@@ -62,7 +61,11 @@ export default function InformationPage() {
             <p key={i}>{text}</p>
           ))}
           <p>
-            independent, based in las vegas, nevada <Clock />
+            based in las vegas, nevada. independent, consulting through{' '}
+            <a href="https://thirdindex.co" target="_blank" rel="noopener noreferrer">
+              third index
+            </a>
+            , a small digital studio.
           </p>
         </div>
       </ColumnReveal>

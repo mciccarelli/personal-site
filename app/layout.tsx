@@ -8,6 +8,7 @@ import ModeToggle from '@/components/mode-toggle';
 import SiteNav from '@/components/site-nav';
 import IntroReveal from '@/components/intro-reveal';
 import HeroIntro from '@/components/hero-intro';
+import Clock from '@/components/clock';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -80,6 +81,10 @@ export default function RootLayout({
 
               <div className="fixed bottom-5 left-5 z-50 md:left-7">
                 <ModeToggle />
+              </div>
+
+              <div className="fixed bottom-5 right-5 z-50 md:right-7">
+                <Clock />
               </div>
             </IntroReveal>
           </main>
