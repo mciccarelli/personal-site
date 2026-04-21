@@ -1,26 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import ThemeProvider from '@/components/theme-provider';
-import { Space_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import Watermark from '@/components/watermark';
-import ModeToggle from '@/components/mode-toggle';
-import SiteNav from '@/components/site-nav';
-import IntroReveal from '@/components/intro-reveal';
-import HeroIntro from '@/components/hero-intro';
-import Clock from '@/components/clock';
-
-const spaceMono = Space_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
-  title: {
-    default: 'michael ciccarelli — design engineer',
-    template: '%s — michael ciccarelli',
-  },
+  title: 'michael ciccarelli — design engineer',
   description:
     'Design engineer building product interfaces and web platforms. React, Next.js, TypeScript. Independent, based in Las Vegas.',
   keywords: [
@@ -63,31 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>
+      <body>
         <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-          <main className="min-h-dvh overflow-hidden lowercase">
-            <Watermark />
-
-            <IntroReveal>
-              <div className="relative z-10 grid grid-cols-1 px-8 pt-6 pb-24 md:grid-cols-8 md:gap-x-12 md:pr-8 md:pb-16 md:pl-10">
-                {/* Intro — mobile only, above nav */}
-                <HeroIntro className="text-foreground/60 mb-4 max-w-xs md:hidden" />
-
-                <div className="mb-6 self-start md:sticky md:top-6 md:col-span-2 md:mb-0">
-                  <SiteNav />
-                </div>
-                {children}
-              </div>
-
-              <div className="fixed bottom-5 left-5 z-50 md:left-7">
-                <ModeToggle />
-              </div>
-
-              <div className="fixed bottom-5 right-5 z-50 md:right-7">
-                <Clock />
-              </div>
-            </IntroReveal>
-          </main>
+          <main className="min-h-dvh lowercase">{children}</main>
         </ThemeProvider>
         <Analytics />
       </body>

@@ -1,6 +1,6 @@
 # ciccarel.li
 
-Personal site built with Next.js, Tailwind CSS, and Motion.
+Personal site built with Next.js and Tailwind CSS.
 
 ## Development
 

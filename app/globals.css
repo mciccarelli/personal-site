@@ -1,9 +1,17 @@
 @import 'tailwindcss';
 
+@font-face {
+	font-family: 'Mono';
+	src: url('/mono.woff2') format('woff2-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 @theme {
 	--text-xs: 0.6875rem;
 	--text-sm: 0.75rem;
-	--text-base: 0.8125rem;
+	--text-base: 0.875rem;
 	--text-lg: 1rem;
 	--text-xl: 1.25rem;
 
@@ -102,7 +110,9 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen text-xs leading-relaxed;
+		@apply bg-background text-foreground min-h-screen text-sm;
+		font-family: 'Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+		line-height: 1.55;
 	}
 
 	h2 {
@@ -122,6 +132,6 @@
 	}
 
 	a {
-		@apply text-foreground/90 transition-colors hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-2;
+		@apply text-foreground/90 transition-colors hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-4;
 	}
 }

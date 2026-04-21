@@ -63,6 +63,7 @@ export default function SocialLinks() {
 						href={link.href}
 						target="_blank"
 						rel="noopener noreferrer"
+						className="no-underline hover:no-underline uppercase tracking-wider"
 						onMouseEnter={() => scrambleTo(link.reveal)}
 						onMouseLeave={() => scrambleTo(DEFAULT_TEXT)}
 					>
@@ -70,7 +71,7 @@ export default function SocialLinks() {
 					</a>
 				</span>
 			))}
-			{'  '}
+			{' — '}
 			<span className="text-foreground/50 select-all inline-block min-w-[7ch]">
 				{displayText}
 			</span>

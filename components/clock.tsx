@@ -23,5 +23,5 @@ export default function Clock() {
 
 	if (!time) return null;
 
-	return <span className="text-xs text-muted-foreground/50">{time}</span>;
+	return <span className="text-xs text-muted-foreground/50 uppercase tracking-wider">{time}</span>;
 }
