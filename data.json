@@ -24,7 +24,7 @@
 			"title": "metropolis",
 			"role": "senior frontend engineer",
 			"location": "brooklyn",
-			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and frontend architecture for web3."
+			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and frontends for web3."
 		},
 		{
 			"year": "2018—2022",
@@ -37,7 +37,7 @@
 			"title": "vice media",
 			"role": "lead frontend engineer",
 			"location": "brooklyn",
-			"description": "led a team of 10 building the publishing platform for vice, noisey, motherboard, and munchies. migrated from a legacy lamp stack to react and established component systems and frontend standards.",
+			"description": "led a team of 10 building the publishing platform for vice, noisey, motherboard, and munchies. migrated from a legacy lamp stack to micro-services, react, established component systems and frontend standards.",
 			"url": "https://vice.com"
 		},
 		{

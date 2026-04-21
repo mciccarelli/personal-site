@@ -1,5 +1,4 @@
 import { Fragment, type ReactNode } from 'react';
-import Clock from '@/components/clock';
 import ModeToggle from '@/components/mode-toggle';
 import SocialLinks from '@/components/social-links';
 import data from '../data.json';
@@ -48,21 +47,20 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
-      <div className="mb-12 flex items-center justify-between">
+      <div className="mb-8">
         <ModeToggle />
-        <Clock />
       </div>
 
-      <div className="md:grid md:grid-cols-2 md:gap-24">
-        <div className="md:sticky md:top-6 md:self-start">
-          <section className="text-foreground/80 mb-10 space-y-6">
+      <div className="md:max-w-2xl">
+        <div>
+          <section className="text-foreground/80 mb-8 space-y-6">
             <h1 className="text-foreground font-medium">michael ciccarelli</h1>
             {bio.map((text, i) => (
               <p key={i}>{renderInlineLinks(text)}</p>
             ))}
           </section>
 
-          <section className="text-foreground/80 mb-14 space-y-1 md:mb-0">
+          <section className="text-foreground/80 mb-8 space-y-1">
             <div>
               <span className="tracking-wider uppercase">email</span> —{' '}
               <a href="mailto:mc@thirdindex.co">mc@thirdindex.co</a>
@@ -71,36 +69,37 @@ export default function Home() {
               <SocialLinks />
             </div>
           </section>
-        </div>
 
-        <section>
-          <ol className="space-y-8">
-            {timeline.map((item, i) => (
-              <li key={i} className="text-foreground/80">
-                <div>
-                  {item.url ? (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground"
-                    >
-                      {item.title}
-                    </a>
-                  ) : (
-                    <span className="text-foreground">{item.title}</span>
-                  )}
-                  <span className="text-muted-foreground">
-                    {' '}
-                    — {item.role}
-                    {item.location ? `, ${item.location}` : ''}, {item.year}
-                  </span>
-                </div>
-                <p className="text-muted-foreground mt-1">{item.description}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
+          <section>
+            <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">—</h2>
+            <ol className="space-y-8">
+              {timeline.map((item, i) => (
+                <li key={i} className="text-foreground/80">
+                  <div>
+                    {item.url ? (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span className="text-foreground">{item.title}</span>
+                    )}
+                    <span className="text-muted-foreground">
+                      {' '}
+                      — {item.role}
+                      {item.location ? `, ${item.location}` : ''}, {item.year}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground mt-1">{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </div>
       </div>
     </div>
   );
