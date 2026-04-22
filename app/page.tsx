@@ -46,7 +46,7 @@ export default function Home() {
   const { bio, cta, timeline } = data;
 
   return (
-    <div className="mx-auto max-w-6xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
+    <div className="mx-auto max-w-2xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
       <div className="mb-8">
         <ModeToggle />
       </div>
