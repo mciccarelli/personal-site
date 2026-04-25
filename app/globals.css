@@ -136,4 +136,8 @@
 	a {
 		@apply text-foreground/90 transition-colors hover:text-foreground no-underline hover:underline hover:decoration-red-500 underline-offset-4;
 	}
+
+	p a {
+		@apply text-foreground;
+	}
 }
