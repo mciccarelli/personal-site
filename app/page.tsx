@@ -53,14 +53,16 @@ export default function Home() {
 
       <div className="md:max-w-2xl">
         <div>
-          <section className="text-foreground/80 mb-8 space-y-6">
+          <section className="text-foreground/90 mb-7 space-y-6">
             <h1 className="text-foreground font-medium">michael ciccarelli</h1>
-            {bio.map((text, i) => (
-              <p key={i}>{renderInlineLinks(text)}</p>
-            ))}
+            <div>
+              {bio.map((text, i) => (
+                <p key={i}>{renderInlineLinks(text)}</p>
+              ))}
+            </div>
           </section>
 
-          <section className="text-foreground/80 mb-8 space-y-1">
+          <section className="text-foreground/60 mb-8 space-y-1">
             <div>
               <span className="tracking-wider uppercase">email</span> —{' '}
               <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
