@@ -1,22 +1,15 @@
 {
 	"bio": [
-		"design engineer building for the web — interfaces, platforms, and design systems. based in las vegas, running [third index](https://thirdindex.co) — a small design and engineering studio. available for fractional and contract work."
+		"design engineer. based in las vegas. founder, [third index](https://thirdindex.co). available for fractional and contract work.",
+		"focused on interaction, motion, and the details that shape how products feel."
 	],
 	"timeline": [
-		{
-			"year": "2025—present",
-			"title": "third index",
-			"role": "founder",
-			"location": "las vegas",
-			"description": "studio practice. building product interfaces, web platforms, and the systems behind them. client work across fintech, commerce, and creative teams, alongside original products.",
-			"url": "https://thirdindex.co"
-		},
 		{
 			"year": "2024—2025",
 			"title": "modern treasury",
 			"role": "design engineer",
 			"location": "new york",
-			"description": "designed and built interfaces for an enterprise fintech platform processing billions in payments annually. contributed to motion patterns, component systems, and headless cms infrastructure.",
+			"description": "built interfaces for an enterprise fintech platform processing billions in payments annually. contributed to motion patterns, component systems, and headless cms infrastructure.",
 			"url": "https://moderntreasury.com"
 		},
 		{
@@ -24,20 +17,20 @@
 			"title": "metropolis",
 			"role": "senior frontend engineer",
 			"location": "brooklyn",
-			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and frontends for web3."
+			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and web3 frontends."
 		},
 		{
 			"year": "2018—2022",
 			"title": "freelance",
 			"role": "full-stack engineer",
-			"description": "contract work across agencies, publishers, consumer brands, and fintech. clients included elara pictures, amazon, pentagram, and axoni. built platforms across marketplaces, editorial systems, and product interfaces."
+			"description": "contract work across agencies, publishers, consumer brands, and fintech. clients include elara pictures, amazon, pentagram, and axoni. built marketplaces, editorial systems, and product interfaces."
 		},
 		{
 			"year": "2014—2018",
 			"title": "vice media",
 			"role": "lead frontend engineer",
 			"location": "brooklyn",
-			"description": "led a team of 10 building the publishing platform for vice, noisey, motherboard, and munchies. migrated from a legacy lamp stack to micro-services, react, established component systems and frontend standards.",
+			"description": "led a team of 10 building the publishing platform for vice, noisey, motherboard, and munchies. migrated from legacy lamp stack to microservices and react. established component systems and frontend standards.",
 			"url": "https://vice.com"
 		},
 		{
@@ -45,7 +38,7 @@
 			"title": "condé nast",
 			"role": "web developer",
 			"location": "new york",
-			"description": "developed responsive sites for gq, wired, and architectural digest. collaborated with internal teams, global brands, and agencies on editorial features and digital campaigns.",
+			"description": "built responsive sites for gq, wired, and architectural digest. collaborated with internal teams, global brands, and agencies on editorial features and campaigns.",
 			"url": "https://condenast.com"
 		}
 	]

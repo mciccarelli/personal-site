@@ -43,7 +43,7 @@ function renderInlineLinks(text: string): ReactNode[] {
 }
 
 export default function Home() {
-  const { bio, cta, timeline } = data;
+  const { bio, timeline } = data;
 
   return (
     <div className="mx-auto max-w-2xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
@@ -63,15 +63,23 @@ export default function Home() {
           <section className="text-foreground/80 mb-8 space-y-1">
             <div>
               <span className="tracking-wider uppercase">email</span> —{' '}
-              <a href="mailto:mc@thirdindex.co">mc@thirdindex.co</a>
+              <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
             </div>
             <div>
-              <SocialLinks />
+              <span className="tracking-wider uppercase">cv</span> —{' '}
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                download (pdf)
+              </a>
+            </div>
+            <div>
+              <span className="tracking-wider uppercase">social</span> — <SocialLinks />
             </div>
           </section>
 
           <section>
-            <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">—</h2>
+            <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">
+              previous experience
+            </h2>
             <ol className="space-y-8">
               {timeline.map((item, i) => (
                 <li key={i} className="text-foreground/80">
