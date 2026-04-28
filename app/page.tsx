@@ -84,8 +84,11 @@ export default function Home() {
             </h2>
             <ol className="space-y-8">
               {timeline.map((item, i) => (
-                <li key={i} className="text-foreground/80">
-                  <div>
+                <li key={i} className="text-foreground/80 md:flex md:gap-6">
+                  <span className="text-muted-foreground mb-1 block tabular-nums md:mb-0 md:w-20 md:shrink-0">
+                    {item.year}
+                  </span>
+                  <div className="md:flex-1">
                     {item.url ? (
                       <a
                         href={item.url}
@@ -101,10 +104,10 @@ export default function Home() {
                     <span className="text-muted-foreground">
                       {' '}
                       — {item.role}
-                      {item.location ? `, ${item.location}` : ''}, {item.year}
+                      {item.location ? `, ${item.location}` : ''}
                     </span>
+                    <p className="text-muted-foreground mt-1">{item.description}</p>
                   </div>
-                  <p className="text-muted-foreground mt-1">{item.description}</p>
                 </li>
               ))}
             </ol>
