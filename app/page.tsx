@@ -68,12 +68,6 @@ export default function Home() {
               <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
             </div>
             <div>
-              <span className="tracking-wider uppercase">cv</span> —{' '}
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                download (pdf)
-              </a>
-            </div>
-            <div>
               <span className="tracking-wider uppercase">social</span> — <SocialLinks />
             </div>
           </section>
