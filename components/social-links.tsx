@@ -8,7 +8,6 @@ const DEFAULT_TEXT = 'mciccarelli';
 const links = [
 	{ label: 'x', href: 'https://x.com/mciccarelli', reveal: 'x.com/mciccarelli' },
 	{ label: 'ig', href: 'https://instagram.com/mciccarelli', reveal: 'instagram.com/mciccarelli' },
-	{ label: 'tg', href: 'https://t.me/mciccarelli', reveal: 't.me/mciccarelli' },
 	{ label: 'li', href: 'https://linkedin.com/in/mciccarelli', reveal: 'linkedin.com/in/mciccarelli' },
 	{ label: 'gh', href: 'https://github.com/mciccarelli', reveal: 'github.com/mciccarelli' },
 ];
