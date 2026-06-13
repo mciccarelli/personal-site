@@ -1,23 +1,8 @@
 import { Fragment, type ReactNode } from 'react';
 import ModeToggle from '@/components/mode-toggle';
 import SocialLinks from '@/components/social-links';
+import SiteTabs from '@/components/site-tabs';
 import data from '../data.json';
-
-function ArrowIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      aria-hidden="true"
-      className="text-foreground/40 group-hover:text-foreground -mt-1 inline-block h-3 w-3 transition-colors"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-    </svg>
-  );
-}
 
 function renderInlineLinks(text: string): ReactNode[] {
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -43,7 +28,7 @@ function renderInlineLinks(text: string): ReactNode[] {
 }
 
 export default function Home() {
-  const { bio, timeline } = data;
+  const { bio, timeline, work } = data;
 
   return (
     <div className="mx-auto max-w-2xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
@@ -68,47 +53,17 @@ export default function Home() {
               <a href="mailto:m@ciccarel.li">m@ciccarel.li</a>
             </div>
             <div>
+              <span className="tracking-wider uppercase">booking</span> —{' '}
+              <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
+                cal.com/ciccarelli/intro
+              </a>
+            </div>
+            <div>
               <span className="tracking-wider uppercase">social</span> — <SocialLinks />
             </div>
           </section>
 
-          <section>
-            <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">
-              previous experience
-            </h2>
-            <ol className="group/timeline space-y-8">
-              {timeline.map((item, i) => (
-                <li
-                  key={i}
-                  className="text-foreground/80 transition-opacity duration-300 group-hover/timeline:[&:not(:hover)]:opacity-40 md:flex md:gap-6"
-                >
-                  <span className="text-muted-foreground mb-1 block tabular-nums transition-colors duration-300 [li:hover>&]:text-accent md:mb-0 md:w-20 md:shrink-0">
-                    {item.year}
-                  </span>
-                  <div className="md:flex-1">
-                    {item.url ? (
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground"
-                      >
-                        {item.title}
-                      </a>
-                    ) : (
-                      <span className="text-foreground">{item.title}</span>
-                    )}
-                    <span className="text-muted-foreground">
-                      {' '}
-                      — {item.role}
-                      {item.location ? `, ${item.location}` : ''}
-                    </span>
-                    <p className="text-muted-foreground mt-1">{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </section>
+          <SiteTabs timeline={timeline} work={work} />
         </div>
       </div>
     </div>

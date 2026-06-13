@@ -40,5 +40,106 @@
 			"description": "built responsive sites for gq, wired, and architectural digest. collaborated with internal teams, global brands, and agencies on editorial features and campaigns.",
 			"url": "https://condenast.com"
 		}
+	],
+	"work": [
+		{
+			"title": "bankroll.fyi",
+			"role": "design & development",
+			"url": "https://bankroll.fyi",
+			"description": "bankroll management for poker players. log sessions in natural language, track variance and roi, and see which games and stakes are actually profitable.",
+			"technologies": "next.js, tailwind, base ui, supabase",
+			"thumbnail": "/projects/bankrollfyi.png",
+			"featured": true
+		},
+		{
+			"title": "legend.xyz",
+			"role": "frontend development",
+			"url": "https://legend-xyz.vercel.app",
+			"description": "marketing site for an embedded smart contract wallet built on open defi protocols. custom webgl moments and scroll-driven sequences across the homepage and product pages.",
+			"technologies": "next.js, tailwind, webgl",
+			"thumbnail": "/projects/legend.jpg",
+			"featured": true
+		},
+		{
+			"title": "amazon: the bar",
+			"role": "frontend development",
+			"url": "https://amazonthe.bar",
+			"description": "site for a creative agency that builds for amazon. custom animation, editorial layouts, typography that carries the brand. nothing off the shelf.",
+			"technologies": "next.js, sanity, tailwind, motion",
+			"thumbnail": "/projects/the-bar.jpg",
+			"video": "/projects/amazonthebar.mp4",
+			"featured": true
+		},
+		{
+			"title": "one/of",
+			"role": "design & development",
+			"url": "https://shoponeof.com",
+			"description": "commerce for a made-to-order fashion label. custom booking flow for in-person fittings, headless shopify checkout for ready-to-ship pieces. two purchase models, one buying system.",
+			"technologies": "shopify (headless), next.js, sanity, cal.com",
+			"thumbnail": "/projects/one-of.jpg",
+			"featured": true
+		},
+		{
+			"title": "elara.world",
+			"role": "fullstack development",
+			"url": "https://elara.world",
+			"description": "community platform pairing editorial content with a merchandise store. publishing and commerce running on the same frontend, with one shared design language.",
+			"technologies": "next.js, sanity, shopify",
+			"thumbnail": "/projects/elara.jpg",
+			"video": "/projects/elara.mp4",
+			"featured": true
+		},
+		{
+			"title": "revolve law",
+			"role": "fullstack development",
+			"url": "https://revolvelawgroup.com",
+			"description": "site for a law firm that wanted to look like neither a law firm nor a tech company. restrained type, quiet motion, a contact flow that gets people to the right place in two clicks.",
+			"technologies": "next.js, tailwind, sanity",
+			"thumbnail": "/projects/revolve.jpg",
+			"featured": true
+		},
+		{
+			"title": "kelvon agee",
+			"role": "design & development",
+			"url": "https://kelvonagee.com",
+			"description": "portfolio for a photographer. full-bleed imagery, ruthless image optimization, typography kept out of the way. the work stays in front.",
+			"technologies": "next.js, cloudinary",
+			"thumbnail": "/projects/kelvon.jpg",
+			"featured": true
+		},
+		{
+			"title": "the well",
+			"role": "fullstack development",
+			"url": "https://the-well.com",
+			"description": "wellness platform combining e-commerce, appointment booking, and member access. shopify for products, custom scheduling for services, member state shared across all of it.",
+			"technologies": "vue.js, sanity, shopify",
+			"thumbnail": "/projects/the-well.jpg",
+			"featured": true
+		},
+		{
+			"title": "el dorado",
+			"role": "frontend development",
+			"url": "https://eldo.us/",
+			"description": "architecture studio portfolio. project pages built around process — drawings, material studies, site photography — not just finished shots. the site reads like a monograph.",
+			"technologies": "next.js, contentful",
+			"thumbnail": "/projects/eldo.jpg",
+			"featured": true
+		},
+		{
+			"title": "modern treasury",
+			"role": "frontend development",
+			"url": "https://moderntreasury.com",
+			"description": "ui and component work for a fintech platform processing over a billion dollars in payments annually. marketing surfaces and in-app patterns built against a shared design system.",
+			"technologies": "next.js, sanity, tailwind",
+			"featured": false
+		},
+		{
+			"title": "vice",
+			"role": "lead frontend development",
+			"url": "https://vice.com",
+			"description": "editorial platform serving millions of readers. real-time content delivery, ad integration, and a frontend that had to hold up under breaking-news traffic spikes.",
+			"technologies": "react.js, redux, node.js",
+			"featured": false
+		}
 	]
 }
