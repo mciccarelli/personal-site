@@ -28,7 +28,7 @@ function renderInlineLinks(text: string): ReactNode[] {
 }
 
 export default function Home() {
-  const { bio, timeline, work } = data;
+  const { bio, timeline, work, photos } = data;
 
   return (
     <div className="mx-auto max-w-2xl px-6 pt-6 pb-20 text-sm lowercase md:px-8">
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </section>
 
-          <SiteTabs timeline={timeline} work={work} />
+          <SiteTabs timeline={timeline} work={work} photos={photos} />
         </div>
       </div>
     </div>

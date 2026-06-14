@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Work from '@/components/work';
+import Photos from '@/components/photos';
 
 // Measure before paint on the client; fall back to useEffect during SSR to
 // avoid the layout-effect warning.
@@ -27,19 +28,23 @@ type WorkItem = {
   featured?: boolean;
 };
 
+type Photo = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 const TABS = ['experience', 'work', 'photos'] as const;
 type Tab = (typeof TABS)[number];
-
-// Photos isn't ready to ship yet — hide its tab but keep the panel wired up so
-// re-enabling is just removing the filter.
-const VISIBLE_TABS = TABS.filter((tab) => tab !== 'photos');
 
 export default function SiteTabs({
   timeline,
   work,
+  photos,
 }: {
   timeline: TimelineItem[];
   work: WorkItem[];
+  photos: Photo[];
 }) {
   const [active, setActive] = useState<Tab>('experience');
   const tabRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
@@ -69,7 +74,7 @@ export default function SiteTabs({
             style={{ left: pill.left, width: pill.width }}
           />
         ) : null}
-        {VISIBLE_TABS.map((tab) => {
+        {TABS.map((tab) => {
           const isActive = active === tab;
           return (
             <button
@@ -133,26 +138,7 @@ export default function SiteTabs({
 
       {active === 'work' ? <Work items={work} /> : null}
 
-      {active === 'photos' ? (
-        <section>
-          <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">
-            photos
-          </h2>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                className="border-border text-muted-foreground/40 flex aspect-square items-center justify-center border border-dashed text-xs"
-              >
-                {String(i + 1).padStart(2, '0')}
-              </div>
-            ))}
-          </div>
-          <p className="text-muted-foreground/60 mt-6">
-            coming soon — drop images into <code>public/photos/</code> to fill this in.
-          </p>
-        </section>
-      ) : null}
+      {active === 'photos' ? <Photos photos={photos} /> : null}
     </div>
   );
 }
