@@ -1,8 +1,15 @@
 {
 	"bio": [
-		"software engineer with 20+ years building for the web, focused on the frontend — design systems, ui components, interaction, and motion. full-stack depth when a project needs it. currently running [third index](https://thirdindex.co), a small independent studio. available for fractional and contract work."
+		"software engineer with 20+ years building for the web, focused on the frontend — design systems, ui components, interaction, and motion. full-stack depth when a project needs it. available for fractional and contract work."
 	],
 	"timeline": [
+		{
+			"year": "2018—current",
+			"title": "third index",
+			"role": "principal engineer",
+			"url": "https://thirdindex.co",
+			"description": "independent product and frontend work for agencies, startups, and consumer brands — amazon, pentagram, elara pictures, axoni. now a studio building product interfaces, marketing sites, and commerce."
+		},
 		{
 			"year": "2024—2025",
 			"title": "modern treasury",
@@ -19,17 +26,11 @@
 			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and web3 frontends."
 		},
 		{
-			"year": "2018—2022",
-			"title": "freelance",
-			"role": "full-stack engineer",
-			"description": "contract work across agencies, publishers, consumer brands, and fintech. clients include elara pictures, amazon, pentagram, and axoni. built marketplaces, editorial systems, and product interfaces."
-		},
-		{
 			"year": "2014—2018",
 			"title": "vice media",
 			"role": "lead frontend engineer",
 			"location": "brooklyn",
-			"description": "led a team of 10 building the publishing platform for vice, noisey, motherboard, and munchies. migrated from legacy lamp stack to microservices and react. established component systems and frontend standards.",
+			"description": "led frontend on the publishing platform for vice, noisey, motherboard, and munchies. migrated from legacy lamp stack to microservices and react. established component systems and frontend standards.",
 			"url": "https://vice.com"
 		},
 		{

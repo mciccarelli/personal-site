@@ -98,9 +98,6 @@ export default function SiteTabs({
 
       {active === 'experience' ? (
         <section>
-          <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">
-            previous experience
-          </h2>
           <ol className="group/timeline space-y-8">
             {timeline.map((item, i) => (
               <li

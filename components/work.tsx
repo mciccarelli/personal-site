@@ -30,10 +30,6 @@ export default function Work({ items }: { items: WorkItem[] }) {
 
   return (
     <section>
-      <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">
-        selected work
-      </h2>
-
       <ol className="group/work space-y-8">
         {featured.map((item, i) => (
           <li

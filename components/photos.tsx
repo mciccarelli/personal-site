@@ -12,7 +12,6 @@ const blur = blurMap as Record<string, string>;
 export default function Photos({ photos }: { photos: Photo[] }) {
   return (
     <section>
-      <h2 className="text-muted-foreground mb-6 font-normal tracking-wider uppercase">photos</h2>
       <div className="space-y-4">
         {photos.map((photo, i) => {
           // Portrait images stay in the narrow content column; landscape images
