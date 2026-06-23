@@ -57,7 +57,7 @@
 			"role": "frontend development",
 			"url": "https://legend-xyz.vercel.app",
 			"description": "marketing site for an embedded smart contract wallet built on open defi protocols. custom webgl moments and scroll-driven sequences across the homepage and product pages.",
-			"technologies": "next.js, tailwind, webgl",
+			"technologies": "next.js, tailwind, webgl, rive",
 			"thumbnail": "/projects/legend.jpg",
 			"featured": true
 		},

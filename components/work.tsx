@@ -64,13 +64,13 @@ export default function Work({ items }: { items: WorkItem[] }) {
       {hovered ? (
         <div
           aria-hidden
-          className="border-border bg-popover pointer-events-none fixed z-50 hidden w-56 overflow-hidden border p-2 md:block"
+          className="pointer-events-none fixed z-50 hidden w-96 overflow-hidden md:block"
           style={{
-            left: Math.min(hovered.x + 20, (typeof window !== 'undefined' ? window.innerWidth : 0) - 244),
+            left: Math.min(hovered.x + 20, (typeof window !== 'undefined' ? window.innerWidth : 0) - 404),
             top: hovered.y + 20,
           }}
         >
-          <span className="block aspect-[4/3] w-full overflow-hidden">
+          <span className="block w-full overflow-hidden">
             {hovered.item.video ? (
               <video
                 src={hovered.item.video}
@@ -78,10 +78,10 @@ export default function Work({ items }: { items: WorkItem[] }) {
                 muted
                 loop
                 playsInline
-                className="h-full w-full object-contain"
+                className="block h-auto w-full"
               />
             ) : (
-              <img src={hovered.item.thumbnail} alt="" className="h-full w-full object-contain" />
+              <img src={hovered.item.thumbnail} alt="" className="block h-auto w-full" />
             )}
           </span>
         </div>
