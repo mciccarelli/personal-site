@@ -45,8 +45,7 @@ export default function Home() {
       <section className="py-7">
         <Label>Contact</Label>
         <p className="mb-3">
-          Available for fractional and contract work — design systems, product interfaces, marketing
-          sites, and commerce.
+          Available for fractional and contract work — design systems, product interfaces, brand / marketing sites, and commerce.
         </p>
         <p>
           You can contact me by email <CopyEmail email="m@ciccarel.li" /> or{' '}

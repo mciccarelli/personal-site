@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ciccarel.li'),
   title: 'michael ciccarelli — design engineer',
   description:
-    'Design engineer with 20+ years building for the web, focused on the frontend: design systems, UI components, interaction, and motion. AI-native, framework agnostic, and available for fractional and contract work. Based in Las Vegas.',
+    'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. AI-native, framework agnostic. Available for fractional and contract work. Based in Las Vegas.',
   keywords: [
     'michael ciccarelli',
     'design engineer',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'React',
     'Next.js',
     'TypeScript',
-    'web platforms',
+    'frontend engineering',
     'product interfaces',
     'design systems',
     'ui components',
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: 'Michael Ciccarelli',
     title: 'Michael Ciccarelli — Design Engineer',
     description:
-      'Design engineer with 20+ years building for the web, focused on the frontend: design systems, UI components, interaction, and motion. AI-native, framework agnostic, and available for fractional and contract work. Based in Las Vegas.',
+      'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. AI-native, framework agnostic. Available for fractional and contract work. Based in Las Vegas.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Michael Ciccarelli — Design Engineer',
     description:
-      'Design engineer with 20+ years building for the web, focused on the frontend: design systems, UI components, interaction, and motion. AI-native, framework agnostic, and available for fractional and contract work. Based in Las Vegas.',
+      'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. AI-native, framework agnostic. Available for fractional and contract work. Based in Las Vegas.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },
