@@ -1,0 +1,33 @@
+# Michael Ciccarelli — Design Engineer
+
+> 20+ years building for the web, focused on the frontend: design systems, UI components, interaction, and motion. AI-native, framework agnostic, and available for fractional and contract work.
+
+Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. Founder of Third Index, an independent studio building product interfaces, marketing sites, and commerce.
+
+## Selected Clients
+
+Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey, Knoll.
+
+## Projects
+
+- [bankroll.fyi](https://bankroll.fyi): Bankroll management for poker players — log sessions in natural language, track variance and ROI
+
+## Work
+
+- [Thirdindex.co](https://thirdindex.co): Founder
+- [Legend.xyz](https://legend-xyz.vercel.app): Frontend development — marketing site with WebGL and Rive
+- [Amazon: The Bar](https://amazonthe.bar): Frontend development — creative agency site
+- [One/Of](https://shoponeof.com): Design and development — commerce for a made-to-order fashion label
+- [Elara.world](https://elara.world): Fullstack development — editorial and commerce platform
+- [Revolve Law](https://revolvelawgroup.com): Fullstack development — law firm site
+- [Kelvon Agee](https://kelvonagee.com): Design and development — photography portfolio
+- [El Dorado](https://eldo.us): Frontend development — architecture studio portfolio
+
+## Contact
+
+- Email: m@ciccarel.li
+- Booking: https://cal.com/ciccarelli/intro
+- X: https://x.com/mciccarelli
+- GitHub: https://github.com/mciccarelli
+- LinkedIn: https://linkedin.com/in/mciccarelli
+- Instagram: https://instagram.com/mciccarelli

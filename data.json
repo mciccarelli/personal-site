@@ -1,248 +1,66 @@
 {
+	"header": "michael ciccarelli — design engineer",
 	"bio": [
-		"software engineer with 20+ years building for the web, focused on the frontend — design systems, ui components, interaction, and motion. full-stack depth when a project needs it. available for fractional and contract work."
+		"20+ years building for the web, focused on the frontend: design systems, UI components, interaction, and motion. AI-native, framework agnostic, and available for fractional and contract work."
 	],
-	"timeline": [
+	"clients": "Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey, Knoll.",
+	"projects": [
 		{
-			"year": "2018—current",
-			"title": "third index",
-			"role": "principal engineer",
-			"url": "https://thirdindex.co",
-			"description": "independent product and frontend work for agencies, startups, and consumer brands — amazon, pentagram, elara pictures, axoni. now a studio building product interfaces, marketing sites, and commerce."
-		},
-		{
-			"year": "2024—2025",
-			"title": "modern treasury",
-			"role": "design engineer",
-			"location": "new york",
-			"description": "built interfaces for an enterprise fintech platform processing billions in payments annually. contributed to motion patterns, component systems, and headless cms infrastructure.",
-			"url": "https://moderntreasury.com"
-		},
-		{
-			"year": "2022—2024",
-			"title": "metropolis",
-			"role": "senior frontend engineer",
-			"location": "brooklyn",
-			"description": "built smart contract deployment tooling (metal.build) and dao governance products (pod.xyz). worked across evm-compatible dapps, farcaster integrations, and web3 frontends."
-		},
-		{
-			"year": "2014—2018",
-			"title": "vice media",
-			"role": "lead frontend engineer",
-			"location": "brooklyn",
-			"description": "led frontend on the publishing platform for vice, noisey, motherboard, and munchies. migrated from legacy lamp stack to microservices and react. established component systems and frontend standards.",
-			"url": "https://vice.com"
-		},
-		{
-			"year": "2012—2014",
-			"title": "condé nast",
-			"role": "web developer",
-			"location": "new york",
-			"description": "built responsive sites for gq, wired, and architectural digest. collaborated with internal teams, global brands, and agencies on editorial features and campaigns.",
-			"url": "https://condenast.com"
+			"title": "bankroll.fyi",
+			"url": "https://bankroll.fyi",
+			"meta": "Live",
+			"thumbnail": "/projects/bankrollfyi.png"
 		}
 	],
 	"work": [
 		{
-			"title": "bankroll.fyi",
-			"role": "design & development",
-			"url": "https://bankroll.fyi",
-			"description": "bankroll management for poker players. log sessions in natural language, track variance and roi, and see which games and stakes are actually profitable.",
-			"technologies": "next.js, tailwind, base ui, supabase",
-			"thumbnail": "/projects/bankrollfyi.png",
-			"featured": true
+			"title": "Thirdindex.co",
+			"url": "https://thirdindex.co",
+			"meta": "Founder"
 		},
 		{
-			"title": "legend.xyz",
-			"role": "frontend development",
+			"title": "Legend.xyz",
 			"url": "https://legend-xyz.vercel.app",
-			"description": "marketing site for an embedded smart contract wallet built on open defi protocols. custom webgl moments and scroll-driven sequences across the homepage and product pages.",
-			"technologies": "next.js, tailwind, webgl, rive",
-			"thumbnail": "/projects/legend.jpg",
-			"featured": true
+			"meta": "Frontend Development",
+			"thumbnail": "/projects/legend.jpg"
 		},
 		{
-			"title": "amazon: the bar",
-			"role": "frontend development",
+			"title": "Amazon: The Bar",
 			"url": "https://amazonthe.bar",
-			"description": "site for a creative agency that builds for amazon. custom animation, editorial layouts, typography that carries the brand. nothing off the shelf.",
-			"technologies": "next.js, sanity, tailwind, motion",
+			"meta": "Frontend Development",
 			"thumbnail": "/projects/the-bar.jpg",
-			"video": "/projects/amazonthebar.mp4",
-			"featured": true
+			"video": "/projects/amazonthebar-1080p.mp4"
 		},
 		{
-			"title": "one/of",
-			"role": "design & development",
+			"title": "One/Of",
 			"url": "https://shoponeof.com",
-			"description": "commerce for a made-to-order fashion label. custom booking flow for in-person fittings, headless shopify checkout for ready-to-ship pieces. two purchase models, one buying system.",
-			"technologies": "shopify (headless), next.js, sanity, cal.com",
-			"thumbnail": "/projects/one-of.jpg",
-			"featured": true
+			"meta": "Design & Development",
+			"thumbnail": "/projects/one-of.jpg"
 		},
 		{
-			"title": "elara.world",
-			"role": "fullstack development",
+			"title": "Elara.world",
 			"url": "https://elara.world",
-			"description": "community platform pairing editorial content with a merchandise store. publishing and commerce running on the same frontend, with one shared design language.",
-			"technologies": "next.js, sanity, shopify",
+			"meta": "Fullstack Development",
 			"thumbnail": "/projects/elara.jpg",
-			"video": "/projects/elara.mp4",
-			"featured": true
+			"video": "/projects/elara.mp4"
 		},
 		{
-			"title": "revolve law",
-			"role": "fullstack development",
+			"title": "Revolve Law",
 			"url": "https://revolvelawgroup.com",
-			"description": "site for a law firm that wanted to look like neither a law firm nor a tech company. restrained type, quiet motion, a contact flow that gets people to the right place in two clicks.",
-			"technologies": "next.js, tailwind, sanity",
-			"thumbnail": "/projects/revolve.jpg",
-			"featured": true
+			"meta": "Fullstack Development",
+			"thumbnail": "/projects/revolve.jpg"
 		},
 		{
-			"title": "kelvon agee",
-			"role": "design & development",
+			"title": "Kelvon Agee",
 			"url": "https://kelvonagee.com",
-			"description": "portfolio for a photographer. full-bleed imagery, ruthless image optimization, typography kept out of the way. the work stays in front.",
-			"technologies": "next.js, cloudinary",
-			"thumbnail": "/projects/kelvon.jpg",
-			"featured": true
+			"meta": "Design & Development",
+			"thumbnail": "/projects/kelvon.jpg"
 		},
 		{
-			"title": "the well",
-			"role": "fullstack development",
-			"url": "https://the-well.com",
-			"description": "wellness platform combining e-commerce, appointment booking, and member access. shopify for products, custom scheduling for services, member state shared across all of it.",
-			"technologies": "vue.js, sanity, shopify",
-			"thumbnail": "/projects/the-well.jpg",
-			"featured": true
-		},
-		{
-			"title": "el dorado",
-			"role": "frontend development",
+			"title": "El Dorado",
 			"url": "https://eldo.us/",
-			"description": "architecture studio portfolio. project pages built around process — drawings, material studies, site photography — not just finished shots. the site reads like a monograph.",
-			"technologies": "next.js, contentful",
-			"thumbnail": "/projects/eldo.jpg",
-			"featured": true
-		},
-		{
-			"title": "modern treasury",
-			"role": "frontend development",
-			"url": "https://moderntreasury.com",
-			"description": "ui and component work for a fintech platform processing over a billion dollars in payments annually. marketing surfaces and in-app patterns built against a shared design system.",
-			"technologies": "next.js, sanity, tailwind",
-			"featured": false
-		},
-		{
-			"title": "vice",
-			"role": "lead frontend development",
-			"url": "https://vice.com",
-			"description": "editorial platform serving millions of readers. real-time content delivery, ad integration, and a frontend that had to hold up under breaking-news traffic spikes.",
-			"technologies": "react.js, redux, node.js",
-			"featured": false
-		}
-	],
-	"photos": [
-		{
-			"src": "/photos/L1002779.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1002031.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1001903.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1001713.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1001648.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1001538.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/R0001137.jpg",
-			"width": 1365,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1001061.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/R0001049.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1000812.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1000803.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1060771.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1060737.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1060543.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1060459.jpg",
-			"width": 1583,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1050831.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1030730.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1030588.jpg",
-			"width": 2048,
-			"height": 1367
-		},
-		{
-			"src": "/photos/L1020769.jpg",
-			"width": 1638,
-			"height": 2048
-		},
-		{
-			"src": "/photos/L1010613.jpg",
-			"width": 2048,
-			"height": 1536
+			"meta": "Frontend Development",
+			"thumbnail": "/projects/eldo.jpg"
 		}
 	]
 }

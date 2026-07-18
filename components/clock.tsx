@@ -2,26 +2,31 @@
 
 import { useState, useEffect } from 'react';
 
+const formatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/Los_Angeles',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+  timeZoneName: 'short',
+});
+
+function format(): string {
+  const parts = formatter.formatToParts(new Date());
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
+  return `${get('timeZoneName')} ${get('hour')}:${get('minute')}`;
+}
+
 export default function Clock() {
-	const [time, setTime] = useState('');
+  const [time, setTime] = useState('');
 
-	useEffect(() => {
-		function tick() {
-			setTime(
-				new Date().toLocaleTimeString('en-US', {
-					timeZone: 'America/Los_Angeles',
-					hour: 'numeric',
-					minute: '2-digit',
-					hour12: true,
-				}) + ' PT'
-			);
-		}
-		tick();
-		const id = setInterval(tick, 1000);
-		return () => clearInterval(id);
-	}, []);
+  useEffect(() => {
+    const tick = () => setTime(format());
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
 
-	if (!time) return null;
+  if (!time) return null;
 
-	return <span className="text-xs text-muted-foreground/50 uppercase tracking-wider">{time}</span>;
+  return <span className="tabular-nums">{time}</span>;
 }
