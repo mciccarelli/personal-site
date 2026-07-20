@@ -3,7 +3,7 @@
 	"bio": [
 		"20+ years building for the web. Frontend engineering with a focus on design systems, interaction, and motion. I work where design and engineering overlap, building polished, production-ready interfaces."
 	],
-	"clients": "Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey, Knoll.",
+	"clients": "Pentagram, Modern Treasury, Axoni, VICE, GQ, WIRED, Grey, Knoll.",
 	"projects": [
 		{
 			"title": "bkrl.app",
@@ -13,11 +13,6 @@
 		}
 	],
 	"work": [
-		{
-			"title": "third index",
-			"url": "https://thirdindex.co",
-			"meta": "Founder"
-		},
 		{
 			"title": "Legend.xyz",
 			"url": "https://legend-xyz.vercel.app",

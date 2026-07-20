@@ -22,8 +22,38 @@ export default function Home() {
       </header>
 
       <section className="mb-7">
-        <Label>Selected Clients</Label>
-        <p>{clients}</p>
+        <Label>Want to work together?</Label>
+        <p className="mb-3">
+          I run{' '}
+          <a
+            href="https://thirdindex.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground transition-colors hover:text-muted"
+          >
+            Third Index
+          </a>
+          , a small studio for startups and consumer brands — fractional design engineering,
+          product interfaces, and commerce.
+        </p>
+        <p className="flex gap-5">
+          <a
+            href="https://cal.com/ciccarelli/intro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground transition-colors hover:text-muted"
+          >
+            Book an intro call &rarr;
+          </a>
+          <a
+            href="https://thirdindex.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground transition-colors hover:text-muted"
+          >
+            thirdindex.co &rarr;
+          </a>
+        </p>
       </section>
 
       <hr className="border-border" />
@@ -36,28 +66,17 @@ export default function Home() {
       <hr className="border-border" />
 
       <section className="py-7">
-        <Label>Work</Label>
+        <Label>Recent Client Work</Label>
         <Rows items={work} />
+        <p className="text-muted mt-4">Other clients: {clients}</p>
       </section>
 
       <hr className="border-border" />
 
       <section className="py-7">
         <Label>Contact</Label>
-        <p className="mb-3">
-          Available for fractional and contract work — design systems, product interfaces, brand / marketing sites, and commerce.
-        </p>
         <p>
-          You can contact me by email <CopyEmail email="m@ciccarel.li" /> or{' '}
-          <a
-            href="https://cal.com/ciccarelli/intro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground transition-colors hover:text-muted"
-          >
-            book an intro call
-          </a>
-          . Find me on{' '}
+          You can contact me by email <CopyEmail email="m@ciccarel.li" />. Find me on{' '}
           <a
             href="https://x.com/mciccarelli"
             target="_blank"

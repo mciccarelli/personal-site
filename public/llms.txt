@@ -2,7 +2,11 @@
 
 > 20+ years building for the web. Frontend engineering with a focus on design systems, interaction, and motion. I work where design and engineering overlap, building polished, production-ready interfaces.
 
-Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. Founder of Third Index, an independent studio building product interfaces, marketing sites, and commerce. AI-native and framework agnostic. Available for fractional and contract work.
+Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic.
+
+## Work With Me
+
+I run [Third Index](https://thirdindex.co), a small studio for startups and consumer brands — fractional design engineering, product interfaces, and commerce. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
 
 ## Selected Clients
 
@@ -10,11 +14,10 @@ Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey,
 
 ## Projects
 
-- [bankroll.fyi](https://bankroll.fyi): Bankroll management for poker players — log sessions in natural language, track variance and ROI
+- [bkrl.app](https://bkrl.app): Bankroll management for poker players — log sessions in natural language, track variance and ROI
 
-## Work
+## Recent Client Work
 
-- [Thirdindex.co](https://thirdindex.co): Founder
 - [Legend.xyz](https://legend-xyz.vercel.app): Frontend development — marketing site with WebGL and Rive
 - [Amazon: The Bar](https://amazonthe.bar): Frontend development — creative agency site
 - [One/Of](https://shoponeof.com): Design and development — commerce for a made-to-order fashion label
