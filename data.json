@@ -6,15 +6,15 @@
 	"clients": "Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey, Knoll.",
 	"projects": [
 		{
-			"title": "bankroll.fyi",
-			"url": "https://bankroll.fyi",
+			"title": "bkrl.app",
+			"url": "https://bkrl.app",
 			"meta": "Live",
 			"thumbnail": "/projects/bankrollfyi.png"
 		}
 	],
 	"work": [
 		{
-			"title": "Thirdindex.co",
+			"title": "third index",
 			"url": "https://thirdindex.co",
 			"meta": "Founder"
 		},
