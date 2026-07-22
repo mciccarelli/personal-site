@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-[34rem] px-6 pt-10 pb-10 md:pt-16">
       <header className="mb-7">
-        <Label>{header}</Label>
+        <h1 className="mb-4">
+          <img src="/ciccarelli.svg" alt={header} className="h-4 w-auto" />
+        </h1>
         {bio.map((text, i) => (
           <p key={i} className="mb-3 last:mb-0">
             {text}
