@@ -107,7 +107,7 @@ export default function Feed({ items }: FeedProps) {
 
   return (
     <div className="relative">
-      <div className="sticky top-[17px] z-40 mx-auto mb-4 flex max-w-xl justify-end md:mb-14 lg:max-w-2xl">
+      <div className="sticky top-14 z-40 mx-auto mb-4 flex max-w-xl justify-end md:top-[17px] md:mb-14 lg:max-w-2xl">
         <FilterMenu counts={counts} />
       </div>
 

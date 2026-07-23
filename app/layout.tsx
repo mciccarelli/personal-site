@@ -61,21 +61,21 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
           <FilterProvider>
             <div className="min-h-dvh">
-              <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 flex items-center justify-between p-5 px-6 md:px-8">
-                <div
-                  aria-hidden
-                  className="h-5 w-28 bg-white mix-blend-difference"
-                  style={{
-                    maskImage: "url('/ciccarelli.svg')",
-                    maskSize: 'contain',
-                    maskRepeat: 'no-repeat',
-                    maskPosition: 'left center',
-                    WebkitMaskImage: "url('/ciccarelli.svg')",
-                    WebkitMaskSize: 'contain',
-                    WebkitMaskRepeat: 'no-repeat',
-                    WebkitMaskPosition: 'left center',
-                  }}
-                />
+              <div
+                aria-hidden
+                className="pointer-events-none fixed top-5 left-6 z-50 h-5 w-28 bg-white mix-blend-difference md:left-8"
+                style={{
+                  maskImage: "url('/ciccarelli.svg')",
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'left center',
+                  WebkitMaskImage: "url('/ciccarelli.svg')",
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'left center',
+                }}
+              />
+              <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 flex items-center justify-end p-5 px-6 md:px-8">
                 <ModeToggle className="pointer-events-auto" />
               </header>
               <main>{children}</main>
