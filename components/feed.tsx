@@ -126,17 +126,36 @@ export default function Feed({ items }: FeedProps) {
           >
             {item.type === 'photo' ? (
               <figure>
-                <div
-                  className="relative md:cursor-zoom-in"
-                  onClick={() => openPhoto(item)}
-                  style={
-                    item.images.length > 1
-                      ? { aspectRatio: `${item.images[0].width} / ${item.images[0].height}` }
-                      : undefined
-                  }
-                >
-                  {item.images.length > 1 ? (
-                    <>
+                {item.images.length > 1 ? (
+                  <>
+                    <div
+                      className="-mx-6 touch-pan-x [scrollbar-width:none] overflow-x-auto px-6 pb-3 md:hidden [&::-webkit-scrollbar]:hidden"
+                      aria-label={`${item.title.split(' — ')[0]} photos`}
+                    >
+                      <div className="flex snap-x snap-mandatory gap-2">
+                        {item.images.map((img) => (
+                          <div
+                            key={img.src}
+                            className="relative w-[88%] flex-none snap-start"
+                            style={{ aspectRatio: `${img.width} / ${img.height}` }}
+                          >
+                            <img
+                              src={img.src}
+                              width={img.width}
+                              height={img.height}
+                              alt=""
+                              loading="lazy"
+                              className="block h-full w-full object-cover shadow-sm"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div
+                      className="relative hidden md:block md:cursor-zoom-in"
+                      onClick={() => openPhoto(item)}
+                      style={{ aspectRatio: `${item.images[0].width} / ${item.images[0].height}` }}
+                    >
                       {item.images.slice(1, 3).map((img, i) => (
                         <img
                           key={img.src}
@@ -158,8 +177,10 @@ export default function Feed({ items }: FeedProps) {
                         loading="lazy"
                         className="relative block h-full w-full object-cover shadow-sm"
                       />
-                    </>
-                  ) : (
+                    </div>
+                  </>
+                ) : (
+                  <div>
                     <img
                       src={item.images[0].src}
                       width={item.images[0].width}
@@ -168,8 +189,8 @@ export default function Feed({ items }: FeedProps) {
                       loading="lazy"
                       className="block h-auto w-full"
                     />
-                  )}
-                </div>
+                  </div>
+                )}
                 <figcaption className={cn('mt-4 space-y-2', item.images.length > 1 && 'mt-6')}>
                   <div className="text-foreground/75 text-sm tracking-[0.08em] uppercase">
                     {item.title.split(' — ')[0]}
