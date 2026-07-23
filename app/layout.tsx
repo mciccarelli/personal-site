@@ -1,5 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { FilterProvider } from '@/components/feed-filter';
+import ModeToggle from '@/components/mode-toggle';
+import ThemeProvider from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
@@ -53,9 +56,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <main className="min-h-dvh">{children}</main>
+        <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
+          <FilterProvider>
+          <div className="min-h-dvh">
+            <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 flex items-center justify-between p-5 px-6 md:px-8">
+              <div
+                aria-hidden
+                className="bg-foreground h-5 w-28"
+                style={{
+                  maskImage: "url('/ciccarelli.svg')",
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'left center',
+                  WebkitMaskImage: "url('/ciccarelli.svg')",
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'left center',
+                }}
+              />
+              <ModeToggle className="pointer-events-auto" />
+            </header>
+            <main>{children}</main>
+          </div>
+          </FilterProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

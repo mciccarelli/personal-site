@@ -28,5 +28,5 @@ export default function Clock() {
 
   if (!time) return null;
 
-  return <span className="tabular-nums">{time}</span>;
+  return <span className="text-muted-foreground/50 text-xs tabular-nums">{time}</span>;
 }

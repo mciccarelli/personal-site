@@ -1,12 +1,25 @@
 # Michael Ciccarelli — Design Engineer
 
-> 20+ years building for the web. Frontend engineering with a focus on design systems, interaction, and motion. I work where design and engineering overlap, building polished, production-ready interfaces.
+> Multidisciplinary designer and developer with 20+ years building for the web.
 
-Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic.
+Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic. He also plays poker and takes photos.
 
 ## Work With Me
 
-I run [Third Index](https://thirdindex.co), a small studio for startups and consumer brands — fractional design engineering, product interfaces, and commerce. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
+I run [THIRD INDEX](https://thirdindex.co), a small digital studio for custom web development. Based in Las Vegas, working worldwide with startups and consumer brands on product interfaces, design systems, marketing sites, and headless editorial and commerce. Fractional or project-based. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
+
+## Now
+
+Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and bettors.
+
+## Experience
+
+- Design Engineer, Third Index — Las Vegas / Remote, 2025–present (founder; end-to-end builds across frontend, backend, and infrastructure)
+- Design Engineer, Modern Treasury — New York, 2024–2025 (enterprise fintech interfaces, design systems, motion patterns, headless CMS)
+- Senior Frontend Engineer, Metropolis — Brooklyn, 2022–2024 (metal.build, pod.xyz, EVM dApps, Farcaster integrations)
+- Senior Engineer II, Axoni — New York, 2021–2022 (React apps, data visualizations, UI libraries for fintech)
+- Lead Frontend Engineer, VICE Media — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
+- Web Developer, Condé Nast — New York, 2012–2014 (GQ, Wired, Architectural Digest)
 
 ## Selected Clients
 

@@ -1,33 +1,141 @@
 @import 'tailwindcss';
 
 @font-face {
-	font-family: 'Mono';
-	src: url('/mono.woff2') format('woff2-variations');
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Founders Grotesk';
+  src: url('/founders-grotesk-medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mono';
+  src: url('/mono.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme {
-	--color-background: #fcfcfc;
-	--color-foreground: #1f1f1f;
-	--color-body: #4a4a4a;
-	--color-muted: #a8a8a8;
-	--color-faint: #d4d4d4;
-	--color-border: #ebebeb;
+  --text-xs: 0.625rem;
+  --text-sm: 0.6875rem;
+  --text-base: 0.75rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
 
-	--font-mono: 'Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --border-radius-sm: calc(var(--radius) - 4px);
+  --border-radius-md: calc(var(--radius) - 2px);
+  --border-radius-lg: var(--radius);
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
 }
 
 @layer base {
-	body {
-		@apply bg-background text-body antialiased;
-		font-family: var(--font-mono);
-		font-size: 0.75rem;
-		line-height: 1.7;
-	}
+  :root {
+    --background: 348 45.45% 97.84%;
+    --foreground: 30 11.11% 3.53%;
 
-	::selection {
-		@apply bg-foreground text-background;
-	}
+    --card: 348 45.45% 97.84%;
+    --card-foreground: 30 11.11% 3.53%;
+
+    --popover: 348 45.45% 97.84%;
+    --popover-foreground: 30 11.11% 3.53%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 348 45.45% 97.84%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 0 100% 47%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 348 45.45% 97.84%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 30 11.11% 3.53%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 11.11% 3.53%;
+    --foreground: 348 45.45% 97.84%;
+
+    --card: 30 11.11% 3.53%;
+    --card-foreground: 348 45.45% 97.84%;
+
+    --popover: 30 11.11% 3.53%;
+    --popover-foreground: 348 45.45% 97.84%;
+
+    --primary: 348 45.45% 97.84%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 348 45.45% 97.84%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 0 100% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 348 45.45% 97.84%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen text-xs leading-[1.3] font-normal tracking-[0.02em];
+    font-family: 'Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-synthesis: none;
+  }
+
+  h2 {
+    @apply mb-2 font-normal tracking-[0.12em];
+  }
+
+  p {
+    @apply mb-4 last-of-type:mb-0;
+  }
+
+  li {
+    @apply mb-px list-none last-of-type:mb-0;
+  }
+
+  a {
+    @apply text-foreground/90 hover:text-foreground no-underline underline-offset-2 transition-colors hover:underline hover:decoration-red-500;
+  }
 }
