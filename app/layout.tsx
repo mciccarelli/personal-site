@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ciccarel.li'),
   title: 'michael ciccarelli — design engineer',
   description:
-    'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. Runs Third Index, a design engineering studio for startups and consumer brands. Based in Las Vegas.',
+    'Multidisciplinary designer and developer with 20+ years building software. Runs Third Index, a small digital studio building product interfaces, design systems, marketing sites, and editorial and commerce platforms for startups and consumer brands. Based in Las Vegas.',
   keywords: [
     'michael ciccarelli',
     'design engineer',
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     siteName: 'Michael Ciccarelli',
     title: 'Michael Ciccarelli — Design Engineer',
     description:
-      'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. Runs Third Index, a design engineering studio for startups and consumer brands. Based in Las Vegas.',
+      'Multidisciplinary designer and developer with 20+ years building software. Runs Third Index, a small digital studio building product interfaces, design systems, marketing sites, and editorial and commerce platforms for startups and consumer brands. Based in Las Vegas.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Michael Ciccarelli — Design Engineer',
     description:
-      'Design engineer with 20+ years of frontend engineering — design systems, UI components, interaction, and motion. Runs Third Index, a design engineering studio for startups and consumer brands. Based in Las Vegas.',
+      'Multidisciplinary designer and developer with 20+ years building software. Runs Third Index, a small digital studio building product interfaces, design systems, marketing sites, and editorial and commerce platforms for startups and consumer brands. Based in Las Vegas.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },

@@ -1,12 +1,12 @@
 # Michael Ciccarelli — Design Engineer
 
-> Multidisciplinary designer and developer with 20+ years building for the web.
+> Multidisciplinary designer and developer with 20+ years building software.
 
 Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic. He also plays poker and takes photos.
 
 ## Work With Me
 
-I run [THIRD INDEX](https://thirdindex.co), a small digital studio for custom web development. Based in Las Vegas, working worldwide with startups and consumer brands on product interfaces, design systems, marketing sites, and headless editorial and commerce. Fractional or project-based. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
+I run [THIRD INDEX](https://thirdindex.co), a small digital studio building product interfaces, design systems, marketing sites, and editorial and commerce platforms for startups and consumer brands. Fractional or project-based. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
 
 ## Now
 
@@ -18,7 +18,7 @@ Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and 
 - Design Engineer, Modern Treasury — New York, 2024–2025 (enterprise fintech interfaces, design systems, motion patterns, headless CMS)
 - Senior Frontend Engineer, Metropolis — Brooklyn, 2022–2024 (metal.build, pod.xyz, EVM dApps, Farcaster integrations)
 - Senior Engineer II, Axoni — New York, 2021–2022 (React apps, data visualizations, UI libraries for fintech)
-- Lead Frontend Engineer, VICE Media — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
+- Lead Frontend Engineer, VICE — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
 - Web Developer, Condé Nast — New York, 2012–2014 (GQ, Wired, Architectural Digest)
 
 ## Selected Clients
@@ -27,17 +27,17 @@ Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey,
 
 ## Projects
 
-- [bkrl.app](https://bkrl.app): Bankroll management for poker players — log sessions in natural language, track variance and ROI
+- [bkrl.app](https://bkrl.app): Bankroll management for poker players. Log sessions in natural language, track variance and ROI.
 
 ## Recent Client Work
 
-- [Legend.xyz](https://legend-xyz.vercel.app): Frontend development — marketing site with WebGL and Rive
-- [Amazon: The Bar](https://amazonthe.bar): Frontend development — creative agency site
-- [One/Of](https://shoponeof.com): Design and development — commerce for a made-to-order fashion label
-- [Elara.world](https://elara.world): Fullstack development — editorial and commerce platform
-- [Revolve Law](https://revolvelawgroup.com): Fullstack development — law firm site
-- [Kelvon Agee](https://kelvonagee.com): Design and development — photography portfolio
-- [El Dorado](https://eldo.us): Frontend development — architecture studio portfolio
+- [Legend.xyz](https://legend-xyz.vercel.app): Frontend development — marketing site for Legend, an embedded smart contract wallet built as a UI/UX layer on top of open DeFi protocols.
+- [Amazon: The Bar](https://amazonthe.bar): Frontend development — portfolio for a creative collective, with custom animations and dynamic layouts.
+- [One/Of](https://shoponeof.com): Design and development — e-commerce platform for a made-to-order fashion label, with a custom booking system and Shopify checkout.
+- [Elara.world](https://elara.world): Fullstack development — community hub combining content publishing with an integrated merchandise store.
+- [Revolve Law](https://revolvelawgroup.com): Fullstack development — law firm site with subtle motion and streamlined contact flows.
+- [Kelvon Agee](https://kelvonagee.com): Design and development — photography portfolio with optimized image delivery.
+- [El Dorado](https://eldo.us): Frontend development — minimalist portfolio for an architecture studio.
 
 ## Contact
 
