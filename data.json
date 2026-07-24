@@ -1,9 +1,10 @@
 {
 	"about": [
-		"Multidisciplinary designer and developer with 20+ years building software. He also plays poker and takes photos."
+		"I've spent 20+ years building for the web, with a focus on frontend engineering, product interfaces, design systems, and interaction. Most of my work has been with designers, agencies, and startups."
 	],
 	"working": [
-		"I run [THIRD INDEX](https://thirdindex.co/), a small digital studio building product interfaces, design systems, marketing sites, and editorial and commerce platforms for startups and consumer brands. Fractional or project-based."
+		"I run [THIRD INDEX](https://thirdindex.co/), a small design and engineering studio that works with startups and consumer brands to build product interfaces, marketing sites, and headless commerce and editorial platforms through fractional and project-based engagements.",
+		"Currently available for product engineering, design systems, and custom web development."
 	],
 	"experience": [
 		{
@@ -32,7 +33,7 @@
 			"years": "2012–14"
 		}
 	],
-	"clients": "Amazon, Pentagram, Modern Treasury, Elara, Axoni, One/Of, VICE, GQ, WIRED, Grey, Knoll.",
+	"clients": "Amazon, Pentagram, Elara, One/Of, Grey, Knoll.",
 	"feed": [
 		{
 			"type": "project",

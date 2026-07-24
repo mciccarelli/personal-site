@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useFilter, type Filter } from '@/components/feed-filter';
-import FilterMenu from '@/components/top-bar';
+import { useFilter } from '@/components/feed-filter';
 
 interface ProjectItem {
   type: 'project';
@@ -65,11 +64,6 @@ export default function Feed({ items }: FeedProps) {
   const [lightbox, setLightbox] = useState<{ photo: PhotoItem; index: number } | null>(null);
 
   const sorted = [...items].sort((a, b) => b.date.localeCompare(a.date));
-  const counts: Record<Filter, number> = {
-    all: sorted.length,
-    projects: sorted.filter((item) => item.type === 'project').length,
-    photos: sorted.filter((item) => item.type === 'photo').length,
-  };
   const visible = sorted.filter((item) => {
     if (filter === 'all') return true;
     return filter === 'projects' ? item.type === 'project' : item.type === 'photo';
@@ -107,11 +101,7 @@ export default function Feed({ items }: FeedProps) {
 
   return (
     <div className="relative">
-      <div className="sticky top-14 z-40 mx-auto mb-4 flex max-w-xl justify-end md:top-[17px] md:mb-14 lg:max-w-2xl">
-        <FilterMenu counts={counts} />
-      </div>
-
-      <div key={filter} className="mx-auto max-w-xl space-y-14 lg:max-w-2xl">
+      <div key={filter} className="space-y-14">
         {visible.map((item, index) => (
           <motion.div
             key={item.title}

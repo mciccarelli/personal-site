@@ -1,6 +1,8 @@
 import { Fragment, type ReactNode } from 'react';
-import Clock from '@/components/clock';
 import CopyEmail from '@/components/copy-email';
+import PhotosLink from '@/components/photos-link';
+import FilterMenu from '@/components/top-bar';
+import { type Filter } from '@/components/feed-filter';
 import Feed, { type FeedItem } from '@/components/feed';
 import data from '../data.json';
 
@@ -56,36 +58,35 @@ function Section({
 
 export default function Home() {
   const { about, working, experience, clients, feed } = data;
+  const counts: Record<Filter, number> = {
+    all: feed.length,
+    projects: feed.filter((item) => item.type === 'project').length,
+    photos: feed.filter((item) => item.type === 'photo').length,
+  };
 
   return (
-    <div className="md:grid md:min-h-dvh md:grid-cols-[minmax(17rem,28vw)_minmax(0,1fr)]">
-      {/* Left — fixed identity column */}
-      <aside className="border-border/40 order-1 flex flex-col justify-between gap-8 border-b px-6 pt-18 pb-7 md:sticky md:top-0 md:h-dvh md:overflow-y-auto md:border-b-0 md:px-8 md:pt-24 md:pb-8">
+    <div className="px-6 md:grid md:min-h-dvh md:grid-cols-12 md:gap-x-8 md:px-8">
+      {/* Right — sticky identity column */}
+      <aside className="border-border/40 flex flex-col justify-between gap-8 border-b pt-20 pb-7 md:col-span-3 md:col-start-10 md:row-start-1 md:sticky md:top-0 md:h-dvh md:overflow-y-auto md:border-b-0 md:pt-5 md:pb-6">
         <div className="space-y-6 md:space-y-10">
-          <div className="space-y-2">
-            <h1 className="text-foreground/90 text-[0.72rem] leading-[1.25] tracking-[0.08em] uppercase">
-              Michael Ciccarelli
-              <br />
-              DESIGN ENGINEER
-            </h1>
-            <p className="text-muted-foreground/65 max-w-[20rem] text-xs leading-[1.35] tracking-[0.04em] uppercase">
-              Available for fractional product UI, design systems, and custom web builds.
-            </p>
-          </div>
+          <h1 className="text-foreground/90 text-[0.72rem] leading-[1.25] tracking-[0.08em] uppercase">
+            Michael Ciccarelli
+            <br />
+            SOFTWARE ENGINEER
+          </h1>
 
           <Section title="About">
             {about.map((paragraph, i) => (
-              <p key={i} className="mb-0">
-                {renderInlineLinks(paragraph)}
-              </p>
+              <p key={i}>{renderInlineLinks(paragraph)}</p>
             ))}
+            <p>
+              Sometimes I play poker, and take <PhotosLink />.
+            </p>
           </Section>
 
           <Section title="Working together">
             {working.map((paragraph, i) => (
-              <p key={i} className="mb-0">
-                {renderInlineLinks(paragraph)}
-              </p>
+              <p key={i}>{renderInlineLinks(paragraph)}</p>
             ))}
           </Section>
 
@@ -122,9 +123,6 @@ export default function Home() {
               <div>
                 <CopyEmail email="m@ciccarel.li" />
               </div>
-              <div className="text-muted-foreground/60">
-                Las Vegas, Nevada <span className="text-muted-foreground/40">·</span> <Clock />
-              </div>
             </div>
           </Section>
 
@@ -158,11 +156,19 @@ export default function Home() {
               </div>
             </div>
           </Section>
+
         </div>
       </aside>
 
-      {/* Right — scrollable feed */}
-      <div className="order-2 px-6 pt-7 pb-20 md:px-12 md:pt-[17px] md:pb-24 lg:px-16">
+      {/* Filters — right-aligned toward feed */}
+      <div className="pt-10 md:col-span-4 md:col-start-1 md:row-start-1 md:flex md:justify-end md:pt-5">
+        <div className="h-fit md:sticky md:top-5">
+          <FilterMenu counts={counts} />
+        </div>
+      </div>
+
+      {/* Center — scrollable feed */}
+      <div id="feed" className="pt-10 pb-20 md:col-span-5 md:col-start-5 md:row-start-1 md:pt-5 md:pb-24">
         <Feed items={feed as FeedItem[]} />
       </div>
     </div>
