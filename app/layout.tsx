@@ -65,7 +65,7 @@ export default function RootLayout({
             <div className="min-h-dvh">
               <div
                 aria-hidden
-                className="pointer-events-none fixed top-[9px] left-[11px] z-50 size-[52px] bg-white mix-blend-difference md:left-[19px]"
+                className="pointer-events-none fixed top-[9px] left-[11px] z-50 size-[52px] bg-white mix-blend-difference md:top-5 md:left-[19px]"
                 style={{
                   maskImage: "url('/c.svg')",
                   maskSize: 'contain',
@@ -78,7 +78,7 @@ export default function RootLayout({
                 }}
               />
               <main>{children}</main>
-              <div className="text-muted-foreground/65 fixed bottom-5 left-6 z-50 flex items-center gap-2 text-xs tracking-[0.04em] uppercase md:left-8">
+              <div className="text-muted-foreground/65 fixed bottom-5 left-6 z-50 flex items-center gap-2 md:bottom-8 text-xs tracking-[0.04em] uppercase md:left-8">
                 <ModeToggle className="-ml-1" />
                 <span>
                   Las Vegas, Nevada <span className="text-muted-foreground/40">·</span> <Clock />

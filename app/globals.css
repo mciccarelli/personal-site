@@ -139,3 +139,20 @@
     @apply text-foreground/90 hover:text-foreground no-underline underline-offset-2 transition-colors hover:underline hover:decoration-red-500;
   }
 }
+
+@layer base {
+	:root {
+		/* sidebar rhythm — tightens on short viewports */
+		--rail-gap: 3rem;
+		--rail-sub: 0.75rem;
+		--rail-para: 0.75rem;
+	}
+
+	@media (max-height: 850px) {
+		:root {
+			--rail-gap: 2rem;
+			--rail-sub: 0.5rem;
+			--rail-para: 0.5rem;
+		}
+	}
+}

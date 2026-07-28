@@ -39,15 +39,15 @@ function Section({
   compact?: boolean;
 }) {
   return (
-    <section className="space-y-1.5 md:space-y-2">
+    <section className="space-y-2 md:space-y-[var(--rail-sub)]">
       <h3 className="text-muted-foreground/70 text-[0.625rem] tracking-[0.18em] uppercase">
         {title}
       </h3>
       <div
         className={
           compact
-            ? 'text-foreground/70 space-y-1 text-xs leading-[1.35] tracking-[0.03em] uppercase'
-            : 'text-foreground/70 space-y-2 text-[0.72rem] leading-[1.45] tracking-[0.005em] normal-case'
+            ? 'text-foreground/70 space-y-1.5 text-xs leading-[1.45] tracking-[0.03em] uppercase'
+            : 'text-foreground/70 space-y-[var(--rail-para)] text-[0.72rem] leading-[1.55] tracking-[0.005em] normal-case'
         }
       >
         {children}
@@ -67,8 +67,8 @@ export default function Home() {
   return (
     <div className="px-6 md:grid md:min-h-dvh md:grid-cols-12 md:gap-x-8 md:px-8">
       {/* Right — sticky identity column */}
-      <aside className="border-border/40 flex flex-col justify-between gap-8 border-b pt-20 pb-7 md:col-span-3 md:col-start-10 md:row-start-1 md:sticky md:top-0 md:h-dvh md:overflow-y-auto md:border-b-0 md:pt-5 md:pb-6">
-        <div className="space-y-6 md:space-y-10">
+      <aside className="border-border/40 flex flex-col justify-between gap-8 border-b pt-20 pb-7 md:col-span-3 md:col-start-10 md:row-start-1 md:sticky md:top-0 md:h-dvh md:overflow-y-auto md:border-b-0 md:pt-8 md:pb-9">
+        <div className="space-y-8 md:space-y-[var(--rail-gap)]">
           <h1 className="text-foreground/90 text-[0.72rem] leading-[1.25] tracking-[0.08em] uppercase">
             Michael Ciccarelli
             <br />
@@ -91,7 +91,7 @@ export default function Home() {
           </Section>
 
           <Section title="Previous experience" compact>
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               {experience.map((e) => (
                 <div key={e.company}>
                   {e.company}{' '}
@@ -108,9 +108,9 @@ export default function Home() {
           </Section>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 md:block md:space-y-8">
+        <div className="grid grid-cols-2 gap-8 md:block md:space-y-[var(--rail-gap)]">
           <Section title="Contact" compact>
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <div>
                 <a
                   href="https://cal.com/ciccarelli/intro"
@@ -127,7 +127,7 @@ export default function Home() {
           </Section>
 
           <Section title="Social" compact>
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <div>
                 <a href="https://x.com/mciccarelli" target="_blank" rel="noopener noreferrer">
                   twitter/x
@@ -161,14 +161,14 @@ export default function Home() {
       </aside>
 
       {/* Filters — right-aligned toward feed */}
-      <div className="pt-10 md:col-span-4 md:col-start-1 md:row-start-1 md:flex md:justify-end md:pt-5">
-        <div className="h-fit md:sticky md:top-5">
+      <div className="pt-10 md:col-span-4 md:col-start-1 md:row-start-1 md:flex md:justify-end md:pt-8">
+        <div className="h-fit md:sticky md:top-8">
           <FilterMenu counts={counts} />
         </div>
       </div>
 
       {/* Center — scrollable feed */}
-      <div id="feed" className="pt-10 pb-20 md:col-span-5 md:col-start-5 md:row-start-1 md:pt-5 md:pb-24">
+      <div id="feed" className="pt-10 pb-20 md:col-span-5 md:col-start-5 md:row-start-1 md:pt-8 md:pb-24">
         <Feed items={feed as FeedItem[]} />
       </div>
     </div>
