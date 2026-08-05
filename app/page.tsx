@@ -4,6 +4,7 @@ import PhotosLink from '@/components/photos-link';
 import FilterMenu from '@/components/top-bar';
 import { type Filter } from '@/components/feed-filter';
 import Feed from '@/components/feed';
+import Experience from '@/components/experience';
 import { getFeed } from '@/lib/sanity';
 import data from '../data.json';
 
@@ -94,22 +95,7 @@ export default async function Home() {
             ))}
           </Section>
 
-          <Section title="Previous experience" compact>
-            <div className="space-y-1.5">
-              {experience.map((e) => (
-                <div key={e.company}>
-                  {e.company}{' '}
-                  <span className="text-muted-foreground/60">
-                    — {e.role}, {e.years}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Section>
-
-          <Section title="Selected clients" compact>
-            <p className="mb-0">{clients}</p>
-          </Section>
+          <Experience entries={experience} clients={clients} />
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:block md:space-y-[var(--rail-gap)]">
