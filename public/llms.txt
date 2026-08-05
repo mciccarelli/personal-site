@@ -1,8 +1,8 @@
-# Michael Ciccarelli — Software Engineer
+# Michael Ciccarelli — Design Engineer
 
 > I build custom software, websites, and product interfaces for the web. My work focuses on frontend engineering, design systems, and interaction.
 
-Personal site of Michael Ciccarelli, a software engineer based in Las Vegas. AI-native and framework agnostic. He sometimes plays poker and takes photos.
+Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic.
 
 ## Work With Me
 

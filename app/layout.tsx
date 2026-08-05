@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ciccarel.li'),
   title: 'michael ciccarelli',
   description:
-    'Software engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
+    'Design engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
   keywords: [
     'michael ciccarelli',
     'software engineer',
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: 'Michael Ciccarelli',
     title: 'Michael Ciccarelli',
     description:
-      'Software engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
+      'Design engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Michael Ciccarelli',
     description:
-      'Software engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
+      'Design engineer in Las Vegas. 20+ years building for the web. Runs Third Index, a small design and engineering studio.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },

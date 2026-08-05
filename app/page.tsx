@@ -1,6 +1,5 @@
 import { Fragment, type ReactNode } from 'react';
 import CopyEmail from '@/components/copy-email';
-import PhotosLink from '@/components/photos-link';
 import FilterMenu from '@/components/top-bar';
 import { type Filter } from '@/components/feed-filter';
 import Feed from '@/components/feed';
@@ -77,16 +76,13 @@ export default async function Home() {
           <h1 className="text-foreground/90 text-[0.72rem] leading-[1.25] tracking-[0.08em] uppercase">
             Michael Ciccarelli
             <br />
-            SOFTWARE ENGINEER
+            DESIGN ENGINEER
           </h1>
 
           <Section title="About">
             {about.map((paragraph, i) => (
               <p key={i}>{renderInlineLinks(paragraph)}</p>
             ))}
-            <p>
-              Sometimes I play poker, and take <PhotosLink />.
-            </p>
           </Section>
 
           <Section title="Working together">
