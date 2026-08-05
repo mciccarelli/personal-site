@@ -3,8 +3,11 @@ import CopyEmail from '@/components/copy-email';
 import PhotosLink from '@/components/photos-link';
 import FilterMenu from '@/components/top-bar';
 import { type Filter } from '@/components/feed-filter';
-import Feed, { type FeedItem } from '@/components/feed';
+import Feed from '@/components/feed';
+import { getFeed } from '@/lib/sanity';
 import data from '../data.json';
+
+export const revalidate = 60;
 
 function renderInlineLinks(text: string): ReactNode[] {
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -56,8 +59,9 @@ function Section({
   );
 }
 
-export default function Home() {
-  const { about, working, experience, clients, feed } = data;
+export default async function Home() {
+  const { about, working, experience, clients } = data;
+  const feed = await getFeed();
   const counts: Record<Filter, number> = {
     all: feed.length,
     projects: feed.filter((item) => item.type === 'project').length,
@@ -169,7 +173,7 @@ export default function Home() {
 
       {/* Center — scrollable feed */}
       <div id="feed" className="pt-10 pb-20 md:col-span-5 md:col-start-5 md:row-start-1 md:pt-8 md:pb-24">
-        <Feed items={feed as FeedItem[]} />
+        <Feed items={feed} />
       </div>
     </div>
   );
