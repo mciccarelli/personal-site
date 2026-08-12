@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const photoSet = defineType({
   name: 'photoSet',
@@ -10,7 +10,16 @@ export const photoSet = defineType({
     defineField({
       name: 'images',
       type: 'array',
-      of: [{type: 'image', options: {hotspot: true}}],
+      of: [
+        defineArrayMember({
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            defineField({name: 'caption', type: 'string'}),
+            defineField({name: 'camera', type: 'string'}),
+          ],
+        }),
+      ],
     }),
   ],
   orderings: [

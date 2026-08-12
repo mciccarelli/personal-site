@@ -23,6 +23,8 @@ interface PhotoImage {
   src: string;
   width: number;
   height: number;
+  caption?: string | null;
+  camera?: string | null;
 }
 
 interface PhotoItem {

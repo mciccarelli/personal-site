@@ -13,6 +13,8 @@ const FEED_QUERY = `*[_type in ["project", "photoSet"]]{
   "image": image.asset->url,
   "video": video.asset->url,
   "images": images[]{
+    caption,
+    camera,
     "src": asset->url,
     "width": asset->metadata.dimensions.width,
     "height": asset->metadata.dimensions.height
@@ -29,7 +31,9 @@ interface FeedDoc {
   image: string | null;
   video: string | null;
   date: string;
-  images: { src: string; width: number; height: number }[] | null;
+  images:
+    | { src: string; width: number; height: number; caption: string | null; camera: string | null }[]
+    | null;
 }
 
 export async function getFeed(): Promise<FeedItem[]> {
