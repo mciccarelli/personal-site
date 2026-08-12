@@ -1,4 +1,4 @@
-# Michael Ciccarelli — Design Engineer
+# Michael Ciccarelli — Engineer, Among Other Things
 
 > I build for the web, from platform architecture to product interfaces, design systems, and creative work with WebGL and motion. Mostly Next.js and TypeScript. Twenty years of it now.
 

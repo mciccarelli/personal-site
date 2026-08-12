@@ -76,7 +76,7 @@ export default async function Home() {
           <h1 className="text-foreground/90 text-[0.72rem] leading-[1.25] tracking-[0.08em] uppercase">
             Michael Ciccarelli
             <br />
-            DESIGN ENGINEER
+            ENGINEER, AMONG OTHER THINGS
           </h1>
 
           <Section title="About">
