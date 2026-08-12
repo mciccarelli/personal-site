@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Clock from '@/components/clock';
-import { FilterProvider } from '@/components/feed-filter';
 import ModeToggle from '@/components/mode-toggle';
 import ThemeProvider from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
@@ -61,8 +60,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-          <FilterProvider>
-            <div className="min-h-dvh">
+          <div className="min-h-dvh">
               <div
                 aria-hidden
                 className="pointer-events-none fixed top-[9px] left-[11px] z-50 size-[52px] bg-white mix-blend-difference md:top-5 md:left-[19px]"
@@ -84,8 +82,7 @@ export default function RootLayout({
                   Las Vegas, Nevada <span className="text-muted-foreground/40">·</span> <Clock />
                 </span>
               </div>
-            </div>
-          </FilterProvider>
+          </div>
         </ThemeProvider>
         <Analytics />
       </body>

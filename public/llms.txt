@@ -2,7 +2,7 @@
 
 > I build software for the web, from application architecture to product interfaces, design systems, and interactive experiences. Mostly Next.js and TypeScript, with WebGL and motion when the work calls for it. Twenty years of it now. Outside of work, I play poker and take photos.
 
-Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic.
+Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic. Photography lives at https://ciccarel.li/photos.
 
 ## Work With Me
 

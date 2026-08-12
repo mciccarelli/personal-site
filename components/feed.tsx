@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useFilter } from '@/components/feed-filter';
@@ -61,12 +61,13 @@ function projectMeta(item: ProjectItem) {
 }
 
 export default function Feed({ items }: FeedProps) {
-  const { filter } = useFilter();
+  const { filter, photosVisible } = useFilter();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [lightbox, setLightbox] = useState<{ photo: PhotoItem; index: number } | null>(null);
 
   const sorted = [...items].sort((a, b) => b.date.localeCompare(a.date));
   const visible = sorted.filter((item) => {
+    if (item.type === 'photo' && !photosVisible) return false;
     if (filter === 'all') return true;
     return filter === 'projects' ? item.type === 'project' : item.type === 'photo';
   });
@@ -103,12 +104,15 @@ export default function Feed({ items }: FeedProps) {
 
   return (
     <div className="relative">
-      <div key={filter} className="space-y-14">
+      <div className="space-y-14">
+        <AnimatePresence initial={false} mode="popLayout">
         {visible.map((item, index) => (
           <motion.div
             key={item.title}
+            layout
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.985 }}
             viewport={{ once: true, margin: '0px 0px -8% 0px' }}
             transition={{
               duration: 0.5,
@@ -293,6 +297,7 @@ export default function Feed({ items }: FeedProps) {
             )}
           </motion.div>
         ))}
+        </AnimatePresence>
       </div>
 
       {lightbox && current && (
