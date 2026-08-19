@@ -5,6 +5,7 @@ import Feed from '@/components/feed';
 import FilterMenu from '@/components/top-bar';
 import Mark from '@/components/mark';
 import ModeToggle from '@/components/mode-toggle';
+import PhotosSwitch from '@/components/photos-switch';
 import PhotosToggle from '@/components/photos-toggle';
 import { FilterProvider, type Filter } from '@/components/feed-filter';
 import { getFeed } from '@/lib/sanity';
@@ -105,7 +106,10 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
           </section>
 
           <section className="space-y-4">
-            <Label>Index</Label>
+            <div className="flex items-center justify-between">
+              <Label>Index</Label>
+              <PhotosSwitch />
+            </div>
             <FilterMenu counts={counts} />
             <Feed items={feed} />
           </section>

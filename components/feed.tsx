@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, type Variants } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { useFilter } from '@/components/feed-filter';
 
@@ -44,6 +44,19 @@ const COLUMN_W = 480;
 const MAX_PREVIEW_W = 320;
 const MIN_PREVIEW_W = 160;
 const PREVIEW_H = 280;
+
+// rows fan in one after another on load and on every filter/photos change
+const listVariants: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.025, delayChildren: 0.04 } },
+  exit: { transition: { duration: 0.14 } },
+};
+
+const rowVariants: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+  exit: { opacity: 0, y: -4, transition: { duration: 0.14, ease: 'easeIn' } },
+};
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', {
   month: 'short',
@@ -153,14 +166,14 @@ export default function Feed({ items }: FeedProps) {
 
   return (
     <>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <motion.ul
-          key={filter}
+          key={`${filter}-${photosVisible}`}
           className="space-y-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.18, ease: 'easeOut' }}
+          variants={listVariants}
+          initial="hidden"
+          animate="show"
+          exit="exit"
         >
           {visible.map((item, index) => {
             const label = item.type === 'photo' ? photoTitle(item) : item.title;
@@ -171,25 +184,24 @@ export default function Feed({ items }: FeedProps) {
                 <span className="text-muted-foreground/45 tabular-nums">{year}</span>
               </>
             );
-            const rowClass =
-              'flex w-full cursor-pointer items-baseline justify-between gap-6 uppercase no-underline transition-colors duration-200 hover:no-underline';
-
             const dimmed = active !== null && active !== index;
+            const rowClass = cn(
+              'flex w-full cursor-pointer items-baseline justify-between gap-6 uppercase no-underline',
+              'transition-[color,opacity] duration-300 ease-out hover:no-underline',
+              active === index ? 'text-foreground' : 'text-foreground/80',
+              dimmed ? 'opacity-30' : 'opacity-100',
+            );
 
             return (
               <motion.li
                 key={item.title}
-                animate={{ opacity: dimmed ? 0.3 : 1 }}
-                transition={{ duration: 0.25, ease: 'easeOut' }}
+                variants={rowVariants}
                 onMouseEnter={(e) => {
                   setCursor({ x: e.clientX, y: e.clientY });
                   setActive(index);
                 }}
                 onMouseLeave={() => setActive(null)}
-                className={cn(
-                  'text-[0.72rem] tracking-[0.06em] uppercase transition-colors duration-200',
-                  active === index ? 'text-foreground' : 'text-foreground/80',
-                )}
+                className="text-[0.72rem] tracking-[0.06em] uppercase"
               >
                 {item.type === 'photo' ? (
                   <button
