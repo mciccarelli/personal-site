@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ciccarel.li/sitemap.xml
+Sitemap: https://relli.cc/sitemap.xml

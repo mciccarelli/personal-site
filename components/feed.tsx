@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useFilter } from '@/components/feed-filter';
 
@@ -40,11 +39,11 @@ interface FeedProps {
   items: FeedItem[];
 }
 
-// slight offsets/rotations for the stacked "pile" look on collections
-const PILE_TRANSFORMS = [
-  'rotate(1.75deg) translate(6px, 4px)',
-  'rotate(-1.5deg) translate(-5px, 7px)',
-];
+// hover preview lives in the gutter beside the centered column, never over the text
+const COLUMN_W = 480;
+const MAX_PREVIEW_W = 320;
+const MIN_PREVIEW_W = 160;
+const PREVIEW_H = 280;
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', {
   month: 'short',
@@ -56,13 +55,31 @@ function formatDate(date: string) {
   return dateFormatter.format(new Date(`${date}-01T00:00:00Z`));
 }
 
-function projectMeta(item: ProjectItem) {
+function photoTitle(item: PhotoItem) {
+  // photo sets often carry the year in the title; the index has its own year column
+  return item.title.split(' — ')[0].replace(/\s+(19|20)\d{2}$/, '');
+}
+
+function itemMeta(item: FeedItem) {
+  if (item.type === 'photo') {
+    return [
+      'Photography',
+      formatDate(item.date),
+      item.title.split(' — ')[1],
+      item.images.length > 1 ? `${item.images.length} photos` : null,
+    ]
+      .filter(Boolean)
+      .join(' · ');
+  }
   return [formatDate(item.date), item.role, item.technologies].filter(Boolean).join(' · ');
 }
 
 export default function Feed({ items }: FeedProps) {
   const { filter, photosVisible } = useFilter();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [active, setActive] = useState<number | null>(null);
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [canHover, setCanHover] = useState(false);
+  const [viewport, setViewport] = useState({ w: 0, h: 0 });
   const [lightbox, setLightbox] = useState<{ photo: PhotoItem; index: number } | null>(null);
 
   const sorted = [...items].sort((a, b) => b.date.localeCompare(a.date));
@@ -72,10 +89,28 @@ export default function Feed({ items }: FeedProps) {
     return filter === 'projects' ? item.type === 'project' : item.type === 'photo';
   });
 
-  const openPhoto = (photo: PhotoItem) => {
-    // lightbox is tablet+ only
-    if (window.matchMedia('(min-width: 768px)').matches) setLightbox({ photo, index: 0 });
-  };
+  // imagery is a pointer affordance only — touch devices stay text-only
+  useEffect(() => {
+    const query = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const update = () => setCanHover(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => setViewport({ w: window.innerWidth, h: window.innerHeight });
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  useEffect(() => {
+    if (active === null) return;
+    const onMove = (e: MouseEvent) => setCursor({ y: e.clientY, x: e.clientX });
+    window.addEventListener('mousemove', onMove);
+    return () => window.removeEventListener('mousemove', onMove);
+  }, [active]);
 
   const step = (dir: 1 | -1) => {
     setLightbox((current) => {
@@ -101,209 +136,127 @@ export default function Feed({ items }: FeedProps) {
   }, [lightbox !== null]);
 
   const current = lightbox ? lightbox.photo.images[lightbox.index] : null;
+  const preview = active !== null ? visible[active] : null;
+  const previewMedia =
+    preview?.type === 'photo'
+      ? { image: preview.images[0].src, video: undefined }
+      : { image: preview?.image, video: preview?.video };
+
+  const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+  const gutter = (viewport.w - COLUMN_W) / 2;
+  const previewW = Math.min(MAX_PREVIEW_W, gutter - 40);
+  const previewPos = {
+    left: viewport.w - gutter + (gutter - previewW) / 2,
+    top: clamp(cursor.y - PREVIEW_H / 2, 24, Math.max(24, viewport.h - PREVIEW_H - 24)),
+  };
+  const showPreview = canHover && previewW >= MIN_PREVIEW_W;
 
   return (
-    <div className="relative">
-      <div className="space-y-14">
-        <AnimatePresence initial={false} mode="popLayout">
-        {visible.map((item, index) => (
-          <motion.div
-            key={item.title}
-            layout
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.985 }}
-            viewport={{ once: true, margin: '0px 0px -8% 0px' }}
-            transition={{
-              duration: 0.5,
-              ease: [0.21, 0.47, 0.32, 0.98],
-              delay: Math.min(index * 0.04, 0.16),
-            }}
-          >
-            {item.type === 'photo' ? (
-              <figure>
-                {item.images.length > 1 ? (
-                  <>
-                    <div
-                      className="-mx-6 touch-pan-x [scrollbar-width:none] overflow-x-auto px-6 pb-3 md:hidden [&::-webkit-scrollbar]:hidden"
-                      aria-label={`${item.title.split(' — ')[0]} photos`}
-                    >
-                      <div className="flex snap-x snap-mandatory gap-2">
-                        {item.images.map((img) => (
-                          <div
-                            key={img.src}
-                            className="relative w-[88%] flex-none snap-start"
-                            style={{ aspectRatio: `${img.width} / ${img.height}` }}
-                          >
-                            <img
-                              src={img.src}
-                              width={img.width}
-                              height={img.height}
-                              alt=""
-                              loading="lazy"
-                              className="block h-full w-full object-cover shadow-sm"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div
-                      className="relative hidden md:block md:cursor-zoom-in"
-                      onClick={() => openPhoto(item)}
-                      style={{ aspectRatio: `${item.images[0].width} / ${item.images[0].height}` }}
-                    >
-                      {item.images.slice(1, 3).map((img, i) => (
-                        <img
-                          key={img.src}
-                          src={img.src}
-                          width={img.width}
-                          height={img.height}
-                          alt=""
-                          loading="lazy"
-                          aria-hidden
-                          className="absolute inset-0 h-full w-full object-cover shadow-md"
-                          style={{ transform: PILE_TRANSFORMS[i] }}
-                        />
-                      ))}
-                      <img
-                        src={item.images[0].src}
-                        width={item.images[0].width}
-                        height={item.images[0].height}
-                        alt=""
-                        loading="lazy"
-                        className="relative block h-full w-full object-cover shadow-sm"
-                      />
-                    </div>
-                  </>
-                ) : (
-                  <div>
-                    <img
-                      src={item.images[0].src}
-                      width={item.images[0].width}
-                      height={item.images[0].height}
-                      alt=""
-                      loading="lazy"
-                      className="block h-auto w-full"
-                    />
-                  </div>
-                )}
-                <figcaption className={cn('mt-4 space-y-2', item.images.length > 1 && 'mt-6')}>
-                  <div className="text-foreground/75 text-sm tracking-[0.08em] uppercase">
-                    {item.title.split(' — ')[0]}
-                  </div>
-                  <div className="text-muted-foreground/55 text-xs leading-[1.3] tracking-[0.04em] uppercase">
-                    Photography
-                    {` · ${formatDate(item.date)}`}
-                    {item.title.split(' — ')[1] ? ` · ${item.title.split(' — ')[1]}` : ''}
-                    {item.images.length > 1 ? ` · ${item.images.length} photos` : ''}
-                  </div>
-                </figcaption>
-              </figure>
-            ) : (
-              <article
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {(item.video || item.image) && (
-                  <div className="mb-4">
-                    {item.url ? (
-                      <Link
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Open ${item.title}`}
-                        className="group block no-underline hover:no-underline"
-                      >
-                        {item.video ? (
-                          <video
-                            src={item.video}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="block h-auto w-full transition-opacity duration-300 group-hover:opacity-90"
-                          />
-                        ) : (
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            loading="lazy"
-                            className="block h-auto w-full transition-opacity duration-300 group-hover:opacity-90"
-                          />
-                        )}
-                      </Link>
-                    ) : item.video ? (
-                      <video
-                        src={item.video}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="block h-auto w-full"
-                      />
-                    ) : (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        loading="lazy"
-                        className="block h-auto w-full"
-                      />
-                    )}
-                  </div>
-                )}
-                <div className="space-y-2">
-                  <div
-                    className={cn(
-                      'text-sm tracking-[0.08em] uppercase transition-colors duration-300',
-                      hoveredIndex === index ? 'text-foreground' : 'text-foreground/75',
-                    )}
-                  >
-                    {item.url ? (
-                      <Link
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 no-underline hover:no-underline"
-                      >
-                        {item.title}
-                        <ArrowUpRight className="size-3" strokeWidth={1.25} />
-                      </Link>
-                    ) : (
-                      item.title
-                    )}
-                  </div>
+    <>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.ul
+          key={filter}
+          className="space-y-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.18, ease: 'easeOut' }}
+        >
+          {visible.map((item, index) => {
+            const label = item.type === 'photo' ? photoTitle(item) : item.title;
+            const year = item.date.slice(0, 4);
+            const inner = (
+              <>
+                <span>{label}</span>
+                <span className="text-muted-foreground/45 tabular-nums">{year}</span>
+              </>
+            );
+            const rowClass =
+              'flex w-full cursor-pointer items-baseline justify-between gap-6 uppercase no-underline transition-colors duration-200 hover:no-underline';
 
-                  <div className="text-foreground/60 space-y-1.5 text-xs leading-[1.3] tracking-[0.02em]">
-                    <div>{item.description}</div>
-                    <div className="text-muted-foreground/55 tracking-[0.04em] uppercase">
-                      {projectMeta(item)}
-                    </div>
-                    {item.url && (
-                      <div className="pt-2">
-                        <Link
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-foreground/50 hover:text-foreground inline-flex items-center gap-1 tracking-[0.08em] uppercase no-underline transition-colors hover:no-underline"
-                        >
-                          Live site
-                          <ArrowUpRight className="size-3" strokeWidth={1.25} />
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </article>
-            )}
+            const dimmed = active !== null && active !== index;
+
+            return (
+              <motion.li
+                key={item.title}
+                animate={{ opacity: dimmed ? 0.3 : 1 }}
+                transition={{ duration: 0.25, ease: 'easeOut' }}
+                onMouseEnter={(e) => {
+                  setCursor({ x: e.clientX, y: e.clientY });
+                  setActive(index);
+                }}
+                onMouseLeave={() => setActive(null)}
+                className={cn(
+                  'text-[0.72rem] tracking-[0.06em] uppercase transition-colors duration-200',
+                  active === index ? 'text-foreground' : 'text-foreground/80',
+                )}
+              >
+                {item.type === 'photo' ? (
+                  <button
+                    type="button"
+                    className={rowClass}
+                    onClick={() => setLightbox({ photo: item, index: 0 })}
+                  >
+                    {inner}
+                  </button>
+                ) : item.url ? (
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={rowClass}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <span className={rowClass.replace('cursor-pointer ', '')}>{inner}</span>
+                )}
+              </motion.li>
+            );
+          })}
+        </motion.ul>
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showPreview && preview && (
+          <motion.div
+            key="preview"
+            aria-hidden
+            className="pointer-events-none fixed z-40"
+            style={{ left: previewPos.left, top: previewPos.top, width: previewW }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
+          >
+            {previewMedia.video ? (
+              <video
+                src={previewMedia.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="block h-auto max-h-[58vh] w-full object-contain object-top shadow-lg"
+              />
+            ) : previewMedia.image ? (
+              <img
+                src={previewMedia.image}
+                alt=""
+                loading="lazy"
+                className="block h-auto max-h-[58vh] w-full object-contain object-top shadow-lg"
+              />
+            ) : null}
+            <div className="text-muted-foreground/70 mt-2 text-left text-[0.625rem] leading-[1.4] tracking-[0.04em] uppercase">
+              {itemMeta(preview)}
+            </div>
           </motion.div>
-        ))}
-        </AnimatePresence>
-      </div>
+        )}
+      </AnimatePresence>
 
       {lightbox && current && (
         <motion.div
           key={lightbox.photo.title}
-          className="fixed inset-0 z-50 hidden items-center justify-center p-8 md:flex md:cursor-zoom-out"
+          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center p-6 md:p-8"
           onClick={() => setLightbox(null)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -355,6 +308,6 @@ export default function Feed({ items }: FeedProps) {
           )}
         </motion.div>
       )}
-    </div>
+    </>
   );
 }

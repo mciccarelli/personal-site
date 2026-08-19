@@ -24,12 +24,12 @@ export default function FilterMenu({ counts }: { counts: Record<Filter, number> 
 		>
 		<Tabs.Root
 			value={filter}
-			orientation="vertical"
+			orientation="horizontal"
 			onValueChange={(value) => setFilter(value as Filter)}
 		>
 			<Tabs.List
 				aria-label="Filter feed"
-				className="flex flex-col items-start gap-1.5 text-xs uppercase md:items-end"
+				className="flex flex-wrap items-center gap-4 text-xs uppercase"
 			>
 				{FILTERS.map((f) => (
 					<Tabs.Tab

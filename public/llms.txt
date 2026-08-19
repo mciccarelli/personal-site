@@ -1,12 +1,12 @@
-# Michael Ciccarelli — Engineer
+# Michael Ciccarelli — Software Engineer
 
-> I build software for the web, from application architecture to product interfaces, design systems, and interactive experiences. Mostly Next.js and TypeScript, with WebGL and motion when the work calls for it. Twenty years of it now. Outside of work, I play poker and take photos.
+> I design and build software for the web — product interfaces, design systems, and the architecture underneath them. Twenty years of it, most recently at Modern Treasury and Metropolis. Next.js and TypeScript day to day, WebGL and motion when the work calls for it. Based in Las Vegas. I also play poker and take photos.
 
-Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. AI-native and framework agnostic. Photography lives at https://ciccarel.li/photos.
+Personal site of Michael Ciccarelli, a software engineer based in Las Vegas. Photography lives at https://relli.cc/photos.
 
 ## Work With Me
 
-[THIRD INDEX](https://thirdindex.co) is my small software studio, building websites, ecommerce and editorial platforms, and custom web applications for startups, brands, and agencies. Fractional or project-based. Currently available. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
+[THIRD INDEX](https://thirdindex.co) is my studio — marketing sites, ecommerce and editorial platforms, and web applications for startups, brands, and agencies. Fractional or per project. Taking on new work now. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
 
 ## Now
 
@@ -41,9 +41,9 @@ Amazon, Pentagram, Elara, One/Of, Grey, Knoll.
 
 ## Contact
 
-- Email: m@ciccarel.li
+- Email: m@relli.cc
 - Booking: https://cal.com/ciccarelli/intro
-- X: https://x.com/mciccarelli
+- X: https://x.com/mcrxlli
 - GitHub: https://github.com/mciccarelli
 - LinkedIn: https://linkedin.com/in/mciccarelli
 - Instagram: https://instagram.com/mciccarelli

@@ -1,4 +1,4 @@
-# ciccarel.li
+# relli.cc
 
 Personal site built with Next.js and Tailwind CSS.
 
