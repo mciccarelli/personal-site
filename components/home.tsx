@@ -40,7 +40,7 @@ function renderInlineLinks(text: string): ReactNode[] {
 
 function Label({ children }: { children: ReactNode }) {
   return (
-    <h3 className="text-muted-foreground/55 text-[0.625rem] tracking-[0.18em] uppercase">
+    <h3 className="text-muted-foreground/55 text-xs tracking-[0.08em] uppercase">
       {children}
     </h3>
   );
@@ -57,18 +57,18 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
 
   return (
     <FilterProvider initialPhotosVisible={photosVisible}>
-      <div className="flex min-h-dvh flex-col items-center justify-center px-6 py-20">
-        <div className="w-full max-w-[30rem] space-y-14 text-left">
+      <div className="px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+        <div className="mx-auto w-full max-w-[30rem] space-y-12 text-left">
           <header className="space-y-5">
             <Mark />
-            <h1 className="text-foreground/90 text-[0.72rem] leading-[1.6] tracking-[0.18em] uppercase">
+            <h1 className="text-foreground/90 text-xs leading-[1.6] tracking-[0.08em] uppercase">
               Michael Ciccarelli
               <br />
               <span className="text-muted-foreground/60">Software Engineer</span>
             </h1>
           </header>
 
-          <div className="text-foreground/70 space-y-5 text-[0.72rem] leading-[1.6] tracking-[0.01em]">
+          <div className="text-foreground/70 space-y-5 text-base leading-[1.55]">
             {about.map((paragraph, i) => (
               <p key={i}>{renderInlineLinks(paragraph)}</p>
             ))}
@@ -77,28 +77,44 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
             ))}
           </div>
 
-          <section className="space-y-2">
+          <section className="space-y-3">
             <Label>Connect</Label>
-            <div className="text-foreground/70 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.04em] uppercase">
-              <span className="normal-case">
-                <CopyEmail email="m@relli.cc" />
-              </span>
+            <div className="text-foreground/70 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
+              <CopyEmail email="m@relli.cc" />
               <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
                 Intro call
               </a>
-              <a href="https://x.com/mcrxlli" target="_blank" rel="noopener noreferrer">
-                Twitter/X
+            </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
+              <a
+                href="https://x.com/mcrxlli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground/50 hover:text-foreground/75"
+              >
+                Twitter
               </a>
-              <a href="https://instagram.com/mciccarelli" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com/mciccarelli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground/50 hover:text-foreground/75"
+              >
                 IG
               </a>
-              <a href="https://github.com/mciccarelli" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/mciccarelli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground/50 hover:text-foreground/75"
+              >
                 GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/mciccarelli/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-muted-foreground/50 hover:text-foreground/75"
               >
                 LinkedIn
               </a>

@@ -169,7 +169,7 @@ export default function Feed({ items }: FeedProps) {
       <AnimatePresence mode="wait">
         <motion.ul
           key={`${filter}-${photosVisible}`}
-          className="space-y-2"
+          className="flex flex-col"
           variants={listVariants}
           initial="hidden"
           animate="show"
@@ -201,7 +201,7 @@ export default function Feed({ items }: FeedProps) {
                   setActive(index);
                 }}
                 onMouseLeave={() => setActive(null)}
-                className="text-[0.72rem] tracking-[0.06em] uppercase"
+                className="mb-0 text-base leading-[1.35] tracking-[0.04em] uppercase"
               >
                 {item.type === 'photo' ? (
                   <button
@@ -258,7 +258,7 @@ export default function Feed({ items }: FeedProps) {
                 className="block h-auto max-h-[58vh] w-full object-contain object-top shadow-lg"
               />
             ) : null}
-            <div className="text-muted-foreground/70 mt-2 text-left text-[0.625rem] leading-[1.4] tracking-[0.04em] uppercase">
+            <div className="text-muted-foreground/70 mt-2 text-left text-xs leading-[1.4] tracking-[0.06em] uppercase">
               {itemMeta(preview)}
             </div>
           </motion.div>

@@ -1,7 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import ThemeProvider from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://relli.cc'),
@@ -55,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
           <main className="min-h-dvh">{children}</main>

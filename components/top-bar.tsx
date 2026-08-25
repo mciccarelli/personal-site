@@ -42,7 +42,7 @@ export default function FilterMenu({ counts }: { counts: Record<Filter, number> 
 							className="size-1.5 bg-red-500 opacity-0 transition-opacity duration-200 group-aria-selected:opacity-100"
 						/>
 						{LABELS[f]}
-						<span className="text-[0.625rem] opacity-45">{counts[f]}</span>
+						<span className="text-xs opacity-45">{counts[f]}</span>
 					</Tabs.Tab>
 				))}
 			</Tabs.List>
