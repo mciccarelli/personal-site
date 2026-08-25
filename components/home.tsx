@@ -59,69 +59,73 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
     <FilterProvider initialPhotosVisible={photosVisible}>
       <div className="px-6 pt-16 pb-24 md:pt-24 md:pb-32">
         <div className="mx-auto w-full max-w-[30rem] space-y-12 text-left">
-          <header className="space-y-5">
+          <header className="space-y-3">
             <Mark />
-            <h1 className="text-foreground/90 text-xs leading-[1.6] tracking-[0.08em] uppercase">
+            <h1 className="text-foreground/90 text-xs leading-[1.45] tracking-[0.08em] uppercase">
               Michael Ciccarelli
               <br />
               <span className="text-muted-foreground/60">Software Engineer</span>
             </h1>
           </header>
 
-          <div className="text-foreground/70 space-y-5 text-base leading-[1.55]">
+          <div className="text-foreground/70 text-base leading-[1.55]">
             {about.map((paragraph, i) => (
-              <p key={i}>{renderInlineLinks(paragraph)}</p>
+              <p key={i} className="mb-8">
+                {renderInlineLinks(paragraph)}
+              </p>
             ))}
             {working.map((paragraph, i) => (
               <p key={i}>{renderInlineLinks(paragraph)}</p>
             ))}
           </div>
 
-          <section className="space-y-3">
+          <section className="space-y-2">
             <Label>Connect</Label>
-            <div className="text-foreground/70 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
-              <CopyEmail email="m@relli.cc" />
-              <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
-                Intro call
-              </a>
-            </div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
-              <a
-                href="https://x.com/mcrxlli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground/50 hover:text-foreground/75"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://instagram.com/mciccarelli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground/50 hover:text-foreground/75"
-              >
-                IG
-              </a>
-              <a
-                href="https://github.com/mciccarelli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground/50 hover:text-foreground/75"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mciccarelli/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground/50 hover:text-foreground/75"
-              >
-                LinkedIn
-              </a>
+            <div className="space-y-1">
+              <div className="text-foreground/70 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
+                <CopyEmail email="m@relli.cc" />
+                <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
+                  Intro call
+                </a>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
+                <a
+                  href="https://x.com/mcrxlli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground/50 hover:text-foreground/75"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="https://instagram.com/mciccarelli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground/50 hover:text-foreground/75"
+                >
+                  IG
+                </a>
+                <a
+                  href="https://github.com/mciccarelli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground/50 hover:text-foreground/75"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mciccarelli/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground/50 hover:text-foreground/75"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </section>
 
-          <section className="space-y-4">
+          <section className="space-y-2">
             <div className="flex items-center justify-between">
               <Label>Index</Label>
               <PhotosSwitch />
@@ -131,7 +135,6 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
           </section>
 
           <Experience entries={experience} clients={clients} />
-
 
           <footer className="flex items-center">
             <ModeToggle className="-ml-1 opacity-30 transition-opacity duration-500 ease-out hover:opacity-100" />

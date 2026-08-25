@@ -10,7 +10,7 @@ interface Entry {
 
 export default function Experience({ entries, clients }: { entries: Entry[]; clients: string }) {
   return (
-    <Collapsible.Root render={<section className="space-y-3" />}>
+    <Collapsible.Root render={<section />}>
       <h3 className="text-xs">
         <Collapsible.Trigger className="group text-muted-foreground/55 hover:text-foreground/75 flex cursor-pointer items-center gap-1.5 tracking-[0.08em] uppercase transition-colors outline-none">
           Previously
@@ -23,7 +23,7 @@ export default function Experience({ entries, clients }: { entries: Entry[]; cli
         </Collapsible.Trigger>
       </h3>
       <Collapsible.Panel className="h-[var(--collapsible-panel-height)] overflow-hidden transition-[height] duration-200 ease-out data-[ending-style]:h-0 data-[starting-style]:h-0">
-        <div className="text-foreground/70 flex flex-col pt-3 text-xs leading-[1.35] tracking-[0.04em] uppercase">
+        <div className="text-foreground/70 flex flex-col pt-2 text-xs leading-[1.35] tracking-[0.04em] uppercase">
           {entries.map((e) => (
             <div key={e.company}>
               {e.company}{' '}
