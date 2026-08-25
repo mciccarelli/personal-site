@@ -64,13 +64,13 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
             <h1 className="text-foreground/90 text-xs leading-[1.45] tracking-[0.08em] uppercase">
               Michael Ciccarelli
               <br />
-              <span className="text-muted-foreground/60">Software Engineer</span>
+              <span className="text-muted-foreground/60">Design Engineer</span>
             </h1>
           </header>
 
           <div className="text-foreground/70 text-base leading-[1.55]">
             {about.map((paragraph, i) => (
-              <p key={i} className="mb-8">
+              <p key={i} className="mb-8 text-pretty">
                 {renderInlineLinks(paragraph)}
               </p>
             ))}
