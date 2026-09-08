@@ -58,13 +58,10 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
     <FilterProvider initialPhotosVisible={photosVisible}>
       <div className="px-6 pt-16 pb-24 md:pt-24 md:pb-32">
         <div className="mx-auto w-full max-w-[36rem]">
-          {/* name at the label stop, title at the value stop, mark below like a blind stamp */}
-          <header className="row-stack">
-            <h1 className="leading-[1.6]">
-              <span className="text-muted-foreground block">relli.cc</span>
-              <span className="text-foreground block font-semibold">Michael Ciccarelli</span>
-            </h1>
-            <p className="text-foreground/85 sm:self-end">Design Engineer</p>
+          {/* one line: site at the label stop, name at the value stop */}
+          <header className="row">
+            <span className="text-muted-foreground">relli.cc</span>
+            <h1 className="text-foreground font-semibold">Michael Ciccarelli</h1>
           </header>
 
           <div className="mt-28 space-y-12 md:mt-36">

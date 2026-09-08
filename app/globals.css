@@ -192,12 +192,12 @@
 
   /* blind emboss: same tone as the paper, read only through its edges */
   .emboss {
-    filter: drop-shadow(-0.6px -0.6px 0 hsl(0 0% 100% / 0.95))
-      drop-shadow(0.7px 0.7px 0.4px hsl(30 10% 10% / 0.28));
+    filter: drop-shadow(-1px -1px 0 hsl(0 0% 100% / 0.95))
+      drop-shadow(1px 1px 0.5px hsl(30 10% 10% / 0.26));
   }
 
   .dark .emboss {
-    filter: drop-shadow(0.6px 0.6px 0 hsl(40 12% 92% / 0.14))
-      drop-shadow(-0.7px -0.7px 0.4px hsl(0 0% 0% / 0.9));
+    filter: drop-shadow(1px 1px 0 hsl(40 12% 92% / 0.14))
+      drop-shadow(-1px -1px 0.5px hsl(0 0% 0% / 0.9));
   }
 }

@@ -4,7 +4,7 @@
 
 Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. Photography lives at https://relli.cc/photos.
 
-## Work With Me
+## Studio
 
 [THIRD INDEX](https://thirdindex.co) is my independent studio. I build marketing sites and custom web applications for startups, brands, and agencies—on a fractional or project basis. Currently available for work. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
 
@@ -21,7 +21,7 @@ Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and 
 - Lead Frontend Engineer, VICE — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
 - Web Developer, Condé Nast — New York, 2012–2014 (GQ, Wired, Architectural Digest)
 
-## Selected Clients
+## Clients
 
 Amazon, Pentagram, Elara, One/Of, Grey, Knoll.
 
@@ -41,9 +41,9 @@ Amazon, Pentagram, Elara, One/Of, Grey, Knoll.
 
 ## Contact
 
-- Email: m@relli.cc
-- Booking: https://cal.com/ciccarelli/intro
-- X: https://x.com/mcrxlli
-- GitHub: https://github.com/mciccarelli
-- LinkedIn: https://linkedin.com/in/mciccarelli
-- Instagram: https://instagram.com/mciccarelli
+- E: m@relli.cc
+- Cal: https://cal.com/ciccarelli/intro
+- X: https://x.com/mcrxlli (@mcrxlli)
+- IG: https://instagram.com/mciccarelli (@mciccarelli)
+- GH: https://github.com/mciccarelli (@mciccarelli)
+- IN: https://www.linkedin.com/in/mciccarelli/

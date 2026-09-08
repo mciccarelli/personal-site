@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://relli.cc'),
   title: 'michael ciccarelli',
   description:
-    'Design engineer in Las Vegas. Twenty years building for the web. Runs Third Index, a design and engineering studio.',
+    'Design engineer in Las Vegas. Product interfaces, design systems, and frontend architecture. Runs Third Index, an independent studio.',
   keywords: [
     'michael ciccarelli',
     'design engineer',
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: 'Michael Ciccarelli',
     title: 'Michael Ciccarelli',
     description:
-      'Design engineer in Las Vegas. Twenty years building for the web. Runs Third Index, a design and engineering studio.',
+      'Design engineer in Las Vegas. Product interfaces, design systems, and frontend architecture. Runs Third Index, an independent studio.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Michael Ciccarelli',
     description:
-      'Design engineer in Las Vegas. Twenty years building for the web. Runs Third Index, a design and engineering studio.',
+      'Design engineer in Las Vegas. Product interfaces, design systems, and frontend architecture. Runs Third Index, an independent studio.',
   },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },

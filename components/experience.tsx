@@ -12,13 +12,14 @@ export default function Experience({ entries, clients }: { entries: Entry[]; cli
   return (
     <Collapsible.Root render={<section />}>
       <h3 className="row">
-        <Collapsible.Trigger className="group label hover:text-foreground inline-flex cursor-pointer items-center gap-1 transition-colors outline-none">
-          Previously:
+        {/* bracketed toggle reads as a control in mono; the label rows around it keep their colons */}
+        <Collapsible.Trigger className="group label hover:text-foreground focus-visible:text-foreground inline-flex cursor-pointer items-center gap-[1ch] transition-colors outline-none">
+          Previously
           <span aria-hidden className="group-data-[panel-open]:hidden">
-            +
+            [+]
           </span>
           <span aria-hidden className="hidden group-data-[panel-open]:inline">
-            &minus;
+            [&minus;]
           </span>
         </Collapsible.Trigger>
       </h3>
