@@ -84,6 +84,15 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
                       {renderInlineLinks(paragraph)}
                     </p>
                   ))}
+                  <a
+                    className="intro-cta mt-5"
+                    href="https://cal.com/ciccarelli/intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book an intro call
+                    <span aria-hidden="true">↗</span>
+                  </a>
                 </div>
               </div>
             </section>
@@ -92,12 +101,6 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
               <div className="row">
                 <span className="label">E:</span>
                 <CopyEmail email="m@relli.cc" />
-              </div>
-              <div className="row">
-                <span className="label">Cal:</span>
-                <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
-                  cal.com/ciccarelli/intro
-                </a>
               </div>
               {CONTACT.map((c) => (
                 <div key={c.label} className="row">
