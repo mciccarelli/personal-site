@@ -29,20 +29,20 @@ export default function FilterMenu({ counts }: { counts: Record<Filter, number> 
 		>
 			<Tabs.List
 				aria-label="Filter feed"
-				className="flex flex-wrap items-center gap-4 text-xs uppercase"
+				className="flex flex-wrap items-center gap-4"
 			>
 				{FILTERS.map((f) => (
 					<Tabs.Tab
 						key={f}
 						value={f}
-						className="group text-muted-foreground/50 hover:text-foreground/75 aria-selected:text-foreground flex cursor-pointer items-center gap-1.5 tracking-[0.08em] uppercase transition-colors outline-none"
+						className="group text-muted-foreground hover:text-foreground/75 aria-selected:text-foreground flex cursor-pointer items-center gap-1.5 transition-colors outline-none"
 					>
 						<span
 							aria-hidden
-							className="size-1.5 bg-red-500 opacity-0 transition-opacity duration-200 group-aria-selected:opacity-100"
+							className="bg-foreground size-1.5 opacity-0 transition-opacity duration-200 group-aria-selected:opacity-100"
 						/>
 						{LABELS[f]}
-						<span className="text-xs opacity-45">{counts[f]}</span>
+						<span className="opacity-45">{counts[f]}</span>
 					</Tabs.Tab>
 				))}
 			</Tabs.List>

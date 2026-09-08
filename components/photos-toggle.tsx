@@ -11,7 +11,7 @@ export default function PhotosToggle({ children }: { children: ReactNode }) {
       type="button"
       aria-pressed={photosVisible}
       onClick={() => setPhotosVisible(!photosVisible)}
-      className="text-foreground/90 hover:text-foreground hover:decoration-red-500 cursor-pointer no-underline underline-offset-2 transition-colors hover:underline"
+      className="text-foreground/85 hover:text-foreground cursor-pointer no-underline underline-offset-[0.2em] transition-colors hover:underline"
     >
       {children}
     </button>

@@ -1,19 +1,19 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/founders-grotesk-medium.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Berkeley Mono';
+  src: url('/mono.woff2') format('woff2-variations');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --text-xs: 0.625rem;
+  --text-xs: 0.6875rem;
   --text-sm: 0.6875rem;
   --text-base: 0.75rem;
-  --text-lg: 1rem;
-  --text-xl: 1.25rem;
+  --text-lg: 0.875rem;
+  --text-xl: 1rem;
 
   --border-radius-sm: calc(var(--radius) - 4px);
   --border-radius-md: calc(var(--radius) - 2px);
@@ -41,66 +41,67 @@
 }
 
 @layer base {
+  /* paper and ink — no hue beyond a warm off-white */
   :root {
-    --background: 348 45.45% 97.84%;
-    --foreground: 30 11.11% 3.53%;
+    --background: 40 14% 95.5%;
+    --foreground: 30 8% 8%;
 
-    --card: 348 45.45% 97.84%;
-    --card-foreground: 30 11.11% 3.53%;
+    --card: 40 14% 95.5%;
+    --card-foreground: 30 8% 8%;
 
-    --popover: 348 45.45% 97.84%;
-    --popover-foreground: 30 11.11% 3.53%;
+    --popover: 40 14% 95.5%;
+    --popover-foreground: 30 8% 8%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 348 45.45% 97.84%;
+    --primary: 30 8% 8%;
+    --primary-foreground: 40 14% 95.5%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 40 8% 90%;
+    --secondary-foreground: 30 8% 8%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 40 8% 90%;
+    --muted-foreground: 30 4% 44%;
 
-    --accent: 0 100% 47%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 30 8% 8%;
+    --accent-foreground: 40 14% 95.5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 348 45.45% 97.84%;
+    --destructive-foreground: 40 14% 95.5%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 30 11.11% 3.53%;
+    --border: 40 8% 86%;
+    --input: 40 8% 86%;
+    --ring: 30 8% 8%;
 
-    --radius: 0.5rem;
+    --radius: 0;
   }
 
   .dark {
-    --background: 30 11.11% 3.53%;
-    --foreground: 348 45.45% 97.84%;
+    --background: 30 6% 7%;
+    --foreground: 40 12% 92%;
 
-    --card: 30 11.11% 3.53%;
-    --card-foreground: 348 45.45% 97.84%;
+    --card: 30 6% 7%;
+    --card-foreground: 40 12% 92%;
 
-    --popover: 30 11.11% 3.53%;
-    --popover-foreground: 348 45.45% 97.84%;
+    --popover: 30 6% 7%;
+    --popover-foreground: 40 12% 92%;
 
-    --primary: 348 45.45% 97.84%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 40 12% 92%;
+    --primary-foreground: 30 6% 7%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 348 45.45% 97.84%;
+    --secondary: 30 4% 14%;
+    --secondary-foreground: 40 12% 92%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 30 4% 14%;
+    --muted-foreground: 40 4% 58%;
 
-    --accent: 0 100% 47%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 12% 92%;
+    --accent-foreground: 30 6% 7%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 348 45.45% 97.84%;
+    --destructive-foreground: 40 12% 92%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 30 4% 16%;
+    --input: 30 4% 16%;
+    --ring: 40 12% 92%;
   }
 }
 
@@ -110,17 +111,41 @@
   }
 
   :root {
-    --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Berkeley Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    /* the card's tab stop: values begin a little past a third of the width */
+    --label-col: 38%;
   }
 
   body {
-    @apply bg-background text-foreground min-h-screen text-base leading-[1.5] font-normal tracking-normal;
+    @apply bg-background text-foreground min-h-screen text-base leading-[1.6] tracking-[0.06em] uppercase;
     font-family: var(--font-body);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
     font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
   }
 
-  h2 {
-    @apply mb-2 font-normal tracking-[0.06em];
+  /* paper grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.16;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+  }
+
+  .dark body::before {
+    opacity: 0.1;
+    filter: invert(1);
+  }
+
+  /* buttons carry the same case and alignment as the text around them */
+  button {
+    text-transform: inherit;
+    text-align: inherit;
   }
 
   p {
@@ -128,27 +153,51 @@
   }
 
   li {
-    @apply mb-px list-none last-of-type:mb-0;
+    @apply list-none;
   }
 
   a {
-    @apply text-foreground/90 hover:text-foreground no-underline underline-offset-2 transition-colors hover:underline hover:decoration-red-500;
+    @apply text-foreground/85 hover:text-foreground no-underline underline-offset-[0.2em] transition-colors hover:underline;
   }
 }
 
-@layer base {
-	:root {
-		/* sidebar rhythm — tightens on short viewports */
-		--rail-gap: 3rem;
-		--rail-sub: 0.75rem;
-		--rail-para: 0.75rem;
-	}
+@layer components {
+  /* label / value pair, the whole page is built from these */
+  .row {
+    display: grid;
+    grid-template-columns: var(--label-col) minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: baseline;
+  }
 
-	@media (max-height: 850px) {
-		:root {
-			--rail-gap: 2rem;
-			--rail-sub: 0.5rem;
-			--rail-para: 0.5rem;
-		}
-	}
+  /* prose rows drop to a single column on narrow screens */
+  .row-stack {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.25rem;
+  }
+
+  @media (min-width: 40rem) {
+    .row-stack {
+      grid-template-columns: var(--label-col) minmax(0, 1fr);
+      column-gap: 1rem;
+      row-gap: 0;
+      align-items: baseline;
+    }
+  }
+
+  .label {
+    @apply text-muted-foreground;
+  }
+
+  /* blind emboss: same tone as the paper, read only through its edges */
+  .emboss {
+    filter: drop-shadow(-0.6px -0.6px 0 hsl(0 0% 100% / 0.95))
+      drop-shadow(0.7px 0.7px 0.4px hsl(30 10% 10% / 0.28));
+  }
+
+  .dark .emboss {
+    filter: drop-shadow(0.6px 0.6px 0 hsl(40 12% 92% / 0.14))
+      drop-shadow(-0.7px -0.7px 0.4px hsl(0 0% 0% / 0.9));
+  }
 }

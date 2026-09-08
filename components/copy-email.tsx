@@ -18,8 +18,8 @@ export default function CopyEmail({ email }: { email: string }) {
   };
 
   return (
-    <span className="inline-flex items-center gap-0.5">
-      <a href={`mailto:${email}`} className="uppercase">
+    <span className="inline-flex items-center gap-1">
+      <a href={`mailto:${email}`}>
         {email}
       </a>
       <button

@@ -38,13 +38,12 @@ function renderInlineLinks(text: string): ReactNode[] {
   return nodes;
 }
 
-function Label({ children }: { children: ReactNode }) {
-  return (
-    <h3 className="text-muted-foreground/55 text-xs tracking-[0.08em] uppercase">
-      {children}
-    </h3>
-  );
-}
+const CONTACT = [
+  { label: 'X', value: '@mcrxlli', href: 'https://x.com/mcrxlli' },
+  { label: 'IG', value: '@mciccarelli', href: 'https://instagram.com/mciccarelli' },
+  { label: 'GH', value: '@mciccarelli', href: 'https://github.com/mciccarelli' },
+  { label: 'IN', value: '/in/mciccarelli', href: 'https://www.linkedin.com/in/mciccarelli/' },
+];
 
 export default async function Home({ photosVisible = false }: { photosVisible?: boolean }) {
   const { about, working, experience, clients } = data;
@@ -58,87 +57,82 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
   return (
     <FilterProvider initialPhotosVisible={photosVisible}>
       <div className="px-6 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="mx-auto w-full max-w-[30rem] space-y-12 text-left">
-          <header className="space-y-3">
-            <Mark />
-            <h1 className="text-foreground/90 text-xs leading-[1.45] tracking-[0.08em] uppercase">
-              Michael Ciccarelli
-              <br />
-              <span className="text-muted-foreground/60">Design Engineer</span>
+        <div className="mx-auto w-full max-w-[36rem]">
+          {/* name at the label stop, title at the value stop, mark below like a blind stamp */}
+          <header className="row-stack">
+            <h1 className="leading-[1.6]">
+              <span className="text-muted-foreground block">relli.cc</span>
+              <span className="text-foreground block font-semibold">Michael Ciccarelli</span>
             </h1>
+            <p className="text-foreground/85 sm:self-end">Design Engineer</p>
           </header>
 
-          <div className="text-foreground/70 text-base leading-[1.55]">
-            {about.map((paragraph, i) => (
-              <p key={i} className="mb-8 text-pretty">
-                {renderInlineLinks(paragraph)}
-              </p>
-            ))}
-            {working.map((paragraph, i) => (
-              <p key={i}>{renderInlineLinks(paragraph)}</p>
-            ))}
-          </div>
+          <div className="mt-28 space-y-12 md:mt-36">
+            <section className="space-y-5">
+              <div className="row-stack">
+                <span className="label">About:</span>
+                <div className="text-foreground/85">
+                  {about.map((paragraph, i) => (
+                    <p key={i} className="text-pretty">
+                      {renderInlineLinks(paragraph)}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="row-stack">
+                <span className="label">Studio:</span>
+                <div className="text-foreground/85">
+                  {working.map((paragraph, i) => (
+                    <p key={i} className="text-pretty">
+                      {renderInlineLinks(paragraph)}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </section>
 
-          <section className="space-y-2">
-            <Label>Connect</Label>
-            <div className="space-y-1">
-              <div className="text-foreground/70 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
+            <section>
+              <div className="row">
+                <span className="label">E:</span>
                 <CopyEmail email="m@relli.cc" />
+              </div>
+              <div className="row">
+                <span className="label">Cal:</span>
                 <a href="https://cal.com/ciccarelli/intro" target="_blank" rel="noopener noreferrer">
-                  Intro call
+                  cal.com/ciccarelli/intro
                 </a>
               </div>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs tracking-[0.06em] uppercase">
-                <a
-                  href="https://x.com/mcrxlli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground/50 hover:text-foreground/75"
-                >
-                  Twitter
-                </a>
-                <a
-                  href="https://instagram.com/mciccarelli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground/50 hover:text-foreground/75"
-                >
-                  IG
-                </a>
-                <a
-                  href="https://github.com/mciccarelli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground/50 hover:text-foreground/75"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mciccarelli/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground/50 hover:text-foreground/75"
-                >
-                  LinkedIn
-                </a>
+              {CONTACT.map((c) => (
+                <div key={c.label} className="row">
+                  <span className="label">{c.label}:</span>
+                  <a href={c.href} target="_blank" rel="noopener noreferrer">
+                    {c.value}
+                  </a>
+                </div>
+              ))}
+            </section>
+
+            <section>
+              <div className="row">
+                <span className="label">Index:</span>
+                <div className="flex items-center gap-4">
+                  <FilterMenu counts={counts} />
+                  <span className="ml-auto flex">
+                    <PhotosSwitch />
+                  </span>
+                </div>
               </div>
-            </div>
-          </section>
+              <Feed items={feed} />
+            </section>
 
-          <section className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label>Index</Label>
-              <PhotosSwitch />
-            </div>
-            <FilterMenu counts={counts} />
-            <Feed items={feed} />
-          </section>
+            <Experience entries={experience} clients={clients} />
 
-          <Experience entries={experience} clients={clients} />
-
-          <footer className="flex items-center">
-            <ModeToggle className="-ml-1 opacity-30 transition-opacity duration-500 ease-out hover:opacity-100" />
-          </footer>
+            {/* maker's mark closes the page, stamped at the value stop */}
+            <footer className="row items-center">
+              <ModeToggle className="-ml-1 opacity-30 transition-opacity duration-500 ease-out hover:opacity-100" />
+              <Mark emboss className="h-6 w-[52px]" />
+            </footer>
+          </div>
         </div>
       </div>
     </FilterProvider>

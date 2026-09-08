@@ -40,7 +40,7 @@ interface FeedProps {
 }
 
 // hover preview lives in the gutter beside the centered column, never over the text
-const COLUMN_W = 480;
+const COLUMN_W = 576;
 const MAX_PREVIEW_W = 320;
 const MIN_PREVIEW_W = 160;
 const PREVIEW_H = 280;
@@ -178,17 +178,18 @@ export default function Feed({ items }: FeedProps) {
           {visible.map((item, index) => {
             const label = item.type === 'photo' ? photoTitle(item) : item.title;
             const year = item.date.slice(0, 4);
+            // year sits at the label stop, title at the value stop
             const inner = (
               <>
-                <span>{label}</span>
-                <span className="text-muted-foreground/45 tabular-nums">{year}</span>
+                <span className="text-muted-foreground">{year}</span>
+                <span className="truncate text-left">{label}</span>
               </>
             );
             const dimmed = active !== null && active !== index;
             const rowClass = cn(
-              'flex w-full cursor-pointer items-baseline justify-between gap-6 uppercase no-underline',
+              'row w-full cursor-pointer no-underline',
               'transition-[color,opacity] duration-300 ease-out hover:no-underline',
-              active === index ? 'text-foreground' : 'text-foreground/80',
+              active === index ? 'text-foreground' : 'text-foreground/85',
               dimmed ? 'opacity-30' : 'opacity-100',
             );
 
@@ -201,7 +202,7 @@ export default function Feed({ items }: FeedProps) {
                   setActive(index);
                 }}
                 onMouseLeave={() => setActive(null)}
-                className="mb-0 text-base leading-[1.35] tracking-[0.04em] uppercase"
+                className="mb-0"
               >
                 {item.type === 'photo' ? (
                   <button
@@ -258,7 +259,7 @@ export default function Feed({ items }: FeedProps) {
                 className="block h-auto max-h-[58vh] w-full object-contain object-top shadow-lg"
               />
             ) : null}
-            <div className="text-muted-foreground/70 mt-2 text-left text-xs leading-[1.4] tracking-[0.06em] uppercase">
+            <div className="text-muted-foreground mt-2 text-left text-xs leading-[1.5]">
               {itemMeta(preview)}
             </div>
           </motion.div>
@@ -286,7 +287,7 @@ export default function Feed({ items }: FeedProps) {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
           />
-          <div className="text-muted-foreground absolute bottom-4 left-1/2 -translate-x-1/2 text-xs tracking-[0.06em]">
+          <div className="text-muted-foreground absolute bottom-4 left-1/2 -translate-x-1/2 text-xs">
             {lightbox.photo.title}
             {lightbox.photo.images.length > 1
               ? ` · ${lightbox.index + 1}/${lightbox.photo.images.length}`
