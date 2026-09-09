@@ -67,7 +67,7 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
           <div className="mt-28 space-y-12 md:mt-36">
             <section className="space-y-5">
               <div className="row-stack">
-                <span className="label">About:</span>
+                <span className="label">About</span>
                 <div className="text-foreground/85">
                   {about.map((paragraph, i) => (
                     <p key={i} className="text-pretty">
@@ -77,7 +77,7 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
                 </div>
               </div>
               <div className="row-stack">
-                <span className="label">Studio:</span>
+                <span className="label">Working together</span>
                 <div className="text-foreground/85">
                   {working.map((paragraph, i) => (
                     <p key={i} className="text-pretty">
@@ -91,7 +91,6 @@ export default async function Home({ photosVisible = false }: { photosVisible?: 
                     rel="noopener noreferrer"
                   >
                     Book an intro call
-                    <span aria-hidden="true">↗</span>
                   </a>
                 </div>
               </div>
