@@ -13,10 +13,10 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 function format(): string {
   const parts = formatter.formatToParts(new Date());
   const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
-  return `${get('timeZoneName')} ${get('hour')}:${get('minute')}`;
+  return `${get('hour')}:${get('minute')} ${get('timeZoneName')}`;
 }
 
-export default function Clock() {
+export default function Clock({ location }: { location?: string }) {
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -26,7 +26,10 @@ export default function Clock() {
     return () => clearInterval(id);
   }, []);
 
-  if (!time) return null;
-
-  return <span className="text-muted-foreground/50 text-xs tabular-nums">{time}</span>;
+  // location renders on the server; the time joins it once the clock is running
+  return (
+    <span className="text-muted-foreground">
+      {[time, location].filter(Boolean).join(' · ')}
+    </span>
+  );
 }

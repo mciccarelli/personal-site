@@ -14,6 +14,8 @@ interface ProjectItem {
   description: string;
   technologies?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   video?: string;
   date: string;
 }

@@ -1,11 +1,14 @@
 {
   "about": [
-    "Design engineer based in Las Vegas, focused on web apps, interfaces, and design systems. I also play poker and take [photos](#photos)."
-  ],
-  "working": [
-    "Through [THIRD INDEX](https://thirdindex.co/), my independent software engineering studio, I help teams build and refine software for the web. Available for projects and fractional engagements."
+    "I design and build software for the web, with a focus on web apps, interfaces, motion, and design systems.",
+    "I work independently through [THIRD INDEX](https://thirdindex.co/), a small studio that partners with designers, founders, and product teams. Available for project-based and fractional engagements."
   ],
   "experience": [
+    {
+      "company": "Third Index",
+      "role": "Principal Engineer",
+      "years": "2025–"
+    },
     {
       "company": "Modern Treasury",
       "role": "Design Engineer",
@@ -13,7 +16,7 @@
     },
     {
       "company": "Metropolis",
-      "role": "Frontend Engineer",
+      "role": "Senior Frontend Engineer",
       "years": "2022–24"
     },
     {
@@ -22,7 +25,7 @@
       "years": "2021–22"
     },
     {
-      "company": "VICE",
+      "company": "VICE Media",
       "role": "Lead Frontend Engineer",
       "years": "2014–18"
     },

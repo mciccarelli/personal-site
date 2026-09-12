@@ -1,12 +1,12 @@
 # Michael Ciccarelli — Design Engineer
 
-> I design and build software for the web — product interfaces, design systems, and frontend architecture. Based in Las Vegas. I also play poker and take photos.
+> I design and build software for the web, with a focus on web apps, interfaces, motion, and design systems. I work independently through THIRD INDEX, a small studio that partners with designers, founders, and product teams. Available for project-based and fractional engagements.
 
 Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. Photography lives at https://relli.cc/photos.
 
 ## Studio
 
-[THIRD INDEX](https://thirdindex.co) is my independent studio. I build marketing sites and custom web applications for startups, brands, and agencies—on a fractional or project basis. Currently available for work. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
+[THIRD INDEX](https://thirdindex.co) is my small studio. It partners with designers, founders, and product teams, on a project or fractional basis. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
 
 ## Now
 
@@ -14,12 +14,21 @@ Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and 
 
 ## Experience
 
-- Design Engineer, Third Index — Las Vegas / Remote, 2025–present (founder; end-to-end builds across frontend, backend, and infrastructure)
-- Design Engineer, Modern Treasury — New York, 2024–2025 (enterprise fintech interfaces, design systems, motion patterns, headless CMS)
-- Frontend Engineer, Metropolis — Brooklyn, 2022–2024 (metal.build, pod.xyz, EVM dApps, Farcaster integrations)
+- Principal Engineer, Third Index — Las Vegas / Remote, 2025–present (leads design and engineering for web applications, product interfaces, and custom software; end-to-end builds across frontend, backend, APIs, infrastructure, and deployment; built bkrl.app)
+- Design Engineer, Modern Treasury — New York, 2024–2025 (enterprise fintech interfaces and UI components, design systems, motion patterns, headless CMS)
+- Senior Frontend Engineer, Metropolis — Brooklyn, 2022–2024 (metal.build, pod.xyz, EVM dApps, Farcaster integrations; led frontend architecture for Web3 interfaces)
 - Senior Engineer II, Axoni — New York, 2021–2022 (React apps, data visualizations, UI libraries for fintech)
-- Lead Frontend Engineer, VICE — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
+- Lead Frontend Engineer, VICE Media — Brooklyn, 2014–2018 (led team of 10; publishing platform across VICE properties; LAMP-to-React migration)
 - Web Developer, Condé Nast — New York, 2012–2014 (GQ, Wired, Architectural Digest)
+
+## Skills
+
+- Frontend / UI: React, Next.js, TypeScript, CSS, component systems
+- Interaction: GSAP, Framer Motion, Three.js, WebGL
+- Backend & APIs: Node.js, Python, PostgreSQL, REST/GraphQL
+- Platforms & Tooling: Vercel, AWS, Cloudflare, Supabase, Docker, Git
+- AI: LLM integrations, AI workflows, OpenAI, Anthropic
+- Domains: E-commerce (Shopify, Stripe), CMS (Sanity, Contentful, Payload), Web3
 
 ## Clients
 
@@ -41,9 +50,10 @@ Amazon, Pentagram, Elara, One/Of, Grey, Knoll.
 
 ## Contact
 
-- E: m@relli.cc
+- E: mikecicc@gmail.com
 - Cal: https://cal.com/ciccarelli/intro
 - X: https://x.com/mcrxlli (@mcrxlli)
 - IG: https://instagram.com/mciccarelli (@mciccarelli)
 - GH: https://github.com/mciccarelli (@mciccarelli)
 - IN: https://www.linkedin.com/in/mciccarelli/
+- Resume: https://relli.cc/michael-ciccarelli_resume.pdf

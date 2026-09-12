@@ -8,9 +8,12 @@ export const client = createClient({
   useCdn: true,
 });
 
-const FEED_QUERY = `*[_type in ["project", "photoSet"]]{
+// newest first on the full date; the month-level date the page shows would tie within a month
+const FEED_QUERY = `*[_type in ["project", "photoSet"]] | order(date desc) {
   _type, title, role, url, description, technologies, date,
   "image": image.asset->url,
+  "imageWidth": image.asset->metadata.dimensions.width,
+  "imageHeight": image.asset->metadata.dimensions.height,
   "video": video.asset->url,
   "images": images[]{
     caption,
@@ -29,6 +32,8 @@ interface FeedDoc {
   description: string | null;
   technologies: string | null;
   image: string | null;
+  imageWidth: number | null;
+  imageHeight: number | null;
   video: string | null;
   date: string;
   images:
@@ -56,6 +61,8 @@ export async function getFeed(): Promise<FeedItem[]> {
         url: doc.url ?? undefined,
         technologies: doc.technologies ?? undefined,
         image: doc.image ?? undefined,
+        imageWidth: doc.imageWidth ?? undefined,
+        imageHeight: doc.imageHeight ?? undefined,
         video: doc.video ?? undefined,
       },
     ];

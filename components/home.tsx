@@ -1,13 +1,12 @@
 import { Fragment, type ReactNode } from 'react';
+import Arrow from '@/components/arrow';
+import Clock from '@/components/clock';
 import CopyEmail from '@/components/copy-email';
-import Experience from '@/components/experience';
-import Feed from '@/components/feed';
-import FilterMenu from '@/components/top-bar';
-import Mark from '@/components/mark';
+import DeckColumn from '@/components/deck-column';
+import DeckNav from '@/components/deck-nav';
 import ModeToggle from '@/components/mode-toggle';
-import PhotosSwitch from '@/components/photos-switch';
-import PhotosToggle from '@/components/photos-toggle';
-import { FilterProvider, type Filter } from '@/components/feed-filter';
+import PhotoColumn from '@/components/photo-column';
+import ProjectCard from '@/components/project-card';
 import { getFeed } from '@/lib/sanity';
 import data from '../data.json';
 
@@ -21,8 +20,12 @@ function renderInlineLinks(text: string): ReactNode[] {
     if (match.index > lastIndex) {
       nodes.push(<Fragment key={key++}>{text.slice(lastIndex, match.index)}</Fragment>);
     }
-    if (match[2] === '#photos') {
-      nodes.push(<PhotosToggle key={key++}>{match[1]}</PhotosToggle>);
+    if (match[2].startsWith('#')) {
+      nodes.push(
+        <a key={key++} href={match[2]}>
+          {match[1]}
+        </a>,
+      );
     } else {
       nodes.push(
         <a key={key++} href={match[2]} target="_blank" rel="noopener noreferrer">
@@ -45,95 +48,128 @@ const CONTACT = [
   { label: 'IN', value: '/in/mciccarelli', href: 'https://www.linkedin.com/in/mciccarelli/' },
 ];
 
-export default async function Home({ photosVisible = false }: { photosVisible?: boolean }) {
-  const { about, working, experience, clients } = data;
+const COLUMNS = [
+  { id: 'projects', label: 'Projects' },
+  { id: 'workbench', label: 'Workbench' },
+  { id: 'photos', label: 'Photos' },
+  { id: 'resume', label: 'Resume' },
+];
+
+function Empty() {
+  return (
+    <div className="row">
+      <span className="text-muted-foreground">&mdash;</span>
+      <span className="text-muted-foreground">Nothing here yet.</span>
+    </div>
+  );
+}
+
+// the /photos route still renders the deck; photos have their own column now
+export default async function Home(_props: { photosVisible?: boolean } = {}) {
+  const { about, experience, clients } = data;
   const feed = await getFeed();
-  const counts: Record<Filter, number> = {
-    all: feed.length,
-    projects: feed.filter((item) => item.type === 'project').length,
-    photos: feed.filter((item) => item.type === 'photo').length,
-  };
+  // the feed arrives newest first from the query
+  const projects = feed.filter((item) => item.type === 'project');
+  const photos = feed.filter((item) => item.type === 'photo');
 
   return (
-    <FilterProvider initialPhotosVisible={photosVisible}>
-      <div className="px-6 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="mx-auto w-full max-w-[36rem]">
-          {/* one line: site at the label stop, name at the value stop */}
-          <header className="row">
-            <span className="text-muted-foreground">relli.cc</span>
-            <h1 className="text-foreground font-semibold">Michael Ciccarelli</h1>
-          </header>
+    <div className="deck">
+      <aside className="deck-rail px-5 pt-8 pb-5">
+        <header>
+          <h1 className="text-foreground font-semibold">Michael Ciccarelli</h1>
+        </header>
 
-          <div className="mt-28 space-y-12 md:mt-36">
-            <section className="space-y-5">
-              <div className="row-stack">
-                <span className="label">About</span>
-                <div className="text-foreground/85">
-                  {about.map((paragraph, i) => (
-                    <p key={i} className="text-pretty">
-                      {renderInlineLinks(paragraph)}
-                    </p>
-                  ))}
-                </div>
+        <div className="mt-10 space-y-8">
+          <section className="text-foreground/85">
+            {about.map((paragraph, i) => (
+              <p key={i} className="mb-3 leading-[1.75] text-balance">
+                {renderInlineLinks(paragraph)}
+              </p>
+            ))}
+            <a
+              className="intro-cta mt-5"
+              href="https://cal.com/ciccarelli/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book an intro call
+              <Arrow />
+            </a>
+          </section>
+
+          <section>
+            <div className="row">
+              <span className="label">E:</span>
+              <CopyEmail email="mikecicc@gmail.com" />
+            </div>
+            {CONTACT.map((c) => (
+              <div key={c.label} className="row">
+                <span className="label">{c.label}:</span>
+                <a href={c.href} target="_blank" rel="noopener noreferrer">
+                  {c.value}
+                </a>
               </div>
-              <div className="row-stack">
-                <span className="label">Working together</span>
-                <div className="text-foreground/85">
-                  {working.map((paragraph, i) => (
-                    <p key={i} className="text-pretty">
-                      {renderInlineLinks(paragraph)}
-                    </p>
-                  ))}
-                  <a
-                    className="intro-cta mt-5"
-                    href="https://cal.com/ciccarelli/intro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Book an intro call
-                  </a>
-                </div>
-              </div>
-            </section>
+            ))}
+          </section>
 
-            <section>
-              <div className="row">
-                <span className="label">E:</span>
-                <CopyEmail email="m@relli.cc" />
-              </div>
-              {CONTACT.map((c) => (
-                <div key={c.label} className="row">
-                  <span className="label">{c.label}:</span>
-                  <a href={c.href} target="_blank" rel="noopener noreferrer">
-                    {c.value}
-                  </a>
-                </div>
-              ))}
-            </section>
-
-            <section>
-              <div className="row">
-                <span className="label">Index:</span>
-                <div className="flex items-center gap-4">
-                  <FilterMenu counts={counts} />
-                  <span className="ml-auto flex">
-                    <PhotosSwitch />
-                  </span>
-                </div>
-              </div>
-              <Feed items={feed} />
-            </section>
-
-            <Experience entries={experience} clients={clients} />
-
-            {/* maker's mark closes the page, stamped at the value stop */}
-            <footer className="row items-center">
-              <ModeToggle className="-ml-1 opacity-30 transition-opacity duration-500 ease-out hover:opacity-100" />
-              <Mark emboss className="h-6 w-[52px]" />
-            </footer>
-          </div>
+          <DeckNav items={COLUMNS} />
         </div>
+
+        {/* local time on the left, theme toggle on the right */}
+        <footer className="mt-auto flex items-center justify-between pt-10">
+          <Clock location="Las Vegas" />
+          <ModeToggle className="-mr-1 opacity-30 transition-opacity duration-500 ease-out hover:opacity-100" />
+        </footer>
+      </aside>
+
+      <div data-deck-columns className="deck-columns">
+        <DeckColumn
+          id="projects"
+          label="Projects"
+          count={projects.length}
+          description="Client and studio work, newest first."
+        >
+          {projects.length === 0 && <Empty />}
+          {projects.map((p) => (
+            <ProjectCard key={p.title} project={p} />
+          ))}
+        </DeckColumn>
+
+        <DeckColumn
+          id="workbench"
+          label="Workbench"
+          count={0}
+          description="Experiments and prototypes."
+        >
+          <Empty />
+        </DeckColumn>
+
+        <PhotoColumn sets={photos} />
+
+        <DeckColumn id="resume" label="Resume" description="Roles and clients, most recent first.">
+          <div className="text-foreground/85">
+            {experience.map((e) => (
+              <div key={e.company} className="row">
+                <span className="text-muted-foreground">{e.years}</span>
+                <span>
+                  {e.company}
+                  <span className="text-muted-foreground"> · {e.role}</span>
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="row">
+            <span className="label">Clients:</span>
+            <span className="text-foreground/85">{clients}</span>
+          </div>
+          <div className="row">
+            <span className="label">PDF:</span>
+            <a href="/michael-ciccarelli_resume.pdf" target="_blank" rel="noopener noreferrer">
+              Download resume
+            </a>
+          </div>
+        </DeckColumn>
       </div>
-    </FilterProvider>
+    </div>
   );
 }
