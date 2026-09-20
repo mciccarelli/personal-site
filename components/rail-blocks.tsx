@@ -33,7 +33,7 @@ export const HANDLE = 'mciccarelli';
 
 // one handle everywhere; the networks are the links
 export const NETWORKS = [
-  { label: 'X', href: 'https://x.com/mcrxlli' },
+  { label: 'X', href: `https://x.com/${HANDLE}` },
   { label: 'IG', href: `https://instagram.com/${HANDLE}` },
   { label: 'GH', href: `https://github.com/${HANDLE}` },
   { label: 'IN', href: `https://linkedin.com/in/${HANDLE}` },
