@@ -54,7 +54,8 @@ export default function DeckNav({ items }: { items: DeckNavItem[] }) {
   };
 
   return (
-    <nav aria-label="Columns" className="flex flex-col">
+    <nav aria-label="Columns">
+      <h3 className="label mb-1">Index:</h3>
       {items.map((item) => (
         <a
           key={item.id}
@@ -62,11 +63,11 @@ export default function DeckNav({ items }: { items: DeckNavItem[] }) {
           onClick={jump(item.id)}
           aria-current={active === item.id ? 'true' : undefined}
           className={cn(
-            'row no-underline transition-colors hover:no-underline',
+            'flex no-underline transition-colors hover:no-underline',
             active === item.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground/75',
           )}
         >
-          <span aria-hidden className="justify-self-end">
+          <span aria-hidden className="w-[2ch] shrink-0">
             {active === item.id ? '■' : ''}
           </span>
           <span>{item.label}</span>

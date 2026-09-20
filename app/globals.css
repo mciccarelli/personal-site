@@ -213,13 +213,13 @@
 
   .intro-cta:hover,
   .intro-cta:focus-visible {
-    color: #bc2922;
+    color: #fa4511;
     text-decoration: none;
   }
 
   .dark .intro-cta:hover,
   .dark .intro-cta:focus-visible {
-    color: #f07870;
+    color: #ff7a4d;
   }
 
   .intro-cta:hover svg,
@@ -286,6 +286,7 @@
       flex-direction: column;
       width: var(--rail);
       overflow-y: auto;
+      overflow-x: hidden;
       background: hsl(var(--background));
       border-right: 1px solid hsl(var(--border));
     }
@@ -333,5 +334,50 @@
   .deck-columns {
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--muted-foreground) / 0.25) transparent;
+  }
+}
+
+@layer components {
+  /* the handle and url show below the row on hover or focus, in one place for every link */
+  .handle::after {
+    content: attr(data-handle);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: hsl(var(--muted-foreground));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+
+  .handle:hover::after,
+  .handle:focus-visible::after {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /* project cards: on hover-capable wide screens the detail text types itself in on hover or
+     focus, one character at a time, and drops out at once when the pointer leaves */
+  .reveal-ch {
+    transition: opacity 120ms ease;
+    transition-delay: calc(var(--i) * 10ms);
+  }
+
+  @media (hover: hover) and (min-width: 64rem) {
+    .card:not(:hover):not(:focus-within) .reveal-ch {
+      opacity: 0;
+      transition: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-ch {
+      transition-delay: 0ms;
+    }
   }
 }

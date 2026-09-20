@@ -1,7 +1,12 @@
 {
-  "about": [
-    "I design and build software for the web, with a focus on web apps, interfaces, motion, and design systems.",
-    "I work independently through [THIRD INDEX](https://thirdindex.co/), a small studio that partners with designers, founders, and product teams. Available for project-based and fractional engagements."
+  "intro": [
+    "Michael Ciccarelli is an independent software developer and designer building for the web.",
+    "Websites, applications, interfaces, and digital products, with a focus on frontend engineering, interaction, and design systems."
+  ],
+  "rates": [
+    "Sprint: 2 weeks, from $10k.",
+    "Project: 4–8 weeks, from $20k.",
+    "Ongoing: 3 days/week, $10k/month."
   ],
   "experience": [
     {

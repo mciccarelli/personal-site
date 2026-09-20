@@ -31,7 +31,7 @@ export default function PhotoColumn({ sets }: { sets: PhotoSet[] }) {
         id="photos"
         label="Photos"
         count={sets.length}
-        description="Places and light, in sets. Click a set to page through it."
+        description="Places and light, in sets."
       >
         {sets.length === 0 && (
           <div className="row">

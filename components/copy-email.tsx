@@ -18,26 +18,28 @@ export default function CopyEmail({ email }: { email: string }) {
   };
 
   return (
-    <span className="inline-flex items-center gap-1">
-      <a href={`mailto:${email}`}>
-        {email}
-      </a>
+    <span className="inline-flex items-center gap-1.5">
+      <a href={`mailto:${email}`}>{email}</a>
       <button
         type="button"
         onClick={copy}
         aria-label="Copy email address"
-        className="text-muted-foreground hover:text-foreground inline-flex cursor-pointer items-center transition-colors"
+        className="text-muted-foreground hover:text-foreground inline-flex cursor-pointer items-center gap-1 transition-colors"
       >
+        {/* icons sit at text size, nudged up half a pixel to centre on the caps */}
         {copied ? (
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-[1em] -translate-y-[0.5px]">
             <path d="M3 8.5 6.5 12 13 4.5" />
           </svg>
         ) : (
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.25">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.25" className="size-[1em] -translate-y-[0.5px]">
             <rect x="5.5" y="5.5" width="8" height="8" rx="1.5" />
             <path d="M10.5 5.5v-2a1.5 1.5 0 0 0-1.5-1.5H4A1.5 1.5 0 0 0 2.5 3.5V9A1.5 1.5 0 0 0 4 10.5h1.5" />
           </svg>
         )}
+        <span role="status" aria-live="polite">
+          {copied ? 'Copied' : ''}
+        </span>
       </button>
     </span>
   );

@@ -41,6 +41,33 @@ interface FeedDoc {
     | null;
 }
 
+// workbench entries, shaped like projects so the column reuses the project card
+const EXPERIMENTS_QUERY = `*[_type == "experiment"] | order(date desc) {
+  title, url, description, technologies, date,
+  "image": image.asset->url,
+  "imageWidth": image.asset->metadata.dimensions.width,
+  "imageHeight": image.asset->metadata.dimensions.height,
+  "video": video.asset->url
+}`;
+
+type ExperimentDoc = Omit<FeedDoc, '_type' | 'role' | 'images'>;
+
+export async function getExperiments(): Promise<Extract<FeedItem, { type: 'project' }>[]> {
+  const docs = await client.fetch<ExperimentDoc[]>(EXPERIMENTS_QUERY);
+  return docs.map((doc) => ({
+    type: 'project',
+    title: doc.title,
+    date: doc.date.slice(0, 7),
+    description: doc.description ?? '',
+    url: doc.url ?? undefined,
+    technologies: doc.technologies ?? undefined,
+    image: doc.image ?? undefined,
+    imageWidth: doc.imageWidth ?? undefined,
+    imageHeight: doc.imageHeight ?? undefined,
+    video: doc.video ?? undefined,
+  }));
+}
+
 export async function getFeed(): Promise<FeedItem[]> {
   const docs = await client.fetch<FeedDoc[]>(FEED_QUERY);
   return docs.flatMap<FeedItem>((doc) => {

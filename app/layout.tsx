@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://relli.cc'),
-  title: 'michael ciccarelli',
+  title: 'relli · michael ciccarelli',
   description:
     'Michael Ciccarelli is a design engineer in Las Vegas working on product interfaces, design systems, and frontend architecture. He runs Third Index, an independent software engineering studio.',
   keywords: [
