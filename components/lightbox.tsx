@@ -1,12 +1,42 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import Spinner from '@/components/spinner';
 
 export interface LightboxImage {
   src: string;
   width: number;
   height: number;
+}
+
+// the full-size photo: its box is laid out from the dimensions before any bytes arrive,
+// a spinner sits in it, and the photo fades in on load. keyed by src so each photo starts fresh
+function Photo({ src, width, height }: LightboxImage) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <motion.div
+      className="relative flex max-h-full max-w-full items-center justify-center shadow-2xl"
+      initial={{ scale: 0.97 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
+    >
+      {!loaded && (
+        <span className="text-muted-foreground absolute inset-0 flex items-center justify-center">
+          <Spinner />
+        </span>
+      )}
+      <img
+        src={src}
+        width={width}
+        height={height}
+        alt=""
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+        className={`bg-secondary block h-auto max-h-[calc(100dvh-3rem)] w-auto max-w-full transition-opacity duration-500 ease-out md:max-h-[calc(100dvh-4rem)] ${loaded ? 'opacity-100' : 'opacity-0'}`}
+      />
+    </motion.div>
+  );
 }
 
 export default function Lightbox({
@@ -47,17 +77,7 @@ export default function Lightbox({
       transition={{ duration: 0.15, ease: 'easeOut' }}
     >
       <div className="bg-background/60 absolute inset-0 backdrop-blur-md" />
-      <motion.img
-        key={current.src}
-        src={current.src}
-        width={current.width}
-        height={current.height}
-        alt=""
-        className="relative h-auto max-h-full w-auto max-w-full shadow-2xl"
-        initial={{ scale: 0.97, opacity: 0.6 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.18, ease: [0.32, 0.72, 0, 1] }}
-      />
+      <Photo key={current.src} src={current.src} width={current.width} height={current.height} />
       <div className="text-muted-foreground absolute bottom-4 left-1/2 -translate-x-1/2 text-xs">
         {title}
         {images.length > 1 ? ` · ${index + 1}/${images.length}` : ''}

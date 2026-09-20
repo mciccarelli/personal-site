@@ -1,4 +1,5 @@
 import Arrow from '@/components/arrow';
+import Media from '@/components/media';
 import Reveal, { RevealIcon } from '@/components/reveal';
 import type { FeedItem } from '@/components/feed';
 
@@ -7,18 +8,11 @@ type Project = Extract<FeedItem, { type: 'project' }>;
 export default function ProjectCard({ project }: { project: Project }) {
   const { title, role, url, technologies, image, imageWidth, imageHeight, video } = project;
 
-  // media keeps its own proportions: full column width, height follows
+  // the box is held at the media's proportions from first paint; the bytes fade in when they land
   const media = video ? (
-    <video src={video} autoPlay muted loop playsInline preload="metadata" className="bg-secondary block h-auto w-full" />
+    <Media src={video} video />
   ) : image ? (
-    <img
-      src={image}
-      width={imageWidth}
-      height={imageHeight}
-      alt=""
-      loading="lazy"
-      className="bg-secondary block h-auto w-full"
-    />
+    <Media src={image} width={imageWidth} height={imageHeight} />
   ) : null;
 
   const detail = [role, technologies].filter(Boolean).join(' · ');

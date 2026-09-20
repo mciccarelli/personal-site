@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import DeckColumn from '@/components/deck-column';
+import Media from '@/components/media';
 import Lightbox from '@/components/lightbox';
 import type { FeedItem } from '@/components/feed';
 
@@ -48,14 +49,7 @@ export default function PhotoColumn({ sets }: { sets: PhotoSet[] }) {
               onClick={() => setOpen({ set, index: 0 })}
               className="group block w-full cursor-pointer text-left"
             >
-              <img
-                src={cover.src}
-                width={cover.width}
-                height={cover.height}
-                alt=""
-                loading="lazy"
-                className="bg-secondary mb-3 block h-auto w-full"
-              />
+              <Media src={cover.src} width={cover.width} height={cover.height} className="mb-3" />
               <div className="flex items-baseline justify-between gap-4">
                 <span className="text-foreground/85 group-hover:text-foreground min-w-0 transition-colors">
                   {setTitle(set)}
