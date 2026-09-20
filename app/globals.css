@@ -213,13 +213,13 @@
 
   .intro-cta:hover,
   .intro-cta:focus-visible {
-    color: #fa4511;
+    color: #022fa8;
     text-decoration: none;
   }
 
   .dark .intro-cta:hover,
   .dark .intro-cta:focus-visible {
-    color: #ff7a4d;
+    color: #6d84ff;
   }
 
   .intro-cta:hover svg,
