@@ -45,7 +45,11 @@ export const metadata: Metadata = {
     'Michael Ciccarelli is an independent software developer and designer in Las Vegas. Product interfaces, design systems, headless commerce, and web applications.',
   },
   icons: {
-    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: { url: '/apple-icon.png', sizes: '180x180' },
   },
 };
 
