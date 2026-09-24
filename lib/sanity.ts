@@ -5,7 +5,7 @@ export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   apiVersion: '2026-08-01',
-  useCdn: true,
+  useCdn: false,
 });
 
 // newest first on the full date; the month-level date the page shows would tie within a month
