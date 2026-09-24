@@ -1,12 +1,14 @@
 import Arrow from '@/components/arrow';
 import Media from '@/components/media';
+import ProjectDetails from '@/components/project-details';
 import Reveal, { RevealIcon } from '@/components/reveal';
 import type { FeedItem } from '@/components/feed';
 
 type Project = Extract<FeedItem, { type: 'project' }>;
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const { title, role, url, technologies, image, imageWidth, imageHeight, video } = project;
+  const { title, role, url, technologies, description, image, imageWidth, imageHeight, video } =
+    project;
 
   // the box is held at the media's proportions from first paint; the bytes fade in when they land
   const media = video ? (
@@ -14,8 +16,6 @@ export default function ProjectCard({ project }: { project: Project }) {
   ) : image ? (
     <Media src={image} width={imageWidth} height={imageHeight} />
   ) : null;
-
-  const detail = [role, technologies].filter(Boolean).join(' · ');
 
   return (
     <article className="card">
@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         ) : (
           <div className="mb-3">{media}</div>
         ))}
-      {/* title at rest; visit and the detail line type themselves in on hover where hover exists */}
+      {/* title and role at rest; only visit types itself in on hover, where hover exists */}
       <div className="flex items-baseline justify-between gap-4">
         <span className="text-foreground/85">{title}</span>
         {url && (
@@ -45,9 +45,10 @@ export default function ProjectCard({ project }: { project: Project }) {
           </a>
         )}
       </div>
-      {detail && (
-        <div className="text-muted-foreground truncate">
-          <Reveal text={detail} />
+      {role && <div className="text-muted-foreground truncate">{role}</div>}
+      {(description?.trim() || technologies?.trim()) && (
+        <div className="mt-1">
+          <ProjectDetails description={description} technologies={technologies} />
         </div>
       )}
     </article>
