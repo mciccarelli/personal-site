@@ -54,21 +54,18 @@ export function Intro() {
   );
 }
 
-// the offer: rates on the label grid, then the one action
-export function Engagements() {
+// where the work happens — rates and engagement shapes live on the studio site
+export function Studio() {
   return (
     <section>
-      <h3 className="label mb-1">Engagements:</h3>
-      {/* "Sprint: 2 weeks, from $10k." splits at the first colon into the label / value grid */}
-      {data.rates.map((line) => {
-        const [label, value] = line.split(/:\s*(.+)/);
-        return (
-          <div key={label} className="row">
-            <span className="label">{label}:</span>
-            <span className="whitespace-nowrap">{value}</span>
-          </div>
-        );
-      })}
+      <h3 className="label mb-1">Studio:</h3>
+      <div className="text-foreground/85">
+        {data.studio.map((paragraph, i) => (
+          <p key={i} className="mb-3 leading-[1.75] text-balance last:mb-0">
+            {renderInlineLinks(paragraph)}
+          </p>
+        ))}
+      </div>
       <a className="intro-cta mt-3" href={CALL_URL} target="_blank" rel="noopener noreferrer">
         Book a call
         <Arrow />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Contact, Engagements, Intro, Previously } from '@/components/rail-blocks';
+import { Contact, Intro, Studio, Previously } from '@/components/rail-blocks';
 
 export const metadata: Metadata = {
   title: 'info · michael ciccarelli',
@@ -15,7 +15,7 @@ export default function InfoPage() {
       </header>
       <div className="mt-10 space-y-8">
         <Intro />
-        <Engagements />
+        <Studio />
         <Contact />
         <Previously />
       </div>

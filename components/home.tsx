@@ -1,7 +1,7 @@
 import Clock from '@/components/clock';
 import DeckColumn from '@/components/deck-column';
 import DeckNav from '@/components/deck-nav';
-import { Contact, Engagements, Intro } from '@/components/rail-blocks';
+import { Contact, Intro, Studio } from '@/components/rail-blocks';
 import ModeToggle from '@/components/mode-toggle';
 import PhotoColumn from '@/components/photo-column';
 import ProjectCard from '@/components/project-card';
@@ -41,7 +41,7 @@ export default async function Home(_props: { photosVisible?: boolean } = {}) {
 
         <div className="mt-10 space-y-8">
           <Intro />
-          <Engagements />
+          <Studio />
           <Contact />
 
           <DeckNav items={COLUMNS} />
