@@ -3,7 +3,7 @@ import Arrow from '@/components/arrow';
 import CopyEmail from '@/components/copy-email';
 import data from '../data.json';
 
-function renderInlineLinks(text: string): ReactNode[] {
+export function renderInlineLinks(text: string): ReactNode[] {
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const nodes: ReactNode[] = [];
   let lastIndex = 0;
@@ -33,10 +33,10 @@ export const HANDLE = 'mciccarelli';
 
 // one handle everywhere; the networks are the links
 export const NETWORKS = [
-  { label: 'X', href: `https://x.com/${HANDLE}` },
-  { label: 'IG', href: `https://instagram.com/${HANDLE}` },
-  { label: 'GH', href: `https://github.com/${HANDLE}` },
-  { label: 'IN', href: `https://linkedin.com/in/${HANDLE}` },
+  { label: 'X', name: 'X', href: `https://x.com/${HANDLE}` },
+  { label: 'IG', name: 'Instagram', href: `https://instagram.com/${HANDLE}` },
+  { label: 'GH', name: 'GitHub', href: `https://github.com/${HANDLE}` },
+  { label: 'IN', name: 'LinkedIn', href: `https://linkedin.com/in/${HANDLE}` },
 ];
 
 // "x.com/mciccarelli"

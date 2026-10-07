@@ -1,7 +1,6 @@
-import Home from '@/components/home';
+import { redirect } from 'next/navigation';
 
-export const revalidate = 60;
-
+// photo sets are hidden for now; the route sends visitors home
 export default function PhotosPage() {
-  return <Home photosVisible />;
+  redirect('/');
 }
