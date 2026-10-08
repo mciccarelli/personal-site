@@ -1,24 +1,6 @@
-import type { Metadata } from 'next';
-import { Contact, Intro, Studio, Previously } from '@/components/rail-blocks';
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: 'info · michael ciccarelli',
-  alternates: { canonical: '/info' },
-};
-
-// the deck's rail on its own: who, how to reach, and where before
+// everything the info page held now lives on the home page
 export default function InfoPage() {
-  return (
-    <div className="max-w-[26rem] px-5 pt-8 pb-16 [--label-col:30%]">
-      <header>
-        <h1 className="text-foreground font-semibold">relli.cc</h1>
-      </header>
-      <div className="mt-10 space-y-8">
-        <Intro />
-        <Studio />
-        <Contact />
-        <Previously />
-      </div>
-    </div>
-  );
+  redirect('/');
 }
