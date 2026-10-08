@@ -178,7 +178,7 @@
   }
 
   .prose-intro {
-    @apply text-foreground/70 leading-[1.75] text-pretty;
+    @apply text-foreground/70 text-[0.625rem] leading-[1.75] text-pretty;
   }
 
   .prose-intro p {
@@ -479,5 +479,57 @@
     .reveal-ch {
       transition-delay: 0ms;
     }
+  }
+}
+
+@layer components {
+  /* photos: a dotted surface that moves with the pan */
+  .canvas {
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    background-image: radial-gradient(hsl(var(--foreground) / 0.12) 1px, transparent 1px);
+  }
+
+  .canvas[data-dragging] {
+    cursor: grabbing;
+  }
+
+  .canvas-photo {
+    @apply bg-secondary cursor-zoom-in;
+  }
+
+  .canvas[data-dragging] .canvas-photo {
+    cursor: grabbing;
+  }
+
+  .canvas-photo img {
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+
+  .canvas-photo img[data-loaded] {
+    opacity: 1;
+  }
+
+  .back-link {
+    @apply bg-foreground text-background inline-flex h-10 items-center gap-[1ch] px-4 text-lg no-underline transition-colors;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    @apply bg-[#022fa8] text-white no-underline;
+  }
+
+  .legend {
+    @apply bg-background/85 border-border border p-3 backdrop-blur-md;
+  }
+
+  .legend-map {
+    background: hsl(var(--secondary));
+  }
+
+  .legend-btn {
+    @apply text-muted-foreground hover:text-foreground inline-flex h-6 min-w-6 cursor-pointer items-center justify-center whitespace-nowrap transition-[color,opacity] disabled:cursor-default disabled:opacity-30 disabled:hover:text-muted-foreground;
   }
 }

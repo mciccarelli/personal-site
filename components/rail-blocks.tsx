@@ -13,8 +13,14 @@ export function renderInlineLinks(text: string): ReactNode[] {
     if (match.index > lastIndex) {
       nodes.push(<Fragment key={key++}>{text.slice(lastIndex, match.index)}</Fragment>);
     }
+    // site paths stay in the tab; everything else opens a new one
+    const external = !match[2].startsWith('/');
     nodes.push(
-      <a key={key++} href={match[2]} target="_blank" rel="noopener noreferrer">
+      <a
+        key={key++}
+        href={match[2]}
+        {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+      >
         {match[1]}
       </a>,
     );
