@@ -2,10 +2,23 @@ import Clock from '@/components/clock';
 import CopyEmail from '@/components/copy-email';
 import Mark from '@/components/mark';
 import ModeToggle from '@/components/mode-toggle';
-import { CALL_URL, EMAIL, NETWORKS, renderInlineLinks } from '@/components/rail-blocks';
+import { renderInlineLinks } from '@/components/inline-links';
 import WorkStrip from '@/components/work-strip';
 import { getWork } from '@/lib/sanity';
 import data from '../data.json';
+
+const CALL_URL = 'https://cal.com/ciccarelli/intro';
+
+const EMAIL = 'mc@relli.cc';
+const HANDLE = 'mciccarelli';
+
+// one handle everywhere; the networks are the links
+const NETWORKS = [
+  { name: 'X', href: `https://x.com/${HANDLE}` },
+  { name: 'Instagram', href: `https://instagram.com/${HANDLE}` },
+  { name: 'GitHub', href: `https://github.com/${HANDLE}` },
+  { name: 'LinkedIn', href: `https://linkedin.com/in/${HANDLE}` },
+];
 
 // one column of prose, the work running off the right edge, then the record
 export default async function Home() {
@@ -61,6 +74,8 @@ export default async function Home() {
         </p>
       </section>
 
+      <p className="page text-foreground/70 mt-16">{renderInlineLinks(data.photos)}</p>
+
       <section className="page mt-16" aria-labelledby="contact">
         <h2 id="contact" className="section-label">
           contact
@@ -68,7 +83,7 @@ export default async function Home() {
         <div className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <CopyEmail email={EMAIL} />
           {NETWORKS.map((n) => (
-            <a key={n.label} className="link" href={n.href} target="_blank" rel="noopener noreferrer">
+            <a key={n.name} className="link" href={n.href} target="_blank" rel="noopener noreferrer">
               {n.name}
             </a>
           ))}

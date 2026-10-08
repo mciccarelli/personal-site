@@ -1,5 +1,4 @@
 import { createClient } from 'next-sanity';
-import { type FeedItem } from '@/components/feed';
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -8,92 +7,25 @@ export const client = createClient({
   useCdn: false,
 });
 
-// newest first on the full date; the month-level date the page shows would tie within a month
-const FEED_QUERY = `*[_type in ["project", "photoSet"]] | order(date desc) {
-  _type, title, role, url, description, technologies, date,
-  "image": image.asset->url,
-  "imageWidth": image.asset->metadata.dimensions.width,
-  "imageHeight": image.asset->metadata.dimensions.height,
-  "video": video.asset->url,
-  "images": images[]{
-    caption,
-    camera,
-    "src": asset->url,
-    "width": asset->metadata.dimensions.width,
-    "height": asset->metadata.dimensions.height
-  }
-}`;
-
-interface FeedDoc {
-  _type: 'project' | 'photoSet';
+export interface WorkItem {
+  kind: 'client' | 'experiment';
   title: string;
-  role: string | null;
-  url: string | null;
-  description: string | null;
-  technologies: string | null;
-  image: string | null;
-  imageWidth: number | null;
-  imageHeight: number | null;
-  video: string | null;
+  // year and month, e.g. 2026-10
   date: string;
-  images:
-    | { src: string; width: number; height: number; caption: string | null; camera: string | null }[]
-    | null;
+  role?: string;
+  url?: string;
+  description: string;
+  technologies?: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  video?: string;
 }
 
-// workbench entries, shaped like projects so the column reuses the project card
-const EXPERIMENTS_QUERY = `*[_type == "experiment"] | order(date desc) {
-  title, url, description, technologies, date,
-  "image": image.asset->url,
-  "imageWidth": image.asset->metadata.dimensions.width,
-  "imageHeight": image.asset->metadata.dimensions.height,
-  "video": video.asset->url
-}`;
-
-type ExperimentDoc = Omit<FeedDoc, '_type' | 'role' | 'images'>;
-
-export async function getExperiments(): Promise<Extract<FeedItem, { type: 'project' }>[]> {
-  const docs = await client.fetch<ExperimentDoc[]>(EXPERIMENTS_QUERY);
-  return docs.map((doc) => ({
-    type: 'project',
-    title: doc.title,
-    date: doc.date.slice(0, 7),
-    description: doc.description ?? '',
-    url: doc.url ?? undefined,
-    technologies: doc.technologies ?? undefined,
-    image: doc.image ?? undefined,
-    imageWidth: doc.imageWidth ?? undefined,
-    imageHeight: doc.imageHeight ?? undefined,
-    video: doc.video ?? undefined,
-  }));
-}
-
-export async function getFeed(): Promise<FeedItem[]> {
-  const docs = await client.fetch<FeedDoc[]>(FEED_QUERY);
-  return docs.flatMap<FeedItem>((doc) => {
-    const date = doc.date.slice(0, 7);
-    if (doc._type === 'photoSet') {
-      const images = doc.images ?? [];
-      // the pile layout needs at least one image; hide sets until photos are uploaded
-      if (images.length === 0) return [];
-      return [{ type: 'photo', title: doc.title, date, images }];
-    }
-    return [
-      {
-        type: 'project',
-        title: doc.title,
-        date,
-        description: doc.description ?? '',
-        role: doc.role ?? undefined,
-        url: doc.url ?? undefined,
-        technologies: doc.technologies ?? undefined,
-        image: doc.image ?? undefined,
-        imageWidth: doc.imageWidth ?? undefined,
-        imageHeight: doc.imageHeight ?? undefined,
-        video: doc.video ?? undefined,
-      },
-    ];
-  });
+export interface PhotoSet {
+  title: string;
+  date: string;
+  images: { src: string; width: number; height: number }[];
 }
 
 // client work and experiments in one list, newest first; kind is the only thing that tells them apart
@@ -105,14 +37,23 @@ const WORK_QUERY = `*[_type in ["project", "experiment"]] | order(date desc) {
   "video": video.asset->url
 }`;
 
-export type WorkItem = Extract<FeedItem, { type: 'project' }> & { kind: 'client' | 'experiment' };
+interface WorkDoc {
+  _type: 'project' | 'experiment';
+  title: string;
+  role: string | null;
+  url: string | null;
+  description: string | null;
+  technologies: string | null;
+  image: string | null;
+  imageWidth: number | null;
+  imageHeight: number | null;
+  video: string | null;
+  date: string;
+}
 
 export async function getWork(): Promise<WorkItem[]> {
-  const docs = await client.fetch<(Omit<FeedDoc, '_type' | 'images'> & { _type: 'project' | 'experiment' })[]>(
-    WORK_QUERY,
-  );
+  const docs = await client.fetch<WorkDoc[]>(WORK_QUERY);
   return docs.map((doc) => ({
-    type: 'project',
     kind: doc._type === 'experiment' ? 'experiment' : 'client',
     title: doc.title,
     date: doc.date.slice(0, 7),
@@ -125,4 +66,24 @@ export async function getWork(): Promise<WorkItem[]> {
     imageHeight: doc.imageHeight ?? undefined,
     video: doc.video ?? undefined,
   }));
+}
+
+// newest first on the full date; the month-level date the page shows would tie within a month
+const PHOTOS_QUERY = `*[_type == "photoSet"] | order(date desc) {
+  title, date,
+  "images": images[]{
+    "src": asset->url,
+    "width": asset->metadata.dimensions.width,
+    "height": asset->metadata.dimensions.height
+  }
+}`;
+
+export async function getPhotoSets(): Promise<PhotoSet[]> {
+  const docs = await client.fetch<(Omit<PhotoSet, 'images'> & { images: PhotoSet['images'] | null })[]>(
+    PHOTOS_QUERY,
+  );
+  // a set with no uploads yet has nothing to place on the canvas
+  return docs.flatMap((doc) =>
+    doc.images?.length ? [{ title: doc.title, date: doc.date.slice(0, 7), images: doc.images }] : [],
+  );
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Spinner from '@/components/spinner';
-import { useMediaState } from '@/components/media-state';
 
 type Props = {
   src: string;
@@ -15,50 +14,17 @@ type Props = {
 };
 
 // holds the media's box from the first paint, shows a spinner while the bytes arrive,
-// then fades the image or video in. reports to the column so its header can show progress.
+// then fades the image or video in.
 export default function Media({ src, video = false, width, height, alt = '', eager = false, className = '' }: Props) {
   const ref = useRef<HTMLImageElement & HTMLVideoElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const state = useMediaState();
-  const counted = useRef(false);
-
-  const finish = () => {
-    setLoaded(true);
-    if (counted.current) {
-      counted.current = false;
-      state?.done();
-    }
-  };
+  const finish = () => setLoaded(true);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
-    // already in cache
-    if (video ? el.readyState >= 2 : el.complete && el.naturalWidth > 0) {
-      setLoaded(true);
-      return;
-    }
-    // lazy media only starts loading near the viewport; count it from that moment
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting) && !counted.current && !loaded) {
-          counted.current = true;
-          state?.add();
-          io.disconnect();
-        }
-      },
-      { rootMargin: '200px' },
-    );
-    io.observe(el);
-    return () => {
-      io.disconnect();
-      if (counted.current) {
-        counted.current = false;
-        state?.done();
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // already in cache, so the load event fired before hydration
+    if (el && (video ? el.readyState >= 2 : el.complete && el.naturalWidth > 0)) setLoaded(true);
+  }, [video]);
 
   const aspect = width && height ? `${width} / ${height}` : '16 / 9';
   const fade = `block h-auto w-full transition-opacity duration-500 ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`;

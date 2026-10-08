@@ -1,8 +1,7 @@
 {
   "intro": [
     "Michael Ciccarelli is an independent software engineer specializing in frontend development and product interfaces.",
-    "I work across design and engineering, building websites, applications, and digital products. Previously in fintech, media, and commerce.",
-    "Sometimes I take [photos](/photos)."
+    "I work across design and engineering, building websites, applications, and digital products. Previously in fintech, media, and commerce."
   ],
   "studio": [
     "Working independently through [Third Index](https://thirdindex.co). Fractional or project-based."
@@ -39,5 +38,6 @@
       "years": "2012–14"
     }
   ],
-  "clients": "Amazon, Pentagram, Elara, One/Of, Grey, Knoll."
+  "clients": "Amazon, Pentagram, Elara, One/Of, Grey, Knoll.",
+  "photos": "Sometimes I take [photos](/photos)."
 }
