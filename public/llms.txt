@@ -1,16 +1,14 @@
-# Michael Ciccarelli — Design Engineer
+# Michael Ciccarelli — Software Engineer
 
-> Michael Ciccarelli is an independent software developer and designer building for the web. Websites, applications, interfaces, and digital products, with a focus on frontend engineering, interaction, and design systems.
+> Michael Ciccarelli is an independent software engineer building for the web. He works across design and engineering, creating websites, applications, and digital products for clients and through self-initiated projects. His focus is frontend engineering, interaction, and design systems.
 
-Personal site of Michael Ciccarelli, a design engineer based in Las Vegas. Selected work is on the home page, photography at https://relli.cc/photos.
+Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poker, and takes photos: https://relli.cc/photos.
 
-## Studio
+## Studio and products
 
-[THIRD INDEX](https://thirdindex.co) is my small studio. It partners with designers, founders, and product teams, on a project or fractional basis. Book an intro call at https://cal.com/ciccarelli/intro or learn more at https://thirdindex.co.
-
-## Now
-
-Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and bettors.
+- [Third Index](https://thirdindex.co): Independent technology studio (2025). Client work lives there. Book an intro call at https://cal.com/ciccarelli/intro.
+- [bkrl.app](https://bkrl.app): Bankroll management for poker players (2026). Log sessions in natural language, track variance and ROI.
+- [spread.now](https://spread.now): A live board of US poker and sports (2026).
 
 ## Experience
 
@@ -29,30 +27,6 @@ Building [bkrl.app](https://bkrl.app), a bankroll tracker for poker players and 
 - Platforms & Tooling: Vercel, AWS, Cloudflare, Supabase, Docker, Git
 - AI: LLM integrations, AI workflows, OpenAI, Anthropic
 - Domains: E-commerce (Shopify, Stripe), CMS (Sanity, Contentful, Payload), Web3
-
-## Clients
-
-Amazon, Pentagram, Elara, One/Of, Grey, Knoll.
-
-## Projects
-
-- [bkrl.app](https://bkrl.app): Bankroll management for poker players. Log sessions in natural language, track variance and ROI.
-
-## Recent Client Work
-
-- [Legend.xyz](https://legend-xyz.vercel.app): Frontend development — marketing site for Legend, an embedded smart contract wallet built as a UI/UX layer on top of open DeFi protocols.
-- [Amazon: The Bar](https://amazonthe.bar): Frontend development — portfolio for a creative collective, with custom animations and dynamic layouts.
-- [One/Of](https://shoponeof.com): Design and development — e-commerce platform for a made-to-order fashion label, with a custom booking system and Shopify checkout.
-- [Elara.world](https://elara.world): Fullstack development — community hub combining content publishing with an integrated merchandise store.
-- [Revolve Law](https://revolvelawgroup.com): Fullstack development — law firm site with subtle motion and streamlined contact flows.
-- [Kelvon Agee](https://kelvonagee.com): Design and development — photography portfolio with optimized image delivery.
-- [El Dorado](https://eldo.us): Frontend development — minimalist portfolio for an architecture studio.
-
-## Engagements
-
-- Sprint: 2 weeks, from $10k.
-- Project: 4–8 weeks, from $20k.
-- Ongoing: 3 days/week, $10k/month.
 
 ## Contact
 
