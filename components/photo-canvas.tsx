@@ -321,11 +321,11 @@ export default function PhotoCanvas({ sets }: { sets: CanvasSet[] }) {
         </div>
       </div>
 
-      {/* the way out, always in the same corner */}
-      <Link href="/" className="back-link fixed top-5 left-5 z-10">
+      {/* the way out, where the home page's first line sits */}
+      <Link href="/" className="back-link link fixed top-8 left-5 z-10 sm:top-12 sm:left-8">
         <span aria-hidden>&larr;</span> Back
       </Link>
-      <div className="text-muted-foreground pointer-events-none fixed top-5 right-5 z-10 flex h-10 items-center">
+      <div className="text-muted-foreground bg-background pointer-events-none fixed top-8 right-5 z-10 -mr-1 px-1 sm:top-12 sm:right-8">
         Photos · {world.photos.length}
       </div>
 

@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
     if (!body?._type) {
       return NextResponse.json({ message: 'no _type in body' }, { status: 400 });
     }
-    // work shows on the home page, photos on their own canvas
-    const paths = [body._type === 'photoSet' ? '/photos' : '/'];
+    // only the photo canvas reads from sanity
+    const paths = ['/photos'];
     for (const path of paths) revalidatePath(path);
     return NextResponse.json({ revalidated: true, paths, type: body._type, now: Date.now() });
   } catch (err) {

@@ -37,7 +37,8 @@ export default function CopyEmail({ email }: { email: string }) {
             <path d="M10.5 5.5v-2a1.5 1.5 0 0 0-1.5-1.5H4A1.5 1.5 0 0 0 2.5 3.5V9A1.5 1.5 0 0 0 4 10.5h1.5" />
           </svg>
         )}
-        <span role="status" aria-live="polite">
+        {/* the checkmark is the visible cue; the word is for screen readers, so the row never reflows */}
+        <span role="status" aria-live="polite" className="sr-only">
           {copied ? 'Copied' : ''}
         </span>
       </button>

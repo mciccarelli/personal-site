@@ -1,13 +1,15 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import ThemeProvider from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
+
+// mirrors the homepage intro; kept under 160 characters for search snippets
+const description =
+  'Michael Ciccarelli is an independent software engineer in Las Vegas, building for the web. Frontend engineering, interaction, and design systems.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://relli.cc'),
   title: 'relli · michael ciccarelli',
-  description:
-    'Michael Ciccarelli is an independent software developer and designer in Las Vegas. Product interfaces, design systems, headless commerce, and web applications.',
+  description,
   keywords: [
     'michael ciccarelli',
     'design engineer',
@@ -35,14 +37,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Michael Ciccarelli',
     title: 'Michael Ciccarelli',
-    description:
-    'Michael Ciccarelli is an independent software developer and designer in Las Vegas. Product interfaces, design systems, headless commerce, and web applications.',
+    description,
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Michael Ciccarelli',
-    description:
-    'Michael Ciccarelli is an independent software developer and designer in Las Vegas. Product interfaces, design systems, headless commerce, and web applications.',
+    description,
   },
   icons: {
     icon: [
@@ -59,11 +59,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <ThemeProvider defaultTheme="system" storageKey="ciccarelli-ui-theme">
-          <main className="min-h-dvh">{children}</main>
-        </ThemeProvider>
+        <main className="min-h-dvh">{children}</main>
         <Analytics />
       </body>
     </html>

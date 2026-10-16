@@ -1,43 +1,27 @@
 {
   "intro": [
     "Michael Ciccarelli is an independent software engineer building for the web.",
-    "I work across design and engineering, building websites, applications, and digital products for clients and independent projects. Focused on frontend engineering, interaction, and design systems."
+    "I work across design and engineering, creating websites, applications, and digital products for clients and through self-initiated projects. My focus is frontend engineering, interaction, and design systems."
   ],
-  "studio": [
-    "Available through [Third Index](https://thirdindex.co)."
-  ],
-  "experience": [
+  "photos": "Sometimes I play poker, and take [photos](/photos).",
+  "products": [
     {
-      "company": "Third Index",
-      "role": "Principal Engineer",
-      "years": "2025–"
+      "name": "Third Index",
+      "url": "https://thirdindex.co",
+      "note": "Independent technology studio.",
+      "year": "2025"
     },
     {
-      "company": "Modern Treasury",
-      "role": "Design Engineer",
-      "years": "2024–25"
+      "name": "bkrl.app",
+      "url": "https://bkrl.app",
+      "note": "Bankroll management for poker players.",
+      "year": "2026"
     },
     {
-      "company": "Metropolis",
-      "role": "Senior Frontend Engineer",
-      "years": "2022–24"
-    },
-    {
-      "company": "Axoni",
-      "role": "Senior Engineer II",
-      "years": "2021–22"
-    },
-    {
-      "company": "VICE Media",
-      "role": "Lead Frontend Engineer",
-      "years": "2014–18"
-    },
-    {
-      "company": "Condé Nast",
-      "role": "Web Developer",
-      "years": "2012–14"
+      "name": "spread.now",
+      "url": "https://spread.now",
+      "note": "A live board of US poker and sports.",
+      "year": "2026"
     }
-  ],
-  "clients": "Amazon, Pentagram, Elara, One/Of, Grey, Knoll.",
-  "photos": "Sometimes I take [photos](/photos)."
+  ]
 }
