@@ -50,7 +50,7 @@ export default function Home() {
         <h2 id="contact" className="section-label">
           contact
         </h2>
-        <div className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-2">
+        <div className="mt-3 flex flex-col items-start gap-1">
           <CopyEmail email={EMAIL} />
           <a className="link" href={CALL_URL} target="_blank" rel="noopener noreferrer">
             Book a call
