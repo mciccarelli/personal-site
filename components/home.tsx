@@ -19,7 +19,11 @@ const NETWORKS = [
 export default function Home() {
   return (
     <div className="pt-8 pb-16 sm:pt-12">
-      <section className="page prose-intro">
+      <header className="page">
+        <img src="/mc.svg" alt="Michael Ciccarelli" width={446} height={229} className="block h-5 w-auto" />
+      </header>
+
+      <section className="page prose-intro mt-10">
         {[...data.intro, data.photos].map((paragraph, i) => (
           <p key={i}>{renderInlineLinks(paragraph)}</p>
         ))}

@@ -1,6 +1,6 @@
 # Michael Ciccarelli — Software Engineer
 
-> Michael Ciccarelli is an independent software engineer building for the web. He works across design and engineering, creating websites, applications, and digital products for clients and through self-initiated projects. His focus is frontend engineering, interaction, and design systems.
+> Michael Ciccarelli is an independent software engineer working across design and development. He runs [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, alongside self-initiated projects. His focus is frontend engineering, interaction, and design systems.
 
 Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poker, and takes photos: https://relli.cc/photos.
 

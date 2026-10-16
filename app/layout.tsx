@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 // mirrors the homepage intro; kept under 160 characters for search snippets
 const description =
-  'Michael Ciccarelli is an independent software engineer in Las Vegas, building for the web. Frontend engineering, interaction, and design systems.';
+  'Michael Ciccarelli is an independent software engineer in Las Vegas, working across design and development. Frontend, interaction, and design systems.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://relli.cc'),
