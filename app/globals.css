@@ -160,11 +160,10 @@
     @apply text-foreground decoration-foreground/30 hover:decoration-foreground underline;
   }
 
-  /* name and year, the note underneath */
+  /* name, the note underneath */
   .product {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 3.5rem;
-    column-gap: 1rem;
+    justify-items: start;
     padding-block: 0.5rem;
   }
 }

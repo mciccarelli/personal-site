@@ -39,8 +39,7 @@ export default function Home() {
               <a className="link" href={p.url} target="_blank" rel="noopener noreferrer">
                 {p.name}
               </a>
-              <span className="text-muted-foreground text-right">{p.year}</span>
-              <span className="text-muted-foreground col-span-2 text-pretty">{p.note}</span>
+              <span className="text-muted-foreground text-pretty">{p.note}</span>
             </li>
           ))}
         </ul>
