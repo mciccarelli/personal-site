@@ -7,9 +7,9 @@ const CALL_URL = 'https://cal.com/ciccarelli/intro';
 const EMAIL = 'mc@relli.cc';
 const HANDLE = 'mciccarelli';
 
-// one handle everywhere; the networks are the links
+// one handle everywhere but X
 const NETWORKS = [
-  { name: 'X', href: `https://x.com/${HANDLE}` },
+  { name: 'X', href: 'https://x.com/mcrxlli' },
   { name: 'Instagram', href: `https://instagram.com/${HANDLE}` },
   { name: 'GitHub', href: `https://github.com/${HANDLE}` },
   { name: 'LinkedIn', href: `https://linkedin.com/in/${HANDLE}` },
