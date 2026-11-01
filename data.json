@@ -3,21 +3,16 @@
     "Michael Ciccarelli is an independent software engineer working across design and development. I run [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, alongside self-initiated projects. My focus is frontend engineering, interaction, and design systems."
   ],
   "photos": "Sometimes I play poker, and take [photos](/photos).",
+  "studio": {
+    "name": "Third Index",
+    "url": "https://thirdindex.co",
+    "note": "Design engineering for the web. Product interfaces, design systems, and frontend architecture for startups and consumer brands."
+  },
   "products": [
     {
-      "name": "Third Index",
-      "url": "https://thirdindex.co",
-      "note": "Independent technology studio."
-    },
-    {
-      "name": "bkrl.app",
-      "url": "https://bkrl.app",
-      "note": "Bankroll management for poker players."
-    },
-    {
-      "name": "spread.now",
-      "url": "https://spread.now",
-      "note": "A live board of US poker and sports."
+      "name": "halloran.company",
+      "url": "https://halloran.company",
+      "note": "A Las Vegas company making software for poker players: bankroll ledger, AI insights, poker rooms, and tournament calendar."
     }
   ]
 }

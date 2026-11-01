@@ -34,6 +34,12 @@ export default function Home() {
           studio and products
         </h2>
         <ul className="mt-3">
+          <li className="product">
+            <a className="link" href={data.studio.url} target="_blank" rel="noopener noreferrer">
+              {data.studio.name}
+            </a>
+            <span className="text-muted-foreground text-pretty">{data.studio.note}</span>
+          </li>
           {data.products.map((p) => (
             <li key={p.name} className="product">
               <a className="link" href={p.url} target="_blank" rel="noopener noreferrer">

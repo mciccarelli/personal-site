@@ -6,9 +6,8 @@ Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poke
 
 ## Studio and products
 
-- [Third Index](https://thirdindex.co): Independent technology studio (2025). Client work lives there. Book an intro call at https://cal.com/ciccarelli/intro.
-- [bkrl.app](https://bkrl.app): Bankroll management for poker players (2026). Log sessions in natural language, track variance and ROI.
-- [spread.now](https://spread.now): A live board of US poker and sports (2026).
+- [Third Index](https://thirdindex.co): Design engineering for the web. Product interfaces, design systems, and frontend architecture for startups and consumer brands. Client work lives there. Book an intro call at https://cal.com/ciccarelli/intro.
+- [halloran.company](https://halloran.company): A Las Vegas company making software for poker players: bankroll ledger, AI insights, poker rooms, and tournament calendar.
 
 ## Experience
 
