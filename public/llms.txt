@@ -7,7 +7,7 @@ Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poke
 ## Studio and company
 
 - [Third Index](https://thirdindex.co): Design engineering for the web. Product interfaces, design systems, and frontend architecture for startups and consumer brands. Client work lives there. Book an intro call at https://cal.com/ciccarelli/intro.
-- [Halloran](https://halloran.company): A small software company in Las Vegas. Tools, data, and resources for poker players and sports bettors: bankrolls, rooms, and tournaments.
+- [Halloran](https://halloran.company): A small software company in Las Vegas. Tools, analytics, and resources for poker players and sports bettors.
 
 ## Experience
 
