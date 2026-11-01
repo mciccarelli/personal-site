@@ -10,9 +10,9 @@
   },
   "products": [
     {
-      "name": "halloran.company",
+      "name": "Halloran",
       "url": "https://halloran.company",
-      "note": "A Las Vegas company making software for poker players: bankroll ledger, AI insights, poker rooms, and tournament calendar."
+      "note": "A small software company in Las Vegas. Tools, analytics, and resources for players, from the interfaces to the APIs underneath."
     }
   ]
 }
