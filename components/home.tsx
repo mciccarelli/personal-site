@@ -31,7 +31,7 @@ export default function Home() {
 
       <section className="page mt-12" aria-labelledby="work">
         <h2 id="work" className="section-label">
-          studio and products
+          studio and company
         </h2>
         <ul className="mt-3">
           <li className="product">

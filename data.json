@@ -1,8 +1,8 @@
 {
   "intro": [
-    "Michael Ciccarelli is an independent software engineer working across design and development. I run [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, alongside self-initiated projects. My focus is frontend engineering, interaction, and design systems."
+    "I’m Michael Ciccarelli, an independent software engineer working across design and development. I run [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, and [Halloran](https://halloran.company), where I build my own. My focus is frontend engineering, interaction, and design systems."
   ],
-  "photos": "Sometimes I play poker, and take [photos](/photos).",
+  "photos": "Sometimes I play poker and take [photos](/photos).",
   "studio": {
     "name": "Third Index",
     "url": "https://thirdindex.co",
@@ -12,7 +12,7 @@
     {
       "name": "Halloran",
       "url": "https://halloran.company",
-      "note": "A small software company in Las Vegas. Tools, analytics, and resources for players, from the interfaces to the APIs underneath."
+      "note": "A small software company in Las Vegas. Tools, data, and resources for poker players and sports bettors: bankrolls, rooms, and tournaments."
     }
   ]
 }

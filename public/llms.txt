@@ -1,13 +1,13 @@
 # Michael Ciccarelli — Software Engineer
 
-> Michael Ciccarelli is an independent software engineer working across design and development. He runs [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, alongside self-initiated projects. His focus is frontend engineering, interaction, and design systems.
+> Michael Ciccarelli is an independent software engineer working across design and development. He runs [Third Index](https://thirdindex.co), building websites, applications, and digital products for clients, and [Halloran](https://halloran.company), where he builds his own. His focus is frontend engineering, interaction, and design systems.
 
-Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poker, and takes photos: https://relli.cc/photos.
+Personal site of Michael Ciccarelli, based in Las Vegas. Sometimes he plays poker and takes photos: https://relli.cc/photos.
 
-## Studio and products
+## Studio and company
 
 - [Third Index](https://thirdindex.co): Design engineering for the web. Product interfaces, design systems, and frontend architecture for startups and consumer brands. Client work lives there. Book an intro call at https://cal.com/ciccarelli/intro.
-- [Halloran](https://halloran.company): A small software company in Las Vegas. Tools, analytics, and resources for players, from the interfaces to the APIs underneath.
+- [Halloran](https://halloran.company): A small software company in Las Vegas. Tools, data, and resources for poker players and sports bettors: bankrolls, rooms, and tournaments.
 
 ## Experience
 
